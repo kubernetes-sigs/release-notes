@@ -1,3 +1,10 @@
-<div *ngFor="let note of notes">
-  --- {{note.text}}
+<div class="card" *ngFor="let note of notes">
+  <div class="card-header">
+    <a target="_blank" href="{{note.pr_url}}">#{{note.pr_number}}</a> by <a target="_blank" href="{{note.author_url}}">{{note.author}}</a>
+    <span class="k8s-badge float-sm-right badge badge-dark">{{note.release_version}}</span>
+    <span *ngFor="let sig of note.sigs" class="k8s-badge float-sm-right badge badge-success">{{sig}}</span>
+    <span *ngFor="let kind of note.kinds" class="k8s-badge float-sm-right badge badge-primary">{{kind}}</span>
+    <span *ngFor="let areas of note.areas" class="k8s-badge float-sm-right badge badge-secondary">{{areas}}</span>
+  </div>
+  <div class="card-body" [innerHTML]="note.markdown | markdown"></div>
 </div>

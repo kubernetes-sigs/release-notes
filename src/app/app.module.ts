@@ -8,10 +8,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotesComponent } from './notes/notes.component';
 import { OptionsComponent } from './options/options.component';
 import { FormsModule } from '@angular/forms';
+import { MarkdownPipe } from './markdown-pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MarkdownPipe,
     NotesComponent,
     OptionsComponent
   ],
