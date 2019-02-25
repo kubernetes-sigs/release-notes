@@ -1,0 +1,17 @@
+<h3>Options</h3>
+<div *ngFor="let option of options">
+  <p *ngFor="let data of option | keyvalue">
+    <b>{{data.key}}</b><br />
+    <span *ngFor="let a of data.value | keyvalue">
+      
+      <input 
+        type="checkbox"
+        name="{{data.key}}[]" 
+        [ngModel]="filter[data.key][a.key]"
+        (ngModelChange)="updateFilter(data.key, a.key, $event)"
+        value="{{a.key}}" />{{a.key}} <br />
+    </span>
+  </p>
+</div>
+<h3>Notes</h3>
+<app-notes [filter]="filter"></app-notes>
