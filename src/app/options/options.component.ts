@@ -11,7 +11,7 @@ import { NotesComponent } from '../notes/notes.component';
 export class OptionsComponent implements OnInit {
   options: Options;
   filter = {
-    "Markdown": "",
+    Markdown: '',
   };
   @ViewChild(NotesComponent) noteChild;
 
@@ -34,12 +34,28 @@ export class OptionsComponent implements OnInit {
   }
 
   updateFilterString(a, b): void {
-    this.filter[a] = b;
+    if (b.length > 0) {
+      this.filter[a] = b;
+    } else {
+      delete this.filter[a];
+    }
+
     this.noteChild.getNotes(this.filter);
   }
 
   updateFilterObject(a, b, val): void {
     this.filter[a][b] = val;
+    this.noteChild.getNotes(this.filter);
+  }
+
+  toggleFilter(event): void {
+    console.log(event);
+    console.log(this.filter);
+    if (typeof this.filter[event.key][event.value] === 'boolean') {
+      this.filter[event.key][event.value] = !this.filter[event.key][event.value];
+    } else {
+      this.filter[event.key][event.value] = true;
+    }
     this.noteChild.getNotes(this.filter);
   }
 

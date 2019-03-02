@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { NotesService } from './notes.service';
 import { Note } from './note';
 
@@ -11,6 +11,7 @@ import { Note } from './note';
 export class NotesComponent implements OnInit {
   notes: Note[];
   @Input() filter: {};
+  @Output() filterUpdate = new EventEmitter<object>();
 
   constructor(private notesService: NotesService) { }
 
@@ -25,6 +26,10 @@ export class NotesComponent implements OnInit {
 
   updateFilter(filter): void {
     this.getNotes(filter);
+  }
+
+  toggleFilter(key, value): void {
+    this.filterUpdate.emit({'key': key, 'value': value});
   }
 
 }
