@@ -142,7 +142,7 @@ func DataHandler(w http.ResponseWriter, r *http.Request, notesData []notes.Relea
 					r := reflect.ValueOf(note)
 					f := reflect.Indirect(r).FieldByName(key)
 
-					if strings.Contains(string(f.String()), value[0]) {
+					if strings.Contains(strings.ToUpper(string(f.String())), strings.ToUpper(value[0])) {
 						filteredNotes = append(filteredNotes, note)
 						break
 					}
