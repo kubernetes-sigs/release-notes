@@ -51,7 +51,7 @@ func main() {
 	})
 
 	// Handle all that lovely static content
-	r.PathPrefix("/static/").Handler(http.StripPrefix("/static/", http.FileServer(http.Dir("./static/"))))
+	r.PathPrefix("/").Handler(http.FileServer(http.Dir("./dist/")))
 
 	http.Handle("/", r)
 
@@ -115,7 +115,6 @@ func DataHandler(w http.ResponseWriter, r *http.Request, notesData []notes.Relea
 	var filteredNotes []notes.ReleaseNote
 
 	if len(r.URL.Query()) > 0 {
-
 		for _, note := range notesData {
 			for key, value := range r.URL.Query() {
 				if key == "Areas" {
