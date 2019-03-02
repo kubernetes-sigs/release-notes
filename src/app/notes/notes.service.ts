@@ -20,12 +20,16 @@ export class NotesService {
     let params = new HttpParams();
 
     for (const key of Object.keys(filter)) {
-      for (const value of Object.keys(filter[key])) {
-        if (String(filter[key][value]) === 'true') {
-          const newVal = (params.get(key) === null ? '' : params.get(key)) + ',' + value;
-          console.log('Setting ' + key + ' to ' + newVal);
-          params = params.set(key, newVal);
+      if (typeof filter[key] === 'object'){
+        for (const value of Object.keys(filter[key])) {
+          if (String(filter[key][value]) === 'true') {
+            const newVal = (params.get(key) === null ? '' : params.get(key)) + ',' + value;
+            console.log('Setting ' + key + ' to ' + newVal);
+            params = params.set(key, newVal);
+          }
         }
+      } else {
+        params = params.set(key, filter[key]);
       }
     }
 

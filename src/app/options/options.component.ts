@@ -10,7 +10,9 @@ import { NotesComponent } from '../notes/notes.component';
 })
 export class OptionsComponent implements OnInit {
   options: Options;
-  filter = {};
+  filter = {
+    "Markdown": "",
+  };
   @ViewChild(NotesComponent) noteChild;
 
   constructor(private optionsService: OptionsService) { }
@@ -31,7 +33,12 @@ export class OptionsComponent implements OnInit {
       );
   }
 
-  updateFilter(a, b, val): void {
+  updateFilterString(a, b): void {
+    this.filter[a] = b;
+    this.noteChild.getNotes(this.filter);
+  }
+
+  updateFilterObject(a, b, val): void {
     this.filter[a][b] = val;
     this.noteChild.getNotes(this.filter);
   }

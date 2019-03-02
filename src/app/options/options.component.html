@@ -1,7 +1,13 @@
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
   <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Kubernetes Release Notes</a>
-    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <input 
+      [ngModel]="filter['Markdown']"
+      (ngModelChange)="updateFilterString('Markdown', $event)"
+      class="form-control form-control-dark w-100" 
+      type="text" 
+      placeholder="Search" 
+      aria-label="Search">
   </nav>  
 </nav>
 
@@ -18,7 +24,7 @@
                   type="checkbox"
                   name="{{data.key}}[]" 
                   [ngModel]="filter[data.key][a.key]"
-                  (ngModelChange)="updateFilter(data.key, a.key, $event)"
+                  (ngModelChange)="updateFilterObject(data.key, a.key, $event)"
                   value="{{a.key}}" /> {{a.key}}
                 </label><br />
             </span>
