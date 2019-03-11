@@ -20,6 +20,39 @@ export class NotesComponent implements OnInit {
     this.getNotes({});
   }
 
+  emptyFilter(): boolean {
+    for( let key in this.filter ) {
+      if(Object.keys(this.filter[key]).length > 0){
+        return false;
+      }
+    }
+    return true
+  }
+
+  doFilter(note): boolean {
+    if(this.emptyFilter()){
+      return true
+    } else {
+      for(let key in this.filter) {
+        if(key == 'release_versions' && Object.keys(this.filter[key]).indexOf(note.release_version) >= 0) {
+          return true;
+        }
+        else if(key in note && typeof note[key] !== 'string' ){
+          if([...new Set(note[key])].filter(x => {
+            return (this.filter[key].indexOf(x) && this.filter[key][x]);
+          }).length > 0) {
+            return true;
+          }
+        } else if (key in note && typeof note[key] === 'string' && this.filter[key].trim().length > 0) {
+          if (note[key].toUpperCase().trim().includes(this.filter[key].toUpperCase().trim())){
+            return true;
+          }
+        }
+      }
+      return false;
+    }
+  }
+
   getNotes(filter): void {
     this.notesService.getNotes(filter)
       .subscribe(notes => {

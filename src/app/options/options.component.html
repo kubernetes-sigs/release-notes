@@ -23,7 +23,7 @@
                 type="checkbox"
                 name="{{data.key}}[]" 
                 [ngModel]="filter[data.key][a.value]"
-                (ngModelChange)="updateFilterObject(data.key, a.key, $event)"
+                (ngModelChange)="updateFilterObject(data.key, a.value, $event)"
                 value="{{a.value}}" /> {{a.value}}
               </label><br />
           </span>

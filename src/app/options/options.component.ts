@@ -13,13 +13,13 @@ export class OptionsComponent implements OnInit {
   options = {
     areas: [],
     kinds: [],
-    releaseVersions: [],
+    release_versions: [],
     sigs: [],
   } as Options;
   filter = {
     areas: [],
     kinds: [],
-    releaseVersions: [],
+    release_versions: [],
     sigs: [],
     markdown: '',
   };
@@ -47,15 +47,16 @@ export class OptionsComponent implements OnInit {
     if (b.length > 0) {
       this.filter[a] = b;
     } else {
-      delete this.filter[a];
+      this.filter[a] = '';
     }
-
-    this.noteChild.getNotes(this.filter);
   }
 
   updateFilterObject(a, b, val): void {
-    this.filter[a][b] = val;
-    this.noteChild.getNotes(this.filter);
+    if(val){
+      this.filter[a][b] = val;
+    } else {
+      delete this.filter[a][b];
+    }
   }
 
   gotNotes(notes: Note[]): void {
@@ -69,23 +70,20 @@ export class OptionsComponent implements OnInit {
       if ('sigs' in note) {
         this.options.sigs = [... new Set(this.options.sigs.concat(note.sigs))];
       }
-      if (this.options.releaseVersions.indexOf(note.release_version) < 0) {
-        this.options.releaseVersions.push(note.release_version);
+      if (this.options.release_versions.indexOf(note.release_version) < 0) {
+        this.options.release_versions.push(note.release_version);
       }
     }
-
-    console.log(this.options);
   }
 
   toggleFilter(event): void {
-    console.log(event);
-    console.log(this.filter);
     if (typeof this.filter[event.key][event.value] === 'boolean') {
-      this.filter[event.key][event.value] = !this.filter[event.key][event.value];
+      delete this.filter[event.key][event.value];
     } else {
       this.filter[event.key][event.value] = true;
     }
-    this.noteChild.getNotes(this.filter);
+
+    //this.noteChild.getNotes(this.filter);
   }
 
 }
