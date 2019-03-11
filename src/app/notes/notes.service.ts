@@ -9,7 +9,7 @@ import { Note } from './note';
   providedIn: 'root'
 })
 export class NotesService {
-  noteUrl = 'http://localhost:8080/data';
+  noteUrl = './assets/data/release-notes.json';
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +20,7 @@ export class NotesService {
     let params = new HttpParams();
 
     for (const key of Object.keys(filter)) {
-      if (typeof filter[key] === 'object'){
+      if (typeof filter[key] === 'object') {
         for (const value of Object.keys(filter[key])) {
           if (String(filter[key][value]) === 'true') {
             const newVal = (params.get(key) === null ? '' : params.get(key)) + ',' + value;
@@ -38,5 +38,6 @@ export class NotesService {
     const options = { params };
 
     return this.http.get<Note[]>(this.noteUrl, options).pipe();
+    
   }
 }

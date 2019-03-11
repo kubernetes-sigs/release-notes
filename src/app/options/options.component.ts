@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild,  } from '@angular/core';
 import { OptionsService } from './options.service';
+import { Note } from '../notes/note';
 import { Options } from './options';
 import { NotesComponent } from '../notes/notes.component';
 
@@ -9,16 +10,25 @@ import { NotesComponent } from '../notes/notes.component';
   styleUrls: ['./options.component.css'],
 })
 export class OptionsComponent implements OnInit {
-  options: Options;
+  options = {
+    areas: [],
+    kinds: [],
+    releaseVersions: [],
+    sigs: [],
+  } as Options;
   filter = {
-    Markdown: '',
+    areas: [],
+    kinds: [],
+    releaseVersions: [],
+    sigs: [],
+    markdown: '',
   };
   @ViewChild(NotesComponent) noteChild;
 
   constructor(private optionsService: OptionsService) { }
 
   ngOnInit() {
-    this.getOptions();
+    //this.getOptions();
   }
 
   getOptions(): void {
@@ -46,6 +56,25 @@ export class OptionsComponent implements OnInit {
   updateFilterObject(a, b, val): void {
     this.filter[a][b] = val;
     this.noteChild.getNotes(this.filter);
+  }
+
+  gotNotes(notes: Note[]): void {
+    for (const note of Object.values(notes)) {
+      if ('areas' in note) {
+        this.options.areas = [... new Set(this.options.areas.concat(note.areas))];
+      }
+      if ('kinds' in note) {
+        this.options.kinds = [... new Set(this.options.kinds.concat(note.kinds))];
+      }
+      if ('sigs' in note) {
+        this.options.sigs = [... new Set(this.options.sigs.concat(note.sigs))];
+      }
+      if (this.options.releaseVersions.indexOf(note.release_version) < 0) {
+        this.options.releaseVersions.push(note.release_version);
+      }
+    }
+
+    console.log(this.options);
   }
 
   toggleFilter(event): void {

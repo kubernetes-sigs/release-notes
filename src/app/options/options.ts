@@ -1,3 +1,6 @@
 export interface Options {
-    releaseVersion: string;
+    areas: string[];
+    kinds: string[];
+    releaseVersions: string[];
+    sigs: string[];
 }

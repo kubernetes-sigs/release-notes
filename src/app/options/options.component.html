@@ -2,8 +2,8 @@
   <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Kubernetes Release Notes</a>
     <input 
-      [ngModel]="filter['Markdown']"
-      (ngModelChange)="updateFilterString('Markdown', $event)"
+      [ngModel]="filter['markdown']"
+      (ngModelChange)="updateFilterString('markdown', $event)"
       class="form-control form-control-dark w-100" 
       type="text" 
       placeholder="Search" 
@@ -15,21 +15,19 @@
   <div class="row">
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
       <div class="sidebar-sticky">
-        <div *ngFor="let option of options">
-          <p *ngFor="let data of option | keyvalue">
-            <b>{{data.key}}</b><br />
-            <span *ngFor="let a of data.value | keyvalue">      
-              <label>
-                <input 
-                  type="checkbox"
-                  name="{{data.key}}[]" 
-                  [ngModel]="filter[data.key][a.key]"
-                  (ngModelChange)="updateFilterObject(data.key, a.key, $event)"
-                  value="{{a.key}}" /> {{a.key}}
-                </label><br />
-            </span>
-          </p>
-        </div>
+        <p *ngFor="let data of options | keyvalue">
+          <b>{{data.key}}</b><br />
+          <span *ngFor="let a of data.value | keyvalue">      
+            <label>
+              <input 
+                type="checkbox"
+                name="{{data.key}}[]" 
+                [ngModel]="filter[data.key][a.value]"
+                (ngModelChange)="updateFilterObject(data.key, a.key, $event)"
+                value="{{a.value}}" /> {{a.value}}
+              </label><br />
+          </span>
+        </p>
       </div>
     </nav>
 
@@ -37,6 +35,7 @@
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <app-notes 
             (filterUpdate)="toggleFilter($event)"
+            (gotNotes)="gotNotes($event)"
             [filter]="filter"></app-notes>
       </div>
     </main>

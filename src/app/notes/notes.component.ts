@@ -12,6 +12,7 @@ export class NotesComponent implements OnInit {
   notes: Note[];
   @Input() filter: {};
   @Output() filterUpdate = new EventEmitter<object>();
+  @Output() gotNotes = new EventEmitter<Note[]>();
 
   constructor(private notesService: NotesService) { }
 
@@ -21,7 +22,10 @@ export class NotesComponent implements OnInit {
 
   getNotes(filter): void {
     this.notesService.getNotes(filter)
-      .subscribe(notes => this.notes = notes);
+      .subscribe(notes => {
+        this.notes = notes;
+        this.gotNotes.emit(notes);
+      });
   }
 
   updateFilter(filter): void {

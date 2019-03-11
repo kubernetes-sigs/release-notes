@@ -11,6 +11,6 @@ export interface Note {
     sigs: string[];
     feature: boolean;
     duplicate: boolean;
-    actionRequired: boolean;
-    releaseVersion: string;
+    action_required: boolean;
+    release_version: string;
 }
