@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild,  } from '@angular/core';
-import { OptionsService } from './options.service';
 import { Note } from '../notes/note';
 import { Options } from './options';
 import { NotesComponent } from '../notes/notes.component';
@@ -25,22 +24,10 @@ export class OptionsComponent implements OnInit {
   };
   @ViewChild(NotesComponent) noteChild;
 
-  constructor(private optionsService: OptionsService) { }
+  constructor() { }
 
   ngOnInit() {
     //this.getOptions();
-  }
-
-  getOptions(): void {
-    this.optionsService.getOptions()
-      .subscribe(
-        options => {
-          for (const option of Object.values(options)) {
-            this.filter[Object.keys(option)[0]] = Object.values(option)[0];
-          }
-          this.options = options;
-        }
-      );
   }
 
   updateFilterString(a, b): void {
