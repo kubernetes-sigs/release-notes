@@ -8,4 +8,5 @@ COPY . .
 RUN $(npm bin)/ng build --prod --output-path=dist
 
 FROM nginx:alpine
+COPY nginx-gzip.conf /etc/nginx/conf.d/
 COPY --from=ui-builder /ng-app/dist/ /usr/share/nginx/html/
