@@ -4,49 +4,36 @@ A lightweight release notes UI to help users keep track of the ever-changing cod
 ## Development
 
 Local requirements:
-* golang > 1.11
 * ng-cli (@angular/cli)
+* golang > 1.11 (to run the release-notes JSON tool)
 * `go get k8s.io/release/cmd/release-notes`
 
   (to generate any additional notes for development)
 
-Run `npm start` from the root dir to start up both the angular development server (on port `4200`) and the `main.go` process (on port `8080).
+Run `npm start` from the root dir to start up the angular development server (on port `4200`).
 
 ```
-$ npm start
+$ jeefy@malaz:~/Code/go/src/github.com/jeefy/relnotes(master)$ npm start
 
 > relnotes@0.0.0 start /home/jeefy/Code/go/src/github.com/jeefy/relnotes
-> concurrently "npm run start:backend" "npm run start:frontend"
+> ng serve
 
-[1] 
-[1] > relnotes@0.0.0 start:frontend /home/jeefy/Code/go/src/github.com/jeefy/relnotes
-[1] > ng serve
-[1] 
-[0] 
-[0] > relnotes@0.0.0 start:backend /home/jeefy/Code/go/src/github.com/jeefy/relnotes
-[0] > go run main.go
-[0] 
-[0] 2019/03/02 18:37:56 Loaded 109 notes
-[0] 2019/03/02 18:37:56 Listening on port 8080
-[1] ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
+** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
 ```
 
-Any changes made to the front-end code (under `src/`) will automatically be reflected. Changes to `main.go` require restarting the `npm start` process.
+Any changes made to the front-end code (under `src/`) will automatically be reflected.
 
 ## Build
 
-To build the container, run
+To build and run the container container:
 
 ```
-$ docker build -t release_notes .
+$ npm run docker:build:run
 ```
 
-It will kick off a multi-stage `docker` build to handle the golang binary and the angular code.
+It will kick off a multi-stage `docker` build to handle building the angular code and dumping it in an nginx container.
 
-Once complete, you can run it using:
-```
-$ docker run -d -p8080:8080 release_notes
-```
+Once complete, you can view it by going to `localhost` in your browser:
 
 ## FAQ
 
