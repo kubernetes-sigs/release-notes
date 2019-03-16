@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input, EventEmitter, Output, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { NotesService } from './notes.service';
 import { Note } from './note';
 
