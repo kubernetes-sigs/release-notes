@@ -5,6 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod --build-optimizer",
+    "docker:build": "docker build -t relnotes .",
+    "docker:run": "docker run -i -t -p 80:80 --name relnotes relnotes",
+    "docker:build:run": "npm run docker:build && npm run docker:run",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
