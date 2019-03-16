@@ -1,5 +1,5 @@
-<ng-container *ngFor="let note of notes">
-  <div class="card" *ngIf="doFilter(note)">
+<ng-container *ngFor="let note of doFilter(notes) | paginate: { itemsPerPage: 10, currentPage: p }">
+  <div class="card">
     <div class="card-header">
       <a target="_blank" href="{{note.pr_url}}">#{{note.pr_number}}</a> by <a target="_blank" href="{{note.author_url}}">{{note.author}}</a>
       <span
@@ -22,3 +22,6 @@
     <div class="card-body" [innerHTML]="note.markdown | markdown"></div>
   </div>
 </ng-container>
+<div align="center">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

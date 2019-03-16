@@ -9,6 +9,7 @@ import { NotesComponent } from './notes/notes.component';
 import { OptionsComponent } from './options/options.component';
 import { FormsModule } from '@angular/forms';
 import { MarkdownPipe } from './markdown-pipe';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MarkdownPipe } from './markdown-pipe';
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

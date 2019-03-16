@@ -23,6 +23,7 @@
     "core-js": "^2.5.4",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.35.0",
+    "ngx-pagination": "^3.2.1",
     "rxjs": "~6.3.3",
     "showdown": "^1.9.0",
     "tslib": "^1.9.0",

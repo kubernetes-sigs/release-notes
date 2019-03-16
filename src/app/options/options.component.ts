@@ -26,9 +26,7 @@ export class OptionsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    //this.getOptions();
-  }
+  ngOnInit() {  }
 
   updateFilterString(a, b): void {
     if (b.length > 0) {
@@ -39,7 +37,7 @@ export class OptionsComponent implements OnInit {
   }
 
   updateFilterObject(a, b, val): void {
-    if(val){
+    if (val) {
       this.filter[a][b] = val;
     } else {
       delete this.filter[a][b];
@@ -69,8 +67,5 @@ export class OptionsComponent implements OnInit {
     } else {
       this.filter[event.key][event.value] = true;
     }
-
-    //this.noteChild.getNotes(this.filter);
   }
-
 }
