@@ -6,12 +6,12 @@ import { Observable } from 'rxjs';
 import { Options } from './options.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OptionsService {
   optionsUrl = 'http://localhost:8080/options';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getOptions(): Observable<Options> {
     return this.http.get<Options>(this.optionsUrl).pipe();

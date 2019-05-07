@@ -36,9 +36,4 @@ export class GetNotesSuccess implements Action {
   constructor(public payload: Note[]) {}
 }
 
-export type NotesAction =
-  | Failed
-  | DoFilter
-  | DoFilterSuccess
-  | GetNotes
-  | GetNotesSuccess;
+export type NotesAction = Failed | DoFilter | DoFilterSuccess | GetNotes | GetNotesSuccess;

@@ -6,17 +6,16 @@ import { Observable } from 'rxjs';
 import { Note } from './notes.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NotesService {
   noteUrl = './assets/data/release-notes.json';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getNotes(filter): Observable<Note[]> {
     console.log('Gathering notes');
 
     return this.http.get<Note[]>(this.noteUrl).pipe();
-
   }
 }
