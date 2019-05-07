@@ -10,6 +10,7 @@ import { OptionsComponent } from './options/options.component';
 import { FormsModule } from '@angular/forms';
 import { MarkdownPipe } from './markdown-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { LoggerService } from '@shared/services/logger.service';
 
 import { EffectsModule } from '@ngrx/effects';
 import { NotesEffects } from './notes/notes.effects';
@@ -36,7 +37,9 @@ import { reducers } from './app.reducer';
     EffectsModule.forRoot([NotesEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
-  providers: [],
+  providers: [
+    LoggerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
