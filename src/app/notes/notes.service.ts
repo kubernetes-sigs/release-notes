@@ -3,7 +3,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { Note } from './note';
+import { Note } from './notes.model';
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,8 @@ export class NotesService {
 
   getNotes(filter): Observable<Note[]> {
     console.log('Gathering notes');
-    
+
     return this.http.get<Note[]>(this.noteUrl).pipe();
-    
+
   }
 }

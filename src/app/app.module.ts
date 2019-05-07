@@ -11,6 +11,14 @@ import { FormsModule } from '@angular/forms';
 import { MarkdownPipe } from './markdown-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 
+import { EffectsModule } from '@ngrx/effects';
+import { NotesEffects } from './notes/notes.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreModule } from '@ngrx/store';
+import { environment } from '../environments/environment';
+import { notesReducer } from './notes/notes.reducer';
+import { reducers } from './app.reducer';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +31,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    StoreModule.forRoot({ notes: notesReducer }),
+    EffectsModule.forRoot([NotesEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
