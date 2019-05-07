@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --build-optimizer",
+    "build:dev": "ng build --output-path dist-dev",
+    "build:prod": "ng build --prod --build-optimizer --output-path dist-prod",
     "docker:build": "docker build -t relnotes .",
-    "docker:run": "docker run -i -t -p 80:80 --name relnotes relnotes",
+    "docker:run": "docker run -i -t -p 80:80 --rm --name relnotes relnotes",
     "docker:build:run": "npm run docker:build && npm run docker:run",
     "test": "ng test",
     "lint": "ng lint",

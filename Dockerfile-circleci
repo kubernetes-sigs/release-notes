@@ -1,0 +1,4 @@
+FROM nginx:alpine
+COPY nginx-gzip.conf /etc/nginx/conf.d/
+ARG SOURCE
+COPY $SOURCE /usr/share/nginx/html/

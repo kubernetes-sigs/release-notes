@@ -1,0 +1,192 @@
+---
+version: 2.1
+
+executors:
+  docker:
+    docker:
+      - image: &image circleci/node:11
+  machine:
+    machine:
+      docker_layer_caching: true
+      image: ubuntu-1604:201903-01
+
+workflows:
+  version: 2
+  pipeline:
+    jobs:
+      - build:
+          name: build-dev
+          target: dev
+          requires:
+            - install
+      - build:
+          name: build-prod
+          target: prod
+          requires:
+            - install
+      - docker:
+          name: docker-dev
+          target: dev
+          requires:
+            - build-dev
+      - docker:
+          name: docker-prod
+          target: prod
+          requires:
+            - build-prod
+      - documentation:
+          requires:
+            - install
+      - install
+      - lint:
+          requires:
+            - install
+      - prettier:
+          requires:
+            - install
+      - results:
+          requires:
+            - build-dev
+            - build-prod
+            - docker-dev
+            - docker-prod
+            - documentation
+      - test-e2e:
+          requires:
+            - install
+      - test-unit:
+          requires:
+            - install
+
+jobs:
+  build:
+    executor: docker
+    parameters:
+      target:
+        type: string
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run: npm run build:<< parameters.target >>
+      - persist_to_workspace:
+          root: .
+          paths:
+            - dist-<< parameters.target >>
+
+  docker:
+    executor: machine
+    parameters:
+      target:
+        type: string
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: build
+          command: |
+            docker build -t $IMAGE -f Dockerfile-circleci \
+              --build-arg SOURCE=dist-<< parameters.target >> .
+            docker save -o $IMAGE.tar $IMAGE
+          environment:
+            IMAGE: relnotes-<< parameters.target >>
+      - persist_to_workspace:
+          root: .
+          paths:
+            - relnotes-<< parameters.target >>.tar
+
+  documentation:
+    executor: docker
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: build
+          command: npm run doc
+      - persist_to_workspace:
+          root: .
+          paths:
+            - documentation
+
+  install:
+    executor: docker
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-npm-install-{{ checksum "package.json" }}
+      - run: npm install
+      - save_cache:
+          key: v1-npm-install-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - persist_to_workspace:
+          root: .
+          paths:
+            - node_modules
+
+  lint:
+    executor: docker
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: lint
+          command: npm run lint
+
+  prettier:
+    executor: docker
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: check
+          # TODO: fix me
+          command: npm run check-prettier || true
+
+  results:
+    executor: docker
+    steps:
+      - attach_workspace:
+          at: .
+      - store_artifacts:
+          path: dist-dev
+          destination: dist/dev
+      - store_artifacts:
+          path: dist-prod
+          destination: dist/prod
+      - store_artifacts:
+          path: relnotes-dev.tar
+          destination: images/relnotes-dev.tar
+      - store_artifacts:
+          path: relnotes-prod.tar
+          destination: images/relnotes-prod.tar
+      - store_artifacts:
+          path: documentation
+          destination: documentation
+
+  test-e2e:
+    executor: docker
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: test
+          # TODO: activate me
+          command: echo npm run e2e:ci
+
+  test-unit:
+    executor: docker
+    steps:
+      - checkout
+      - attach_workspace:
+          at: .
+      - run:
+          name: test
+          # TODO: coverage report and test run
+          command: echo npm test
