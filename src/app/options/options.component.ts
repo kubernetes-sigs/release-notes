@@ -1,14 +1,14 @@
-import { Component, OnInit, ViewChild,  } from '@angular/core';
-import { Note } from '../notes/note';
-import { Options } from './options';
-import { NotesComponent } from '../notes/notes.component';
+import { Component, ViewChild,  } from '@angular/core';
+import { Note } from '@app/notes/notes.model';
+import { Options } from './options.model';
+import { NotesComponent } from '@app/notes/notes.component';
 
 @Component({
   selector: 'app-options',
   templateUrl: './options.component.html',
   styleUrls: ['./options.component.css'],
 })
-export class OptionsComponent implements OnInit {
+export class OptionsComponent {
   options = {
     areas: [],
     kinds: [],
@@ -26,14 +26,13 @@ export class OptionsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {  }
-
   updateFilterString(a, b): void {
     if (b.length > 0) {
       this.filter[a] = b;
     } else {
       this.filter[a] = '';
     }
+    this.noteChild.update(this.filter);
   }
 
   updateFilterObject(a, b, val): void {
@@ -42,6 +41,7 @@ export class OptionsComponent implements OnInit {
     } else {
       delete this.filter[a][b];
     }
+    this.noteChild.update(this.filter);
   }
 
   gotNotes(notes: Note[]): void {

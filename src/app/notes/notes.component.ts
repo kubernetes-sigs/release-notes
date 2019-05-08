@@ -1,77 +1,48 @@
-import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
-import { NotesService } from './notes.service';
-import { Note } from './note';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { Note } from './notes.model';
+import { DoFilter, GetNotes } from './notes.actions';
+import { State } from '@app/app.reducer';
+import { getAllNotesSelector, getFilteredNotesSelector } from './notes.reducer';
 
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
-  providers: [ NotesService ],
-  styleUrls: ['./notes.component.css']
+  providers: [],
+  styleUrls: ['./notes.component.css'],
 })
-export class NotesComponent implements OnInit {
-  notes: Note[];
-  filteredNotes: Note[];
-  p = 1;
+export class NotesComponent {
   @Input() filter: {};
   @Output() filterUpdate = new EventEmitter<object>();
   @Output() gotNotes = new EventEmitter<Note[]>();
+  allNotes: Note[];
+  filteredNotes: Note[];
+  p = 1;
 
-  constructor(private notesService: NotesService) { }
+  constructor(private store: Store<State>) {
+    store.dispatch(new GetNotes(this.filter));
 
-  ngOnInit() {
-    this.getNotes({});
+    this.store.pipe(select(getAllNotesSelector)).subscribe(n => {
+      // Initial retrieval of the notes
+      this.allNotes = n;
+      this.filteredNotes = n;
+      this.gotNotes.emit(n);
+    });
+
+    this.store.pipe(select(getFilteredNotesSelector)).subscribe(n => {
+      // Filter update of the notes
+      this.filteredNotes = n;
+    });
   }
 
-  emptyFilter(): boolean {
-    for ( const key in this.filter ) {
-      if (Object.keys(this.filter[key]).length > 0) {
-        return false;
-      }
-    }
-    return true;
+  public update(filter: object) {
+    this.filter = filter;
+    this.store.dispatch(new DoFilter(this.allNotes, filter));
   }
 
-  doFilter(notes): Note[] {
-    if (this.emptyFilter()) {
-      return this.notes;
-    } else {
-      const filteredNotes: Note[] = [];
-      for (const note of notes) {
-        for (const key in this.filter) {
-          if (key === 'release_versions' && Object.keys(this.filter[key]).indexOf(note.release_version) >= 0) {
-            filteredNotes.push(note);
-          } else {
-            if (key in note && typeof note[key] !== 'string' ) {
-              if ([...new Set(note[key])].filter(x => {
-                return (this.filter[key].indexOf(x) && this.filter[key][x]);
-              }).length > 0) {
-                filteredNotes.push(note);
-              }
-            } else {
-              if (key in note && typeof note[key] === 'string' && this.filter[key].trim().length > 0) {
-                if (note[key].toUpperCase().trim().includes(this.filter[key].toUpperCase().trim())) {
-                  filteredNotes.push(note);
-                }
-              }
-            }
-          }
-        }
-      }
-      return filteredNotes;
-    }
+  public toggleFilter(key, value): void {
+    this.filterUpdate.emit({ key, value });
+    this.store.dispatch(new DoFilter(this.allNotes, this.filter));
   }
-
-  getNotes(filter): void {
-    this.notesService.getNotes(filter)
-      .subscribe(notes => {
-        this.notes = notes;
-        this.filteredNotes = notes;
-        this.gotNotes.emit(notes);
-      });
-  }
-
-  toggleFilter(key, value): void {
-    this.filterUpdate.emit({key, value});
-  }
-
 }

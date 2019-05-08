@@ -1,4 +1,4 @@
-<ng-container *ngFor="let note of doFilter(notes) | paginate: { itemsPerPage: 10, currentPage: p }">
+<ng-container *ngFor="let note of filteredNotes | paginate: { itemsPerPage: 10, currentPage: p }">
   <div class="card">
     <div class="card-header">
       <a target="_blank" href="{{note.pr_url}}">#{{note.pr_number}}</a> by <a target="_blank" href="{{note.author_url}}">{{note.author}}</a>
@@ -6,17 +6,17 @@
         (click)="toggleFilter('release_versions', note.release_version)"
         class="k8s-badge float-sm-right badge badge-dark">{{note.release_version}}</span>
 
-      <span 
+      <span
         (click)="toggleFilter('sigs', sig)"
-        *ngFor="let sig of note.sigs" 
+        *ngFor="let sig of note.sigs"
         class="k8s-badge float-sm-right badge badge-success">{{sig}}</span>
-      <span 
+      <span
         (click)="toggleFilter('kinds', kind)"
-        *ngFor="let kind of note.kinds" 
+        *ngFor="let kind of note.kinds"
         class="k8s-badge float-sm-right badge badge-primary">{{kind}}</span>
-      <span 
+      <span
         (click)="toggleFilter('areas', area)"
-        *ngFor="let area of note.areas" 
+        *ngFor="let area of note.areas"
         class="k8s-badge float-sm-right badge badge-secondary">{{area}}</span>
     </div>
     <div class="card-body" [innerHTML]="note.markdown | markdown"></div>
