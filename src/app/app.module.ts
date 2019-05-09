@@ -46,9 +46,7 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
     EffectsModule.forRoot([NotesEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
-  providers: [
-    LoggerService
-  ],
-  bootstrap: [AppComponent]
+  providers: [LoggerService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

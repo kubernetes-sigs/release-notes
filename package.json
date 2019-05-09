@@ -8,24 +8,24 @@
     "docker:build": "docker build -t relnotes .",
     "docker:run": "docker run -i -t -p 80:80 --name relnotes relnotes",
     "docker:build:run": "npm run docker:build && npm run docker:run",
-    "test": "ng test",
+    "test": "jest",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "update": "ncu -au",
+    "update": "ncu -u",
     "doc": "compodoc -p src/tsconfig.app.json",
     "prettier": "prettier --write './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'",
     "check-prettier": "prettier -c './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "^7.2.14",
-    "@angular/common": "^7.2.14",
-    "@angular/compiler": "^7.2.14",
-    "@angular/core": "^7.2.14",
-    "@angular/forms": "^7.2.14",
-    "@angular/platform-browser": "^7.2.14",
-    "@angular/platform-browser-dynamic": "^7.2.14",
-    "@angular/router": "^7.2.14",
+    "@angular/animations": "^7.2.15",
+    "@angular/common": "^7.2.15",
+    "@angular/compiler": "^7.2.15",
+    "@angular/core": "^7.2.15",
+    "@angular/forms": "^7.2.15",
+    "@angular/platform-browser": "^7.2.15",
+    "@angular/platform-browser-dynamic": "^7.2.15",
+    "@angular/router": "^7.2.15",
     "@ngrx/effects": "^7.4.0",
     "@ngrx/store": "^7.4.0",
     "@ngrx/store-devtools": "^7.4.0",
@@ -48,23 +48,46 @@
     "@compodoc/compodoc": "^1.1.9",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
+    "@types/jest": "^24.0.12",
     "@types/node": "~8.9.4",
-    "babel-core": "^6.7.0",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.6.0",
+    "babel-jest": "^24.8.0",
     "codelyzer": "~4.5.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "^4.0.1",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~1.1.2",
-    "karma-jasmine-html-reporter": "^0.2.2",
+    "jest": "^24.8.0",
+    "jest-preset-angular": "^7.1.0",
     "prettier": "^1.17.0",
     "protractor": "~5.4.0",
     "tar": ">=4.4.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "~3.2.2"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coverageDirectory": "<rootDir>/reports",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/src/environments/*.*/",
+      "/src/setupJest\\.ts/",
+      "[.*\\/]*.*.html"
+    ],
+    "coverageReporters": [
+      "text",
+      "html"
+    ],
+    "moduleNameMapper": {
+      "^@app(.*)$": "<rootDir>/src/app/$1",
+      "^@environment": "<rootDir>/src/environments/environment",
+      "^@shared(.*)$": "<rootDir>/src/app/shared/$1"
+    },
+    "preset": "jest-preset-angular",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupJest.ts"
+    ],
+    "silent": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }
