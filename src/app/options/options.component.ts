@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Note } from '@app/notes/notes.model';
-import { Options } from './options.model';
+import { Filter, Options } from '@app/shared/model/options.model';
 import { NotesComponent } from '@app/notes/notes.component';
 
 @Component({
@@ -9,19 +9,8 @@ import { NotesComponent } from '@app/notes/notes.component';
   styleUrls: ['./options.component.css'],
 })
 export class OptionsComponent {
-  options = {
-    areas: [],
-    kinds: [],
-    release_versions: [],
-    sigs: [],
-  } as Options;
-  filter = {
-    areas: [],
-    kinds: [],
-    release_versions: [],
-    sigs: [],
-    markdown: '',
-  };
+  options: Options = new Options();
+  filter: Filter = new Filter();
   @ViewChild(NotesComponent) noteChild;
 
   constructor() {}
@@ -55,8 +44,8 @@ export class OptionsComponent {
       if ('sigs' in note) {
         this.options.sigs = [...new Set(this.options.sigs.concat(note.sigs))];
       }
-      if (this.options.release_versions.indexOf(note.release_version) < 0) {
-        this.options.release_versions.push(note.release_version);
+      if (this.options.releaseVersions.indexOf(note.release_version) < 0) {
+        this.options.releaseVersions.push(note.release_version);
       }
     }
   }
