@@ -1,14 +1,15 @@
 <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
   <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Kubernetes Release Notes</a>
-    <input 
+    <input
       [ngModel]="filter['markdown']"
       (ngModelChange)="updateFilterString('markdown', $event)"
-      class="form-control form-control-dark w-100" 
-      type="text" 
-      placeholder="Search" 
-      aria-label="Search">
-  </nav>  
+      class="form-control form-control-dark w-100"
+      type="text"
+      placeholder="Search"
+      aria-label="Search"
+    />
+  </nav>
 </nav>
 
 <div class="container-fluid">
@@ -16,27 +17,33 @@
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
       <div class="sidebar-sticky">
         <p *ngFor="let data of options | keyvalue">
-          <b>{{data.key}}</b><br />
-          <span *ngFor="let a of data.value | keyvalue">      
+          <b>{{ data.key }}</b
+          ><br />
+          <span *ngFor="let a of data.value | keyvalue">
             <label>
-              <input 
+              <input
                 type="checkbox"
-                name="{{data.key}}[]" 
+                name="{{ data.key }}[]"
                 [ngModel]="filter[data.key][a.value]"
                 (ngModelChange)="updateFilterObject(data.key, a.value, $event)"
-                value="{{a.value}}" /> {{a.value}}
-              </label><br />
+                value="{{ a.value }}"
+              />
+              {{ a.value }} </label
+            ><br />
           </span>
         </p>
       </div>
     </nav>
 
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <app-notes 
-            (filterUpdate)="toggleFilter($event)"
-            (gotNotes)="gotNotes($event)"
-            [filter]="filter"></app-notes>
+      <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+      >
+        <app-notes
+          (filterUpdate)="toggleFilter($event)"
+          (gotNotes)="gotNotes($event)"
+          [filter]="filter"
+        ></app-notes>
       </div>
     </main>
   </div>
