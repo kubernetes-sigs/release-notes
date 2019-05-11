@@ -11,7 +11,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "update": "ncu -au"
+    "update": "ncu -au",
+    "prettier": "prettier --write './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'",
+    "check-prettier": "prettier -c './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'"
   },
   "private": true,
   "dependencies": {
@@ -56,6 +58,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "prettier": "^1.17.0",
     "protractor": "~5.4.0",
     "tar": ">=4.4.2",
     "ts-node": "~7.0.0",
