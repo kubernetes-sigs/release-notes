@@ -1,4 +1,4 @@
-import { Component, ViewChild,  } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { Note } from '@app/notes/notes.model';
 import { Options } from './options.model';
 import { NotesComponent } from '@app/notes/notes.component';
@@ -24,7 +24,7 @@ export class OptionsComponent {
   };
   @ViewChild(NotesComponent) noteChild;
 
-  constructor() { }
+  constructor() {}
 
   updateFilterString(a, b): void {
     if (b.length > 0) {
@@ -47,13 +47,13 @@ export class OptionsComponent {
   gotNotes(notes: Note[]): void {
     for (const note of Object.values(notes)) {
       if ('areas' in note) {
-        this.options.areas = [... new Set(this.options.areas.concat(note.areas))];
+        this.options.areas = [...new Set(this.options.areas.concat(note.areas))];
       }
       if ('kinds' in note) {
-        this.options.kinds = [... new Set(this.options.kinds.concat(note.kinds))];
+        this.options.kinds = [...new Set(this.options.kinds.concat(note.kinds))];
       }
       if ('sigs' in note) {
-        this.options.sigs = [... new Set(this.options.sigs.concat(note.sigs))];
+        this.options.sigs = [...new Set(this.options.sigs.concat(note.sigs))];
       }
       if (this.options.release_versions.indexOf(note.release_version) < 0) {
         this.options.release_versions.push(note.release_version);

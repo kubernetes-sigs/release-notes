@@ -7,7 +7,7 @@ import { Note } from './notes.model';
 import { LoggerService } from '@shared/services/logger.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class NotesService {
   noteUrl = './assets/data/release-notes.json';

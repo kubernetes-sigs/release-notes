@@ -21,12 +21,7 @@ import { notesReducer } from './notes/notes.reducer';
 import { reducers } from './app.reducer';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    MarkdownPipe,
-    NotesComponent,
-    OptionsComponent
-  ],
+  declarations: [AppComponent, MarkdownPipe, NotesComponent, OptionsComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -35,11 +30,11 @@ import { reducers } from './app.reducer';
     NgxPaginationModule,
     StoreModule.forRoot({ notes: notesReducer }),
     EffectsModule.forRoot([NotesEffects]),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
   ],
   providers: [
     LoggerService
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
