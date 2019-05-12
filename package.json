@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "update": "ncu -au",
-    "doc": "compodoc -p src/tsconfig.app.json"
+    "doc": "compodoc -p src/tsconfig.app.json",
     "prettier": "prettier --write './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'",
     "check-prettier": "prettier -c './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'"
   },
@@ -34,9 +34,9 @@
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.35.0",
     "ngx-pagination": "^3.2.1",
+    "ngx-markdown": "^7.1.5",
     "npm-check-updates": "^3.1.9",
     "rxjs": "~6.3.3",
-    "showdown": "^1.9.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
   },

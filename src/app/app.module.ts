@@ -8,7 +8,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotesComponent } from './notes/notes.component';
 import { OptionsComponent } from './options/options.component';
 import { FormsModule } from '@angular/forms';
-import { MarkdownPipe } from './markdown-pipe';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoggerService } from '@shared/services/logger.service';
 
@@ -19,15 +18,30 @@ import { StoreModule } from '@ngrx/store';
 import { environment } from '../environments/environment';
 import { notesReducer } from './notes/notes.reducer';
 import { reducers } from './app.reducer';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 
 @NgModule({
-  declarations: [AppComponent, MarkdownPipe, NotesComponent, OptionsComponent],
+  declarations: [AppComponent, NotesComponent, OptionsComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgxPaginationModule,
+    MarkdownModule.forRoot({
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          gfm: true,
+          tables: true,
+          breaks: false,
+          pedantic: false,
+          sanitize: false,
+          smartLists: true,
+          smartypants: false,
+        },
+      },
+    }),
     StoreModule.forRoot({ notes: notesReducer }),
     EffectsModule.forRoot([NotesEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
