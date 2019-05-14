@@ -12,10 +12,7 @@ import { LoggerService } from '@shared/services/logger.service';
 export class NotesService {
   noteUrl = './assets/data/release-notes.json';
 
-  constructor(
-    private http: HttpClient,
-    private logger: LoggerService,
-  ) {}
+  constructor(private http: HttpClient, private logger: LoggerService) {}
 
   getNotes(filter): Observable<Note[]> {
     this.logger.debug('Gathering notes');
