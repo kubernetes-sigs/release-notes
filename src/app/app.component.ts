@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+/**
+ * The main app component
+ */
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'relnotes';
+
+  /**
+   * The main app components constructor
+   */
+  constructor() {}
 }
