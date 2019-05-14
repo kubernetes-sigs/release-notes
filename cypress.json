@@ -1,0 +1,12 @@
+{
+  "baseUrl": "http://localhost:4200",
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 30000,
+  "fixturesFolder": false,
+  "pageLoadTimeout": 200000,
+  "responseTimeout": 200000,
+  "supportFile": false,
+  "video": false,
+  "viewportHeight": 1200,
+  "viewportWidth": 1920
+}

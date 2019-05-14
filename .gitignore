@@ -48,5 +48,7 @@ Thumbs.db
 # documentation
 documentation
 
+# cypress output
+cypress/screenshots
 # jest reports
 reports
