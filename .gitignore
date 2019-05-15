@@ -1,7 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/dist
+/dist*
 /tmp
 /out-tsc
 # Only exists if Bazel was run
@@ -40,6 +40,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+.orig
 
 # System Files
 .DS_Store
@@ -50,5 +51,6 @@ documentation
 
 # cypress output
 cypress/screenshots
+
 # jest reports
 reports
