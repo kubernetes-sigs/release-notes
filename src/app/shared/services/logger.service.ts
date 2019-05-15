@@ -45,7 +45,7 @@ export class LoggerService {
    */
   public warn(msg: string) {
     if (environment.logLevel >= 1) {
-      console.log(`[WARN]\t${this.date()}: ${msg}`);
+      console.warn(`[WARN]\t${this.date()}: ${msg}`);
     }
   }
 
@@ -55,6 +55,6 @@ export class LoggerService {
    * @param msg     The error log message
    */
   public error(msg: string) {
-    console.log(`[ERROR]\t${this.date()}: ${msg}`);
+    console.error(`[ERROR]\t${this.date()}: ${msg}`);
   }
 }
