@@ -5,6 +5,7 @@ import { Note } from './notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
 import { State } from '@app/app.reducer';
 import { getAllNotesSelector, getFilteredNotesSelector } from './notes.reducer';
+import { Filter } from '@app/shared/model/options.model';
 
 @Component({
   selector: 'app-notes',
@@ -13,7 +14,7 @@ import { getAllNotesSelector, getFilteredNotesSelector } from './notes.reducer';
   styleUrls: ['./notes.component.css'],
 })
 export class NotesComponent {
-  @Input() filter: {};
+  @Input() filter: Filter;
   @Output() filterUpdate = new EventEmitter<object>();
   @Output() gotNotes = new EventEmitter<Note[]>();
   allNotes: Note[];
@@ -36,7 +37,7 @@ export class NotesComponent {
     });
   }
 
-  public update(filter: object) {
+  public update(filter: Filter) {
     this.filter = filter;
     this.store.dispatch(new DoFilter(this.allNotes, filter));
   }

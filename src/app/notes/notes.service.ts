@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 
 import { Note } from './notes.model';
 import { LoggerService } from '@shared/services/logger.service';
+import { Filter } from '@app/shared/model/options.model';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +15,7 @@ export class NotesService {
 
   constructor(private http: HttpClient, private logger: LoggerService) {}
 
-  getNotes(filter): Observable<Note[]> {
+  getNotes(filter: Filter): Observable<Note[]> {
     this.logger.debug('Gathering notes');
     return this.http.get<Note[]>(this.noteUrl).pipe();
   }

@@ -12,6 +12,7 @@ import {
 } from './notes.actions';
 import { NotesService } from './notes.service';
 import { Note } from './notes.model';
+import { Filter } from '@app/shared/model/options.model';
 
 @Injectable()
 export class NotesEffects {
@@ -44,7 +45,7 @@ export class NotesEffects {
     }),
     exhaustMap(data => {
       console.log('[Notes Effects:DoFilter] SUCCESS');
-      if (this.isEmptyFilter(data.filter)) {
+      if (data.filter.isEmpty()) {
         return of(new DoFilterSuccess(data.notes));
       } else {
         const filteredNotes: Note[] = [];
@@ -87,15 +88,6 @@ export class NotesEffects {
       }
     }),
   );
-
-  isEmptyFilter(filter: object): boolean {
-    for (const key in filter) {
-      if (Object.keys(filter[key]).length > 0) {
-        return false;
-      }
-    }
-    return true;
-  }
 
   constructor(private actions$: Actions, private notesService: NotesService) {}
 }

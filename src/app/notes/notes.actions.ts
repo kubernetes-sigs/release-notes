@@ -1,5 +1,6 @@
 import { Action } from '@ngrx/store';
 import { Note } from './notes.model';
+import { Filter } from '@app/shared/model/options.model';
 
 export enum ActionTypes {
   Failed = '[Notes Component] Failed',
@@ -18,7 +19,7 @@ export class Failed implements Action {
 
 export class DoFilter implements Action {
   readonly type = ActionTypes.DoFilter;
-  constructor(public notes: Note[], public filter: object) {}
+  constructor(public notes: Note[], public filter: Filter) {}
 }
 
 export class DoFilterSuccess implements Action {
@@ -28,7 +29,7 @@ export class DoFilterSuccess implements Action {
 
 export class GetNotes implements Action {
   readonly type = ActionTypes.GetNotes;
-  constructor(public filter: object) {}
+  constructor(public filter: Filter) {}
 }
 
 export class GetNotesSuccess implements Action {
