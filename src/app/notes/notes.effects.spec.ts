@@ -9,8 +9,11 @@ import { NotesEffects } from './notes.effects';
 import { DoFilter, DoFilterSuccess, Failed, GetNotes, GetNotesSuccess } from './notes.actions';
 import { notesMock } from './notes.model.mock';
 import { LoggerService } from '@shared/services/logger.service';
+import { Filter } from '@app/shared/model/options.model';
 
 describe('NotesEffects', () => {
+  const filter = new Filter();
+
   let effects: NotesEffects;
   let actions: Observable<any>;
   let httpMock: HttpTestingController;
@@ -29,7 +32,7 @@ describe('NotesEffects', () => {
 
   describe('GetNotes', () => {
     it('should succeed with empty filter', () => {
-      const action = new GetNotes({});
+      const action = new GetNotes(filter);
       const completion = new GetNotesSuccess(notesMock);
 
       actions = hot('-a---', { a: action });
@@ -42,7 +45,7 @@ describe('NotesEffects', () => {
 
     it('should fail if NotesService fails', () => {
       const error = 'error';
-      const action = new GetNotes({});
+      const action = new GetNotes(filter);
       const completion = new Failed(error);
 
       actions = hot('-a---', { a: action });
@@ -56,7 +59,7 @@ describe('NotesEffects', () => {
 
   describe('DoFilter', () => {
     it('should succeed with empty filter', () => {
-      const action = new DoFilter(notesMock, {});
+      const action = new DoFilter(notesMock, filter);
       const completion = new DoFilterSuccess(notesMock);
 
       actions = hot('--a-', { a: action });
@@ -66,7 +69,9 @@ describe('NotesEffects', () => {
     });
 
     it('should succeed with non matching filter', () => {
-      const action = new DoFilter(notesMock, { key: 'value' });
+      const testFilter = new Filter();
+      testFilter.areas = ['area'];
+      const action = new DoFilter(notesMock, testFilter);
       const completion = new DoFilterSuccess([]);
 
       actions = hot('--a-', { a: action });
