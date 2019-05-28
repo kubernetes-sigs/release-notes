@@ -4,17 +4,16 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --build-optimizer",
+    "build-dev": "ng build --output-path dist-dev",
+    "build-prod": "ng build --prod --build-optimizer --output-path dist-prod",
     "docker:build": "docker build -t relnotes .",
-    "docker:run": "docker run -i -t -p 80:80 --name relnotes relnotes",
+    "docker:run": "docker run -i -t -p 80:80 --rm --name relnotes relnotes",
     "docker:build:run": "npm run docker:build && npm run docker:run",
     "test": "jest",
     "lint": "ng lint",
-    "e2e": "cypress run",
-    "e2e:ci": "start-server-and-test start http-get://localhost:4200 e2e",
-    "e2e:open": "cypress open",
-    "update": "ncu -au",
-    "e2e": "ng e2e",
+    "e2e-cy": "cypress run",
+    "e2e-cy-ci": "start-server-and-test start http-get://localhost:4200 e2e-cy",
+    "e2e-cy-open": "cypress open",
     "update": "ncu -u",
     "doc": "compodoc -p src/tsconfig.app.json",
     "prettier": "prettier --write './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'",
@@ -91,6 +90,9 @@
       "<rootDir>/src/setupJest.ts"
     ],
     "silent": true,
+    "testPathIgnorePatterns": [
+      "<rootDir>/cypress/"
+    ],
     "transform": {
       "^.+\\.js$": "babel-jest"
     }
