@@ -42,7 +42,7 @@ export class NotesComponent {
     this.store.dispatch(new DoFilter(this.allNotes, filter));
   }
 
-  public toggleFilter(key, value): void {
+  public toggleFilter(key, value) {
     this.filterUpdate.emit({ key, value });
     this.store.dispatch(new DoFilter(this.allNotes, this.filter));
   }

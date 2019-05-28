@@ -1,13 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { StoreModule, combineReducers } from '@ngrx/store';
+import { Store, StoreModule, combineReducers } from '@ngrx/store';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { State } from '@app/app.reducer';
+
 import { NotesComponent } from './notes.component';
 import { notesReducer } from './notes.reducer';
-import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { DoFilter } from './notes.actions';
 
 describe('NotesComponent', () => {
   let fixture: ComponentFixture<NotesComponent>;
   let component: NotesComponent;
+  let store: Store<State>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -36,9 +40,34 @@ describe('NotesComponent', () => {
 
     fixture = TestBed.createComponent(NotesComponent);
     component = fixture.componentInstance;
+    store = TestBed.get(Store);
+
+    spyOn(store, 'dispatch').and.callThrough();
   }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should succeed to update', () => {
+    // Given
+    const action = new DoFilter(undefined, {});
+
+    // When
+    component.update({});
+
+    // Then
+    expect(store.dispatch).toHaveBeenCalledWith(action);
+  });
+
+  it('should succeed to toggle filter', () => {
+    // Given
+    const action = new DoFilter(undefined, undefined);
+
+    // When
+    component.toggleFilter('key', 'value');
+
+    // Then
+    expect(store.dispatch).toHaveBeenCalledWith(action);
   });
 });
