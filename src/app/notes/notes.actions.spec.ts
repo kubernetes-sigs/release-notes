@@ -7,10 +7,11 @@ import {
   GetNotesSuccess,
 } from './notes.actions';
 import { notesMock } from './notes.model.mock';
+import { Filter } from '@app/shared/model/options.model';
 
 describe('NotesActions', () => {
   // Given
-  const filter = { key: 'value' };
+  const filter = new Filter();
 
   it('should be able to create a Failed action', () => {
     // Given
