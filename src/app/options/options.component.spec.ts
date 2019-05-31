@@ -91,7 +91,7 @@ describe('OptionsComponent', () => {
     expect(component.options.areas.length).toEqual(1);
     expect(component.options.kinds.length).toEqual(1);
     expect(component.options.sigs.length).toEqual(1);
-    expect(component.options.release_versions.length).toEqual(1);
+    expect(component.options.releaseVersions.length).toEqual(1);
   });
 
   it('should succeed to update options on empty/invalid notes', () => {
@@ -99,6 +99,6 @@ describe('OptionsComponent', () => {
     expect(component.options.areas.length).toEqual(0);
     expect(component.options.kinds.length).toEqual(0);
     expect(component.options.sigs.length).toEqual(0);
-    expect(component.options.release_versions.length).toEqual(1);
+    expect(component.options.releaseVersions.length).toEqual(1);
   });
 });

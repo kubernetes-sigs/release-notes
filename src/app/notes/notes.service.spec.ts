@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotesService } from './notes.service';
 import { LoggerService } from '@shared/services/logger.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { Filter } from '@app/shared/model/options.model';
 
 describe('NotesService', () => {
   let service: NotesService;
@@ -23,6 +24,6 @@ describe('NotesService', () => {
   });
 
   it('should succeed to get notes', () => {
-    expect(service.getNotes({})).toBeTruthy();
+    expect(service.getNotes(new Filter())).toBeTruthy();
   });
 });
