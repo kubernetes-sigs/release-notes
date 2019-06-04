@@ -1,6 +1,7 @@
 # Release Notes
 
 [![Build](https://img.shields.io/badge/master-view%20online-brightgreen.svg)](https://relnotes.k8s.io)
+[![Coverage](https://codecov.io/gh/kubernetes-sigs/release-notes/branch/master/graph/badge.svg)](https://codecov.io/gh/kubernetes-sigs/release-notes)
 
 A lightweight release notes UI to help users keep track of the ever-changing
 codebase for Kubernetes.

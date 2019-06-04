@@ -73,7 +73,7 @@
   },
   "jest": {
     "collectCoverage": true,
-    "coverageDirectory": "<rootDir>/reports",
+    "coverageDirectory": "./coverage",
     "coveragePathIgnorePatterns": [
       "/node_modules/",
       "/src/environments/*.*/",

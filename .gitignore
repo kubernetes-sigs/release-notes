@@ -54,4 +54,4 @@ documentation
 cypress/screenshots
 
 # jest reports
-reports
+coverage
