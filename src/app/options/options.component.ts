@@ -6,7 +6,6 @@ import { NotesComponent } from '@app/notes/notes.component';
 @Component({
   selector: 'app-options',
   templateUrl: './options.component.html',
-  styleUrls: ['./options.component.css'],
 })
 export class OptionsComponent {
   options: Options = new Options();
