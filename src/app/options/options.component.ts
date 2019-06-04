@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Note } from '@app/notes/notes.model';
 import { Filter, Options } from '@app/shared/model/options.model';
 import { NotesComponent } from '@app/notes/notes.component';
@@ -10,7 +10,7 @@ import { NotesComponent } from '@app/notes/notes.component';
 export class OptionsComponent {
   options: Options = new Options();
   filter: Filter = new Filter();
-  @ViewChild(NotesComponent) noteChild;
+  @ViewChild(NotesComponent, { static: true }) noteChild;
 
   constructor() {}
 
