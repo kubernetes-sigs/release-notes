@@ -34,7 +34,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	var NotesData []notes.ReleaseNote
+	NotesData := []notes.ReleaseNote{}
 
 	for _, file := range files {
 		var tmpNotes []notes.ReleaseNote
@@ -44,7 +44,9 @@ func main() {
 
 		}
 
-		json.Unmarshal(content, &tmpNotes)
+		if err := json.Unmarshal(content, &tmpNotes); err != nil {
+			log.Fatalln(err)
+		}
 
 		NotesData = append(NotesData, tmpNotes...)
 
@@ -77,10 +79,9 @@ func main() {
 }
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
-	return
 }
 
-func OptionsHandler(w http.ResponseWriter, r *http.Request, notesData []notes.ReleaseNote) {
+func OptionsHandler(w http.ResponseWriter, _ *http.Request, notesData []notes.ReleaseNote) {
 	sigs := make(map[string]string)
 	kinds := make(map[string]string)
 	areas := make(map[string]string)
@@ -89,7 +90,9 @@ func OptionsHandler(w http.ResponseWriter, r *http.Request, notesData []notes.Re
 
 	log.Printf("Options generated for %d notes\n", len(notesData))
 
-	for _, note := range notesData {
+	for i := range notesData {
+		note := notesData[i]
+
 		for _, v := range note.SIGs {
 			sigs[v] = ""
 		}
@@ -102,19 +105,11 @@ func OptionsHandler(w http.ResponseWriter, r *http.Request, notesData []notes.Re
 		versions[note.ReleaseVersion] = ""
 	}
 
-	options = append(options, map[string]interface{}{
-		"SIGs": sigs,
-	})
-
-	options = append(options, map[string]interface{}{
-		"Kinds": kinds,
-	})
-	options = append(options, map[string]interface{}{
-		"Areas": areas,
-	})
-	options = append(options, map[string]interface{}{
-		"ReleaseVersion": versions,
-	})
+	options = append(options,
+		map[string]interface{}{"SIGs": sigs},
+		map[string]interface{}{"Kinds": kinds},
+		map[string]interface{}{"Areas": areas},
+		map[string]interface{}{"ReleaseVersion": versions})
 
 	payload, err := json.Marshal(options)
 	if err != nil {
@@ -123,7 +118,9 @@ func OptionsHandler(w http.ResponseWriter, r *http.Request, notesData []notes.Re
 
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
-	w.Write(payload)
+	if _, err := w.Write(payload); err != nil {
+		log.Println(err)
+	}
 
 }
 
@@ -131,33 +128,36 @@ func DataHandler(w http.ResponseWriter, r *http.Request, notesData []notes.Relea
 	var filteredNotes []notes.ReleaseNote
 
 	if len(r.URL.Query()) > 0 {
-		for _, note := range notesData {
+		for i := range notesData {
+			note := notesData[i]
 			for key, value := range r.URL.Query() {
-				if key == "Areas" {
+				switch key {
+				case "Areas":
 					if checkArray(value[0], note.Areas) {
 						filteredNotes = append(filteredNotes, note)
 						break
 					}
-				} else if key == "SIGs" {
+				case "SIGs":
 					if checkArray(value[0], note.SIGs) {
 						filteredNotes = append(filteredNotes, note)
 						break
 					}
-				} else if key == "Kinds" {
+				case "Kinds":
 					if checkArray(value[0], note.Kinds) {
 						filteredNotes = append(filteredNotes, note)
 						break
 					}
-				} else if key == "ReleaseVersion" {
+				case "ReleaseVersion":
 					if strings.Contains(value[0], note.ReleaseVersion) {
 						filteredNotes = append(filteredNotes, note)
 						break
 					}
-				} else {
+				default:
 					r := reflect.ValueOf(note)
 					f := reflect.Indirect(r).FieldByName(key)
 
-					if len(value[0]) > 0 && strings.Contains(strings.ToUpper(string(f.String())), strings.ToUpper(value[0])) {
+					if len(value[0]) > 0 && strings.Contains(strings.ToUpper(f.String()),
+						strings.ToUpper(value[0])) {
 						filteredNotes = append(filteredNotes, note)
 						break
 					}
@@ -177,7 +177,9 @@ func DataHandler(w http.ResponseWriter, r *http.Request, notesData []notes.Relea
 
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 	w.Header().Set("Content-Type", "application/json")
-	w.Write(payload)
+	if _, err := w.Write(payload); err != nil {
+		log.Println(err)
+	}
 
 }
 
