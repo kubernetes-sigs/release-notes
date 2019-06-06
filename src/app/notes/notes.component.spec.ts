@@ -7,8 +7,11 @@ import { State } from '@app/app.reducer';
 import { NotesComponent } from './notes.component';
 import { notesReducer } from './notes.reducer';
 import { DoFilter } from './notes.actions';
+import { Filter } from '@app/shared/model/options.model';
 
 describe('NotesComponent', () => {
+  const filter = new Filter();
+
   let fixture: ComponentFixture<NotesComponent>;
   let component: NotesComponent;
   let store: Store<State>;
@@ -51,10 +54,10 @@ describe('NotesComponent', () => {
 
   it('should succeed to update', () => {
     // Given
-    const action = new DoFilter(undefined, {});
+    const action = new DoFilter(undefined, filter);
 
     // When
-    component.update({});
+    component.update(filter);
 
     // Then
     expect(store.dispatch).toHaveBeenCalledWith(action);
