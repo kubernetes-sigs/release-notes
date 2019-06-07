@@ -4,7 +4,7 @@
       <a target="_blank" href="{{ note.pr_url }}">#{{ note.pr_number }}</a> by
       <a target="_blank" href="{{ note.author_url }}">{{ note.author }}</a>
       <span
-        (click)="toggleFilter('release_versions', note.release_version)"
+        (click)="toggleFilter('releaseVersions', note.release_version)"
         class="k8s-badge float-sm-right badge badge-dark"
         >{{ note.release_version }}</span
       >
