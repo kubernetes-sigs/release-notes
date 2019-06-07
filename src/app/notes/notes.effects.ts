@@ -13,6 +13,7 @@ import {
 import { NotesService } from './notes.service';
 import { Note } from './notes.model';
 import { Filter } from '@app/shared/model/options.model';
+import { LoggerService } from '@shared/services/logger.service';
 
 @Injectable()
 export class NotesEffects {
@@ -23,11 +24,11 @@ export class NotesEffects {
     exhaustMap(filter =>
       this.notesService.getNotes(filter).pipe(
         map((notes: Note[]) => {
-          console.log('[Notes Effects:GetNotes] SUCCESS');
+          this.logger.debug('[Notes Effects:GetNotes] SUCCESS');
           return new GetNotesSuccess(notes);
         }),
         catchError(error => {
-          console.log(`[Notes Effects:GetNotes] FAILED: ${error}`);
+          this.logger.debug(`[Notes Effects:GetNotes] FAILED: ${error}`);
           return of(new Failed(error));
         }),
       ),
@@ -44,7 +45,7 @@ export class NotesEffects {
       };
     }),
     exhaustMap(data => {
-      console.log('[Notes Effects:DoFilter] SUCCESS');
+      this.logger.debug('[Notes Effects:DoFilter] SUCCESS');
       if (data.filter.isEmpty()) {
         return of(new DoFilterSuccess(data.notes));
       } else {
@@ -89,5 +90,9 @@ export class NotesEffects {
     }),
   );
 
-  constructor(private actions$: Actions, private notesService: NotesService) {}
+  constructor(
+    private actions$: Actions,
+    private notesService: NotesService,
+    private logger: LoggerService,
+  ) {}
 }
