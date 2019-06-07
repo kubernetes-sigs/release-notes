@@ -52,7 +52,7 @@ export class NotesEffects {
         for (const note of data.notes) {
           for (const key in data.filter) {
             if (
-              key === 'release_versions' &&
+              key === 'releaseVersions' &&
               Object.keys(data.filter[key]).indexOf(note.release_version) >= 0
             ) {
               filteredNotes.push(note);
