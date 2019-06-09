@@ -14,3 +14,5 @@ export interface Note {
   action_required: boolean;
   release_version: string;
 }
+
+export type NoteList = Map<number, Note>;
