@@ -26,7 +26,6 @@ export class NotesEffects {
         map((noteList: NoteList) => {
           const notes: Note[] = [];
           for (const k of noteList.keys()) {
-            console.log('keys', k);
             notes.push(noteList[k]);
           }
           this.logger.debug('[Notes Effects:GetNotes] SUCCESS');
