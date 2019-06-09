@@ -11,7 +11,7 @@ import { Filter } from '@app/shared/model/options.model';
   selector: 'app-notes',
   templateUrl: './notes.component.html',
   providers: [],
-  styleUrls: ['./notes.component.css'],
+  styleUrls: ['./notes.component.scss'],
 })
 export class NotesComponent {
   @Input() filter: Filter;
