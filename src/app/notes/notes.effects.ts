@@ -46,7 +46,7 @@ export class NotesEffects {
     }),
     exhaustMap(data => {
       this.logger.debug('[Notes Effects:DoFilter] SUCCESS');
-      if (data.filter.isEmpty()) {
+      if (data.filter && data.filter.isEmpty()) {
         return of(new DoFilterSuccess(data.notes));
       } else {
         const filteredNotes: Note[] = [];
