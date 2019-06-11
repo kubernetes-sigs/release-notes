@@ -8,6 +8,7 @@ import { notesMock } from '@app/notes/notes.model.mock';
 import { Note } from '@app/notes/notes.model';
 import { notesReducer } from '@app/notes/notes.reducer';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('OptionsComponent', () => {
   let component: OptionsComponent;
@@ -33,6 +34,7 @@ describe('OptionsComponent', () => {
           },
         }),
         NgxPaginationModule,
+        RouterTestingModule,
         StoreModule.forRoot({
           notes: combineReducers(notesReducer),
         }),

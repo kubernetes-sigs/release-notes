@@ -1,6 +1,5 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { Observable } from 'rxjs';
 import { Note } from './notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
 import { State } from '@app/app.reducer';
@@ -29,6 +28,8 @@ export class NotesComponent {
       this.allNotes = n;
       this.filteredNotes = n;
       this.gotNotes.emit(n);
+
+      this.store.dispatch(new DoFilter(this.allNotes, this.filter));
     });
 
     this.store.pipe(select(getFilteredNotesSelector)).subscribe(n => {
