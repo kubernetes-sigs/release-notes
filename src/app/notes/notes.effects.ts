@@ -11,7 +11,7 @@ import {
   GetNotesSuccess,
 } from './notes.actions';
 import { NotesService } from './notes.service';
-import { Note } from './notes.model';
+import { Note, NoteList } from './notes.model';
 import { Filter } from '@app/shared/model/options.model';
 import { LoggerService } from '@shared/services/logger.service';
 
@@ -23,7 +23,11 @@ export class NotesEffects {
     map((action: GetNotes) => action.filter),
     exhaustMap(filter =>
       this.notesService.getNotes(filter).pipe(
-        map((notes: Note[]) => {
+        map((noteList: NoteList) => {
+          const notes: Note[] = [];
+          for (const k of noteList.keys()) {
+            notes.push(noteList[k]);
+          }
           this.logger.debug('[Notes Effects:GetNotes] SUCCESS');
           return new GetNotesSuccess(notes);
         }),
