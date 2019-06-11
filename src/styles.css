@@ -88,8 +88,7 @@ body {
 .navbar-brand {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  font-size: 1rem;
-  background-color: rgba(0, 0, 0, 0.25);
+  font-size: 1vw !important;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -100,12 +99,12 @@ body {
 }
 
 .form-control-dark {
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.1);
+  color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
 }
 
 .form-control-dark:focus {
-  border-color: transparent;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
+  border-color: transparent !important;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25) !important;
 }
