@@ -15,6 +15,14 @@ export class Filter extends Options {
   markdown = '';
 
   /**
+   * Method to set the markdown attribute
+   * @returns void
+   */
+  public setMarkdown(md: string): void {
+    this.markdown = md;
+  }
+
+  /**
    * Helper method to test if the filter is empty
    *
    * @returns true is the filter is empty, false otherwise

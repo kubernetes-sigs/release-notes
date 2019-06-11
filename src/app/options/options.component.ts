@@ -17,26 +17,20 @@ export class OptionsComponent implements OnInit {
 
   ngOnInit() {
     this.route.queryParamMap.subscribe(queryParamMap => {
-      /* tslint:disable:no-string-literal */
       if ('filter' in this && this.filter.isEmpty()) {
         for (const i of Object.keys(this.filter)) {
-          if (i in queryParamMap['params']) {
+          if (queryParamMap.getAll(i).length > 0) {
             if (i !== 'markdown') {
-              if (Array.isArray(queryParamMap['params'][i])) {
-                for (const x of Object.keys(queryParamMap['params'][i])) {
-                  this.filter[i][queryParamMap['params'][i][x]] = true;
-                }
-              } else {
-                this.filter[i][queryParamMap['params'][i]] = true;
+              for (const x of queryParamMap.getAll(i)) {
+                this.filter[i][x] = true;
               }
             } else {
-              this.filter['markdown'] = queryParamMap['params']['markdown'];
+              this.filter.setMarkdown(queryParamMap.get(i));
             }
           }
         }
         this.noteChild.update(this.filter);
       }
-      /* tslint:enable:no-string-literal */
     });
   }
 
