@@ -12,7 +12,7 @@ export class Options {
  * A generic filter abstraction based on the Options type
  */
 export class Filter extends Options {
-  markdown = '';
+  private markdown = '';
 
   /**
    * Method to set the markdown attribute
@@ -44,16 +44,14 @@ export class Filter extends Options {
   public toURI(): object {
     const friendly = {};
     for (const key of Object.keys(this)) {
-      /* tslint:disable:no-string-literal */
       if (key !== 'markdown') {
         if (Object.keys(this[key]).length > 0) {
           friendly[key] = Object.keys(this[key]);
         }
       }
-      if (key === 'markdown' && this['markdown'].trim().length > 0) {
+      if (key === 'markdown' && this.markdown.trim().length > 0) {
         friendly[key] = this[key];
       }
-      /* tslint:enable:no-string-literal */
     }
 
     return friendly;
