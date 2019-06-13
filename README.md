@@ -1,25 +1,25 @@
 # Release Notes
 
-A lightweight release notes UI to help users keep track of the ever-changing codebase for Kubernetes.
+[![Build](https://img.shields.io/badge/master-view%20online-brightgreen.svg)](https://relnotes.k8s.io)
+
+A lightweight release notes UI to help users keep track of the ever-changing
+codebase for Kubernetes.
 
 ## Development
 
 Local requirements:
 
-- ng-cli (@angular/cli)
+- node/npm
 - golang > 1.11 (to run the release-notes JSON tool)
 - `go get k8s.io/release/cmd/release-notes`
-
   (to generate any additional notes for development)
 
-Run `npm start` from the root dir to start up the angular development server (on port `4200`).
+Run `npm install && npm start` from the root dir to start up the angular
+development server (on port `4200`).
 
 ```
-$ jeefy@malaz:~/Code/go/src/github.com/jeefy/relnotes(master)$ npm start
-
-> relnotes@0.0.0 start /home/jeefy/Code/go/src/github.com/jeefy/relnotes
-> ng serve
-
+$ npm install
+$ npm start
 ** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
 ```
 
@@ -33,7 +33,7 @@ To build and run the container container:
 $ npm run docker:build:run
 ```
 
-It will kick off a multi-stage `docker` build to handle building the angular code and dumping it in an nginx container.
+It will kick off a multi-stage `docker` build to handle building the angular code and dumping it in a nginx container.
 
 Once complete, you can view it by going to `localhost` in your browser:
 
