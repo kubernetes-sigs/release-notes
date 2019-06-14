@@ -1,14 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/testing';
 import { FormsModule } from '@angular/forms';
 import { StoreModule, combineReducers } from '@ngrx/store';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { OptionsComponent } from './options.component';
 import { NotesComponent } from '@app/notes/notes.component';
+import { ModalComponent } from '@app/modal/modal.component';
 import { notesMock } from '@app/notes/notes.model.mock';
 import { Note } from '@app/notes/notes.model';
 import { notesReducer } from '@app/notes/notes.reducer';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { RouterTestingModule } from '@angular/router/testing';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 describe('OptionsComponent', () => {
   let component: OptionsComponent;
@@ -16,7 +19,7 @@ describe('OptionsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NotesComponent, OptionsComponent],
+      declarations: [NotesComponent, ModalComponent, OptionsComponent],
       imports: [
         FormsModule,
         MarkdownModule.forRoot({
@@ -34,12 +37,19 @@ describe('OptionsComponent', () => {
           },
         }),
         NgxPaginationModule,
+        NgbModule,
         RouterTestingModule,
         StoreModule.forRoot({
           notes: combineReducers(notesReducer),
         }),
       ],
-    }).compileComponents();
+    })
+      .overrideModule(BrowserDynamicTestingModule, {
+        set: {
+          entryComponents: [ModalComponent],
+        },
+      })
+      .compileComponents();
 
     fixture = TestBed.createComponent(OptionsComponent);
     fixture.detectChanges();
@@ -102,5 +112,9 @@ describe('OptionsComponent', () => {
     expect(component.options.kinds.length).toEqual(0);
     expect(component.options.sigs.length).toEqual(0);
     expect(component.options.releaseVersions.length).toEqual(1);
+  });
+
+  it('should succeed to open the modal view', () => {
+    component.openModal();
   });
 });

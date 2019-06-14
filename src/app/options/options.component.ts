@@ -2,7 +2,9 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { Note } from '@app/notes/notes.model';
 import { Filter, Options } from '@app/shared/model/options.model';
 import { NotesComponent } from '@app/notes/notes.component';
+import { ModalComponent } from '@app/modal/modal.component';
 import { Router, ActivatedRoute } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-options',
@@ -13,7 +15,11 @@ export class OptionsComponent implements OnInit {
   filter: Filter = new Filter();
   @ViewChild(NotesComponent, { static: true }) noteChild;
 
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private modalService: NgbModal,
+  ) {}
 
   ngOnInit() {
     this.route.queryParamMap.subscribe(queryParamMap => {
@@ -88,5 +94,13 @@ export class OptionsComponent implements OnInit {
       relativeTo: this.route,
       queryParams: this.filter.toURI(),
     });
+  }
+
+  openModal(): void {
+    const modalRef = this.modalService.open(ModalComponent);
+    modalRef.componentInstance.title = 'About this project';
+    modalRef.componentInstance.content = `
+        <strong>Hi</strong> there!
+    `;
   }
 }
