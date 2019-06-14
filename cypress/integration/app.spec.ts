@@ -7,6 +7,6 @@ describe('Release Notes App', () => {
     // Given
     // When
     // Then
-    cy.title().should('include', 'Relnotes');
+    cy.title().should('include', 'Kubernetes Release Notes');
   });
 });
