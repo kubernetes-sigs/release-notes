@@ -20,7 +20,7 @@ describe('AppComponent', () => {
     expect(instance).toBeTruthy();
   });
 
-  it(`should have as title 'relnotes'`, () => {
-    expect(instance.title).toEqual('relnotes');
+  it(`should have as title 'Kubernetes Release Notes'`, () => {
+    expect(instance.title).toEqual('Kubernetes Release Notes');
   });
 });
