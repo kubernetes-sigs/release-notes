@@ -12,10 +12,7 @@ body {
   vertical-align: text-bottom;
 }
 
-/*
-   * Sidebar
-   */
-
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
@@ -67,10 +64,7 @@ body {
   text-transform: uppercase;
 }
 
-/*
-   * Content
-   */
-
+/* Content */
 [role='main'] {
   padding-top: 133px; /* Space for fixed navbar */
 }
@@ -79,23 +73,6 @@ body {
   [role='main'] {
     padding-top: 48px; /* Space for fixed navbar */
   }
-}
-
-/*
-   * Navbar
-   */
-
-.navbar-brand {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  font-size: 1vw !important;
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
-}
-
-.navbar .form-control {
-  padding: 0.75rem 1rem;
-  border-width: 0;
-  border-radius: 0;
 }
 
 .form-control-dark {

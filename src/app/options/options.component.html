@@ -1,15 +1,35 @@
-<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-  <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Kubernetes Release Notes</a>
-    <input
-      [ngModel]="filter['markdown']"
-      (ngModelChange)="updateFilterString('markdown', $event)"
-      class="form-control form-control-dark w-100"
-      type="text"
-      placeholder="Search"
-      aria-label="Search"
-    />
-  </nav>
+<nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg shadow">
+  <a class="navbar-brand" href="#">Kubernetes Release Notes</a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="navbarNavAltMarkup" class="navbar-collapse collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <input
+          [ngModel]="filter['markdown']"
+          (ngModelChange)="updateFilterString('markdown', $event)"
+          class="form-control bg-dark text-white border-0 rounded-0"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+      </li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <button (click)="openModal()" class="btn btn-outline-info">About</button>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <div class="container-fluid">

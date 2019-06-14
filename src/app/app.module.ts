@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NotesComponent } from './notes/notes.component';
 import { OptionsComponent } from './options/options.component';
+import { ModalComponent } from './modal/modal.component';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoggerService } from '@shared/services/logger.service';
@@ -21,13 +23,14 @@ import { reducers } from './app.reducer';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 
 @NgModule({
-  declarations: [AppComponent, NotesComponent, OptionsComponent],
+  declarations: [AppComponent, NotesComponent, OptionsComponent, ModalComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     NgxPaginationModule,
+    NgbModule,
     MarkdownModule.forRoot({
       markedOptions: {
         provide: MarkedOptions,
@@ -48,5 +51,6 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
   ],
   providers: [LoggerService],
   bootstrap: [AppComponent],
+  entryComponents: [ModalComponent],
 })
 export class AppModule {}
