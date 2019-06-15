@@ -100,7 +100,47 @@ export class OptionsComponent implements OnInit {
     const modalRef = this.modalService.open(ModalComponent);
     modalRef.componentInstance.title = 'About this project';
     modalRef.componentInstance.content = `
-        <strong>Hi</strong> there!
+        <p>
+            Thank you for giving the official Kubernetes Release Notes website
+            a try! The project aims to provide you with the best possible user
+            experience when it comes to finding out what changed in Kubernetes.
+        </p>
+        <p>
+            We would love feedback on your experience using this website. We
+            are particularly interested in:
+            <ul>
+                <li>
+                    how easy it is to use and find what you are looking for
+                </li>
+                <li>
+                    the look and feel
+                </li>
+                <li>
+                    how to improve it further for your specific use case
+                </li>
+            </ul>
+            We would appreciate it if you could take a few minutes to fill out
+            our survey and help us to improve!
+        </p>
+        <p>
+            <a href="#" taget="_bank">
+                👉 Help us and participate in the survey.
+            </a>
+        </p>
+            We aim to evaluate the results of the survey at the end of the
+            v1.16 release cycle on the official Kubernetes
+            <a href="https://groups.google.com/forum/#!forum/kubernetes-sig-release"
+               target="_bank">SIG release mailling list</a>.
+        </p>
+        <p>
+            Do you want to contribute or give further feedback? Great, feel
+            free to open up a pull request or issue in the
+            <a href="https://github.com/kubernetes-sigs/release-notes"
+               target="_blank">GitHub repository</a>.
+            Beside this, you can always contact us via the official
+            <a href="https://kubernetes.slack.com/messages/sig-release"
+               target="_blank">Kubernetes Slack #sig-release channel</a>.
+        </p>
     `;
   }
 }
