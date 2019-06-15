@@ -25,7 +25,7 @@ export class NotesEffects {
       this.notesService.getNotes(filter).pipe(
         map((noteList: NoteList) => {
           const notes: Note[] = [];
-          for (const k of noteList.keys()) {
+          for (const k of Object.keys(noteList)) {
             notes.push(noteList[k]);
           }
           this.logger.debug('[Notes Effects:GetNotes] SUCCESS');
