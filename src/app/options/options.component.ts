@@ -123,14 +123,14 @@ export class OptionsComponent implements OnInit {
             our survey and help us to improve!
         </p>
         <p>
-            <a href="#" taget="_bank">
+            <a href="https://forms.gle/XJJamzwFPPfujtfd9" taget="_blank">
                 👉 Help us and participate in the survey.
             </a>
         </p>
             We aim to evaluate the results of the survey at the end of the
             v1.16 release cycle on the official Kubernetes
             <a href="https://groups.google.com/forum/#!forum/kubernetes-sig-release"
-               target="_bank">SIG release mailling list</a>.
+               target="_bank">SIG release mailing list</a>.
         </p>
         <p>
             Do you want to contribute or give further feedback? Great, feel
