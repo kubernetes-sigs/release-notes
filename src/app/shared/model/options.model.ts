@@ -56,4 +56,27 @@ export class Filter extends Options {
 
     return friendly;
   }
+
+  /**
+   * Method to see if a value is empty
+   *
+   * @returns a boolean
+   */
+
+  public isset(key: string): boolean {
+    if (Object.keys(this[key]).length > 0) {
+      return true;
+    }
+    return false;
+  }
+
+  /**
+   * Method to return a value
+   *
+   * @returns an object or null
+   */
+
+  public get(key: string): object {
+    return this[key];
+  }
 }
