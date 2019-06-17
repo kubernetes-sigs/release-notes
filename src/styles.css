@@ -75,6 +75,12 @@ body {
   }
 }
 
+/* Navbar */
+*:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+
 .form-control-dark {
   color: #fff !important;
   background-color: rgba(255, 255, 255, 0.1) !important;
