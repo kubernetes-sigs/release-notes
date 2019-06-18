@@ -74,13 +74,12 @@ describe('OptionsComponent', () => {
   });
 
   it('should succeed to update filter object', () => {
-    const obj = { key: 'value' };
-    component.updateFilterObject(areas, b, obj);
-    expect(component.filter[areas][b]).toEqual(obj);
+    component.updateFilterObject(areas, b, true);
+    expect(component.filter[areas][b]).toEqual(true);
   });
 
   it('should succeed to delete filter object', () => {
-    component.updateFilterObject(areas, b, undefined);
+    component.updateFilterObject(areas, b, false);
   });
 
   it('should succeed to toggle filter to true', () => {

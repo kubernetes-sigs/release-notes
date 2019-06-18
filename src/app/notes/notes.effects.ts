@@ -50,49 +50,50 @@ export class NotesEffects {
     }),
     exhaustMap(data => {
       this.logger.debug('[Notes Effects:DoFilter] SUCCESS');
+      const filteredNotes: Note[] = [];
       if (data.filter && data.filter.isEmpty()) {
         return of(new DoFilterSuccess(data.notes));
       } else {
-        const filteredNotes: Note[] = [];
-        const copyFilter: Filter = data.filter;
-        const relverFilter = 'releaseVersions';
         if (data.filter) {
-          copyFilter.releaseVersions = [];
-        }
+          const copyFilter = Object.create(data.filter);
 
-        for (const note of data.notes) {
-          // Release Version is a special filter.
-          if (
-            (data.filter.isset('releaseVersions') &&
-              Object.keys(data.filter.get('releaseVersions')).indexOf(note.release_version) >= 0) ||
-            (!('releaseVersions' in data.filter) ||
-              !(Object.keys(data.filter.get('releaseVersions')).length > 0))
-          ) {
-            if (copyFilter.isEmpty()) {
-              filteredNotes.push(note);
-            } else {
-              for (const key in data.filter) {
-                if (key in note && typeof note[key] !== 'string') {
-                  if (
-                    [...new Set(note[key])].filter(x => {
-                      return data.filter[key].indexOf(x) && data.filter[key][x];
-                    }).length > 0
-                  ) {
-                    filteredNotes.push(note);
-                  }
-                } else {
-                  if (
-                    key in note &&
-                    typeof note[key] === 'string' &&
-                    data.filter[key].trim().length > 0
-                  ) {
+          copyFilter.releaseVersions = [];
+
+          for (const note of data.notes) {
+            // Release Version is a special filter.
+            if (
+              (data.filter.isset('releaseVersions') &&
+                Object.keys(data.filter.get('releaseVersions')).indexOf(note.release_version) >=
+                  0) ||
+              (!('releaseVersions' in data.filter) ||
+                !(Object.keys(data.filter.get('releaseVersions')).length > 0))
+            ) {
+              if (copyFilter.isEmpty()) {
+                filteredNotes.push(note);
+              } else {
+                for (const key in data.filter) {
+                  if (key in note && typeof note[key] !== 'string') {
                     if (
-                      note[key]
-                        .toUpperCase()
-                        .trim()
-                        .includes(data.filter[key].toUpperCase().trim())
+                      [...new Set(note[key])].filter(x => {
+                        return data.filter[key].indexOf(x) && data.filter[key][x];
+                      }).length > 0
                     ) {
                       filteredNotes.push(note);
+                    }
+                  } else {
+                    if (
+                      key in note &&
+                      typeof note[key] === 'string' &&
+                      data.filter[key].trim().length > 0
+                    ) {
+                      if (
+                        note[key]
+                          .toUpperCase()
+                          .trim()
+                          .includes(data.filter[key].toUpperCase().trim())
+                      ) {
+                        filteredNotes.push(note);
+                      }
                     }
                   }
                 }
