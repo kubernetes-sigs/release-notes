@@ -79,4 +79,14 @@ export class Filter extends Options {
   public get(key: string): object {
     return this[key];
   }
+
+  /**
+   * Method to add a value to a key
+   *
+   * @returns void
+   */
+
+  public add(key: string, value: string): void {
+    this[key][value] = true;
+  }
 }

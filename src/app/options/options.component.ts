@@ -28,7 +28,7 @@ export class OptionsComponent implements OnInit {
           if (queryParamMap.getAll(i).length > 0) {
             if (i !== 'markdown') {
               for (const x of queryParamMap.getAll(i)) {
-                this.filter[i][x] = true;
+                this.filter.add(i, x);
               }
             } else {
               this.filter.setMarkdown(queryParamMap.get(i));
@@ -53,7 +53,7 @@ export class OptionsComponent implements OnInit {
 
   updateFilterObject(a, b, val): void {
     if (val) {
-      this.filter[a][b] = val;
+      this.filter.add(a, b);
     } else {
       delete this.filter[a][b];
     }
@@ -83,7 +83,7 @@ export class OptionsComponent implements OnInit {
     if (typeof this.filter[event.key][event.value] === 'boolean') {
       delete this.filter[event.key][event.value];
     } else {
-      this.filter[event.key][event.value] = true;
+      this.filter.add(event.key, event.value);
     }
 
     this.updateURI();
