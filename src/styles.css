@@ -75,6 +75,10 @@ body {
   }
 }
 
+#notesComponent {
+  width: 100%;
+}
+
 /* Navbar */
 *:focus {
   box-shadow: none !important;
