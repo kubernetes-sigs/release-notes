@@ -5,13 +5,12 @@ import { Observable } from 'rxjs';
 
 import { Note, NoteList } from './notes.model';
 import { LoggerService } from '@shared/services/logger.service';
+import { environment } from '@environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NotesService {
-  noteUrl = './assets/data/release-notes.json';
-
   constructor(private http: HttpClient, private logger: LoggerService) {}
 
   /**
@@ -20,7 +19,7 @@ export class NotesService {
    * @returns The NoteList as observable
    */
   getNotes(): Observable<NoteList> {
-    this.logger.debug('Gathering notes');
-    return this.http.get<NoteList>(this.noteUrl).pipe();
+    this.logger.debug(`Gathering notes from ${environment.notesAsset}`);
+    return this.http.get<NoteList>(environment.notesAsset).pipe();
   }
 }

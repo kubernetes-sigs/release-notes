@@ -143,4 +143,29 @@ export class OptionsComponent implements OnInit {
         </p>
     `;
   }
+
+  /**
+   * Create the options header ID from the given input string
+   *
+   * @param input   The provided input string
+   *
+   * @returns The prefixed output string
+   */
+  optionsHeaderID(input: string): string {
+    return `options-${input}`;
+  }
+
+  /**
+   * Create the options checkbox ID from the given input string. This method
+   * also stripps invalid dot (.) characters from the input.
+   *
+   * @param input   The provided input string
+   *
+   * @returns The prefixed output string
+   */
+  optionCheckboxID(input: string): string {
+    // Strip the dots from the release versions
+    const stripped = input.replace(/\./g, '-');
+    return `option-${stripped}`;
+  }
 }

@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:test": "ng serve --configuration=test",
     "build-dev": "ng build --output-path dist-dev",
     "build-prod": "ng build --prod --build-optimizer --output-path dist-prod",
     "docker:build": "docker build -t relnotes .",
@@ -12,7 +13,7 @@
     "test": "jest",
     "lint": "ng lint",
     "e2e-cy": "cypress run",
-    "e2e-cy-ci": "start-server-and-test start http-get://localhost:4200 e2e-cy",
+    "e2e-cy-ci": "start-server-and-test start:test http-get://localhost:4200 e2e-cy",
     "e2e-cy-open": "cypress open",
     "update": "ncu -u",
     "doc": "compodoc -p src/tsconfig.app.json",
@@ -96,7 +97,8 @@
     ],
     "silent": true,
     "testPathIgnorePatterns": [
-      "<rootDir>/cypress/"
+      "<rootDir>/cypress",
+      "<rootDir>/src/environments"
     ],
     "transform": {
       "^.+\\.js$": "babel-jest"
