@@ -29,7 +29,7 @@ export class DoFilterSuccess implements Action {
 
 export class GetNotes implements Action {
   readonly type = ActionTypes.GetNotes;
-  constructor(public filter: Filter) {}
+  constructor() {}
 }
 
 export class GetNotesSuccess implements Action {
