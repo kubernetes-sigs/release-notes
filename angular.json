@@ -51,6 +51,15 @@
                   "maximumError": "5mb"
                 }
               ]
+            },
+            "test": {
+              "assets": ["src/favicon.png", "src/assets", "src/testdata"],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ]
             }
           }
         },
@@ -62,6 +71,9 @@
           "configurations": {
             "production": {
               "browserTarget": "relnotes:build:production"
+            },
+            "test": {
+              "browserTarget": "relnotes:build:test"
             }
           }
         },

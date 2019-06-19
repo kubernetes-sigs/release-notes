@@ -116,4 +116,13 @@ describe('OptionsComponent', () => {
   it('should succeed to open the modal view', () => {
     component.openModal();
   });
+
+  it('should succeed to retrieve the options header ID', () => {
+    expect(component.optionsHeaderID('value')).toEqual('options-value');
+  });
+
+  it('should succeed to retrieve the options checkbox ID', () => {
+    expect(component.optionCheckboxID('value')).toEqual('option-value');
+    expect(component.optionCheckboxID('1.2.3')).toEqual('option-1-2-3');
+  });
 });

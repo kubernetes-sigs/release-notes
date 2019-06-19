@@ -18,6 +18,7 @@
           [ngModel]="filter['markdown']"
           (ngModelChange)="updateFilterString('markdown', $event)"
           class="form-control bg-dark text-white border-0 rounded-0"
+          id="searchBar"
           type="search"
           placeholder="Search"
           aria-label="Search"
@@ -26,7 +27,7 @@
     </ul>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <button (click)="openModal()" class="btn btn-outline-info">About</button>
+        <button (click)="openModal()" id="aboutButton" class="btn btn-outline-info">About</button>
       </li>
     </ul>
   </div>
@@ -36,12 +37,13 @@
   <div class="row">
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
       <div class="sidebar-sticky">
-        <p *ngFor="let data of options | keyvalue">
+        <p *ngFor="let data of options | keyvalue" [id]="optionsHeaderID(data.key)">
           <b>{{ data.key }}</b
           ><br />
           <span *ngFor="let a of data.value | keyvalue">
             <label>
               <input
+                [id]="optionCheckboxID(a.value)"
                 type="checkbox"
                 name="{{ data.key }}[]"
                 [ngModel]="filter[data.key][a.value]"
