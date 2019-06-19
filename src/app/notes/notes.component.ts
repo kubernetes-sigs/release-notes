@@ -21,7 +21,7 @@ export class NotesComponent {
   p = 1;
 
   constructor(private store: Store<State>) {
-    store.dispatch(new GetNotes(this.filter));
+    store.dispatch(new GetNotes());
 
     this.store.pipe(select(getAllNotesSelector)).subscribe(n => {
       // Initial retrieval of the notes

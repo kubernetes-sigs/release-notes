@@ -52,12 +52,11 @@ describe('NotesActions', () => {
 
   it('should be able to create a GetNotes action', () => {
     // When
-    const action = new GetNotes(filter);
+    const action = new GetNotes();
 
     // Then
     expect({ ...action }).toEqual({
       type: ActionTypes.GetNotes,
-      filter,
     });
   });
 

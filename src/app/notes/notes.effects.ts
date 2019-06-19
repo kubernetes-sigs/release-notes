@@ -20,9 +20,8 @@ export class NotesEffects {
   @Effect()
   getNotes$ = this.actions$.pipe(
     ofType(ActionTypes.GetNotes),
-    map((action: GetNotes) => action.filter),
-    exhaustMap(filter =>
-      this.notesService.getNotes(filter).pipe(
+    exhaustMap(() =>
+      this.notesService.getNotes().pipe(
         map((noteList: NoteList) => {
           const notes: Note[] = [];
           for (const k of Object.keys(noteList)) {

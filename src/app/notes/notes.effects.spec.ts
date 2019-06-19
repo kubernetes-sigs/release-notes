@@ -32,7 +32,7 @@ describe('NotesEffects', () => {
 
   describe('GetNotes', () => {
     it('should succeed with empty filter', () => {
-      const action = new GetNotes(filter);
+      const action = new GetNotes();
       const completion = new GetNotesSuccess(notesMock);
 
       actions = hot('-a---', { a: action });
@@ -45,7 +45,7 @@ describe('NotesEffects', () => {
 
     it('should fail if NotesService fails', () => {
       const error = 'error';
-      const action = new GetNotes(filter);
+      const action = new GetNotes();
       const completion = new Failed(error);
 
       actions = hot('-a---', { a: action });
