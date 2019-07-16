@@ -8,6 +8,7 @@ import { NotesComponent } from './notes.component';
 import { notesReducer } from './notes.reducer';
 import { DoFilter } from './notes.actions';
 import { Filter } from '@app/shared/model/options.model';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('NotesComponent', () => {
   const filter = new Filter();
@@ -20,6 +21,7 @@ describe('NotesComponent', () => {
     TestBed.configureTestingModule({
       declarations: [NotesComponent],
       imports: [
+        FontAwesomeModule,
         MarkdownModule.forRoot({
           markedOptions: {
             provide: MarkedOptions,
@@ -72,5 +74,19 @@ describe('NotesComponent', () => {
 
     // Then
     expect(store.dispatch).toHaveBeenCalledWith(action);
+  });
+
+  it('should succeed to retrieve the correct badge class', () => {
+    // Given
+
+    // When
+    const kep = component.badgeClass('KEP');
+    const official = component.badgeClass('official');
+    const external = component.badgeClass('external');
+
+    // Then
+    expect(kep).toEqual('badge-primary');
+    expect(official).toEqual('badge-success');
+    expect(external).toEqual('badge-secondary');
   });
 });

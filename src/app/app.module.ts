@@ -21,6 +21,7 @@ import { environment } from '../environments/environment';
 import { notesReducer } from './notes/notes.reducer';
 import { reducers } from './app.reducer';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, NotesComponent, OptionsComponent, ModalComponent],
@@ -48,6 +49,7 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
     StoreModule.forRoot({ notes: notesReducer }),
     EffectsModule.forRoot([NotesEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    FontAwesomeModule,
   ],
   providers: [LoggerService],
   bootstrap: [AppComponent],

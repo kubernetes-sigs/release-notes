@@ -1,4 +1,10 @@
-import { Note } from './notes.model';
+import { DocType, Documentation, Note } from './notes.model';
+
+export const documentationMock: Documentation = {
+  description: 'Relevant information',
+  url: 'https://kubernetes.io/docs/concepts/workloads/pods/pod',
+  type: DocType.official,
+};
 
 export const notesMock: Note[] = [
   {
@@ -16,5 +22,6 @@ export const notesMock: Note[] = [
     duplicate: true,
     action_required: true,
     release_version: 'release_version',
+    documentation: [documentationMock],
   },
 ];

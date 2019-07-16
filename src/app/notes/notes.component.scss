@@ -5,3 +5,17 @@
 .k8s-badge {
   cursor: pointer;
 }
+
+$linkcolor: #007bff;
+
+.icon {
+  margin-left: 0.5em;
+  color: $linkcolor;
+  &:hover {
+    color: darken($linkcolor, 20%);
+  }
+}
+
+.doc-badge {
+  margin-left: 0.5em;
+}
