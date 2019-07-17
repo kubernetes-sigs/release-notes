@@ -3,6 +3,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NotesService } from './notes.service';
 import { LoggerService } from '@shared/services/logger.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { notesMock } from './notes.model.mock';
 
 describe('NotesService', () => {
   let service: NotesService;
@@ -24,5 +25,9 @@ describe('NotesService', () => {
 
   it('should succeed to get notes', () => {
     expect(service.getNotes()).toBeTruthy();
+  });
+
+  it('should succeed to convert to note list', () => {
+    expect(service.toNoteList([notesMock, notesMock])).toEqual(notesMock.concat(notesMock));
   });
 });
