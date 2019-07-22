@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   logLevel: 3, // 0 - 3 verbosity
-  notesAsset: 'assets/data/release-notes.json',
+  notesAssets: ['assets/data/release-notes-1.15.json', 'assets/data/release-notes-1.16.json'],
 };
 
 /*
