@@ -13,4 +13,17 @@ export interface Note {
   duplicate: boolean;
   action_required: boolean;
   release_version: string;
+  documentation: Documentation[];
+}
+
+export interface Documentation {
+  description: string | null;
+  url: string;
+  type: DocType;
+}
+
+export enum DocType {
+  external = 1,
+  kep,
+  official,
 }

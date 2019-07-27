@@ -12,6 +12,7 @@ import { notesReducer } from '@app/notes/notes.reducer';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('OptionsComponent', () => {
   let component: OptionsComponent;
@@ -21,6 +22,7 @@ describe('OptionsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [NotesComponent, ModalComponent, OptionsComponent],
       imports: [
+        FontAwesomeModule,
         FormsModule,
         MarkdownModule.forRoot({
           markedOptions: {
