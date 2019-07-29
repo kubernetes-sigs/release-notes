@@ -2,11 +2,15 @@ describe('Release Notes App', () => {
   // Test constants
   const aboutButton = '#aboutButton';
   const appModal = 'app-modal';
+  const documentationButton = '#documentationButton';
+  const documentationContent = '#documentationContent';
+  const documentationTooltip = '.documentationTooltip';
   const cards = '.card';
   const modalCloseButton = '#modalCloseButton';
   const optionID = '#option';
   const option1140 = `${optionID}-1-14-0`;
   const option1150 = `${optionID}-1-15-0`;
+  const option1160 = `${optionID}-1-16-0`;
   const optionKubectl = `${optionID}-kubectl`;
   const optionKubelet = `${optionID}-kubelet`;
   const optionReleaseEng = `${optionID}-release-eng`;
@@ -23,6 +27,9 @@ describe('Release Notes App', () => {
   const v1150entry3 = '#65782';
   const v1150entry4 = '#66635';
   const v1150entry5 = '#66928';
+  const v1160entry1 = '#74416';
+  const v1160entry1DocumentationButton = `${documentationButton}-${v1160entry1.replace('#', '')}`;
+  const v1160entry1DocumentationContent = `${documentationContent}-${v1160entry1.replace('#', '')}`;
 
   beforeEach(() => {
     cy.visit('/');
@@ -163,5 +170,33 @@ describe('Release Notes App', () => {
 
     // Then
     cy.get(appModal).should('not.be.visible');
+  });
+
+  it(`should be open the 'Additional Documentation' tooltip on hover`, () => {
+    // Given
+    cy.get(option1160).check();
+    cy.get(documentationTooltip).should('not.be.visible');
+
+    // When
+    cy.get(v1160entry1DocumentationButton).trigger('mouseover');
+
+    // Then
+    cy.get(documentationTooltip).should('not.be.visible');
+  });
+
+  it(`should be possible to open the 'Additional Documentation'`, () => {
+    // Given
+    // When
+    cy.get(option1160).check();
+
+    // Then
+    cy.get(option1140).should('not.be.checked');
+    cy.get(option1150).should('not.be.checked');
+    cy.get(documentationTooltip).should('not.be.visible');
+    cy.get(v1160entry1DocumentationContent).should('not.be.visible');
+
+    cy.get(v1160entry1DocumentationButton).click();
+    cy.get(v1160entry1DocumentationContent).should('be.visible');
+    cy.get(documentationTooltip).should('be.visible');
   });
 });
