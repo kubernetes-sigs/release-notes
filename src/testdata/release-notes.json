@@ -11,7 +11,7 @@
     "kinds": ["feature"],
     "sigs": ["api-machinery"],
     "feature": true,
-    "release_version": "1.16.0-alpha.1",
+    "release_version": "1.16.0",
     "documentation": [
       {
         "description": "Relevant information",
