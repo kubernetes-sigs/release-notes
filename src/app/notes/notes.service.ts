@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 
 import { Note } from './notes.model';
 import { LoggerService } from '@shared/services/logger.service';
-import { environment } from '@environment';
+import { assets } from '@env/assets';
 
 @Injectable({
   providedIn: 'root',
@@ -20,11 +20,14 @@ export class NotesService {
    * @returns The NoteList as observable
    */
   getNotes(): Observable<Note[]> {
-    this.logger.debug(`Gathering notes from ${environment.notesAssets}`);
+    this.logger.debug(`Gathering notes from ${assets.length} assets`);
 
     const observables = [];
-    for (const jsonFile of environment.notesAssets) {
-      observables.push(this.http.get(jsonFile));
+    for (const asset of assets) {
+      if (asset.hidden) {
+        continue;
+      }
+      observables.push(this.http.get(asset.path));
     }
 
     return forkJoin(observables).pipe(map(this.toNoteList));

@@ -5,7 +5,6 @@ import {
   createSelector,
   MetaReducer,
 } from '@ngrx/store';
-import { environment } from '@environment';
 import { State as NotesState, notesReducer } from './notes/notes.reducer';
 
 export interface State {

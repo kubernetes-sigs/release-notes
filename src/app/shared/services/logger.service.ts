@@ -1,11 +1,36 @@
 import { Injectable } from '@angular/core';
-import { environment } from '@environment';
+import { isDevMode } from '@angular/core';
+
+/**
+ * All available verbosity levels
+ */
+export enum Verbosity {
+  Error = 0,
+  Warn,
+  Info,
+  Debug,
+}
 
 /**
  * The logger service implementation
  */
 @Injectable()
 export class LoggerService {
+  /**
+   * The default verbosity in non production mode
+   */
+  private logLevel = Verbosity.Debug;
+
+  /**
+   * The loggers constructor
+   */
+  constructor() {
+    // Adapt the default verbosity in production mode
+    if (!isDevMode()) {
+      this.logLevel = Verbosity.Error;
+    }
+  }
+
   /**
    * Gets the current time as prefix
    *
@@ -17,12 +42,21 @@ export class LoggerService {
   }
 
   /**
+   * Set the verbosity to a dedicated level
+   *
+   * @param level     The verbosity level
+   */
+  public setVerbosity(level: Verbosity) {
+    this.logLevel = level;
+  }
+
+  /**
    * Logs a debug message to the console when log level >= 3
    *
    * @param msg     The log message
    */
   public debug(msg: string) {
-    if (environment.logLevel >= 3) {
+    if (this.logLevel >= Verbosity.Debug) {
       console.log(`[DEBUG]\t${this.date()}: ${msg}`);
     }
   }
@@ -33,7 +67,7 @@ export class LoggerService {
    * @param msg     The info log message
    */
   public info(msg: string) {
-    if (environment.logLevel >= 2) {
+    if (this.logLevel >= Verbosity.Info) {
       console.log(`[INFO]\t${this.date()}: ${msg}`);
     }
   }
@@ -44,7 +78,7 @@ export class LoggerService {
    * @param msg     The warning log message
    */
   public warn(msg: string) {
-    if (environment.logLevel >= 1) {
+    if (this.logLevel >= Verbosity.Warn) {
       console.warn(`[WARN]\t${this.date()}: ${msg}`);
     }
   }
@@ -55,6 +89,8 @@ export class LoggerService {
    * @param msg     The error log message
    */
   public error(msg: string) {
-    console.error(`[ERROR]\t${this.date()}: ${msg}`);
+    if (this.logLevel >= Verbosity.Error) {
+      console.error(`[ERROR]\t${this.date()}: ${msg}`);
+    }
   }
 }
