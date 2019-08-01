@@ -2,18 +2,21 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { Note } from '@app/notes/notes.model';
 import { Filter, Options } from '@app/shared/model/options.model';
 import { NotesComponent } from '@app/notes/notes.component';
+import { FilterComponent } from '@app/filter/filter.component';
 import { ModalComponent } from '@app/modal/modal.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-options',
-  templateUrl: './options.component.html',
+  selector: 'app-main',
+  templateUrl: './main.component.html',
 })
-export class OptionsComponent implements OnInit {
+export class MainComponent implements OnInit {
   options: Options = new Options();
   filter: Filter = new Filter();
+
   @ViewChild(NotesComponent, { static: true }) noteChild;
+  @ViewChild(FilterComponent, { static: true }) filterChild;
 
   constructor(
     private router: Router,
@@ -51,17 +54,6 @@ export class OptionsComponent implements OnInit {
     this.updateURI();
   }
 
-  updateFilterObject(a, b, val): void {
-    if (val) {
-      this.filter.add(a, b);
-    } else {
-      delete this.filter[a][b];
-    }
-    this.noteChild.update(this.filter);
-
-    this.updateURI();
-  }
-
   gotNotes(notes: Note[]): void {
     for (const note of Object.values(notes)) {
       if ('areas' in note) {
@@ -79,7 +71,13 @@ export class OptionsComponent implements OnInit {
     }
   }
 
-  toggleFilter(event): void {
+  onUpdateFromFilterComponent(filter: Filter): void {
+    this.filter = filter;
+    this.noteChild.update(this.filter);
+    this.updateURI();
+  }
+
+  onUpdateFromNotesComponent(event: any): void {
     if (typeof this.filter[event.key][event.value] === 'boolean') {
       delete this.filter[event.key][event.value];
     } else {
@@ -142,30 +140,5 @@ export class OptionsComponent implements OnInit {
                target="_blank">Kubernetes Slack #sig-release channel</a>.
         </p>
     `;
-  }
-
-  /**
-   * Create the options header ID from the given input string
-   *
-   * @param input   The provided input string
-   *
-   * @returns The prefixed output string
-   */
-  optionsHeaderID(input: string): string {
-    return `options-${input}`;
-  }
-
-  /**
-   * Create the options checkbox ID from the given input string. This method
-   * also stripps invalid dot (.) characters from the input.
-   *
-   * @param input   The provided input string
-   *
-   * @returns The prefixed output string
-   */
-  optionCheckboxID(input: string): string {
-    // Strip the dots from the release versions
-    const stripped = input.replace(/\./g, '-');
-    return `option-${stripped}`;
   }
 }
