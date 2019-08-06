@@ -13,6 +13,8 @@ describe('Release Notes App', () => {
   const option1160 = `${optionID}-1-16-0`;
   const optionKubectl = `${optionID}-kubectl`;
   const optionKubelet = `${optionID}-kubelet`;
+  const optionKEP = `${optionID}-KEP`;
+  const optionExternal = `${optionID}-external`;
   const optionReleaseEng = `${optionID}-release-eng`;
   const optionsID = '#options';
   const optionsReleaseVersionsID = `${optionsID}-releaseVersions`;
@@ -198,5 +200,56 @@ describe('Release Notes App', () => {
     cy.get(v1160entry1DocumentationButton).click();
     cy.get(v1160entry1DocumentationContent).should('be.visible');
     cy.get(documentationTooltip).should('be.visible');
+  });
+
+  it(`should be possible to filter 'KEP' doc types`, () => {
+    // Given
+    cy.get(optionKEP).should('not.be.checked');
+
+    // When
+    cy.get(optionKEP).check();
+
+    // Then
+    cy.get(optionKEP).should('be.checked');
+    cy.get(v1160entry1DocumentationContent).should('be.visible');
+    cy.get(cards).should($c => {
+      expect($c).to.have.length(1);
+      expect($c).to.contain(v1160entry1);
+    });
+  });
+
+  it(`should be possible to filter 'external' doc types`, () => {
+    // Given
+    cy.get(optionExternal).should('not.be.checked');
+
+    // When
+    cy.get(optionExternal).check();
+
+    // Then
+    cy.get(optionExternal).should('be.checked');
+    cy.get(v1160entry1DocumentationContent).should('be.visible');
+    cy.get(cards).should($c => {
+      expect($c).to.have.length(1);
+      expect($c).to.contain(v1160entry1);
+    });
+  });
+
+  it(`should show double filtered documentation entries only once`, () => {
+    // Given
+    cy.get(optionExternal).should('not.be.checked');
+    cy.get(optionKEP).should('not.be.checked');
+
+    // When
+    cy.get(optionExternal).check();
+    cy.get(optionKEP).check();
+
+    // Then
+    cy.get(optionExternal).should('be.checked');
+    cy.get(optionKEP).should('be.checked');
+    cy.get(v1160entry1DocumentationContent).should('be.visible');
+    cy.get(cards).should($c => {
+      expect($c).to.have.length(1);
+      expect($c).to.contain(v1160entry1);
+    });
   });
 });
