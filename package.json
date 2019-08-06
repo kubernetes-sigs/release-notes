@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:prod": "ng serve --prod",
     "start:test": "ng serve --configuration=test",
     "build-dev": "ng build --output-path dist-dev",
     "build-prod": "ng build --prod --build-optimizer --output-path dist-prod",
@@ -91,7 +92,7 @@
     ],
     "moduleNameMapper": {
       "^@app(.*)$": "<rootDir>/src/app/$1",
-      "^@environment": "<rootDir>/src/environments/environment",
+      "^@env(.*)$": "<rootDir>/src/environments/$1",
       "^@shared(.*)$": "<rootDir>/src/app/shared/$1"
     },
     "preset": "jest-preset-angular",

@@ -56,8 +56,8 @@
               "assets": ["src/favicon.png", "src/assets", "src/testdata"],
               "fileReplacements": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.test.ts"
+                  "replace": "src/environments/assets.ts",
+                  "with": "src/environments/assets.test.ts"
                 }
               ]
             }

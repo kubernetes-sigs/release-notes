@@ -1,6 +1,5 @@
 import { TestBed, getTestBed } from '@angular/core/testing';
 import { Filter } from './options.model';
-import { environment } from '@environment';
 
 describe('OptionsModel', () => {
   let filter: Filter;

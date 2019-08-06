@@ -1,6 +1,5 @@
 import { TestBed, getTestBed } from '@angular/core/testing';
-import { LoggerService } from './logger.service';
-import { environment } from '@environment';
+import { LoggerService, Verbosity } from './logger.service';
 
 describe('LoggerService', () => {
   let service: LoggerService;
@@ -23,6 +22,9 @@ describe('LoggerService', () => {
 
   describe('error', () => {
     it('should log', () => {
+      // Given
+      service.setVerbosity(Verbosity.Error);
+
       // When
       service.error(message);
 
@@ -34,9 +36,9 @@ describe('LoggerService', () => {
   });
 
   describe('warn', () => {
-    it('should not log when logLevel < 1', () => {
+    it('should not log when logLevel < Verbosity.Warn', () => {
       // Given
-      environment.logLevel = 0;
+      service.setVerbosity(Verbosity.Error);
 
       // When
       service.warn(message);
@@ -47,9 +49,9 @@ describe('LoggerService', () => {
       expect(console.error).not.toHaveBeenCalled();
     });
 
-    it('should log when logLevel >= 1', () => {
+    it('should log when logLevel >= Verbosity.Warn', () => {
       // Given
-      environment.logLevel = 1;
+      service.setVerbosity(Verbosity.Warn);
 
       // When
       service.warn(message);
@@ -62,9 +64,9 @@ describe('LoggerService', () => {
   });
 
   describe('info', () => {
-    it('should not log when logLevel < 2', () => {
+    it('should not log when logLevel < Verbosity.Info', () => {
       // Given
-      environment.logLevel = 1;
+      service.setVerbosity(Verbosity.Warn);
 
       // When
       service.info(message);
@@ -75,9 +77,9 @@ describe('LoggerService', () => {
       expect(console.error).not.toHaveBeenCalled();
     });
 
-    it('should log when logLevel >= 2', () => {
+    it('should log when logLevel >= Verbosity.Info', () => {
       // Given
-      environment.logLevel = 2;
+      service.setVerbosity(Verbosity.Info);
 
       // When
       service.info(message);
@@ -90,9 +92,9 @@ describe('LoggerService', () => {
   });
 
   describe('debug', () => {
-    it('should not log when logLevel < 3', () => {
+    it('should not log when logLevel < Verbosity.Debug', () => {
       // Given
-      environment.logLevel = 2;
+      service.setVerbosity(Verbosity.Info);
 
       // When
       service.debug(message);
@@ -103,9 +105,9 @@ describe('LoggerService', () => {
       expect(console.error).not.toHaveBeenCalled();
     });
 
-    it('should log when logLevel >= 3', () => {
+    it('should log when logLevel >= Verbosity.Debug', () => {
       // Given
-      environment.logLevel = 3;
+      service.setVerbosity(Verbosity.Debug);
 
       // When
       service.debug(message);
