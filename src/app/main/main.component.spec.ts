@@ -3,8 +3,9 @@ import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/t
 import { FormsModule } from '@angular/forms';
 import { StoreModule, combineReducers } from '@ngrx/store';
 import { NgxPaginationModule } from 'ngx-pagination';
-import { OptionsComponent } from './options.component';
+import { MainComponent } from './main.component';
 import { NotesComponent } from '@app/notes/notes.component';
+import { FilterComponent } from '@app/filter/filter.component';
 import { ModalComponent } from '@app/modal/modal.component';
 import { notesMock } from '@app/notes/notes.model.mock';
 import { Note } from '@app/notes/notes.model';
@@ -14,13 +15,13 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-describe('OptionsComponent', () => {
-  let component: OptionsComponent;
-  let fixture: ComponentFixture<OptionsComponent>;
+describe('MainComponent', () => {
+  let component: MainComponent;
+  let fixture: ComponentFixture<MainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NotesComponent, ModalComponent, OptionsComponent],
+      declarations: [NotesComponent, FilterComponent, ModalComponent, MainComponent],
       imports: [
         FontAwesomeModule,
         FormsModule,
@@ -53,7 +54,7 @@ describe('OptionsComponent', () => {
       })
       .compileComponents();
 
-    fixture = TestBed.createComponent(OptionsComponent);
+    fixture = TestBed.createComponent(MainComponent);
     fixture.detectChanges();
     component = fixture.componentInstance;
   }));
@@ -75,30 +76,6 @@ describe('OptionsComponent', () => {
     expect(component.filter.areas).toBe('');
   });
 
-  it('should succeed to update filter object', () => {
-    component.updateFilterObject(areas, b, true);
-    expect(component.filter[areas][b]).toEqual(true);
-  });
-
-  it('should succeed to delete filter object', () => {
-    component.updateFilterObject(areas, b, false);
-  });
-
-  it('should succeed to toggle filter to true', () => {
-    const event = { key: areas, value: b };
-    component.toggleFilter(event);
-    expect(component.filter[areas][b]).toBeTruthy();
-  });
-
-  it('should succeed to toggle filter to false', () => {
-    const event = { key: areas, value: b };
-    component.toggleFilter(event);
-    expect(component.filter[areas][b]).toBeTruthy();
-
-    component.toggleFilter(event);
-    expect(component.filter[areas][b]).toBeFalsy();
-  });
-
   it('should succeed to update options on gotNotes', () => {
     component.gotNotes(notesMock);
     expect(component.options.areas.length).toEqual(1);
@@ -115,16 +92,22 @@ describe('OptionsComponent', () => {
     expect(component.options.releaseVersions.length).toEqual(1);
   });
 
+  it('should succeed to toggle filter to true', () => {
+    const event = { key: areas, value: b };
+    component.onUpdateFromNotesComponent(event);
+    expect(component.filter[areas][b]).toBeTruthy();
+  });
+
+  it('should succeed to toggle filter to false', () => {
+    const event = { key: areas, value: b };
+    component.onUpdateFromNotesComponent(event);
+    expect(component.filter[areas][b]).toBeTruthy();
+
+    component.onUpdateFromNotesComponent(event);
+    expect(component.filter[areas][b]).toBeFalsy();
+  });
+
   it('should succeed to open the modal view', () => {
     component.openModal();
-  });
-
-  it('should succeed to retrieve the options header ID', () => {
-    expect(component.optionsHeaderID('value')).toEqual('options-value');
-  });
-
-  it('should succeed to retrieve the options checkbox ID', () => {
-    expect(component.optionCheckboxID('value')).toEqual('option-value');
-    expect(component.optionCheckboxID('1.2.3')).toEqual('option-1-2-3');
   });
 });

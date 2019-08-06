@@ -3,12 +3,14 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { FilterComponent } from './filter/filter.component';
+import { MainComponent } from './main/main.component';
+import { ModalComponent } from './modal/modal.component';
+import { NotesComponent } from './notes/notes.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { NotesComponent } from './notes/notes.component';
-import { OptionsComponent } from './options/options.component';
-import { ModalComponent } from './modal/modal.component';
 import { FormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { LoggerService } from '@shared/services/logger.service';
@@ -24,7 +26,7 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [AppComponent, NotesComponent, OptionsComponent, ModalComponent],
+  declarations: [AppComponent, FilterComponent, MainComponent, ModalComponent, NotesComponent],
   imports: [
     HttpClientModule,
     BrowserModule,
