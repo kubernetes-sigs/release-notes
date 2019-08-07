@@ -63,4 +63,16 @@ export class NotesComponent {
     }
     return 'badge-secondary';
   }
+
+  /**
+   * Retrieve the collapse css class based on the current filter
+   *
+   * @returns The resulting class as string
+   */
+  public collapseClass(): string {
+    if (this.filter.isset('documentation')) {
+      return 'show';
+    }
+    return '';
+  }
 }

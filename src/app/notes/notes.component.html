@@ -44,7 +44,7 @@
       <div [innerHTML]="note.markdown | markdown"></div>
       <div
         *ngIf="note.documentation"
-        class="collapse"
+        class="collapse {{ collapseClass() }}"
         id="documentationContent-{{ note.pr_number }}"
       >
         <h6>Additional Documentation</h6>

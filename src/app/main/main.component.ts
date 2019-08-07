@@ -55,6 +55,7 @@ export class MainComponent implements OnInit {
   }
 
   gotNotes(notes: Note[]): void {
+    console.log(this.options);
     for (const note of Object.values(notes)) {
       if ('areas' in note) {
         this.options.areas = [...new Set(this.options.areas.concat(note.areas))];
@@ -64,6 +65,13 @@ export class MainComponent implements OnInit {
       }
       if ('sigs' in note) {
         this.options.sigs = [...new Set(this.options.sigs.concat(note.sigs))];
+      }
+      if ('documentation' in note) {
+        this.options.documentation = [
+          ...new Set(
+            this.options.documentation.concat(note.documentation.map(x => x.type.toString())),
+          ),
+        ];
       }
       if (this.options.releaseVersions.indexOf(note.release_version) < 0) {
         this.options.releaseVersions.push(note.release_version);

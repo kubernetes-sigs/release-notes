@@ -68,7 +68,16 @@ export class NotesEffects {
               } else {
                 for (const key in data.filter) {
                   if (key in note && typeof note[key] !== 'string') {
-                    if (
+                    // Filter the documentation by its doctype
+                    if (key === 'documentation' && note[key]) {
+                      for (let i = 0, len = note[key].length; i < len; i++) {
+                        const docType = note[key][i].type.toString();
+                        if (data.filter[key][docType] === true && filteredNotes.indexOf(note) < 0) {
+                          filteredNotes.push(note);
+                        }
+                      }
+                    } else if (
+                      // Filter everything else based on a simple set manipulation
                       [...new Set(note[key])].filter(x => {
                         return data.filter[key].indexOf(x) && data.filter[key][x];
                       }).length > 0

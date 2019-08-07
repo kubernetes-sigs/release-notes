@@ -6,6 +6,7 @@ export class Options {
   kinds: string[] = [];
   releaseVersions: string[] = [];
   sigs: string[] = [];
+  documentation: string[] = [];
 }
 
 /**
@@ -62,7 +63,6 @@ export class Filter extends Options {
    *
    * @returns a boolean
    */
-
   public isset(key: string): boolean {
     if (Object.keys(this[key]).length > 0) {
       return true;
@@ -75,7 +75,6 @@ export class Filter extends Options {
    *
    * @returns an object or null
    */
-
   public get(key: string): object {
     return this[key];
   }
@@ -85,7 +84,6 @@ export class Filter extends Options {
    *
    * @returns void
    */
-
   public add(key: string, value: string): void {
     this[key][value] = true;
   }
