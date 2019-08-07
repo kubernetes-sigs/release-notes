@@ -2,17 +2,9 @@ import { Injectable } from '@angular/core';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, exhaustMap, map } from 'rxjs/operators';
-import {
-  ActionTypes,
-  DoFilterSuccess,
-  DoFilter,
-  Failed,
-  GetNotes,
-  GetNotesSuccess,
-} from './notes.actions';
+import { ActionTypes, DoFilterSuccess, DoFilter, Failed, GetNotesSuccess } from './notes.actions';
 import { NotesService } from './notes.service';
 import { Note } from './notes.model';
-import { Filter } from '@app/shared/model/options.model';
 import { LoggerService } from '@shared/services/logger.service';
 
 @Injectable()

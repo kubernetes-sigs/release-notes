@@ -1,46 +1,56 @@
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { Note } from '@app/notes/notes.model';
-import { Filter, Options } from '@app/shared/model/options.model';
+import { Component, ViewChild } from '@angular/core';
+import { Store, select } from '@ngrx/store';
+import { first, skip } from 'rxjs/operators';
+import { State } from '@app/app.reducer';
+import { Filter } from '@app/shared/model/options.model';
 import { NotesComponent } from '@app/notes/notes.component';
 import { FilterComponent } from '@app/filter/filter.component';
+import { UpdateFilter } from '@app/filter/filter.actions';
 import { ModalComponent } from '@app/modal/modal.component';
 import { Router, ActivatedRoute } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { getFilterSelector } from '@app/filter/filter.reducer';
 
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
 })
-export class MainComponent implements OnInit {
-  options: Options = new Options();
+export class MainComponent {
   filter: Filter = new Filter();
 
   @ViewChild(NotesComponent, { static: true }) noteChild;
   @ViewChild(FilterComponent, { static: true }) filterChild;
 
   constructor(
+    private store: Store<State>,
     private router: Router,
     private route: ActivatedRoute,
     private modalService: NgbModal,
-  ) {}
-
-  ngOnInit() {
-    this.route.queryParamMap.subscribe(queryParamMap => {
-      if ('filter' in this && this.filter.isEmpty()) {
-        for (const i of Object.keys(this.filter)) {
-          if (queryParamMap.getAll(i).length > 0) {
-            if (i !== 'markdown') {
-              for (const x of queryParamMap.getAll(i)) {
-                this.filter.add(i, x);
-              }
-            } else {
-              this.filter.setMarkdown(queryParamMap.get(i));
+  ) {
+    this.route.queryParamMap
+      .pipe(skip(1))
+      .pipe(first())
+      .subscribe(queryParamMap => {
+        const f = new Filter();
+        for (let i = 0, len = queryParamMap.keys.length; i < len; i++) {
+          const key = queryParamMap.keys[i];
+          if (key !== 'markdown') {
+            for (const value of queryParamMap.getAll(key)) {
+              f.add(key, value);
             }
+          } else {
+            f.setMarkdown(queryParamMap.get(key));
           }
         }
-        this.noteChild.update(this.filter);
-      }
-    });
+        this.store.dispatch(new UpdateFilter(f));
+      });
+    this.store
+      .pipe(select(getFilterSelector))
+      .pipe(skip(1))
+      .subscribe(filter => {
+        this.filter = filter;
+        this.updateURI();
+      });
   }
 
   updateFilterString(a, b): void {
@@ -49,50 +59,7 @@ export class MainComponent implements OnInit {
     } else {
       this.filter[a] = '';
     }
-    this.noteChild.update(this.filter);
-
-    this.updateURI();
-  }
-
-  gotNotes(notes: Note[]): void {
-    console.log(this.options);
-    for (const note of Object.values(notes)) {
-      if ('areas' in note) {
-        this.options.areas = [...new Set(this.options.areas.concat(note.areas))];
-      }
-      if ('kinds' in note) {
-        this.options.kinds = [...new Set(this.options.kinds.concat(note.kinds))];
-      }
-      if ('sigs' in note) {
-        this.options.sigs = [...new Set(this.options.sigs.concat(note.sigs))];
-      }
-      if ('documentation' in note) {
-        this.options.documentation = [
-          ...new Set(
-            this.options.documentation.concat(note.documentation.map(x => x.type.toString())),
-          ),
-        ];
-      }
-      if (this.options.releaseVersions.indexOf(note.release_version) < 0) {
-        this.options.releaseVersions.push(note.release_version);
-      }
-    }
-  }
-
-  onUpdateFromFilterComponent(filter: Filter): void {
-    this.filter = filter;
-    this.noteChild.update(this.filter);
-    this.updateURI();
-  }
-
-  onUpdateFromNotesComponent(event: any): void {
-    if (typeof this.filter[event.key][event.value] === 'boolean') {
-      delete this.filter[event.key][event.value];
-    } else {
-      this.filter.add(event.key, event.value);
-    }
-
-    this.updateURI();
+    this.store.dispatch(new UpdateFilter(this.filter));
   }
 
   updateURI(): void {

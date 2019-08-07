@@ -1,11 +1,7 @@
-import { TestBed, getTestBed } from '@angular/core/testing';
 import { Filter } from './options.model';
 
 describe('OptionsModel', () => {
   let filter: Filter;
-
-  // Given
-  const message = 'message';
 
   beforeEach(() => {
     filter = new Filter();

@@ -1,13 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientModule } from '@angular/common/http';
 import { NotesService } from './notes.service';
 import { LoggerService } from '@shared/services/logger.service';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { notesMock } from './notes.model.mock';
 
 describe('NotesService', () => {
   let service: NotesService;
-  let httpMock: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -15,7 +13,6 @@ describe('NotesService', () => {
       providers: [LoggerService],
     }).compileComponents();
 
-    httpMock = TestBed.get(HttpTestingController);
     service = TestBed.get(NotesService);
   });
 

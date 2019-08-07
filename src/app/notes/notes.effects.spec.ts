@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideMockActions } from '@ngrx/effects/testing';
 import { cold, hot } from 'jasmine-marbles';
 import { Observable } from 'rxjs';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { NotesService } from './notes.service';
 import { NotesEffects } from './notes.effects';
@@ -16,7 +16,6 @@ describe('NotesEffects', () => {
 
   let effects: NotesEffects;
   let actions: Observable<any>;
-  let httpMock: HttpTestingController;
   let notesService: any;
 
   beforeEach(() => {
@@ -26,7 +25,6 @@ describe('NotesEffects', () => {
     });
 
     effects = TestBed.get(NotesEffects);
-    httpMock = TestBed.get(HttpTestingController);
     notesService = TestBed.get(NotesService);
   });
 
