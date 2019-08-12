@@ -72,7 +72,8 @@ export class NotesEffects {
                       // Filter everything else based on a simple set manipulation
                       [...new Set(note[key])].filter(x => {
                         return data.filter[key].indexOf(x) && data.filter[key][x];
-                      }).length > 0
+                      }).length > 0 &&
+                      filteredNotes.indexOf(note) < 0
                     ) {
                       filteredNotes.push(note);
                     }
@@ -86,7 +87,8 @@ export class NotesEffects {
                         note[key]
                           .toUpperCase()
                           .trim()
-                          .includes(data.filter[key].toUpperCase().trim())
+                          .includes(data.filter[key].toUpperCase().trim()) &&
+                        filteredNotes.indexOf(note) < 0
                       ) {
                         filteredNotes.push(note);
                       }
