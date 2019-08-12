@@ -24,10 +24,7 @@ export class NotesService {
 
     const observables = [];
     for (const asset of assets) {
-      if (asset.hidden) {
-        continue;
-      }
-      observables.push(this.http.get(asset.path));
+      observables.push(this.http.get(asset));
     }
 
     return forkJoin(observables).pipe(map(this.toNoteList));
