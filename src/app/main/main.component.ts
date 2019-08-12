@@ -1,10 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { first, skip } from 'rxjs/operators';
 import { State } from '@app/app.reducer';
 import { Filter } from '@app/shared/model/options.model';
-import { NotesComponent } from '@app/notes/notes.component';
-import { FilterComponent } from '@app/filter/filter.component';
 import { UpdateFilter } from '@app/filter/filter.actions';
 import { ModalComponent } from '@app/modal/modal.component';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -17,9 +15,6 @@ import { getFilterSelector } from '@app/filter/filter.reducer';
 })
 export class MainComponent {
   filter: Filter = new Filter();
-
-  @ViewChild(NotesComponent, { static: true }) noteChild;
-  @ViewChild(FilterComponent, { static: true }) filterChild;
 
   constructor(
     private store: Store<State>,
