@@ -1,4 +1,4 @@
-import { Action, createSelector, createFeatureSelector } from '@ngrx/store';
+import { createSelector } from '@ngrx/store';
 import { ActionTypes, NotesAction } from './notes.actions';
 import { Note } from './notes.model';
 import { State as RootState } from '@app/app.reducer';

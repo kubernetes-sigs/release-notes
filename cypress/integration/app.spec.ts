@@ -16,6 +16,7 @@ describe('Release Notes App', () => {
   const optionKEP = `${optionID}-KEP`;
   const optionExternal = `${optionID}-external`;
   const optionReleaseEng = `${optionID}-release-eng`;
+  const optionTest = `${optionID}-test`;
   const optionsID = '#options';
   const optionsReleaseVersionsID = `${optionsID}-releaseVersions`;
   const searchBar = '#searchBar';
@@ -251,5 +252,21 @@ describe('Release Notes App', () => {
       expect($c).to.have.length(1);
       expect($c).to.contain(v1160entry1);
     });
+  });
+
+  it(`should be possible to access the page with pre defined filter`, () => {
+    // Given
+    // When
+    cy.visit('/?areas=test&markdown=shutdown');
+
+    // Then
+    cy.get(cards).should($c => {
+      expect($c).to.have.length(3);
+      expect($c).to.contain(v1150entry1);
+      expect($c).to.contain(v1150entry5);
+      expect($c).to.contain(v1160entry1);
+    });
+    cy.get(optionTest).should('be.checked');
+    cy.get(searchBar).should('have.attr', 'ng-reflect-model', 'shutdown');
   });
 });

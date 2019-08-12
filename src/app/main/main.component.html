@@ -37,12 +37,7 @@
   <div class="row">
     <nav class="col-md-2 d-none d-md-block bg-light sidebar">
       <div class="sidebar-sticky">
-        <app-filter
-          id="filterComponent"
-          [options]="options"
-          [filter]="filter"
-          (filterUpdate)="onUpdateFromFilterComponent($event)"
-        ></app-filter>
+        <app-filter id="filterComponent"></app-filter>
       </div>
     </nav>
 
@@ -50,12 +45,7 @@
       <div
         class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
       >
-        <app-notes
-          id="notesComponent"
-          (filterUpdate)="onUpdateFromNotesComponent($event)"
-          (gotNotes)="gotNotes($event)"
-          [filter]="filter"
-        ></app-notes>
+        <app-notes id="notesComponent"></app-notes>
       </div>
     </main>
   </div>

@@ -17,11 +17,12 @@ import { LoggerService } from '@shared/services/logger.service';
 
 import { EffectsModule } from '@ngrx/effects';
 import { NotesEffects } from './notes/notes.effects';
+import { FilterEffects } from './filter/filter.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
 import { environment } from '../environments/environment';
 import { notesReducer } from './notes/notes.reducer';
-import { reducers } from './app.reducer';
+import { filterReducer } from './filter/filter.reducer';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
@@ -48,8 +49,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         },
       },
     }),
-    StoreModule.forRoot({ notes: notesReducer }),
-    EffectsModule.forRoot([NotesEffects]),
+    StoreModule.forRoot({ filter: filterReducer, notes: notesReducer }),
+    EffectsModule.forRoot([FilterEffects, NotesEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     FontAwesomeModule,
   ],

@@ -7,8 +7,7 @@ import { MainComponent } from './main.component';
 import { NotesComponent } from '@app/notes/notes.component';
 import { FilterComponent } from '@app/filter/filter.component';
 import { ModalComponent } from '@app/modal/modal.component';
-import { notesMock } from '@app/notes/notes.model.mock';
-import { Note } from '@app/notes/notes.model';
+import { filterReducer } from '@app/filter/filter.reducer';
 import { notesReducer } from '@app/notes/notes.reducer';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -43,6 +42,7 @@ describe('MainComponent', () => {
         NgbModule,
         RouterTestingModule,
         StoreModule.forRoot({
+          filter: combineReducers(filterReducer),
           notes: combineReducers(notesReducer),
         }),
       ],
@@ -74,37 +74,6 @@ describe('MainComponent', () => {
   it('should succeed to delete filter string', () => {
     component.updateFilterString(areas, '');
     expect(component.filter.areas).toBe('');
-  });
-
-  it('should succeed to update options on gotNotes', () => {
-    component.gotNotes(notesMock);
-    expect(component.options.areas.length).toEqual(1);
-    expect(component.options.kinds.length).toEqual(1);
-    expect(component.options.sigs.length).toEqual(1);
-    expect(component.options.releaseVersions.length).toEqual(1);
-  });
-
-  it('should succeed to update options on empty/invalid notes', () => {
-    component.gotNotes([{} as Note]);
-    expect(component.options.areas.length).toEqual(0);
-    expect(component.options.kinds.length).toEqual(0);
-    expect(component.options.sigs.length).toEqual(0);
-    expect(component.options.releaseVersions.length).toEqual(1);
-  });
-
-  it('should succeed to toggle filter to true', () => {
-    const event = { key: areas, value: b };
-    component.onUpdateFromNotesComponent(event);
-    expect(component.filter[areas][b]).toBeTruthy();
-  });
-
-  it('should succeed to toggle filter to false', () => {
-    const event = { key: areas, value: b };
-    component.onUpdateFromNotesComponent(event);
-    expect(component.filter[areas][b]).toBeTruthy();
-
-    component.onUpdateFromNotesComponent(event);
-    expect(component.filter[areas][b]).toBeFalsy();
   });
 
   it('should succeed to open the modal view', () => {

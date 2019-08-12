@@ -6,13 +6,10 @@ import { State } from '@app/app.reducer';
 
 import { NotesComponent } from './notes.component';
 import { notesReducer } from './notes.reducer';
-import { DoFilter } from './notes.actions';
-import { Filter } from '@app/shared/model/options.model';
+import { filterReducer } from '@app/filter/filter.reducer';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('NotesComponent', () => {
-  const filter = new Filter();
-
   let fixture: ComponentFixture<NotesComponent>;
   let component: NotesComponent;
   let store: Store<State>;
@@ -38,6 +35,7 @@ describe('NotesComponent', () => {
         }),
         NgxPaginationModule,
         StoreModule.forRoot({
+          filter: combineReducers(filterReducer),
           notes: combineReducers(notesReducer),
         }),
       ],
@@ -54,26 +52,13 @@ describe('NotesComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should succeed to update', () => {
-    // Given
-    const action = new DoFilter(undefined, filter);
-
-    // When
-    component.update(filter);
-
-    // Then
-    expect(store.dispatch).toHaveBeenCalledWith(action);
-  });
-
   it('should succeed to toggle filter', () => {
     // Given
-    const action = new DoFilter(undefined, undefined);
-
     // When
     component.toggleFilter('key', 'value');
 
     // Then
-    expect(store.dispatch).toHaveBeenCalledWith(action);
+    expect(store.dispatch).not.toHaveBeenCalled();
   });
 
   it('should succeed to retrieve the correct badge class', () => {

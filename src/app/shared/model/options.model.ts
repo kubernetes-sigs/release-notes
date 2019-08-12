@@ -87,4 +87,13 @@ export class Filter extends Options {
   public add(key: string, value: string): void {
     this[key][value] = true;
   }
+
+  /**
+   * Method to delete a value and a key
+   *
+   * @returns void
+   */
+  public del(key: string, value: string): void {
+    delete this[key][value];
+  }
 }

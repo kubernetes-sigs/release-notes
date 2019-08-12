@@ -1,11 +1,13 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { DocType, Note } from './notes.model';
+import { Note } from './notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
 import { State } from '@app/app.reducer';
 import { getAllNotesSelector, getFilteredNotesSelector } from './notes.reducer';
 import { Filter } from '@app/shared/model/options.model';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
+import { UpdateFilter } from '@app/filter/filter.actions';
+import { getFilterSelector } from '@app/filter/filter.reducer';
 
 @Component({
   selector: 'app-notes',
@@ -14,40 +16,53 @@ import { faBook } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./notes.component.scss'],
 })
 export class NotesComponent {
-  @Input() filter: Filter;
-  @Output() filterUpdate = new EventEmitter<object>();
-  @Output() gotNotes = new EventEmitter<Note[]>();
-  allNotes: Note[];
-  filteredNotes: Note[];
+  filter: Filter = new Filter();
+  allNotes: Note[] = [];
+  filteredNotes: Note[] = [];
   p = 1;
   faBook = faBook;
 
   constructor(private store: Store<State>) {
-    store.dispatch(new GetNotes());
+    this.store.dispatch(new GetNotes());
 
-    this.store.pipe(select(getAllNotesSelector)).subscribe(n => {
-      // Initial retrieval of the notes
-      this.allNotes = n;
-      this.filteredNotes = n;
-      this.gotNotes.emit(n);
+    store.pipe(select(getAllNotesSelector)).subscribe(notes => {
+      if (notes) {
+        // Initial retrieval of the notes
+        this.allNotes = notes;
+        this.filteredNotes = notes;
 
+        this.store.dispatch(new DoFilter(this.allNotes, this.filter));
+      }
+    });
+
+    this.store.pipe(select(getFilteredNotesSelector)).subscribe(notes => {
+      if (notes) {
+        // Filter update of the notes
+        this.filteredNotes = notes;
+      }
+    });
+
+    this.store.pipe(select(getFilterSelector)).subscribe(filter => {
+      if (filter) {
+        this.filter = filter;
+        this.store.dispatch(new DoFilter(this.allNotes, filter));
+      }
+    });
+  }
+
+  /**
+   * Add or remove a filter element based on its state
+   */
+  public toggleFilter(key: string, value: string): void {
+    if (key in this.filter) {
+      if (typeof this.filter[key][value] === 'boolean') {
+        this.filter.del(key, value);
+      } else {
+        this.filter.add(key, value);
+      }
+      this.store.dispatch(new UpdateFilter(this.filter));
       this.store.dispatch(new DoFilter(this.allNotes, this.filter));
-    });
-
-    this.store.pipe(select(getFilteredNotesSelector)).subscribe(n => {
-      // Filter update of the notes
-      this.filteredNotes = n;
-    });
-  }
-
-  public update(filter: Filter) {
-    this.filter = filter;
-    this.store.dispatch(new DoFilter(this.allNotes, filter));
-  }
-
-  public toggleFilter(key, value) {
-    this.filterUpdate.emit({ key, value });
-    this.store.dispatch(new DoFilter(this.allNotes, this.filter));
+    }
   }
 
   /**
