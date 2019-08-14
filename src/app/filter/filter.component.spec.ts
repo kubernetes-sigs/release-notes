@@ -7,6 +7,7 @@ import { notesReducer } from '@app/notes/notes.reducer';
 import { Note } from '@app/notes/notes.model';
 import { notesMock } from '@app/notes/notes.model.mock';
 import { filterReducer } from '@app/filter/filter.reducer';
+import { settingsReducer } from '@app/settings/settings.reducer';
 
 describe('FilterComponent', () => {
   let component: FilterComponent;
@@ -20,6 +21,7 @@ describe('FilterComponent', () => {
         StoreModule.forRoot({
           filter: combineReducers(filterReducer),
           notes: combineReducers(notesReducer),
+          settings: combineReducers(settingsReducer),
         }),
       ],
     }).compileComponents();
@@ -43,7 +45,8 @@ describe('FilterComponent', () => {
   });
 
   it('should succeed to update options', () => {
-    component.updateOptions(notesMock);
+    component.notes = notesMock;
+    component.updateOptions();
     expect(component.options.areas.length).toEqual(1);
     expect(component.options.kinds.length).toEqual(1);
     expect(component.options.sigs.length).toEqual(1);
@@ -51,10 +54,19 @@ describe('FilterComponent', () => {
   });
 
   it('should succeed to update options on empty/invalid notes', () => {
-    component.updateOptions([{} as Note]);
+    component.notes = [{} as Note];
+    component.updateOptions();
     expect(component.options.areas.length).toEqual(0);
     expect(component.options.kinds.length).toEqual(0);
     expect(component.options.sigs.length).toEqual(0);
     expect(component.options.releaseVersions.length).toEqual(1);
+  });
+
+  it('should indicate if a release version is a pre-release', () => {
+    expect(component.isPreRelease(undefined)).toBeFalsy();
+    expect(component.isPreRelease('1.15.1')).toBeFalsy();
+    expect(component.isPreRelease('1.16.0-alpha.1')).toBeTruthy();
+    expect(component.isPreRelease('1.16.0-beta.1')).toBeTruthy();
+    expect(component.isPreRelease('1.16.0-rc.1')).toBeTruthy();
   });
 });

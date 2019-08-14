@@ -7,12 +7,14 @@ import { MainComponent } from './main.component';
 import { NotesComponent } from '@app/notes/notes.component';
 import { FilterComponent } from '@app/filter/filter.component';
 import { ModalComponent } from '@app/modal/modal.component';
+import { SettingsComponent } from '@app/settings/settings.component';
 import { filterReducer } from '@app/filter/filter.reducer';
 import { notesReducer } from '@app/notes/notes.reducer';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { settingsReducer } from '@app/settings/settings.reducer';
 
 describe('MainComponent', () => {
   let component: MainComponent;
@@ -20,7 +22,13 @@ describe('MainComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [NotesComponent, FilterComponent, ModalComponent, MainComponent],
+      declarations: [
+        FilterComponent,
+        MainComponent,
+        ModalComponent,
+        NotesComponent,
+        SettingsComponent,
+      ],
       imports: [
         FontAwesomeModule,
         FormsModule,
@@ -44,6 +52,7 @@ describe('MainComponent', () => {
         StoreModule.forRoot({
           filter: combineReducers(filterReducer),
           notes: combineReducers(notesReducer),
+          settings: combineReducers(settingsReducer),
         }),
       ],
     })

@@ -1,0 +1,22 @@
+<a href="#" id="settingsLink" (click)="openModal(content)" class="nav-link">
+  <fa-icon class="icon" [icon]="faCogs" size="lg"></fa-icon>
+</a>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-settings">Settings</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <label
+      ><input
+        type="checkbox"
+        id="preReleaseSetting"
+        [(ngModel)]="settings.displayPreReleases"
+        (click)="togglePreReleasesSetting()"
+      />
+      Show pre-releases</label
+    >
+  </div>
+</ng-template>
