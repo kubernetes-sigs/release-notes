@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { skip } from 'rxjs/operators';
-import { Filter, Options } from '@app/shared/model/options.model';
+import { Options, OptionType } from '@app/shared/model/options.model';
+import { Filter } from '@app/shared/model/filter.model';
 import { Settings } from '@app/shared/model/settings.model';
-import { Note } from '@app/notes/notes.model';
+import { Note } from '@app/shared/model/notes.model';
 import { getAllNotesSelector } from '@app/notes/notes.reducer';
 import { State } from '@app/app.reducer';
 import { UpdateFilter } from './filter.actions';
@@ -13,8 +14,9 @@ import { getSettingsSelector } from '@app/settings/settings.reducer';
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FilterComponent {
+export class FilterComponent implements OnInit {
   options: Options = new Options();
   filter: Filter = new Filter();
   settings: Settings = new Settings();
@@ -23,7 +25,12 @@ export class FilterComponent {
   /**
    * FilterComponent's constructor
    */
-  constructor(private store: Store<State>) {
+  constructor(private cdr: ChangeDetectorRef, private store: Store<State>) {}
+
+  /**
+   * Runs after component initialization
+   */
+  ngOnInit() {
     this.store.pipe(select(getAllNotesSelector)).subscribe(notes => {
       if (notes) {
         this.notes = notes;
@@ -55,53 +62,38 @@ export class FilterComponent {
 
     // Populate the new options
     for (const note of Object.values(this.notes)) {
-      if ('areas' in note) {
-        this.options.areas = [...new Set(this.options.areas.concat(note.areas))];
+      if (OptionType.areas in note) {
+        this.options.add(OptionType.areas, note.areas);
       }
-      if ('kinds' in note) {
-        this.options.kinds = [...new Set(this.options.kinds.concat(note.kinds))];
+      if (OptionType.kinds in note) {
+        this.options.add(OptionType.kinds, note.kinds);
       }
-      if ('sigs' in note) {
-        this.options.sigs = [...new Set(this.options.sigs.concat(note.sigs))];
+      if (OptionType.sigs in note) {
+        this.options.add(OptionType.sigs, note.sigs);
       }
-      if ('documentation' in note) {
-        this.options.documentation = [
-          ...new Set(
-            this.options.documentation.concat(note.documentation.map(x => x.type.toString())),
-          ),
-        ];
+      if (OptionType.documentation in note) {
+        this.options.add(OptionType.documentation, note.documentation.map(x => x.type.toString()));
       }
       if (
-        !this.options.releaseVersions.includes(note.release_version) &&
-        (this.settings.displayPreReleases || !this.isPreRelease(note.release_version))
+        !this.options.get(OptionType.releaseVersions).has(note.release_version) &&
+        (this.settings.displayPreReleases || !this.filter.isPreRelease(note.release_version))
       ) {
-        this.options.releaseVersions.push(note.release_version);
+        this.options.get(OptionType.releaseVersions).add(note.release_version);
       }
     }
-  }
 
-  /**
-   * Test wheter a release version string is a pre release
-   *
-   * @param version The release version string
-   *
-   * @returns boolean true if it's a pre-release, otherwise false
-   */
-  isPreRelease(version: string): boolean {
-    if (version) {
-      return version.includes('alpha') || version.includes('beta') || version.includes('rc');
-    }
-    return false;
+    // Update the UI
+    this.cdr.detectChanges();
   }
 
   /**
    * Update the filter object based on the given parameters
    */
-  updateFilter(key: string, value: string, event: any): void {
+  updateFilter(optionType: OptionType, value: string, event: any): void {
     if (event) {
-      this.filter.add(key, value);
+      this.filter.set(optionType, value);
     } else {
-      this.filter.del(key, value);
+      this.filter.del(optionType, value);
     }
     this.store.dispatch(new UpdateFilter(this.filter));
   }
@@ -126,8 +118,11 @@ export class FilterComponent {
    * @returns The prefixed output string
    */
   optionCheckboxID(input: string): string {
-    // Strip the dots from the release versions
-    const stripped = input.replace(/\./g, '-');
-    return `option-${stripped}`;
+    if (input) {
+      // Strip the dots from the release versions
+      const stripped = input.replace(/\./g, '-');
+      return `option-${stripped}`;
+    }
+    return '';
   }
 }

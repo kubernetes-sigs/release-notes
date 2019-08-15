@@ -4,7 +4,8 @@ import { of } from 'rxjs';
 import { catchError, exhaustMap, map } from 'rxjs/operators';
 import { ActionTypes, DoFilterSuccess, DoFilter, Failed, GetNotesSuccess } from './notes.actions';
 import { NotesService } from './notes.service';
-import { Note } from './notes.model';
+import { Note } from '@app/shared/model/notes.model';
+import { OptionType } from '@app/shared/model/options.model';
 import { LoggerService } from '@shared/services/logger.service';
 
 @Injectable()
@@ -36,71 +37,67 @@ export class NotesEffects {
       };
     }),
     exhaustMap(data => {
-      this.logger.debug('[Notes Effects:DoFilter] SUCCESS');
-      const filteredNotes: Note[] = [];
-      if (data.filter && data.filter.isEmpty()) {
-        return of(new DoFilterSuccess(data.notes));
-      } else {
-        if (data.filter) {
-          const copyFilter = Object.create(data.filter);
+      const filteredNotes: Set<Note> = new Set();
+      const filter = data.filter;
 
-          copyFilter.releaseVersions = [];
+      for (const note of data.notes) {
+        // Filter the release versions
+        if (
+          !filter.has(OptionType.releaseVersions, note.release_version) &&
+          (!filter.optionIsEmpty(OptionType.releaseVersions) ||
+            filter.isPreRelease(note.release_version))
+        ) {
+          // Wrong release version set, it will not be added
+          continue;
+        }
 
-          for (const note of data.notes) {
-            // Release Version is a special filter.
+        // If the filter is empty (this ignores the releaseVersions field),
+        // show the note
+        if (filter.isEmpty()) {
+          filteredNotes.add(note);
+          continue;
+        }
+
+        // Filter all regular option types
+        if (filter.hasAny(OptionType.areas, note.areas)) {
+          filteredNotes.add(note);
+          continue;
+        }
+        if (filter.hasAny(OptionType.kinds, note.kinds)) {
+          filteredNotes.add(note);
+          continue;
+        }
+        if (filter.hasAny(OptionType.sigs, note.sigs)) {
+          filteredNotes.add(note);
+          continue;
+        }
+        if (
+          note.documentation &&
+          filter.hasAny(OptionType.documentation, note.documentation.map(x => x.type.toString()))
+        ) {
+          filteredNotes.add(note);
+          continue;
+        }
+
+        // Now lazily filter every string based field via the text based filter
+        if (filter.text.length > 0) {
+          for (const key of Object.keys(note)) {
             if (
-              (data.filter.isset('releaseVersions') &&
-                Object.keys(data.filter.get('releaseVersions')).indexOf(note.release_version) >=
-                  0) ||
-              (!('releaseVersions' in data.filter) ||
-                !(Object.keys(data.filter.get('releaseVersions')).length > 0))
+              typeof note[key] === 'string' &&
+              note[key]
+                .toUpperCase()
+                .trim()
+                .includes(filter.text.toUpperCase().trim())
             ) {
-              if (copyFilter.isEmpty()) {
-                filteredNotes.push(note);
-              } else {
-                for (const key in data.filter) {
-                  if (key in note && typeof note[key] !== 'string') {
-                    // Filter the documentation by its doctype
-                    if (key === 'documentation' && note[key]) {
-                      for (let i = 0, len = note[key].length; i < len; i++) {
-                        const docType = note[key][i].type.toString();
-                        if (data.filter[key][docType] === true && filteredNotes.indexOf(note) < 0) {
-                          filteredNotes.push(note);
-                        }
-                      }
-                    } else if (
-                      // Filter everything else based on a simple set manipulation
-                      [...new Set(note[key])].filter(x => {
-                        return data.filter[key].indexOf(x) && data.filter[key][x];
-                      }).length > 0 &&
-                      filteredNotes.indexOf(note) < 0
-                    ) {
-                      filteredNotes.push(note);
-                    }
-                  } else {
-                    if (
-                      key in note &&
-                      typeof note[key] === 'string' &&
-                      data.filter[key].trim().length > 0
-                    ) {
-                      if (
-                        note[key]
-                          .toUpperCase()
-                          .trim()
-                          .includes(data.filter[key].toUpperCase().trim()) &&
-                        filteredNotes.indexOf(note) < 0
-                      ) {
-                        filteredNotes.push(note);
-                      }
-                    }
-                  }
-                }
-              }
+              filteredNotes.add(note);
+              break;
             }
           }
         }
-        return of(new DoFilterSuccess(filteredNotes));
       }
+
+      this.logger.debug('[Notes Effects:DoFilter] SUCCESS (filtered)');
+      return of(new DoFilterSuccess([...filteredNotes]));
     }),
   );
 

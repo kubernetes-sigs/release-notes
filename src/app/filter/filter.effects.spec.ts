@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import { FilterEffects } from './filter.effects';
 import { UpdateFilter, UpdateFilterSuccess } from './filter.actions';
 import { LoggerService } from '@shared/services/logger.service';
-import { Filter } from '@app/shared/model/options.model';
+import { Filter } from '@app/shared/model/filter.model';
 
 describe('FilterEffects', () => {
   const testFilter = new Filter();

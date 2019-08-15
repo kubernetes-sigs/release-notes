@@ -1,6 +1,6 @@
 import { Failed, UpdateFilterSuccess } from './filter.actions';
 import { initialState, filterReducer } from './filter.reducer';
-import { Filter } from '@app/shared/model/options.model';
+import { Filter } from '@app/shared/model/filter.model';
 
 describe('FilterReducer', () => {
   describe('reducing an undefined action', () => {

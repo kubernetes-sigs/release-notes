@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { Note } from './notes.model';
+import { Note } from '@app/shared/model/notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
 import { State } from '@app/app.reducer';
 import { getAllNotesSelector, getFilteredNotesSelector } from './notes.reducer';
-import { Filter } from '@app/shared/model/options.model';
+import { Filter } from '@app/shared/model/filter.model';
+import { OptionType } from '@app/shared/model/options.model';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { UpdateFilter } from '@app/filter/filter.actions';
 import { getFilterSelector } from '@app/filter/filter.reducer';
@@ -53,16 +54,14 @@ export class NotesComponent {
   /**
    * Add or remove a filter element based on its state
    */
-  public toggleFilter(key: string, value: string): void {
-    if (key in this.filter) {
-      if (typeof this.filter[key][value] === 'boolean') {
-        this.filter.del(key, value);
-      } else {
-        this.filter.add(key, value);
-      }
-      this.store.dispatch(new UpdateFilter(this.filter));
-      this.store.dispatch(new DoFilter(this.allNotes, this.filter));
+  public toggleFilter(optionType: OptionType, value: string): void {
+    if (this.filter.has(optionType, value)) {
+      this.filter.del(optionType, value);
+    } else {
+      this.filter.set(optionType, value);
     }
+    this.store.dispatch(new UpdateFilter(this.filter));
+    this.store.dispatch(new DoFilter(this.allNotes, this.filter));
   }
 
   /**
@@ -85,7 +84,7 @@ export class NotesComponent {
    * @returns The resulting class as string
    */
   public collapseClass(): string {
-    if (this.filter.isset('documentation')) {
+    if (!this.filter.optionIsEmpty(OptionType.documentation)) {
       return 'show';
     }
     return '';

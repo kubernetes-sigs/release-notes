@@ -1,6 +1,6 @@
 import { DoFilterSuccess, Failed, GetNotesSuccess } from './notes.actions';
 import { initialState, notesReducer } from './notes.reducer';
-import { notesMock } from './notes.model.mock';
+import { notesMock } from '@app/shared/model/notes.model.mock';
 
 describe('NotesReducer', () => {
   describe('reducing an undefined action', () => {

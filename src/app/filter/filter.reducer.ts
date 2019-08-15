@@ -1,6 +1,6 @@
 import { createSelector } from '@ngrx/store';
 import { ActionTypes, FilterAction } from './filter.actions';
-import { Filter } from '@app/shared/model/options.model';
+import { Filter } from '@app/shared/model/filter.model';
 import { State as RootState } from '@app/app.reducer';
 
 export interface State {

@@ -15,8 +15,8 @@
     <ul class="navbar-nav mr-auto w-100">
       <li class="nav-item active w-100">
         <input
-          [ngModel]="filter['markdown']"
-          (ngModelChange)="updateFilterString('markdown', $event)"
+          [ngModel]="filter.text"
+          (ngModelChange)="updateFilterString($event)"
           class="form-control bg-dark text-white border-0 rounded-0"
           id="searchBar"
           type="search"

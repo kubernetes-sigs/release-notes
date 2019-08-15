@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Note } from './notes.model';
+import { Note } from '@app/shared/model/notes.model';
 import { LoggerService } from '@shared/services/logger.service';
 import { assets } from '@env/assets';
 

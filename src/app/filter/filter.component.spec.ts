@@ -4,8 +4,9 @@ import { StoreModule, combineReducers } from '@ngrx/store';
 
 import { FilterComponent } from '@app/filter/filter.component';
 import { notesReducer } from '@app/notes/notes.reducer';
-import { Note } from '@app/notes/notes.model';
-import { notesMock } from '@app/notes/notes.model.mock';
+import { Note } from '@app/shared/model/notes.model';
+import { OptionType } from '@app/shared/model/options.model';
+import { notesMock } from '@app/shared/model/notes.model.mock';
 import { filterReducer } from '@app/filter/filter.reducer';
 import { settingsReducer } from '@app/settings/settings.reducer';
 
@@ -42,31 +43,24 @@ describe('FilterComponent', () => {
   it('should succeed to retrieve the options checkbox ID', () => {
     expect(component.optionCheckboxID('value')).toEqual('option-value');
     expect(component.optionCheckboxID('1.2.3')).toEqual('option-1-2-3');
+    expect(component.optionCheckboxID(undefined)).toEqual('');
   });
 
   it('should succeed to update options', () => {
     component.notes = notesMock;
     component.updateOptions();
-    expect(component.options.areas.length).toEqual(1);
-    expect(component.options.kinds.length).toEqual(1);
-    expect(component.options.sigs.length).toEqual(1);
-    expect(component.options.releaseVersions.length).toEqual(1);
+    expect(component.options.get(OptionType.areas).size).toEqual(1);
+    expect(component.options.get(OptionType.kinds).size).toEqual(1);
+    expect(component.options.get(OptionType.sigs).size).toEqual(1);
+    expect(component.options.get(OptionType.releaseVersions).size).toEqual(1);
   });
 
   it('should succeed to update options on empty/invalid notes', () => {
     component.notes = [{} as Note];
     component.updateOptions();
-    expect(component.options.areas.length).toEqual(0);
-    expect(component.options.kinds.length).toEqual(0);
-    expect(component.options.sigs.length).toEqual(0);
-    expect(component.options.releaseVersions.length).toEqual(1);
-  });
-
-  it('should indicate if a release version is a pre-release', () => {
-    expect(component.isPreRelease(undefined)).toBeFalsy();
-    expect(component.isPreRelease('1.15.1')).toBeFalsy();
-    expect(component.isPreRelease('1.16.0-alpha.1')).toBeTruthy();
-    expect(component.isPreRelease('1.16.0-beta.1')).toBeTruthy();
-    expect(component.isPreRelease('1.16.0-rc.1')).toBeTruthy();
+    expect(component.options.get(OptionType.areas).size).toEqual(0);
+    expect(component.options.get(OptionType.kinds).size).toEqual(0);
+    expect(component.options.get(OptionType.sigs).size).toEqual(0);
+    expect(component.options.get(OptionType.releaseVersions).size).toEqual(1);
   });
 });

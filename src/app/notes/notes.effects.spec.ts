@@ -7,9 +7,10 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { NotesService } from './notes.service';
 import { NotesEffects } from './notes.effects';
 import { DoFilter, DoFilterSuccess, Failed, GetNotes, GetNotesSuccess } from './notes.actions';
-import { notesMock } from './notes.model.mock';
+import { notesMock } from '@app/shared/model/notes.model.mock';
+import { OptionType } from '@app/shared/model/options.model';
 import { LoggerService } from '@shared/services/logger.service';
-import { Filter } from '@app/shared/model/options.model';
+import { Filter } from '@app/shared/model/filter.model';
 
 describe('NotesEffects', () => {
   const filter = new Filter();
@@ -68,7 +69,79 @@ describe('NotesEffects', () => {
 
     it('should succeed with non matching filter', () => {
       const testFilter = new Filter();
-      testFilter.areas = ['area'];
+      testFilter.set(OptionType.areas, 'area52');
+      const action = new DoFilter(notesMock, testFilter);
+      const completion = new DoFilterSuccess([]);
+
+      actions = hot('--a-', { a: action });
+      const expected = cold('--b', { b: completion });
+
+      expect(effects.doFilter$).toBeObservable(expected);
+    });
+
+    it('should succeed with matching filter by area', () => {
+      const testFilter = new Filter();
+      testFilter.set(OptionType.areas, notesMock[0].areas[0]);
+      const action = new DoFilter(notesMock, testFilter);
+      const completion = new DoFilterSuccess(notesMock);
+
+      actions = hot('--a-', { a: action });
+      const expected = cold('--b', { b: completion });
+
+      expect(effects.doFilter$).toBeObservable(expected);
+    });
+
+    it('should succeed with matching filter by kinds', () => {
+      const testFilter = new Filter();
+      testFilter.set(OptionType.kinds, notesMock[0].kinds[0]);
+      const action = new DoFilter(notesMock, testFilter);
+      const completion = new DoFilterSuccess(notesMock);
+
+      actions = hot('--a-', { a: action });
+      const expected = cold('--b', { b: completion });
+
+      expect(effects.doFilter$).toBeObservable(expected);
+    });
+
+    it('should succeed with matching filter by sig', () => {
+      const testFilter = new Filter();
+      testFilter.set(OptionType.sigs, notesMock[0].sigs[0]);
+      const action = new DoFilter(notesMock, testFilter);
+      const completion = new DoFilterSuccess(notesMock);
+
+      actions = hot('--a-', { a: action });
+      const expected = cold('--b', { b: completion });
+
+      expect(effects.doFilter$).toBeObservable(expected);
+    });
+
+    it('should succeed with matching filter by documentation', () => {
+      const testFilter = new Filter();
+      testFilter.set(OptionType.documentation, notesMock[0].documentation[0].type.toString());
+      const action = new DoFilter(notesMock, testFilter);
+      const completion = new DoFilterSuccess(notesMock);
+
+      actions = hot('--a-', { a: action });
+      const expected = cold('--b', { b: completion });
+
+      expect(effects.doFilter$).toBeObservable(expected);
+    });
+
+    it('should succeed with matching filter by text', () => {
+      const testFilter = new Filter();
+      testFilter.text = notesMock[0].author;
+      const action = new DoFilter(notesMock, testFilter);
+      const completion = new DoFilterSuccess(notesMock);
+
+      actions = hot('--a-', { a: action });
+      const expected = cold('--b', { b: completion });
+
+      expect(effects.doFilter$).toBeObservable(expected);
+    });
+
+    it('should succeed with non matching pre-release version', () => {
+      const testFilter = new Filter();
+      testFilter.set(OptionType.releaseVersions, '1.18.0-alpha.1');
       const action = new DoFilter(notesMock, testFilter);
       const completion = new DoFilterSuccess([]);
 
