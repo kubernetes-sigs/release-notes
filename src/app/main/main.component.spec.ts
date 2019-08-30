@@ -68,21 +68,8 @@ describe('MainComponent', () => {
     component = fixture.componentInstance;
   }));
 
-  const areas = 'areas';
-  const b = 'b';
-
   it('should create', () => {
     expect(component).toBeTruthy();
-  });
-
-  it('should succeed to update filter string', () => {
-    component.updateFilterString(areas, b);
-    expect(component.filter.areas).toEqual(b);
-  });
-
-  it('should succeed to delete filter string', () => {
-    component.updateFilterString(areas, '');
-    expect(component.filter.areas).toBe('');
   });
 
   it('should succeed to open the modal view', () => {

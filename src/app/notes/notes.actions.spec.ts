@@ -6,8 +6,8 @@ import {
   GetNotes,
   GetNotesSuccess,
 } from './notes.actions';
-import { notesMock } from './notes.model.mock';
-import { Filter } from '@app/shared/model/options.model';
+import { notesMock } from '@app/shared/model/notes.model.mock';
+import { Filter } from '@app/shared/model/filter.model';
 
 describe('NotesActions', () => {
   // Given

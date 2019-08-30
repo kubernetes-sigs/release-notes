@@ -1,32 +1,34 @@
-import { Filter } from './options.model';
+import { Options, OptionType } from './options.model';
 
 describe('OptionsModel', () => {
-  let filter: Filter;
+  let options: Options;
 
   beforeEach(() => {
-    filter = new Filter();
+    options = new Options();
   });
 
-  describe('toURI()', () => {
-    it('should succeed on initial state', () => {
-      // When
-      // Then
-      expect(filter.toURI()).toEqual({});
-      expect(filter.isEmpty()).toBeTruthy();
-    });
+  it('should succeed to access the data', () => {
+    // When
+    // Then
+    expect(options.data).toBeDefined();
   });
 
-  describe('setMarkdown', () => {
-    it('should succeed with markdown', () => {
-      // Given
-      const markdown = 'some markdown';
+  it('should succeed to retrieve an empty OptionSet', () => {
+    // When
+    const res = options.get(OptionType.areas);
 
-      // When
-      filter.setMarkdown(markdown);
+    // Then
+    expect(res).toEqual(new Set());
+  });
 
-      // Then
-      expect(filter.toURI()).toEqual({ markdown });
-      expect(filter.isEmpty()).toBeFalsy();
-    });
+  it('should succeed to add data', () => {
+    // Given
+    options.add(OptionType.areas, ['a', 'a', 'b']);
+
+    // When
+    const res = options.get(OptionType.areas);
+
+    // Then
+    expect(res).toEqual(new Set(['a', 'b']));
   });
 });

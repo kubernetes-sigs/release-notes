@@ -1,6 +1,6 @@
 import { createSelector } from '@ngrx/store';
 import { ActionTypes, NotesAction } from './notes.actions';
-import { Note } from './notes.model';
+import { Note } from '@app/shared/model/notes.model';
 import { State as RootState } from '@app/app.reducer';
 
 export interface State {

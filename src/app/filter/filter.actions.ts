@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Filter } from '@app/shared/model/options.model';
+import { Filter } from '@app/shared/model/filter.model';
 
 export enum ActionTypes {
   Failed = '[Filter Component] Failed',

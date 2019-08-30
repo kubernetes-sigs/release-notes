@@ -8,6 +8,7 @@ import { NotesComponent } from './notes.component';
 import { notesReducer } from './notes.reducer';
 import { filterReducer } from '@app/filter/filter.reducer';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { OptionType } from '@app/shared/model/options.model';
 
 describe('NotesComponent', () => {
   let fixture: ComponentFixture<NotesComponent>;
@@ -55,10 +56,10 @@ describe('NotesComponent', () => {
   it('should succeed to toggle filter', () => {
     // Given
     // When
-    component.toggleFilter('key', 'value');
+    component.toggleFilter(OptionType.areas, 'value');
 
     // Then
-    expect(store.dispatch).not.toHaveBeenCalled();
+    expect(store.dispatch).toHaveBeenCalled();
   });
 
   it('should succeed to retrieve the correct badge class', () => {

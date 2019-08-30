@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { NotesService } from './notes.service';
 import { LoggerService } from '@shared/services/logger.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { notesMock } from './notes.model.mock';
+import { notesMock } from '@app/shared/model/notes.model.mock';
 
 describe('NotesService', () => {
   let service: NotesService;
