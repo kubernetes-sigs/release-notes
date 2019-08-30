@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { first, skip } from 'rxjs/operators';
 import { State } from '@app/app.reducer';
-import { Filter } from '@app/shared/model/options.model';
+import { Filter, OptionType } from '@app/shared/model/options.model';
 import { UpdateFilter } from '@app/filter/filter.actions';
 import { ModalComponent } from '@app/modal/modal.component';
 import { Router, ActivatedRoute } from '@angular/router';
