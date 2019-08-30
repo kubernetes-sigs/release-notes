@@ -40,6 +40,10 @@ html {
   }
 }
 
+.nav-link {
+  cursor: pointer;
+}
+
 .sidebar .nav-link {
   font-weight: 500;
   color: #333;
@@ -94,4 +98,8 @@ html {
 .form-control-dark:focus {
   border-color: transparent !important;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25) !important;
+}
+
+input[type='checkbox'] {
+  vertical-align: middle;
 }

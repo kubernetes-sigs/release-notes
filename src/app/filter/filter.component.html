@@ -1,17 +1,15 @@
-<p *ngFor="let data of options | keyvalue" [id]="optionsHeaderID(data.key)">
-  <span *ngIf="data.value.length > 0">
+<p *ngFor="let data of options.data | keyvalue" [id]="optionsHeaderID(data.key)">
+  <span *ngIf="data.value.size > 0">
     <h6>{{ data.key }}</h6>
-    <div *ngFor="let a of data.value | keyvalue">
+    <div *ngFor="let entry of data.value.values()">
       <label>
         <input
-          [id]="optionCheckboxID(a.value)"
           type="checkbox"
-          name="{{ data.key }}[]"
-          [ngModel]="filter[data.key][a.value]"
-          (ngModelChange)="updateFilter(data.key, a.value, $event)"
-          value="{{ a.value }}"
+          [id]="optionCheckboxID(entry)"
+          [ngModel]="filter.data.get(data.key).has(entry)"
+          (ngModelChange)="updateFilter(data.key, entry, $event)"
         />
-        {{ a.value }}
+        {{ entry }}
       </label>
     </div>
   </span>

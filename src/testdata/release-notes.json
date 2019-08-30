@@ -1,4 +1,18 @@
 {
+  "69263": {
+    "commit": "bf55a99eb861262b59375eb3a11d13b39db80031",
+    "text": "Creates an annotation 'service.beta.kubernetes.io/aws-load-balancer-eip-allocations' to assign AWS EIP to the newly created Network Load Balancer. Number of allocations and subnets must match.",
+    "markdown": "Creates an annotation 'service.beta.kubernetes.io/aws-load-balancer-eip-allocations' to assign AWS EIP to the newly created Network Load Balancer. Number of allocations and subnets must match. ([#69263](https://github.com/kubernetes/kubernetes/pull/69263), [@brooksgarrett](https://github.com/brooksgarrett))\n\n  Courtesy of SIG AWS, and SIG Cloud Provider",
+    "author": "brooksgarrett",
+    "author_url": "https://github.com/brooksgarrett",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/69263",
+    "pr_number": 69263,
+    "areas": ["cloudprovider"],
+    "kinds": ["feature"],
+    "sigs": ["aws", "cloud-provider"],
+    "feature": true,
+    "release_version": "1.17.0-alpha.2"
+  },
   "74416": {
     "commit": "7e17aeb1b5c817e37fbb36278004c63011be3544",
     "text": "Add --shutdown-delay-duration to kube-apiserver in order to delay a graceful shutdown. `/healthz` will keep returning success during this time and requests are normally served, but `/readyz` will return faillure immediately. This delay can be used to allow the SDN to update iptables on all nodes and stop sending traffic.",

@@ -16,26 +16,26 @@
         <fa-icon class="icon" [icon]="faBook" size="lg"></fa-icon>
       </a>
       <span
-        (click)="toggleFilter('releaseVersions', note.release_version)"
+        (click)="toggleFilter(OptionType.releaseVersions, note.release_version)"
         class="k8s-badge float-sm-right badge badge-dark"
         >{{ note.release_version }}</span
       >
 
       <span
-        (click)="toggleFilter('sigs', sig)"
         *ngFor="let sig of note.sigs"
+        (click)="toggleFilter(OptionType.sigs, sig)"
         class="k8s-badge float-sm-right badge badge-success"
         >{{ sig }}</span
       >
       <span
-        (click)="toggleFilter('kinds', kind)"
         *ngFor="let kind of note.kinds"
+        (click)="toggleFilter(OptionType.kinds, kind)"
         class="k8s-badge float-sm-right badge badge-primary"
         >{{ kind }}</span
       >
       <span
-        (click)="toggleFilter('areas', area)"
         *ngFor="let area of note.areas"
+        (click)="toggleFilter(OptionType.areas, area)"
         class="k8s-badge float-sm-right badge badge-secondary"
         >{{ area }}</span
       >

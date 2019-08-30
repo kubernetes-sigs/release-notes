@@ -1,5 +1,5 @@
 import { ActionTypes, UpdateFilter, UpdateFilterSuccess, Failed } from './filter.actions';
-import { Filter } from '@app/shared/model/options.model';
+import { Filter } from '@app/shared/model/filter.model';
 
 describe('FilterActions', () => {
   // Given

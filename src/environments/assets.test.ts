@@ -1,6 +1,1 @@
-export const assets = [
-  {
-    path: 'testdata/release-notes.json',
-    hidden: false,
-  },
-];
+export const assets = ['testdata/release-notes.json'];

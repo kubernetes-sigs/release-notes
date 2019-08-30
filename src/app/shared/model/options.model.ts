@@ -1,99 +1,79 @@
 /**
- * A generic options abstraction
+ * All available option types
  */
-export class Options {
-  areas: string[] = [];
-  kinds: string[] = [];
-  releaseVersions: string[] = [];
-  sigs: string[] = [];
-  documentation: string[] = [];
+export enum OptionType {
+  areas = 'areas',
+  kinds = 'kinds',
+  releaseVersions = 'releaseVersions',
+  sigs = 'sigs',
+  documentation = 'documentation',
 }
 
 /**
- * A generic filter abstraction based on the Options type
+ * The option data type
  */
-export class Filter extends Options {
-  private markdown = '';
+export type OptionData = Map<OptionType, OptionSet>;
+
+/**
+ * The options for a single OptionType
+ */
+export type OptionSet = Set<string>;
+
+/**
+ * A generic options abstraction
+ */
+export class Options {
+  /**
+   * The private data store
+   */
+  private store: OptionData = new Map([
+    [OptionType.areas, new Set()],
+    [OptionType.kinds, new Set()],
+    [OptionType.releaseVersions, new Set()],
+    [OptionType.sigs, new Set()],
+    [OptionType.documentation, new Set()],
+  ]);
 
   /**
-   * Method to set the markdown attribute
-   * @returns void
+   * Retrieve the data
+   *
+   * @returns OptionData The currently available data
    */
-  public setMarkdown(md: string): void {
-    this.markdown = md;
+  public get data(): OptionData {
+    return this.store;
   }
 
   /**
-   * Helper method to test if the filter is empty
+   * Retrieve an single OptionSet for the provided optionType
    *
-   * @returns true is the filter is empty, false otherwise
+   * @param optionType The OptionType to be used
+   *
+   * @returns OptionSet The data
    */
-  public isEmpty(): boolean {
-    for (const key in this) {
-      if (Object.keys(this[key]).length > 0) {
-        return false;
-      }
-    }
-    return true;
+  public get(optionType: OptionType): OptionSet {
+    return this.data.get(optionType);
   }
 
   /**
-   * Helper method to convert filter object into a URI-friendly object
+   * Append an input string array to the provided option type by discarding
+   * duplicate elements
    *
-   *  @returns a object
+   * @param optionType The OptionType to be used
+   * @param input The array of documentation string to be added
    */
-  public toURI(): object {
-    const friendly = {};
-    for (const key of Object.keys(this)) {
-      if (key !== 'markdown') {
-        if (Object.keys(this[key]).length > 0) {
-          friendly[key] = Object.keys(this[key]);
-        }
-      }
-      if (key === 'markdown' && this.markdown.trim().length > 0) {
-        friendly[key] = this[key];
-      }
-    }
-
-    return friendly;
+  public add(optionType: OptionType, input: string[]) {
+    this.data.set(optionType, this.merge(this.data.get(optionType), input));
   }
 
   /**
-   * Method to see if a value is empty
+   * Merge a set and a string array into a new set
    *
-   * @returns a boolean
-   */
-  public isset(key: string): boolean {
-    if (Object.keys(this[key]).length > 0) {
-      return true;
-    }
-    return false;
-  }
-
-  /**
-   * Method to return a value
+   * @param input The base set
+   * @param arr The array to be appended
    *
-   * @returns an object or null
+   * @returns OptionSet the new Set of strings
    */
-  public get(key: string): object {
-    return this[key];
-  }
-
-  /**
-   * Method to add a value to a key
-   *
-   * @returns void
-   */
-  public add(key: string, value: string): void {
-    this[key][value] = true;
-  }
-
-  /**
-   * Method to delete a value and a key
-   *
-   * @returns void
-   */
-  public del(key: string, value: string): void {
-    delete this[key][value];
+  private merge(input: OptionSet, arr: string[]): OptionSet {
+    return new Set([...input, ...new Set(arr)]);
   }
 }

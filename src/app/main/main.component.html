@@ -15,8 +15,8 @@
     <ul class="navbar-nav mr-auto w-100">
       <li class="nav-item active w-100">
         <input
-          [ngModel]="filter['markdown']"
-          (ngModelChange)="updateFilterString('markdown', $event)"
+          [ngModel]="filter.text"
+          (ngModelChange)="updateFilterString($event)"
           class="form-control bg-dark text-white border-0 rounded-0"
           id="searchBar"
           type="search"
@@ -27,8 +27,9 @@
     </ul>
     <ul class="navbar-nav">
       <li class="nav-item">
-        <button (click)="openModal()" id="aboutButton" class="btn btn-outline-info">About</button>
+        <a (click)="openModal()" id="aboutLink" class="nav-link">About</a>
       </li>
+      <li class="nav-item" id="settingsButton"><app-settings></app-settings></li>
     </ul>
   </div>
 </nav>

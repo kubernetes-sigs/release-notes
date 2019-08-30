@@ -1,6 +1,7 @@
 describe('Release Notes App', () => {
   // Test constants
-  const aboutButton = '#aboutButton';
+  const aboutLink = '#aboutLink';
+  const settingsLink = '#settingsLink';
   const appModal = 'app-modal';
   const documentationButton = '#documentationButton';
   const documentationContent = '#documentationContent';
@@ -11,6 +12,7 @@ describe('Release Notes App', () => {
   const option1140 = `${optionID}-1-14-0`;
   const option1150 = `${optionID}-1-15-0`;
   const option1160 = `${optionID}-1-16-0`;
+  const option1170 = `${optionID}-1-17-0-alpha-2`;
   const optionKubectl = `${optionID}-kubectl`;
   const optionKubelet = `${optionID}-kubelet`;
   const optionKEP = `${optionID}-KEP`;
@@ -31,8 +33,10 @@ describe('Release Notes App', () => {
   const v1150entry4 = '#66635';
   const v1150entry5 = '#66928';
   const v1160entry1 = '#74416';
+  const v1170entry1 = '#69263';
   const v1160entry1DocumentationButton = `${documentationButton}-${v1160entry1.replace('#', '')}`;
   const v1160entry1DocumentationContent = `${documentationContent}-${v1160entry1.replace('#', '')}`;
+  const preReleaseSetting = '#preReleaseSetting';
 
   beforeEach(() => {
     cy.visit('/');
@@ -163,7 +167,7 @@ describe('Release Notes App', () => {
   it(`should be possible to open the 'About' page`, () => {
     // Given
     // When
-    cy.get(aboutButton).click();
+    cy.get(aboutLink).click();
 
     // Then
     cy.get(appModal).should('be.visible');
@@ -268,5 +272,19 @@ describe('Release Notes App', () => {
     });
     cy.get(optionTest).should('be.checked');
     cy.get(searchBar).should('have.attr', 'ng-reflect-model', 'shutdown');
+  });
+
+  it(`should be possible to enable showing pre-releases`, () => {
+    // Given
+    cy.get(settingsLink).click();
+    cy.get(preReleaseSetting).should('be.visible');
+    cy.get(preReleaseSetting).should('not.be.checked');
+    cy.get(option1170).should('not.be.visible');
+
+    // When
+    cy.get(preReleaseSetting).check();
+
+    // Then
+    cy.get(option1170).should('be.visible');
   });
 });

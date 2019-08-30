@@ -29,12 +29,12 @@ export class MainComponent {
         const f = new Filter();
         for (let i = 0, len = queryParamMap.keys.length; i < len; i++) {
           const key = queryParamMap.keys[i];
-          if (key !== 'markdown') {
+          if (key !== f.markdownKey) {
             for (const value of queryParamMap.getAll(key)) {
-              f.add(key, value);
+              f.set(OptionType[key], value);
             }
           } else {
-            f.setMarkdown(queryParamMap.get(key));
+            f.text = queryParamMap.get(key);
           }
         }
         this.store.dispatch(new UpdateFilter(f));
@@ -48,12 +48,8 @@ export class MainComponent {
       });
   }
 
-  updateFilterString(a, b): void {
-    if (b.length > 0) {
-      this.filter[a] = b;
-    } else {
-      this.filter[a] = '';
-    }
+  updateFilterString(to: string): void {
+    this.filter.text = to;
     this.store.dispatch(new UpdateFilter(this.filter));
   }
 

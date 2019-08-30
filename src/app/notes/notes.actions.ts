@@ -1,6 +1,6 @@
 import { Action } from '@ngrx/store';
-import { Note } from './notes.model';
-import { Filter } from '@app/shared/model/options.model';
+import { Note } from '@app/shared/model/notes.model';
+import { Filter } from '@app/shared/model/filter.model';
 
 export enum ActionTypes {
   Failed = '[Notes Component] Failed',
