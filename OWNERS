@@ -5,3 +5,11 @@ approvers:
   - marpaia
   - onyiny-ang
   - sig-release-leads
+reviewers:
+  - jeefy
+  - marpaia
+  - onyiny-ang
+  - saschagrunert
+labels:
+  - sig/release
+  - area/release-eng
