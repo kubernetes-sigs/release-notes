@@ -19,15 +19,14 @@ html {
   bottom: 0;
   left: 0;
   z-index: 100; /* Behind the navbar */
-  padding: 48px 0 0; /* Height of navbar */
-  padding-left: 20px;
+  padding: 54px 0 0 20px !important; /* Height of navbar */
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-sticky {
   position: relative;
   top: 0;
-  height: calc(100vh - 48px);
+  height: calc(100vh - 54px);
   padding-top: 0.5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -70,13 +69,7 @@ html {
 
 /* Content */
 [role='main'] {
-  padding-top: 133px; /* Space for fixed navbar */
-}
-
-@media (min-width: 768px) {
-  [role='main'] {
-    padding-top: 48px; /* Space for fixed navbar */
-  }
+  padding-top: 54px; /* Space for fixed navbar */
 }
 
 #notesComponent {
