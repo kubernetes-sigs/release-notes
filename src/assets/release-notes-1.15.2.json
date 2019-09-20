@@ -1,0 +1,27 @@
+{
+  "80436": {
+    "commit": "f6278300bebbb750328ac16ee6dd3aa7d3549568",
+    "text": "Fix CVE-2019-11249: Incomplete fixes for CVE-2019-1002101 and CVE-2019-11246, kubectl cp potential directory traversal",
+    "markdown": "Fix CVE-2019-11249: Incomplete fixes for CVE-2019-1002101 and CVE-2019-11246, kubectl cp potential directory traversal ([#80436](https://github.com/kubernetes/kubernetes/pull/80436), [@M00nF1sh](https://github.com/M00nF1sh))",
+    "author": "M00nF1sh",
+    "author_url": "https://github.com/M00nF1sh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/80436",
+    "pr_number": 80436,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"],
+    "release_version": "1.15.2"
+  },
+  "80850": {
+    "commit": "f9a243ca99dc1ef47b8b44c1d00458b6c404dd2a",
+    "text": "Fix CVE-2019-11247: API server allows access to custom resources via wrong scope",
+    "markdown": "Fix CVE-2019-11247: API server allows access to custom resources via wrong scope ([#80850](https://github.com/kubernetes/kubernetes/pull/80850), [@sttts](https://github.com/sttts))",
+    "author": "sttts",
+    "author_url": "https://github.com/sttts",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/80850",
+    "pr_number": 80850,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"],
+    "release_version": "1.15.2"
+  }
+}
