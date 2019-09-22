@@ -1,4 +1,50 @@
 {
+  "81068": {
+    "commit": "e7ecb2240375ac2b91f7bbd55358cded0eb1f698",
+    "text": "",
+    "markdown": "Pod spread constraints have been added in alpha. You can use these constraints to control how Pods are spread across the cluster among failure-domains.",
+    "documentation": [
+      {
+        "description": "Even Pods Spread - 6. Integration Test #80011",
+        "url": "https://github.com/kubernetes/kubernetes/pull/80011",
+        "type": "external"
+      },
+      {
+        "description": "Even Pods Spread - 5. Priority Core #79063",
+        "url": "https://github.com/kubernetes/kubernetes/pull/79063",
+        "type": "external"
+      },
+      {
+        "description": "Even Pods Spread - 4. Preemption Support #79062",
+        "url": "https://github.com/kubernetes/kubernetes/pull/79062",
+        "type": "external"
+      },
+      {
+        "description": "Even Pods Spread - 3. Predicates Core #77828",
+        "url": "https://github.com/kubernetes/kubernetes/pull/77828",
+        "type": "external"
+      },
+      {
+        "description": "Even Pods Spread - 2. Calculating Predicates Metadata #77760",
+        "url": "https://github.com/kubernetes/kubernetes/pull/77760",
+        "type": "external"
+      },
+      {
+        "description": "Even Pods Spread - 1. API changes #77327",
+        "url": "https://github.com/kubernetes/kubernetes/pull/77327",
+        "type": "external"
+      }
+    ],
+    "author": "Huang-Wei",
+    "author_url": "https://github.com/Huang-Wei",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/81068",
+    "pr_number": 81068,
+    "areas": ["kubeadm", "kubelet", "test"],
+    "kinds": ["feature"],
+    "sigs": ["scheduling"],
+    "feature": true,
+    "release_version": "1.16.0"
+  },
   "53185": {
     "commit": "315dcca3417e6224294322b1073b5e9d03453f26",
     "text": "populate object name for admission attributes when CREATE",
