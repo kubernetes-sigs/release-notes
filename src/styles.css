@@ -11,14 +11,6 @@ html {
   height: 16px;
   vertical-align: text-bottom;
 }
-/* Text size fix that mobile devices not zoom in */
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
-  select,
-  textarea,
-  input {
-    font-size: 16px;
-  }
-}
 
 /* Sidebar */
 .sidebar {
