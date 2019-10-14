@@ -59,5 +59,8 @@ describe('OptionsModel', () => {
     expect(filter.isPreRelease('1.16.0-alpha.1')).toBeTruthy();
     expect(filter.isPreRelease('1.16.0-beta.1')).toBeTruthy();
     expect(filter.isPreRelease('1.16.0-rc.1')).toBeTruthy();
+    expect(filter.isPreRelease('1.17.0-alpha.1')).toBeTruthy();
+    expect(filter.isPreRelease('1.17.0-beta.1')).toBeTruthy();
+    expect(filter.isPreRelease('1.17.0-rc.1')).toBeTruthy();
   });
 });
