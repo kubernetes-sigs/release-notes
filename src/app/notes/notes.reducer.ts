@@ -52,3 +52,7 @@ export const getFilteredNotesSelector = createSelector(
   selectNotes,
   (state: State) => state.filteredNotes,
 );
+export const getErrorSelector = createSelector(
+  selectNotes,
+  (state: State) => state.error,
+);

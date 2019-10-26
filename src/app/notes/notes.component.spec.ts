@@ -9,6 +9,7 @@ import { notesReducer } from './notes.reducer';
 import { filterReducer } from '@app/filter/filter.reducer';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { OptionType } from '@app/shared/model/options.model';
+import { documentationMock } from '@app/shared/model/notes.model.mock';
 
 describe('NotesComponent', () => {
   let fixture: ComponentFixture<NotesComponent>;
@@ -74,5 +75,41 @@ describe('NotesComponent', () => {
     expect(kep).toEqual('badge-primary');
     expect(official).toEqual('badge-success');
     expect(external).toEqual('badge-secondary');
+  });
+
+  it('should succeed sanitize the document description with [KEP]', () => {
+    // Given
+    const doc = documentationMock;
+    doc.description = '[KEP]';
+
+    // When
+    const description = component.saneKEPDescription(doc);
+
+    // Then
+    expect(description).toEqual('Kubernetes Enhancement Proposal');
+  });
+
+  it('should succeed sanitize the document description with [KEP Some docs]', () => {
+    // Given
+    const doc = documentationMock;
+    doc.description = '[KEP Some docs]';
+
+    // When
+    const description = component.saneKEPDescription(doc);
+
+    // Then
+    expect(description).toEqual('Some docs');
+  });
+
+  it('should succeed sanitize the document description', () => {
+    // Given
+    const doc = documentationMock;
+    doc.description = ' some documentation ';
+
+    // When
+    const description = component.saneKEPDescription(doc);
+
+    // Then
+    expect(description).toEqual('some documentation');
   });
 });

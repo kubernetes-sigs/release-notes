@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { Note } from '@app/shared/model/notes.model';
+import { Note, Documentation } from '@app/shared/model/notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
 import { State } from '@app/app.reducer';
-import { getAllNotesSelector, getFilteredNotesSelector } from './notes.reducer';
+import { getErrorSelector, getAllNotesSelector, getFilteredNotesSelector } from './notes.reducer';
 import { Filter } from '@app/shared/model/filter.model';
 import { OptionType } from '@app/shared/model/options.model';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
@@ -22,6 +22,9 @@ export class NotesComponent {
   filteredNotes: Note[] = [];
   p = 1;
   faBook = faBook;
+  errorMessage = '';
+
+  readonly kep = 'KEP';
 
   constructor(private store: Store<State>) {
     this.store.dispatch(new GetNotes());
@@ -33,6 +36,12 @@ export class NotesComponent {
         this.filteredNotes = notes;
 
         this.store.dispatch(new DoFilter(this.allNotes, this.filter));
+      }
+    });
+
+    store.pipe(select(getErrorSelector, getAllNotesSelector)).subscribe(err => {
+      if (err) {
+        this.errorMessage = `Unable to display notes: ${err}`;
       }
     });
 
@@ -70,12 +79,34 @@ export class NotesComponent {
    * @returns The resulting class as string
    */
   public badgeClass(t: string): string {
-    if (t === 'KEP') {
+    if (t === this.kep) {
       return 'badge-primary';
     } else if (t === 'official') {
       return 'badge-success';
     }
     return 'badge-secondary';
+  }
+
+  /**
+   * Sanitize the documentation description
+   *
+   * @param doc The documentation to be processed
+   *
+   * @returns The resulting description as string
+   */
+  public saneKEPDescription(doc: Documentation): string {
+    const stripped = doc.description
+      .replace(/[\[\]]/g, '') // remove brackets
+      .replace(this.kep, '') // remove 'KEP'
+      .trim();
+
+    if (stripped === '') {
+      // write out KEP
+      return 'Kubernetes Enhancement Proposal';
+    }
+
+    // all other sort of descriptions
+    return stripped;
   }
 
   /**

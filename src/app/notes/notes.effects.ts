@@ -20,7 +20,10 @@ export class NotesEffects {
           return new GetNotesSuccess(notes);
         }),
         catchError(error => {
-          this.logger.debug(`[Notes Effects:GetNotes] FAILED: ${error}`);
+          this.logger.debug(`[Notes Effects:GetNotes] FAILED: ${error.message}`);
+          if (error && error.message) {
+            return of(new Failed(error.message));
+          }
           return of(new Failed(error));
         }),
       ),
