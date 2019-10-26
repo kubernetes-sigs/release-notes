@@ -63,6 +63,7 @@ export class Options {
    */
   public add(optionType: OptionType, input: string[]) {
     this.data.set(optionType, this.merge(this.data.get(optionType), input));
+    this.sort();
   }
 
   /**
@@ -75,5 +76,27 @@ export class Options {
    */
   private merge(input: OptionSet, arr: string[]): OptionSet {
     return new Set([...input, ...new Set(arr)]);
+  }
+
+  /**
+   * Sort the internal data structures by its defined logical order
+   */
+  private sort() {
+    [OptionType.areas, OptionType.kinds, OptionType.sigs, OptionType.documentation].forEach(x =>
+      this.sort_set(x),
+    );
+    this.sort_set(OptionType.releaseVersions, (a, b) => (a < b ? 1 : -1));
+  }
+
+  /**
+   * Sort a set by converting it to a sorted array and conerting it back again
+   *
+   * @param optionType The OptionType to be used
+   * @param compareFn The name of the function used to determine the order of
+   *                  the elements. If omitted, the elements are sorted in
+   *                  ascending, ASCII character order.
+   */
+  private sort_set(optionType: OptionType, compareFn?: (a: string, b: string) => number) {
+    this.store.set(optionType, new Set([...this.store.get(optionType)].sort(compareFn)));
   }
 }
