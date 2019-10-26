@@ -52,7 +52,7 @@
           <li *ngFor="let doc of note.documentation">
             <a href="{{ doc.url }}" target="_blank">
               <span *ngIf="doc.description; else elseBlock">
-                {{ doc.description }}
+                {{ saneKEPDescription(doc) }}
               </span>
               <ng-template #elseBlock>{{ doc.url }}</ng-template>
               <span class="badge doc-badge {{ badgeClass(doc.type) }}">{{ doc.type }}</span>
