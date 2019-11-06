@@ -22,7 +22,7 @@ import { FilterEffects } from './filter/filter.effects';
 import { SettingsEffects } from './settings/settings.effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
-import { environment } from '../environments/environment';
+import { environment } from '@env/environment';
 import { notesReducer } from './notes/notes.reducer';
 import { settingsReducer } from './settings/settings.reducer';
 import { filterReducer } from './filter/filter.reducer';
