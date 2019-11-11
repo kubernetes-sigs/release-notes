@@ -204,7 +204,6 @@ describe('Release Notes App', () => {
 
     cy.get(v1160entry1DocumentationButton).click();
     cy.get(v1160entry1DocumentationContent).should('be.visible');
-    cy.get(documentationTooltip).should('be.visible');
   });
 
   it(`should be possible to filter 'KEP' doc types`, () => {

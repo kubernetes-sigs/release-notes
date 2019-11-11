@@ -76,7 +76,10 @@ export class NotesEffects {
         }
         if (
           note.documentation &&
-          filter.hasAny(OptionType.documentation, note.documentation.map(x => x.type.toString()))
+          filter.hasAny(
+            OptionType.documentation,
+            note.documentation.map(x => x.type.toString()),
+          )
         ) {
           filteredNotes.add(note);
           continue;

@@ -35,7 +35,4 @@ export function filterReducer(state = initialState, action: FilterAction): State
 }
 
 export const selectFilter = (state: RootState) => state.filter;
-export const getFilterSelector = createSelector(
-  selectFilter,
-  (state: State) => state.filter,
-);
+export const getFilterSelector = createSelector(selectFilter, (state: State) => state.filter);
