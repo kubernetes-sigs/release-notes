@@ -1,0 +1,77 @@
+{
+  "85223": {
+    "commit": "976712556e4bd22d5312a0af36b18127c709d54a",
+    "text": "CRDs can have fields named `type` with value `array` and nested array with `items` fields without validation to fall over this.",
+    "markdown": "CRDs can have fields named `type` with value `array` and nested array with `items` fields without validation to fall over this. ([#85223](https://github.com/kubernetes/kubernetes/pull/85223), [@sttts](https://github.com/sttts))",
+    "author": "sttts",
+    "author_url": "https://github.com/sttts",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85223",
+    "pr_number": 85223,
+    "areas": ["apiserver", "cloudprovider", "code-generation", "dependency", "kubectl"],
+    "kinds": ["bug"],
+    "sigs": [
+      "api-machinery",
+      "cli",
+      "cloud-provider",
+      "cluster-lifecycle",
+      "instrumentation",
+      "node"
+    ],
+    "duplicate": true,
+    "release_version": "1.17.0-rc.1"
+  },
+  "85237": {
+    "commit": "81af5baff8e958dc8817913ec3c4172028f30122",
+    "text": "Promote CSIMigrationAWS to Beta (off by default since it requires installation of the AWS EBS CSI Driver)\nThe in-tree AWS EBS plugin \"kubernetes.io/aws-ebs\" is now deprecated and will be removed in 1.21. Users should enable CSIMigration + CSIMigrationAWS features and install the AWS EBS CSI Driver (https://github.com/kubernetes-sigs/aws-ebs-csi-driver) to avoid disruption to existing Pod and PVC objects at that time.\nUsers should start using the AWS EBS CSI CSI Driver directly for any new volumes.",
+    "markdown": "Promote CSIMigrationAWS to Beta (off by default since it requires installation of the AWS EBS CSI Driver)\n  The in-tree AWS EBS plugin \"kubernetes.io/aws-ebs\" is now deprecated and will be removed in 1.21. Users should enable CSIMigration + CSIMigrationAWS features and install the AWS EBS CSI Driver (https://github.com/kubernetes-sigs/aws-ebs-csi-driver) to avoid disruption to existing Pod and PVC objects at that time.\n  Users should start using the AWS EBS CSI CSI Driver directly for any new volumes. ([#85237](https://github.com/kubernetes/kubernetes/pull/85237), [@leakingtapan](https://github.com/leakingtapan))\n\n  Courtesy of SIG Storage",
+    "author": "leakingtapan",
+    "author_url": "https://github.com/leakingtapan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85237",
+    "pr_number": 85237,
+    "areas": ["provider/aws"],
+    "kinds": ["feature"],
+    "sigs": ["storage"],
+    "feature": true,
+    "release_version": "1.17.0-rc.1"
+  },
+  "85441": {
+    "commit": "384e45febdb302c145ab0e1fd3bcf0eda882e2e8",
+    "text": "Resolves error from v1.17.0-beta.2 with --authorizer-mode webhook complaining about an invalid version",
+    "markdown": "Resolves error from v1.17.0-beta.2 with --authorizer-mode webhook complaining about an invalid version ([#85441](https://github.com/kubernetes/kubernetes/pull/85441), [@liggitt](https://github.com/liggitt))",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85441",
+    "pr_number": 85441,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "auth"],
+    "duplicate": true,
+    "release_version": "1.17.0-rc.1"
+  },
+  "85494": {
+    "commit": "3c5dad61f72cc0fcee20bc5c27db1bde31a691b9",
+    "text": "kubeadm: fix stray \"node-cidr-mask-size\" flag in the kube-controller-manager manifest when IPv6DualStack is enabled",
+    "markdown": "kubeadm: fix stray \"node-cidr-mask-size\" flag in the kube-controller-manager manifest when IPv6DualStack is enabled ([#85494](https://github.com/kubernetes/kubernetes/pull/85494), [@tedyu](https://github.com/tedyu))",
+    "author": "tedyu",
+    "author_url": "https://github.com/tedyu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85494",
+    "pr_number": 85494,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"],
+    "release_version": "1.17.0-rc.1"
+  },
+  "85524": {
+    "commit": "3028dc1f7ac6dfd87463e6d21466966984990bf5",
+    "text": "kubeadm: fix a panic in case the KubeProxyConfiguration feature gates were not initialized.",
+    "markdown": "kubeadm: fix a panic in case the KubeProxyConfiguration feature gates were not initialized. ([#85524](https://github.com/kubernetes/kubernetes/pull/85524), [@Arvinderpal](https://github.com/Arvinderpal))",
+    "author": "Arvinderpal",
+    "author_url": "https://github.com/Arvinderpal",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85524",
+    "pr_number": 85524,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"],
+    "release_version": "1.17.0-rc.1"
+  }
+}
