@@ -44,15 +44,9 @@ export function notesReducer(state = initialState, action: NotesAction): State {
 }
 
 export const selectNotes = (state: RootState) => state.notes;
-export const getAllNotesSelector = createSelector(
-  selectNotes,
-  (state: State) => state.notes,
-);
+export const getAllNotesSelector = createSelector(selectNotes, (state: State) => state.notes);
 export const getFilteredNotesSelector = createSelector(
   selectNotes,
   (state: State) => state.filteredNotes,
 );
-export const getErrorSelector = createSelector(
-  selectNotes,
-  (state: State) => state.error,
-);
+export const getErrorSelector = createSelector(selectNotes, (state: State) => state.error);

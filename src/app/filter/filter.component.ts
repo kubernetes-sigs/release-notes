@@ -72,7 +72,10 @@ export class FilterComponent implements OnInit {
         this.options.add(OptionType.sigs, note.sigs);
       }
       if (OptionType.documentation in note) {
-        this.options.add(OptionType.documentation, note.documentation.map(x => x.type.toString()));
+        this.options.add(
+          OptionType.documentation,
+          note.documentation.map(x => x.type.toString()),
+        );
       }
       if (
         !this.options.get(OptionType.releaseVersions).has(note.release_version) &&

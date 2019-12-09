@@ -35,7 +35,4 @@ export function settingsReducer(state = initialState, action: SettingsAction): S
 }
 
 export const selectSettings = (state: RootState) => state.settings;
-export const getSettingsSelector = createSelector(
-  selectSettings,
-  (state: State) => state.settings,
-);
+export const getSettingsSelector = createSelector(selectSettings, (state: State) => state.settings);
