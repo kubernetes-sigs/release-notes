@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Note, Documentation } from '@app/shared/model/notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
@@ -16,20 +16,23 @@ import { getFilterSelector } from '@app/filter/filter.reducer';
   providers: [],
   styleUrls: ['./notes.component.scss'],
 })
-export class NotesComponent {
+export class NotesComponent implements OnInit {
   filter: Filter = new Filter();
   allNotes: Note[] = [];
   filteredNotes: Note[] = [];
   p = 1;
   faBook = faBook;
   errorMessage = '';
+  OptionType = OptionType;
 
   readonly kep = 'KEP';
 
-  constructor(private store: Store<State>) {
+  constructor(private store: Store<State>) {}
+
+  ngOnInit() {
     this.store.dispatch(new GetNotes());
 
-    store.pipe(select(getAllNotesSelector)).subscribe(notes => {
+    this.store.pipe(select(getAllNotesSelector)).subscribe(notes => {
       if (notes) {
         // Initial retrieval of the notes
         this.allNotes = notes;
@@ -39,7 +42,7 @@ export class NotesComponent {
       }
     });
 
-    store.pipe(select(getErrorSelector, getAllNotesSelector)).subscribe(err => {
+    this.store.pipe(select(getErrorSelector, getAllNotesSelector)).subscribe(err => {
       if (err) {
         this.errorMessage = `Unable to display notes: ${err}`;
       }

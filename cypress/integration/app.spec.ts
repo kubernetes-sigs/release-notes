@@ -286,4 +286,40 @@ describe('Release Notes App', () => {
     // Then
     cy.get(option1170).should('be.visible');
   });
+
+  it(`should be possible to filter via the labels ('bug')`, () => {
+    // Given
+    // When
+    cy.get('.badge-kind').contains('bug').click();
+
+    // Then
+    cy.get(cards).should($c => {
+      expect($c).to.have.length(4);
+      expect($c).to.contain(v1140entry2);
+      expect($c).to.contain(v1140entry5);
+      expect($c).to.contain(v1150entry1);
+      expect($c).to.contain(v1150entry2);
+    });
+    cy.location().should(loc => {
+      expect(loc.search).to.eq('?kinds=bug');
+    });
+  });
+
+  it(`should be possible to filter via the labels ('testing')`, () => {
+    // Given
+    // When
+    cy.get('.badge-sig').contains('testing').click();
+
+    // Then
+    cy.get(cards).should($c => {
+      expect($c).to.have.length(4);
+      expect($c).to.contain(v1140entry1);
+      expect($c).to.contain(v1150entry1);
+      expect($c).to.contain(v1150entry5);
+      expect($c).to.contain(v1140entry3);
+    });
+    cy.location().should(loc => {
+      expect(loc.search).to.eq('?sigs=testing');
+    });
+  });
 });

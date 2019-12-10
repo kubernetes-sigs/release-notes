@@ -20,26 +20,26 @@
       </a>
       <span
         (click)="toggleFilter(OptionType.releaseVersions, note.release_version)"
-        class="k8s-badge float-sm-right badge badge-dark"
+        class="k8s-badge float-sm-right badge badge-dark badge-release-version"
         >{{ note.release_version }}</span
       >
 
       <span
         *ngFor="let sig of note.sigs"
         (click)="toggleFilter(OptionType.sigs, sig)"
-        class="k8s-badge float-sm-right badge badge-success"
+        class="k8s-badge float-sm-right badge badge-success badge-sig"
         >{{ sig }}</span
       >
       <span
         *ngFor="let kind of note.kinds"
         (click)="toggleFilter(OptionType.kinds, kind)"
-        class="k8s-badge float-sm-right badge badge-primary"
+        class="k8s-badge float-sm-right badge badge-primary badge-kind"
         >{{ kind }}</span
       >
       <span
         *ngFor="let area of note.areas"
         (click)="toggleFilter(OptionType.areas, area)"
-        class="k8s-badge float-sm-right badge badge-secondary"
+        class="k8s-badge float-sm-right badge badge-secondary badge-area"
         >{{ area }}</span
       >
     </div>
