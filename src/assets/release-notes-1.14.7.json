@@ -7,19 +7,9 @@
     "author_url": "https://github.com/dixudx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/53185",
     "pr_number": 53185,
-    "areas": [
-      "admission-control",
-      "apiserver",
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "auth",
-      "testing"
-    ],
+    "areas": ["admission-control", "apiserver", "test"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "auth", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -31,16 +21,9 @@
     "author_url": "https://github.com/dixudx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/57741",
     "pr_number": 57741,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "api-change",
-      "bug"
-    ],
-    "sigs": [
-      "node"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["api-change", "bug"],
+    "sigs": ["node"],
     "release_version": "1.14.7"
   },
   "59484": {
@@ -58,15 +41,9 @@
     "author_url": "https://github.com/verb",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/59484",
     "pr_number": 59484,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "node"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["node"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -78,15 +55,9 @@
     "author_url": "https://github.com/roycaihw",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/64996",
     "pr_number": 64996,
-    "areas": [
-      "custom-resources"
-    ],
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["custom-resources"],
+    "kinds": ["api-change"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "69655": {
@@ -97,16 +68,9 @@
     "author_url": "https://github.com/CaoShuFeng",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/69655",
     "pr_number": 69655,
-    "areas": [
-      "custom-resources"
-    ],
-    "kinds": [
-      "api-change",
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["custom-resources"],
+    "kinds": ["api-change", "bug"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "71757": {
@@ -117,13 +81,8 @@
     "author_url": "https://github.com/mikedanese",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/71757",
     "pr_number": 71757,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery",
-      "auth"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "auth"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -135,15 +94,8 @@
     "author_url": "https://github.com/wozniakjan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/73405",
     "pr_number": 73405,
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "apps",
-      "architecture"
-    ],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "apps", "architecture"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -155,25 +107,9 @@
     "author_url": "https://github.com/jennybuckley",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/77354",
     "pr_number": 77354,
-    "areas": [
-      "apiserver",
-      "cloudprovider",
-      "code-generation",
-      "dependency",
-      "kubectl",
-      "test"
-    ],
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
-      "testing"
-    ],
+    "areas": ["apiserver", "cloudprovider", "code-generation", "dependency", "kubectl", "test"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "cli", "cloud-provider", "cluster-lifecycle", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -185,13 +121,8 @@
     "author_url": "https://github.com/sudeshsh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/77688",
     "pr_number": 77688,
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["scheduling"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -203,23 +134,9 @@
     "author_url": "https://github.com/matthyx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/77807",
     "pr_number": 77807,
-    "areas": [
-      "dependency",
-      "kubectl",
-      "kubelet",
-      "release-eng",
-      "test"
-    ],
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "apps",
-      "cli",
-      "node",
-      "release",
-      "testing"
-    ],
+    "areas": ["dependency", "kubectl", "kubelet", "release-eng", "test"],
+    "kinds": ["api-change"],
+    "sigs": ["apps", "cli", "node", "release", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -231,19 +148,9 @@
     "author_url": "https://github.com/roycaihw",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/77824",
     "pr_number": 77824,
-    "areas": [
-      "admission-control",
-      "apiserver",
-      "test"
-    ],
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "api-machinery",
-      "auth",
-      "testing"
-    ],
+    "areas": ["admission-control", "apiserver", "test"],
+    "kinds": ["api-change"],
+    "sigs": ["api-machinery", "auth", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -255,19 +162,9 @@
     "author_url": "https://github.com/rajansandeep",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/78033",
     "pr_number": 78033,
-    "areas": [
-      "dependency",
-      "kubeadm",
-      "kubectl"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "cli",
-      "cluster-lifecycle"
-    ],
+    "areas": ["dependency", "kubeadm", "kubectl"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "cli", "cluster-lifecycle"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -279,18 +176,9 @@
     "author_url": "https://github.com/soltysh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/78098",
     "pr_number": 78098,
-    "areas": [
-      "kubectl",
-      "test"
-    ],
-    "kinds": [
-      "api-change",
-      "cleanup"
-    ],
-    "sigs": [
-      "cli",
-      "testing"
-    ],
+    "areas": ["kubectl", "test"],
+    "kinds": ["api-change", "cleanup"],
+    "sigs": ["cli", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -302,12 +190,8 @@
     "author_url": "https://github.com/ahmedtd",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/78502",
     "pr_number": 78502,
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "auth"
-    ],
+    "kinds": ["feature"],
+    "sigs": ["auth"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -319,15 +203,9 @@
     "author_url": "https://github.com/sttts",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/78829",
     "pr_number": 78829,
-    "areas": [
-      "custom-resources"
-    ],
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["custom-resources"],
+    "kinds": ["api-change"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "79247": {
@@ -338,15 +216,9 @@
     "author_url": "https://github.com/egernst",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/79247",
     "pr_number": 79247,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "node"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["node"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -368,9 +240,7 @@
       "release-eng",
       "test"
     ],
-    "kinds": [
-      "api-change"
-    ],
+    "kinds": ["api-change"],
     "sigs": [
       "api-machinery",
       "apps",
@@ -394,20 +264,9 @@
     "author_url": "https://github.com/claudiubelu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/79539",
     "pr_number": 79539,
-    "areas": [
-      "kubelet",
-      "test"
-    ],
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "apps",
-      "node",
-      "testing",
-      "windows"
-    ],
+    "areas": ["kubelet", "test"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["apps", "node", "testing", "windows"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -419,19 +278,9 @@
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/79604",
     "pr_number": 79604,
-    "areas": [
-      "apiserver",
-      "custom-resources",
-      "test"
-    ],
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "testing"
-    ],
+    "areas": ["apiserver", "custom-resources", "test"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -443,18 +292,9 @@
     "author_url": "https://github.com/smarterclayton",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80238",
     "pr_number": 80238,
-    "areas": [
-      "e2e-test-framework",
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "apps",
-      "network",
-      "testing"
-    ],
+    "areas": ["e2e-test-framework", "test"],
+    "kinds": ["feature"],
+    "sigs": ["apps", "network", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -466,16 +306,9 @@
     "author_url": "https://github.com/pohly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80253",
     "pr_number": 80253,
-    "areas": [
-      "e2e-test-framework",
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "testing"
-    ],
+    "areas": ["e2e-test-framework", "test"],
+    "kinds": ["feature"],
+    "sigs": ["testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -487,15 +320,9 @@
     "author_url": "https://github.com/draveness",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80337",
     "pr_number": 80337,
-    "areas": [
-      "kubectl"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cli"
-    ],
+    "areas": ["kubectl"],
+    "kinds": ["cleanup"],
+    "sigs": ["cli"],
     "action_required": true,
     "release_version": "1.14.7"
   },
@@ -507,17 +334,9 @@
     "author_url": "https://github.com/danwinship",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80368",
     "pr_number": 80368,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "network",
-      "node",
-      "scheduling"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["network", "node", "scheduling"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -529,15 +348,9 @@
     "author_url": "https://github.com/mborsz",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80477",
     "pr_number": 80477,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["apiserver"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -558,9 +371,7 @@
       "release-eng",
       "test"
     ],
-    "kinds": [
-      "api-change"
-    ],
+    "kinds": ["api-change"],
     "sigs": [
       "api-machinery",
       "apps",
@@ -589,16 +400,9 @@
     "author_url": "https://github.com/pohly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80568",
     "pr_number": 80568,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "storage",
-      "testing"
-    ],
+    "areas": ["test"],
+    "kinds": ["api-change"],
+    "sigs": ["storage", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -610,12 +414,8 @@
     "author_url": "https://github.com/hex108",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80696",
     "pr_number": 80696,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
+    "kinds": ["cleanup"],
+    "sigs": ["scheduling"],
     "release_version": "1.14.7"
   },
   "80726": {
@@ -626,18 +426,9 @@
     "author_url": "https://github.com/wangzhen127",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80726",
     "pr_number": 80726,
-    "areas": [
-      "dependency",
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "cluster-lifecycle",
-      "node",
-      "testing"
-    ],
+    "areas": ["dependency", "test"],
+    "kinds": ["feature"],
+    "sigs": ["cluster-lifecycle", "node", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -649,15 +440,9 @@
     "author_url": "https://github.com/jennybuckley",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80773",
     "pr_number": 80773,
-    "areas": [
-      "code-generation"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["code-generation"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "80911": {
@@ -668,16 +453,9 @@
     "author_url": "https://github.com/gab-satchi",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80911",
     "pr_number": 80911,
-    "areas": [
-      "provider/vmware"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "storage",
-      "windows"
-    ],
+    "areas": ["provider/vmware"],
+    "kinds": ["feature"],
+    "sigs": ["storage", "windows"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -689,13 +467,8 @@
     "author_url": "https://github.com/monotek",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80912",
     "pr_number": 80912,
-    "kinds": [
-      "flake"
-    ],
-    "sigs": [
-      "cluster-lifecycle",
-      "instrumentation"
-    ],
+    "kinds": ["flake"],
+    "sigs": ["cluster-lifecycle", "instrumentation"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -707,12 +480,8 @@
     "author_url": "https://github.com/liu-cong",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80930",
     "pr_number": 80930,
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
+    "kinds": ["api-change"],
+    "sigs": ["scheduling"],
     "release_version": "1.14.7"
   },
   "80937": {
@@ -723,15 +492,9 @@
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/80937",
     "pr_number": 80937,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["feature"],
+    "sigs": ["cluster-lifecycle"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -743,16 +506,9 @@
     "author_url": "https://github.com/johnSchnake",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81043",
     "pr_number": 81043,
-    "areas": [
-      "e2e-test-framework",
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "testing"
-    ],
+    "areas": ["e2e-test-framework", "test"],
+    "kinds": ["feature"],
+    "sigs": ["testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -764,21 +520,9 @@
     "author_url": "https://github.com/robscott",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81048",
     "pr_number": 81048,
-    "areas": [
-      "apiserver",
-      "test"
-    ],
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "apps",
-      "auth",
-      "network",
-      "testing"
-    ],
+    "areas": ["apiserver", "test"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "apps", "auth", "network", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -790,19 +534,9 @@
     "author_url": "https://github.com/jsafrane",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81163",
     "pr_number": 81163,
-    "areas": [
-      "e2e-test-framework",
-      "kubelet",
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node",
-      "storage",
-      "testing"
-    ],
+    "areas": ["e2e-test-framework", "kubelet", "test"],
+    "kinds": ["bug"],
+    "sigs": ["node", "storage", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -814,17 +548,9 @@
     "author_url": "https://github.com/andyzhangx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81266",
     "pr_number": 81266,
-    "areas": [
-      "cloudprovider",
-      "provider/azure"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cloud-provider",
-      "storage"
-    ],
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "storage"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -836,13 +562,8 @@
     "author_url": "https://github.com/liyanhui1228",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81300",
     "pr_number": 81300,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cluster-lifecycle",
-      "windows"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle", "windows"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -854,18 +575,9 @@
     "author_url": "https://github.com/knight42",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81342",
     "pr_number": 81342,
-    "areas": [
-      "e2e-test-framework",
-      "kubectl",
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "cli",
-      "testing"
-    ],
+    "areas": ["e2e-test-framework", "kubectl", "test"],
+    "kinds": ["feature"],
+    "sigs": ["cli", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -884,16 +596,9 @@
     "author_url": "https://github.com/ddebroy",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81397",
     "pr_number": 81397,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "node",
-      "windows"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["node", "windows"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -905,17 +610,9 @@
     "author_url": "https://github.com/roycaihw",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81399",
     "pr_number": 81399,
-    "areas": [
-      "admission-control",
-      "apiserver"
-    ],
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "api-machinery",
-      "instrumentation"
-    ],
+    "areas": ["admission-control", "apiserver"],
+    "kinds": ["api-change"],
+    "sigs": ["api-machinery", "instrumentation"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -927,16 +624,9 @@
     "author_url": "https://github.com/nilo19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81411",
     "pr_number": 81411,
-    "areas": [
-      "cloudprovider",
-      "provider/azure"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"],
     "release_version": "1.14.7"
   },
   "81413": {
@@ -947,19 +637,9 @@
     "author_url": "https://github.com/anderseknert",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81413",
     "pr_number": 81413,
-    "areas": [
-      "apiserver",
-      "cloudprovider",
-      "dependency"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "auth",
-      "cloud-provider"
-    ],
+    "areas": ["apiserver", "cloudprovider", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "auth", "cloud-provider"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -971,16 +651,9 @@
     "author_url": "https://github.com/huffmanca",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81429",
     "pr_number": 81429,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node",
-      "storage"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node", "storage"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -992,20 +665,9 @@
     "author_url": "https://github.com/robscott",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81430",
     "pr_number": 81430,
-    "areas": [
-      "apiserver",
-      "ipvs",
-      "test"
-    ],
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "network",
-      "testing"
-    ],
+    "areas": ["apiserver", "ipvs", "test"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "network", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1017,18 +679,9 @@
     "author_url": "https://github.com/roycaihw",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81436",
     "pr_number": 81436,
-    "areas": [
-      "custom-resources",
-      "dependency",
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery",
-      "testing"
-    ],
+    "areas": ["custom-resources", "dependency", "test"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1046,15 +699,9 @@
     "author_url": "https://github.com/bertinatto",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81467",
     "pr_number": 81467,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "testing"
-    ],
+    "areas": ["test"],
+    "kinds": ["feature"],
+    "sigs": ["testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1066,12 +713,8 @@
     "author_url": "https://github.com/ashutoshgngwr",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81468",
     "pr_number": 81468,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cli"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["cli"],
     "release_version": "1.14.7"
   },
   "81476": {
@@ -1089,19 +732,9 @@
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81476",
     "pr_number": 81476,
-    "areas": [
-      "apiserver",
-      "custom-resources",
-      "test"
-    ],
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "testing"
-    ],
+    "areas": ["apiserver", "custom-resources", "test"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1113,15 +746,9 @@
     "author_url": "https://github.com/paulsubrata55",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81477",
     "pr_number": 81477,
-    "areas": [
-      "ipvs"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "network"
-    ],
+    "areas": ["ipvs"],
+    "kinds": ["bug"],
+    "sigs": ["network"],
     "release_version": "1.14.7"
   },
   "81494": {
@@ -1132,15 +759,9 @@
     "author_url": "https://github.com/Klaven",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81494",
     "pr_number": 81494,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"],
     "release_version": "1.14.7"
   },
   "81500": {
@@ -1151,16 +772,9 @@
     "author_url": "https://github.com/feiskyer",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81500",
     "pr_number": 81500,
-    "areas": [
-      "cloudprovider",
-      "provider/azure"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"],
     "release_version": "1.14.7"
   },
   "81509": {
@@ -1171,17 +785,9 @@
     "author_url": "https://github.com/RainbowMango",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81509",
     "pr_number": 81509,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "auth",
-      "instrumentation"
-    ],
+    "areas": ["apiserver"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "auth", "instrumentation"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1193,15 +799,9 @@
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81515",
     "pr_number": 81515,
-    "areas": [
-      "custom-resources"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["custom-resources"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "81531": {
@@ -1219,15 +819,8 @@
     "author_url": "https://github.com/logicalhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81531",
     "pr_number": 81531,
-    "areas": [
-      "apiserver",
-      "cloudprovider",
-      "dependency",
-      "release-eng"
-    ],
-    "kinds": [
-      "feature"
-    ],
+    "areas": ["apiserver", "cloudprovider", "dependency", "release-eng"],
+    "kinds": ["feature"],
     "sigs": [
       "api-machinery",
       "auth",
@@ -1254,14 +847,8 @@
     "author_url": "https://github.com/logicalhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81534",
     "pr_number": 81534,
-    "areas": [
-      "dependency",
-      "kubelet",
-      "release-eng"
-    ],
-    "kinds": [
-      "feature"
-    ],
+    "areas": ["dependency", "kubelet", "release-eng"],
+    "kinds": ["feature"],
     "sigs": [
       "api-machinery",
       "auth",
@@ -1283,23 +870,9 @@
     "author_url": "https://github.com/prameshj",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81549",
     "pr_number": 81549,
-    "areas": [
-      "apiserver",
-      "cloudprovider",
-      "code-generation",
-      "dependency",
-      "kubectl"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery",
-      "cli",
-      "cloud-provider",
-      "cluster-lifecycle",
-      "node"
-    ],
+    "areas": ["apiserver", "cloudprovider", "code-generation", "dependency", "kubectl"],
+    "kinds": ["cleanup"],
+    "sigs": ["api-machinery", "cli", "cloud-provider", "cluster-lifecycle", "node"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1311,16 +884,9 @@
     "author_url": "https://github.com/irajdeep",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81573",
     "pr_number": 81573,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "design"
-    ],
-    "sigs": [
-      "instrumentation",
-      "node"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["design"],
+    "sigs": ["instrumentation", "node"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1339,15 +905,8 @@
     "author_url": "https://github.com/logicalhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81576",
     "pr_number": 81576,
-    "areas": [
-      "apiserver",
-      "cloudprovider",
-      "dependency",
-      "release-eng"
-    ],
-    "kinds": [
-      "feature"
-    ],
+    "areas": ["apiserver", "cloudprovider", "dependency", "release-eng"],
+    "kinds": ["feature"],
     "sigs": [
       "api-machinery",
       "apps",
@@ -1369,15 +928,9 @@
     "author_url": "https://github.com/neolit123",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81623",
     "pr_number": 81623,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["cleanup"],
+    "sigs": ["cluster-lifecycle"],
     "release_version": "1.14.7"
   },
   "81624": {
@@ -1395,15 +948,8 @@
     "author_url": "https://github.com/logicalhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81624",
     "pr_number": 81624,
-    "areas": [
-      "apiserver",
-      "cloudprovider",
-      "dependency",
-      "release-eng"
-    ],
-    "kinds": [
-      "feature"
-    ],
+    "areas": ["apiserver", "cloudprovider", "dependency", "release-eng"],
+    "kinds": ["feature"],
     "sigs": [
       "api-machinery",
       "apps",
@@ -1425,13 +971,8 @@
     "author_url": "https://github.com/pjh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81625",
     "pr_number": 81625,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cluster-lifecycle",
-      "windows"
-    ],
+    "kinds": ["cleanup"],
+    "sigs": ["cluster-lifecycle", "windows"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1450,22 +991,9 @@
     "author_url": "https://github.com/logicalhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81626",
     "pr_number": 81626,
-    "areas": [
-      "dependency",
-      "kubelet",
-      "release-eng"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "cluster-lifecycle",
-      "instrumentation",
-      "network",
-      "node",
-      "release"
-    ],
+    "areas": ["dependency", "kubelet", "release-eng"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "cluster-lifecycle", "instrumentation", "network", "node", "release"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1477,12 +1005,8 @@
     "author_url": "https://github.com/likakuli",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81634",
     "pr_number": 81634,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "81668": {
@@ -1493,16 +1017,9 @@
     "author_url": "https://github.com/darshanime",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81668",
     "pr_number": 81668,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery",
-      "network"
-    ],
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "network"],
     "action_required": true,
     "release_version": "1.14.7"
   },
@@ -1514,18 +1031,9 @@
     "author_url": "https://github.com/caesarxuchao",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81682",
     "pr_number": 81682,
-    "areas": [
-      "apiserver",
-      "code-generation",
-      "kubectl"
-    ],
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "api-machinery",
-      "cli"
-    ],
+    "areas": ["apiserver", "code-generation", "kubectl"],
+    "kinds": ["api-change"],
+    "sigs": ["api-machinery", "cli"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1537,18 +1045,9 @@
     "author_url": "https://github.com/MrHohn",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81691",
     "pr_number": 81691,
-    "areas": [
-      "e2e-test-framework",
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "apps",
-      "network",
-      "testing"
-    ],
+    "areas": ["e2e-test-framework", "test"],
+    "kinds": ["feature"],
+    "sigs": ["apps", "network", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1560,16 +1059,9 @@
     "author_url": "https://github.com/andyzhangx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81720",
     "pr_number": 81720,
-    "areas": [
-      "cloudprovider",
-      "provider/azure"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"],
     "release_version": "1.14.7"
   },
   "81732": {
@@ -1580,12 +1072,8 @@
     "author_url": "https://github.com/tallclair",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81732",
     "pr_number": 81732,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["scheduling"],
     "release_version": "1.14.7"
   },
   "81747": {
@@ -1596,16 +1084,9 @@
     "author_url": "https://github.com/Random-Liu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81747",
     "pr_number": 81747,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node",
-      "windows"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node", "windows"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1617,12 +1098,8 @@
     "author_url": "https://github.com/sttts",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81786",
     "pr_number": 81786,
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1634,15 +1111,9 @@
     "author_url": "https://github.com/yastij",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81791",
     "pr_number": 81791,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["cleanup"],
+    "sigs": ["cluster-lifecycle"],
     "release_version": "1.14.7"
   },
   "81792": {
@@ -1653,16 +1124,9 @@
     "author_url": "https://github.com/j-griffith",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81792",
     "pr_number": 81792,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "storage",
-      "testing"
-    ],
+    "areas": ["test"],
+    "kinds": ["feature"],
+    "sigs": ["storage", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1674,20 +1138,9 @@
     "author_url": "https://github.com/robscott",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81795",
     "pr_number": 81795,
-    "areas": [
-      "apiserver",
-      "kubectl",
-      "test"
-    ],
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "cli",
-      "testing"
-    ],
+    "areas": ["apiserver", "kubectl", "test"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "cli", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1699,16 +1152,9 @@
     "author_url": "https://github.com/draveness",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81800",
     "pr_number": 81800,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling",
-      "testing"
-    ],
+    "areas": ["test"],
+    "kinds": ["cleanup"],
+    "sigs": ["scheduling", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1720,13 +1166,8 @@
     "author_url": "https://github.com/sttts",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81872",
     "pr_number": 81872,
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1738,12 +1179,8 @@
     "author_url": "https://github.com/wgliang",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81876",
     "pr_number": 81876,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["scheduling"],
     "release_version": "1.14.7"
   },
   "81903": {
@@ -1754,15 +1191,9 @@
     "author_url": "https://github.com/jfbai",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81903",
     "pr_number": 81903,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"],
     "release_version": "1.14.7"
   },
   "81929": {
@@ -1773,16 +1204,9 @@
     "author_url": "https://github.com/egernst",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81929",
     "pr_number": 81929,
-    "areas": [
-      "kubectl"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "cli",
-      "scheduling"
-    ],
+    "areas": ["kubectl"],
+    "kinds": ["feature"],
+    "sigs": ["cli", "scheduling"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1794,16 +1218,9 @@
     "author_url": "https://github.com/deads2k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81946",
     "pr_number": 81946,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery",
-      "scheduling"
-    ],
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "scheduling"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1815,19 +1232,9 @@
     "author_url": "https://github.com/apelisse",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81956",
     "pr_number": 81956,
-    "areas": [
-      "apiserver",
-      "kubectl",
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "cli",
-      "testing"
-    ],
+    "areas": ["apiserver", "kubectl", "test"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "cli", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1839,15 +1246,9 @@
     "author_url": "https://github.com/roycaihw",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81965",
     "pr_number": 81965,
-    "areas": [
-      "custom-resources"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["custom-resources"],
+    "kinds": ["cleanup"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "81969": {
@@ -1858,18 +1259,9 @@
     "author_url": "https://github.com/logicalhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81969",
     "pr_number": 81969,
-    "areas": [
-      "apiserver",
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery",
-      "auth",
-      "testing"
-    ],
+    "areas": ["apiserver", "test"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "auth", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1881,15 +1273,9 @@
     "author_url": "https://github.com/dashpole",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/81972",
     "pr_number": 81972,
-    "areas": [
-      "dependency"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node"
-    ],
+    "areas": ["dependency"],
+    "kinds": ["bug"],
+    "sigs": ["node"],
     "release_version": "1.14.7"
   },
   "82004": {
@@ -1912,16 +1298,9 @@
     "author_url": "https://github.com/pohly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82004",
     "pr_number": 82004,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "storage",
-      "testing"
-    ],
+    "areas": ["test"],
+    "kinds": ["api-change"],
+    "sigs": ["storage", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1933,12 +1312,8 @@
     "author_url": "https://github.com/sttts",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82005",
     "pr_number": 82005,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "82034": {
@@ -1949,17 +1324,9 @@
     "author_url": "https://github.com/alculquicondor",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82034",
     "pr_number": 82034,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "apps",
-      "scheduling",
-      "testing"
-    ],
+    "areas": ["test"],
+    "kinds": ["feature"],
+    "sigs": ["apps", "scheduling", "testing"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -1971,21 +1338,9 @@
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82090",
     "pr_number": 82090,
-    "areas": [
-      "admission-control",
-      "apiserver",
-      "kubelet",
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery",
-      "auth",
-      "node",
-      "testing"
-    ],
+    "areas": ["admission-control", "apiserver", "kubelet", "test"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "auth", "node", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -1997,24 +1352,9 @@
     "author_url": "https://github.com/khenidak",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82091",
     "pr_number": 82091,
-    "areas": [
-      "apiserver",
-      "ipvs",
-      "kubectl",
-      "release-eng",
-      "test"
-    ],
-    "kinds": [
-      "api-change"
-    ],
-    "sigs": [
-      "api-machinery",
-      "apps",
-      "cli",
-      "network",
-      "release",
-      "testing"
-    ],
+    "areas": ["apiserver", "ipvs", "kubectl", "release-eng", "test"],
+    "kinds": ["api-change"],
+    "sigs": ["api-machinery", "apps", "cli", "network", "release", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -2033,12 +1373,8 @@
     "author_url": "https://github.com/wk8",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82110",
     "pr_number": 82110,
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "windows"
-    ],
+    "kinds": ["feature"],
+    "sigs": ["windows"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -2050,12 +1386,8 @@
     "author_url": "https://github.com/wgliang",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82119",
     "pr_number": 82119,
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
+    "kinds": ["cleanup"],
+    "sigs": ["scheduling"],
     "release_version": "1.14.7"
   },
   "82120": {
@@ -2066,12 +1398,8 @@
     "author_url": "https://github.com/soltysh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82120",
     "pr_number": 82120,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cli"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["cli"],
     "release_version": "1.14.7"
   },
   "82127": {
@@ -2082,15 +1410,9 @@
     "author_url": "https://github.com/rajansandeep",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82127",
     "pr_number": 82127,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"],
     "release_version": "1.14.7"
   },
   "82140": {
@@ -2101,13 +1423,8 @@
     "author_url": "https://github.com/wangzhen127",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82140",
     "pr_number": 82140,
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "cluster-lifecycle",
-      "node"
-    ],
+    "kinds": ["feature"],
+    "sigs": ["cluster-lifecycle", "node"],
     "feature": true,
     "release_version": "1.14.7"
   },
@@ -2119,16 +1436,9 @@
     "author_url": "https://github.com/soltysh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82143",
     "pr_number": 82143,
-    "areas": [
-      "kubectl",
-      "security"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cli"
-    ],
+    "areas": ["kubectl", "security"],
+    "kinds": ["cleanup"],
+    "sigs": ["cli"],
     "release_version": "1.14.7"
   },
   "82146": {
@@ -2139,15 +1449,9 @@
     "author_url": "https://github.com/deads2k",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82146",
     "pr_number": 82146,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "82170": {
@@ -2158,15 +1462,9 @@
     "author_url": "https://github.com/vivekbagade",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82170",
     "pr_number": 82170,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "testing"
-    ],
+    "areas": ["test"],
+    "kinds": ["cleanup"],
+    "sigs": ["testing"],
     "release_version": "1.14.7"
   },
   "82199": {
@@ -2177,19 +1475,9 @@
     "author_url": "https://github.com/dims",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82199",
     "pr_number": 82199,
-    "areas": [
-      "e2e-test-framework",
-      "kubeadm",
-      "test"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery",
-      "cluster-lifecycle",
-      "testing"
-    ],
+    "areas": ["e2e-test-framework", "kubeadm", "test"],
+    "kinds": ["cleanup"],
+    "sigs": ["api-machinery", "cluster-lifecycle", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -2201,15 +1489,9 @@
     "author_url": "https://github.com/uablrek",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82214",
     "pr_number": 82214,
-    "areas": [
-      "ipvs"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "network"
-    ],
+    "areas": ["ipvs"],
+    "kinds": ["bug"],
+    "sigs": ["network"],
     "release_version": "1.14.7"
   },
   "82248": {
@@ -2220,15 +1502,9 @@
     "author_url": "https://github.com/rosti",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82248",
     "pr_number": 82248,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "design"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["design"],
+    "sigs": ["cluster-lifecycle"],
     "release_version": "1.14.7"
   },
   "82262": {
@@ -2239,17 +1515,9 @@
     "author_url": "https://github.com/nilo19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82262",
     "pr_number": 82262,
-    "areas": [
-      "provider/azure",
-      "test"
-    ],
-    "kinds": [
-      "bug",
-      "failing-test"
-    ],
-    "sigs": [
-      "testing"
-    ],
+    "areas": ["provider/azure", "test"],
+    "kinds": ["bug", "failing-test"],
+    "sigs": ["testing"],
     "release_version": "1.14.7"
   },
   "82267": {
@@ -2260,15 +1528,9 @@
     "author_url": "https://github.com/kad",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82267",
     "pr_number": 82267,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"],
     "release_version": "1.14.7"
   },
   "82303": {
@@ -2279,16 +1541,9 @@
     "author_url": "https://github.com/roycaihw",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82303",
     "pr_number": 82303,
-    "areas": [
-      "apiserver",
-      "custom-resources"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["apiserver", "custom-resources"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "82314": {
@@ -2299,13 +1554,8 @@
     "author_url": "https://github.com/lzang",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82314",
     "pr_number": 82314,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cluster-lifecycle",
-      "windows"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle", "windows"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -2317,12 +1567,8 @@
     "author_url": "https://github.com/olagacek",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82322",
     "pr_number": 82322,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "instrumentation"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["instrumentation"],
     "release_version": "1.14.7"
   },
   "82438": {
@@ -2333,16 +1579,9 @@
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82438",
     "pr_number": 82438,
-    "areas": [
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery",
-      "testing"
-    ],
+    "areas": ["test"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -2354,12 +1593,8 @@
     "author_url": "https://github.com/everpeace",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82483",
     "pr_number": 82483,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "scheduling"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["scheduling"],
     "release_version": "1.14.7"
   },
   "82501": {
@@ -2370,13 +1605,8 @@
     "author_url": "https://github.com/losipiuk",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82501",
     "pr_number": 82501,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "autoscaling",
-      "cluster-lifecycle"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["autoscaling", "cluster-lifecycle"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -2388,16 +1618,9 @@
     "author_url": "https://github.com/dims",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82514",
     "pr_number": 82514,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "bug",
-      "cleanup"
-    ],
-    "sigs": [
-      "node"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["bug", "cleanup"],
+    "sigs": ["node"],
     "release_version": "1.14.7"
   },
   "82535": {
@@ -2408,15 +1631,9 @@
     "author_url": "https://github.com/demobox",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82535",
     "pr_number": 82535,
-    "areas": [
-      "kubectl"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cli"
-    ],
+    "areas": ["kubectl"],
+    "kinds": ["cleanup"],
+    "sigs": ["cli"],
     "release_version": "1.14.7"
   },
   "82588": {
@@ -2427,15 +1644,9 @@
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82588",
     "pr_number": 82588,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["apiserver"],
+    "kinds": ["cleanup"],
+    "sigs": ["api-machinery"],
     "release_version": "1.14.7"
   },
   "82653": {
@@ -2446,17 +1657,9 @@
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82653",
     "pr_number": 82653,
-    "areas": [
-      "custom-resources",
-      "test"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery",
-      "testing"
-    ],
+    "areas": ["custom-resources", "test"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "testing"],
     "duplicate": true,
     "release_version": "1.14.7"
   },
@@ -2468,15 +1671,9 @@
     "author_url": "https://github.com/rphillips",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/82669",
     "pr_number": 82669,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "node"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"],
     "release_version": "1.14.7"
   }
 }
