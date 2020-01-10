@@ -42,8 +42,8 @@
   },
   "74026": {
     "commit": "cb2684c41671f78563f8e92b6c5fafbf45471534",
-    "text": "When CSI is used for block volumes and workers are on-line upgraded (i.e., kubelet is restarted only), masters must be upgraded before workers and each worker must be drained before it can be upgraded.",
-    "markdown": "When CSI is used for block volumes and workers are on-line upgraded (i.e., kubelet is restarted only), masters must be upgraded before workers and each worker must be drained before it can be upgraded. ([#74026](https://github.com/kubernetes/kubernetes/pull/74026), [@mkimuram](https://github.com/mkimuram))",
+    "text": "A node that uses a CSI raw block volume needs to be drained before kubelet can be upgraded to 1.17.",
+    "markdown": "A node that uses a CSI raw block volume needs to be drained before kubelet can be upgraded to 1.17. ([#74026](https://github.com/kubernetes/kubernetes/pull/74026), [@mkimuram](https://github.com/mkimuram))",
     "author": "mkimuram",
     "author_url": "https://github.com/mkimuram",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/74026",
