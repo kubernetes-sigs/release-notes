@@ -42,8 +42,8 @@
   },
   "74026": {
     "commit": "cb2684c41671f78563f8e92b6c5fafbf45471534",
-    "text": "All nodes need to be drained before upgrading Kubernetes cluster, because paths used for block volumes are changed in this release, so on-line upgrade of nodes aren't allowed.",
-    "markdown": "All nodes need to be drained before upgrading Kubernetes cluster, because paths used for block volumes are changed in this release, so on-line upgrade of nodes aren't allowed. ([#74026](https://github.com/kubernetes/kubernetes/pull/74026), [@mkimuram](https://github.com/mkimuram))",
+    "text": "A node that uses a CSI raw block volume needs to be drained before kubelet can be upgraded to 1.17.",
+    "markdown": "A node that uses a CSI raw block volume needs to be drained before kubelet can be upgraded to 1.17. ([#74026](https://github.com/kubernetes/kubernetes/pull/74026), [@mkimuram](https://github.com/mkimuram))",
     "author": "mkimuram",
     "author_url": "https://github.com/mkimuram",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/74026",
