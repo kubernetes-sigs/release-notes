@@ -1,0 +1,362 @@
+{
+  "76496": {
+    "commit": "f4db8212be53c69a27d893d6a4111422fbce8008",
+    "text": "The following deprecated metrics are removed, please convert to the corresponding metrics:\n1. The following replacement metrics are available from v1.14.0:\n- `rest_client_request_latency_seconds` -\u003e `rest_client_request_duration_seconds`\n- `scheduler_scheduling_latency_seconds` -\u003e `scheduler_scheduling_duration_seconds `\n- `docker_operations` -\u003e `docker_operations_total`\n- `docker_operations_latency_microseconds` -\u003e `docker_operations_duration_seconds`\n- `docker_operations_errors` -\u003e `docker_operations_errors_total`\n- `docker_operations_timeout` -\u003e `docker_operations_timeout_total`\n- `network_plugin_operations_latency_microseconds` -\u003e `network_plugin_operations_duration_seconds`\n- `kubelet_pod_worker_latency_microseconds` -\u003e `kubelet_pod_worker_duration_seconds`\n- `kubelet_pod_start_latency_microseconds` -\u003e `kubelet_pod_start_duration_seconds`\n- `kubelet_cgroup_manager_latency_microseconds` -\u003e `kubelet_cgroup_manager_duration_seconds`\n- `kubelet_pod_worker_start_latency_microseconds` -\u003e `kubelet_pod_worker_start_duration_seconds`\n- `kubelet_pleg_relist_latency_microseconds` -\u003e `kubelet_pleg_relist_duration_seconds`\n- `kubelet_pleg_relist_interval_microseconds` -\u003e `kubelet_pleg_relist_interval_seconds`\n- `kubelet_eviction_stats_age_microseconds` -\u003e `kubelet_eviction_stats_age_seconds`\n- `kubelet_runtime_operations` -\u003e `kubelet_runtime_operations_total`\n- `kubelet_runtime_operations_latency_microseconds` -\u003e `kubelet_runtime_operations_duration_seconds`\n- `kubelet_runtime_operations_errors` -\u003e `kubelet_runtime_operations_errors_total`\n- `kubelet_device_plugin_registration_count` -\u003e `kubelet_device_plugin_registration_total`\n- `kubelet_device_plugin_alloc_latency_microseconds` -\u003e `kubelet_device_plugin_alloc_duration_seconds`\n- `scheduler_e2e_scheduling_latency_microseconds` -\u003e `scheduler_e2e_scheduling_duration_seconds`\n- `scheduler_scheduling_algorithm_latency_microseconds` -\u003e `scheduler_scheduling_algorithm_duration_seconds`\n- `scheduler_scheduling_algorithm_predicate_evaluation` -\u003e `scheduler_scheduling_algorithm_predicate_evaluation_seconds`\n- `scheduler_scheduling_algorithm_priority_evaluation` -\u003e `scheduler_scheduling_algorithm_priority_evaluation_seconds`\n- `scheduler_scheduling_algorithm_preemption_evaluation` -\u003e `scheduler_scheduling_algorithm_preemption_evaluation_seconds`\n- `scheduler_binding_latency_microseconds` -\u003e `scheduler_binding_duration_seconds`\n- `kubeproxy_sync_proxy_rules_latency_microseconds` -\u003e `kubeproxy_sync_proxy_rules_duration_seconds`\n- `apiserver_request_latencies` -\u003e `apiserver_request_duration_seconds`\n- `apiserver_dropped_requests` -\u003e `apiserver_dropped_requests_total`\n- `etcd_request_latencies_summary` -\u003e `etcd_request_duration_seconds`\n- `apiserver_storage_transformation_latencies_microseconds ` -\u003e `apiserver_storage_transformation_duration_seconds`\n- `apiserver_storage_data_key_generation_latencies_microseconds` -\u003e `apiserver_storage_data_key_generation_duration_seconds`\n- `apiserver_request_count` -\u003e `apiserver_request_total`\n- `apiserver_request_latencies_summary`\n2. The following replacement metrics are available from v1.15.0:\n- `apiserver_storage_transformation_failures_total` -\u003e `apiserver_storage_transformation_operations_total`",
+    "markdown": "The following deprecated metrics are removed, please convert to the corresponding metrics:\n  1. The following replacement metrics are available from v1.14.0:\n  - `rest_client_request_latency_seconds` -\u003e `rest_client_request_duration_seconds`\n  - `scheduler_scheduling_latency_seconds` -\u003e `scheduler_scheduling_duration_seconds `\n  - `docker_operations` -\u003e `docker_operations_total`\n  - `docker_operations_latency_microseconds` -\u003e `docker_operations_duration_seconds`\n  - `docker_operations_errors` -\u003e `docker_operations_errors_total`\n  - `docker_operations_timeout` -\u003e `docker_operations_timeout_total`\n  - `network_plugin_operations_latency_microseconds` -\u003e `network_plugin_operations_duration_seconds`\n  - `kubelet_pod_worker_latency_microseconds` -\u003e `kubelet_pod_worker_duration_seconds`\n  - `kubelet_pod_start_latency_microseconds` -\u003e `kubelet_pod_start_duration_seconds`\n  - `kubelet_cgroup_manager_latency_microseconds` -\u003e `kubelet_cgroup_manager_duration_seconds`\n  - `kubelet_pod_worker_start_latency_microseconds` -\u003e `kubelet_pod_worker_start_duration_seconds`\n  - `kubelet_pleg_relist_latency_microseconds` -\u003e `kubelet_pleg_relist_duration_seconds`\n  - `kubelet_pleg_relist_interval_microseconds` -\u003e `kubelet_pleg_relist_interval_seconds`\n  - `kubelet_eviction_stats_age_microseconds` -\u003e `kubelet_eviction_stats_age_seconds`\n  - `kubelet_runtime_operations` -\u003e `kubelet_runtime_operations_total`\n  - `kubelet_runtime_operations_latency_microseconds` -\u003e `kubelet_runtime_operations_duration_seconds`\n  - `kubelet_runtime_operations_errors` -\u003e `kubelet_runtime_operations_errors_total`\n  - `kubelet_device_plugin_registration_count` -\u003e `kubelet_device_plugin_registration_total`\n  - `kubelet_device_plugin_alloc_latency_microseconds` -\u003e `kubelet_device_plugin_alloc_duration_seconds`\n  - `scheduler_e2e_scheduling_latency_microseconds` -\u003e `scheduler_e2e_scheduling_duration_seconds`\n  - `scheduler_scheduling_algorithm_latency_microseconds` -\u003e `scheduler_scheduling_algorithm_duration_seconds`\n  - `scheduler_scheduling_algorithm_predicate_evaluation` -\u003e `scheduler_scheduling_algorithm_predicate_evaluation_seconds`\n  - `scheduler_scheduling_algorithm_priority_evaluation` -\u003e `scheduler_scheduling_algorithm_priority_evaluation_seconds`\n  - `scheduler_scheduling_algorithm_preemption_evaluation` -\u003e `scheduler_scheduling_algorithm_preemption_evaluation_seconds`\n  - `scheduler_binding_latency_microseconds` -\u003e `scheduler_binding_duration_seconds`\n  - `kubeproxy_sync_proxy_rules_latency_microseconds` -\u003e `kubeproxy_sync_proxy_rules_duration_seconds`\n  - `apiserver_request_latencies` -\u003e `apiserver_request_duration_seconds`\n  - `apiserver_dropped_requests` -\u003e `apiserver_dropped_requests_total`\n  - `etcd_request_latencies_summary` -\u003e `etcd_request_duration_seconds`\n  - `apiserver_storage_transformation_latencies_microseconds ` -\u003e `apiserver_storage_transformation_duration_seconds`\n  - `apiserver_storage_data_key_generation_latencies_microseconds` -\u003e `apiserver_storage_data_key_generation_duration_seconds`\n  - `apiserver_request_count` -\u003e `apiserver_request_total`\n  - `apiserver_request_latencies_summary`\n  2. The following replacement metrics are available from v1.15.0:\n  - `apiserver_storage_transformation_failures_total` -\u003e `apiserver_storage_transformation_operations_total` ([#76496](https://github.com/kubernetes/kubernetes/pull/76496), [@danielqsj](https://github.com/danielqsj))",
+    "author": "danielqsj",
+    "author_url": "https://github.com/danielqsj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/76496",
+    "pr_number": 76496,
+    "areas": [
+      "apiserver",
+      "ipvs",
+      "kubelet"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cluster-lifecycle",
+      "instrumentation",
+      "network",
+      "node",
+      "scheduling"
+    ],
+    "duplicate": true,
+    "release_version": "1.15.9"
+  },
+  "84265": {
+    "commit": "c9003a268dff6700506929b247847341ea4d5b33",
+    "text": "Fixed the following \n-  AWS Cloud Provider attempts to delete LoadBalancer security group it didn’t provision\n-  AWS Cloud Provider creates default LoadBalancer security group even if annotation [service.beta.kubernetes.io/aws-load-balancer-security-groups] is present",
+    "markdown": "Fixed the following \n  -  AWS Cloud Provider attempts to delete LoadBalancer security group it didn’t provision\n  -  AWS Cloud Provider creates default LoadBalancer security group even if annotation [service.beta.kubernetes.io/aws-load-balancer-security-groups] is present ([#84265](https://github.com/kubernetes/kubernetes/pull/84265), [@bhagwat070919](https://github.com/bhagwat070919))",
+    "author": "bhagwat070919",
+    "author_url": "https://github.com/bhagwat070919",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/84265",
+    "pr_number": 84265,
+    "areas": [
+      "cloudprovider",
+      "provider/aws"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "release_version": "1.15.9"
+  },
+  "85281": {
+    "commit": "d9bf22f8f7df184cf427114e8ad1fef12474364f",
+    "text": "New flag `--show-hidden-metrics-for-version` in kube-controller-manager can be used to show all hidden metrics that deprecated in the previous minor release.",
+    "markdown": "New flag `--show-hidden-metrics-for-version` in kube-controller-manager can be used to show all hidden metrics that deprecated in the previous minor release. ([#85281](https://github.com/kubernetes/kubernetes/pull/85281), [@RainbowMango](https://github.com/RainbowMango))\n\n  Courtesy of SIG API Machinery",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-instrumentation/20190404-kubernetes-control-plane-metrics-stability.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "RainbowMango",
+    "author_url": "https://github.com/RainbowMango",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85281",
+    "pr_number": 85281,
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "feature": true,
+    "release_version": "1.15.9"
+  },
+  "85283": {
+    "commit": "dd77283426bd3249004472efcbb3257744448161",
+    "text": "Cleaned up the output from `kubectl describe CSINode \u003cname\u003e`.",
+    "markdown": "Cleaned up the output from `kubectl describe CSINode \u003cname\u003e`. ([#85283](https://github.com/kubernetes/kubernetes/pull/85283), [@huffmanca](https://github.com/huffmanca))",
+    "author": "huffmanca",
+    "author_url": "https://github.com/huffmanca",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85283",
+    "pr_number": 85283,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cli",
+      "storage"
+    ],
+    "duplicate": true,
+    "release_version": "1.15.9"
+  },
+  "85458": {
+    "commit": "7f2128757b1aa2e83320d1f635fe8b2e7028542a",
+    "text": "Improved yaml parsing performance",
+    "markdown": "Improved yaml parsing performance ([#85458](https://github.com/kubernetes/kubernetes/pull/85458), [@cjcullen](https://github.com/cjcullen))",
+    "author": "cjcullen",
+    "author_url": "https://github.com/cjcullen",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85458",
+    "pr_number": 85458,
+    "areas": [
+      "apiserver",
+      "cloudprovider",
+      "code-generation",
+      "dependency",
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery",
+      "cli",
+      "cloud-provider",
+      "cluster-lifecycle",
+      "instrumentation",
+      "node"
+    ],
+    "duplicate": true,
+    "release_version": "1.15.9"
+  },
+  "85613": {
+    "commit": "05209312b74eac15f0a80577cbbdcb11bce9b8ad",
+    "text": "`kubectl apply  -f \u003cfile\u003e --prune -n \u003cnamespace\u003e` should prune all resources not defined in the file in the cli specified namespace.",
+    "markdown": "`kubectl apply  -f \u003cfile\u003e --prune -n \u003cnamespace\u003e` should prune all resources not defined in the file in the cli specified namespace. ([#85613](https://github.com/kubernetes/kubernetes/pull/85613), [@MartinKaburu](https://github.com/MartinKaburu))",
+    "author": "MartinKaburu",
+    "author_url": "https://github.com/MartinKaburu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85613",
+    "pr_number": 85613,
+    "areas": [
+      "kubectl"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cli"
+    ],
+    "release_version": "1.15.9"
+  },
+  "85850": {
+    "commit": "61d36e4a43b831f960b190b81d371cb33b5f20d1",
+    "text": "You can now pass \"--node-ip ::\" to kubelet to indicate that it should autodetect an IPv6 address to use as the node's primary address.",
+    "markdown": "You can now pass \"--node-ip ::\" to kubelet to indicate that it should autodetect an IPv6 address to use as the node's primary address. ([#85850](https://github.com/kubernetes/kubernetes/pull/85850), [@danwinship](https://github.com/danwinship))\n\n  Courtesy of SIG Cloud Provider, SIG Network, and SIG Node",
+    "author": "danwinship",
+    "author_url": "https://github.com/danwinship",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85850",
+    "pr_number": 85850,
+    "areas": [
+      "ipv6",
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cloud-provider",
+      "network",
+      "node"
+    ],
+    "feature": true,
+    "release_version": "1.15.9"
+  },
+  "86282": {
+    "commit": "be26fbc638ff5ed952ccae70e68baa712b3c60c8",
+    "text": "kubelet: resource metrics endpoint `/metrics/resource/v1alpha1` as well as all metrics under this endpoint have been deprecated.\nPlease convert to the following metrics emitted by endpoint `/metrics/resource`:\n- scrape_error --\u003e scrape_error\n- node_cpu_usage_seconds_total --\u003e node_cpu_usage_seconds\n- node_memory_working_set_bytes --\u003e node_memory_working_set_bytes\n- container_cpu_usage_seconds_total --\u003e container_cpu_usage_seconds\n- container_memory_working_set_bytes --\u003e container_memory_working_set_bytes\n- scrape_error --\u003e scrape_error",
+    "markdown": "kubelet: resource metrics endpoint `/metrics/resource/v1alpha1` as well as all metrics under this endpoint have been deprecated.\n  Please convert to the following metrics emitted by endpoint `/metrics/resource`:\n  - scrape_error --\u003e scrape_error\n  - node_cpu_usage_seconds_total --\u003e node_cpu_usage_seconds\n  - node_memory_working_set_bytes --\u003e node_memory_working_set_bytes\n  - container_cpu_usage_seconds_total --\u003e container_cpu_usage_seconds\n  - container_memory_working_set_bytes --\u003e container_memory_working_set_bytes\n  - scrape_error --\u003e scrape_error ([#86282](https://github.com/kubernetes/kubernetes/pull/86282), [@RainbowMango](https://github.com/RainbowMango))\n\n  Courtesy of SIG Node",
+    "author": "RainbowMango",
+    "author_url": "https://github.com/RainbowMango",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/86282",
+    "pr_number": 86282,
+    "areas": [
+      "kubelet"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "node"
+    ],
+    "feature": true,
+    "release_version": "1.15.9"
+  },
+  "86861": {
+    "commit": "916edd922e528f2f27542d3ca5967ca11fe153f8",
+    "text": "kubeadm upgrades always persist the etcd backup for stacked",
+    "markdown": "kubeadm upgrades always persist the etcd backup for stacked ([#86861](https://github.com/kubernetes/kubernetes/pull/86861), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/86861",
+    "pr_number": 86861,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "cleanup"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "release_version": "1.15.9"
+  },
+  "86899": {
+    "commit": "3e8155ead3d890697141d4946ec5fdd5b0dab192",
+    "text": "kubeadm: support automatic retry after failing to pull image",
+    "markdown": "kubeadm: support automatic retry after failing to pull image ([#86899](https://github.com/kubernetes/kubernetes/pull/86899), [@SataQiu](https://github.com/SataQiu))\n\n  Courtesy of SIG Cluster Lifecycle",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/86899",
+    "pr_number": 86899,
+    "areas": [
+      "kubeadm"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cluster-lifecycle"
+    ],
+    "feature": true,
+    "release_version": "1.15.9"
+  },
+  "87029": {
+    "commit": "af46f2cdd2a72ef808f99715c978d58a4603871b",
+    "text": "Fixes service account token admission error in clusters that do not run the service account token controller",
+    "markdown": "Fixes service account token admission error in clusters that do not run the service account token controller ([#87029](https://github.com/kubernetes/kubernetes/pull/87029), [@liggitt](https://github.com/liggitt))",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87029",
+    "pr_number": 87029,
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "auth"
+    ],
+    "release_version": "1.15.9"
+  },
+  "87035": {
+    "commit": "d2a526bc0eb0961966584749935e7a28bd769adc",
+    "text": "provider/azure: Network security groups can now be in a separate resource group.",
+    "markdown": "provider/azure: Network security groups can now be in a separate resource group. ([#87035](https://github.com/kubernetes/kubernetes/pull/87035), [@CecileRobertMichon](https://github.com/CecileRobertMichon))\n\n  Courtesy of SIG Cloud Provider",
+    "author": "CecileRobertMichon",
+    "author_url": "https://github.com/CecileRobertMichon",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87035",
+    "pr_number": 87035,
+    "areas": [
+      "cloudprovider",
+      "provider/azure"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "feature": true,
+    "release_version": "1.15.9"
+  },
+  "87044": {
+    "commit": "36e40fb850293076b415ae3d376f5f81dc897105",
+    "text": "TODO",
+    "markdown": "TODO ([#87044](https://github.com/kubernetes/kubernetes/pull/87044), [@jennybuckley](https://github.com/jennybuckley))\n\n  Courtesy of SIG API Machinery",
+    "author": "jennybuckley",
+    "author_url": "https://github.com/jennybuckley",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87044",
+    "pr_number": 87044,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "feature": true,
+    "release_version": "1.15.9"
+  },
+  "87122": {
+    "commit": "93595eb4eb933bfed90b1f4a1f5597caccf7ccfd",
+    "text": "Azure network and VM clients now suppress requests on throttling",
+    "markdown": "Azure network and VM clients now suppress requests on throttling ([#87122](https://github.com/kubernetes/kubernetes/pull/87122), [@feiskyer](https://github.com/feiskyer))\n\n  Courtesy of SIG Cloud Provider",
+    "author": "feiskyer",
+    "author_url": "https://github.com/feiskyer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87122",
+    "pr_number": 87122,
+    "areas": [
+      "cloudprovider",
+      "provider/azure"
+    ],
+    "kinds": [
+      "feature"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "feature": true,
+    "release_version": "1.15.9"
+  },
+  "87203": {
+    "commit": "0c8dcc59f099f69240ffd83eb2eae1cb6e1c68aa",
+    "text": "All apiservers log request lines in a more greppable format.",
+    "markdown": "All apiservers log request lines in a more greppable format. ([#87203](https://github.com/kubernetes/kubernetes/pull/87203), [@lavalamp](https://github.com/lavalamp))",
+    "author": "lavalamp",
+    "author_url": "https://github.com/lavalamp",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87203",
+    "pr_number": 87203,
+    "areas": [
+      "apiserver"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "release_version": "1.15.9"
+  },
+  "87213": {
+    "commit": "a25c6aa35067187800ef2a0928646f5d23268764",
+    "text": "CustomResourceDefinition status fields are no longer required for client validation when submitting manifests.",
+    "markdown": "CustomResourceDefinition status fields are no longer required for client validation when submitting manifests. ([#87213](https://github.com/kubernetes/kubernetes/pull/87213), [@hasheddan](https://github.com/hasheddan))\n\n  Courtesy of SIG API Machinery",
+    "author": "hasheddan",
+    "author_url": "https://github.com/hasheddan",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87213",
+    "pr_number": 87213,
+    "areas": [
+      "custom-resources"
+    ],
+    "kinds": [
+      "api-change",
+      "feature"
+    ],
+    "sigs": [
+      "api-machinery"
+    ],
+    "feature": true,
+    "release_version": "1.15.9"
+  },
+  "87246": {
+    "commit": "6413f1ee2be99fe5ba18844a2646fb15d462bec4",
+    "text": "Fix the bug PIP's DNS is deleted if no DNS label service annotation isn't set.",
+    "markdown": "Fix the bug PIP's DNS is deleted if no DNS label service annotation isn't set. ([#87246](https://github.com/kubernetes/kubernetes/pull/87246), [@nilo19](https://github.com/nilo19))",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87246",
+    "pr_number": 87246,
+    "areas": [
+      "cloudprovider",
+      "provider/azure"
+    ],
+    "kinds": [
+      "bug"
+    ],
+    "sigs": [
+      "cloud-provider"
+    ],
+    "release_version": "1.15.9"
+  }
+}
