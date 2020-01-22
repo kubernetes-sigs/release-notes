@@ -7,14 +7,8 @@
     "author_url": "https://github.com/danielqsj",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/76496",
     "pr_number": 76496,
-    "areas": [
-      "apiserver",
-      "ipvs",
-      "kubelet"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
+    "areas": ["apiserver", "ipvs", "kubelet"],
+    "kinds": ["cleanup"],
     "sigs": [
       "api-machinery",
       "cluster-lifecycle",
@@ -34,16 +28,9 @@
     "author_url": "https://github.com/bhagwat070919",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/84265",
     "pr_number": 84265,
-    "areas": [
-      "cloudprovider",
-      "provider/aws"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
+    "areas": ["cloudprovider", "provider/aws"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"],
     "release_version": "1.16.6"
   },
   "85281": {
@@ -61,12 +48,8 @@
     "author_url": "https://github.com/RainbowMango",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/85281",
     "pr_number": 85281,
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery"],
     "feature": true,
     "release_version": "1.16.6"
   },
@@ -78,16 +61,9 @@
     "author_url": "https://github.com/huffmanca",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/85283",
     "pr_number": 85283,
-    "areas": [
-      "kubectl"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cli",
-      "storage"
-    ],
+    "areas": ["kubectl"],
+    "kinds": ["cleanup"],
+    "sigs": ["cli", "storage"],
     "duplicate": true,
     "release_version": "1.16.6"
   },
@@ -99,16 +75,8 @@
     "author_url": "https://github.com/cjcullen",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/85458",
     "pr_number": 85458,
-    "areas": [
-      "apiserver",
-      "cloudprovider",
-      "code-generation",
-      "dependency",
-      "kubectl"
-    ],
-    "kinds": [
-      "bug"
-    ],
+    "areas": ["apiserver", "cloudprovider", "code-generation", "dependency", "kubectl"],
+    "kinds": ["bug"],
     "sigs": [
       "api-machinery",
       "cli",
@@ -128,15 +96,9 @@
     "author_url": "https://github.com/MartinKaburu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/85613",
     "pr_number": 85613,
-    "areas": [
-      "kubectl"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cli"
-    ],
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"],
     "release_version": "1.16.6"
   },
   "85850": {
@@ -147,18 +109,9 @@
     "author_url": "https://github.com/danwinship",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/85850",
     "pr_number": 85850,
-    "areas": [
-      "ipv6",
-      "kubelet"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "cloud-provider",
-      "network",
-      "node"
-    ],
+    "areas": ["ipv6", "kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["cloud-provider", "network", "node"],
     "feature": true,
     "release_version": "1.16.6"
   },
@@ -170,15 +123,9 @@
     "author_url": "https://github.com/RainbowMango",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/86282",
     "pr_number": 86282,
-    "areas": [
-      "kubelet"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "node"
-    ],
+    "areas": ["kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["node"],
     "feature": true,
     "release_version": "1.16.6"
   },
@@ -190,15 +137,9 @@
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/86861",
     "pr_number": 86861,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "cleanup"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["cleanup"],
+    "sigs": ["cluster-lifecycle"],
     "release_version": "1.16.6"
   },
   "86899": {
@@ -209,15 +150,9 @@
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/86899",
     "pr_number": 86899,
-    "areas": [
-      "kubeadm"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "cluster-lifecycle"
-    ],
+    "areas": ["kubeadm"],
+    "kinds": ["feature"],
+    "sigs": ["cluster-lifecycle"],
     "feature": true,
     "release_version": "1.16.6"
   },
@@ -229,12 +164,8 @@
     "author_url": "https://github.com/liggitt",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/87029",
     "pr_number": 87029,
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "auth"
-    ],
+    "kinds": ["bug"],
+    "sigs": ["auth"],
     "release_version": "1.16.6"
   },
   "87035": {
@@ -245,16 +176,9 @@
     "author_url": "https://github.com/CecileRobertMichon",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/87035",
     "pr_number": 87035,
-    "areas": [
-      "cloudprovider",
-      "provider/azure"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["feature"],
+    "sigs": ["cloud-provider"],
     "feature": true,
     "release_version": "1.16.6"
   },
@@ -266,15 +190,9 @@
     "author_url": "https://github.com/jennybuckley",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/87044",
     "pr_number": 87044,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["apiserver"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery"],
     "feature": true,
     "release_version": "1.16.6"
   },
@@ -286,16 +204,9 @@
     "author_url": "https://github.com/feiskyer",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/87122",
     "pr_number": 87122,
-    "areas": [
-      "cloudprovider",
-      "provider/azure"
-    ],
-    "kinds": [
-      "feature"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["feature"],
+    "sigs": ["cloud-provider"],
     "feature": true,
     "release_version": "1.16.6"
   },
@@ -307,15 +218,9 @@
     "author_url": "https://github.com/lavalamp",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/87203",
     "pr_number": 87203,
-    "areas": [
-      "apiserver"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"],
     "release_version": "1.16.6"
   },
   "87213": {
@@ -326,16 +231,9 @@
     "author_url": "https://github.com/hasheddan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/87213",
     "pr_number": 87213,
-    "areas": [
-      "custom-resources"
-    ],
-    "kinds": [
-      "api-change",
-      "feature"
-    ],
-    "sigs": [
-      "api-machinery"
-    ],
+    "areas": ["custom-resources"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery"],
     "feature": true,
     "release_version": "1.16.6"
   },
@@ -347,16 +245,9 @@
     "author_url": "https://github.com/nilo19",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/87246",
     "pr_number": 87246,
-    "areas": [
-      "cloudprovider",
-      "provider/azure"
-    ],
-    "kinds": [
-      "bug"
-    ],
-    "sigs": [
-      "cloud-provider"
-    ],
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"],
     "release_version": "1.16.6"
   }
 }
