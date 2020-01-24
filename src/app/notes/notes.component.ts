@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
-import { Note, Documentation } from '@app/shared/model/notes.model';
+import { Kep } from '@app/shared/model/notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
 import { State } from '@app/app.reducer';
 import { getErrorSelector, getAllNotesSelector, getFilteredNotesSelector } from './notes.reducer';
@@ -18,13 +18,14 @@ import { getFilterSelector } from '@app/filter/filter.reducer';
 })
 export class NotesComponent {
   filter: Filter = new Filter();
-  allNotes: Note[] = [];
-  filteredNotes: Note[] = [];
+  allNotes: Kep[] = [];
+  filteredNotes: Kep[] = [];
   p = 1;
   faBook = faBook;
   errorMessage = '';
 
-  readonly kep = 'KEP';
+  readonly tocStart = '<!-- toc -->';
+  readonly tocEnd = '<!-- /toc -->';
 
   constructor(private store: Store<State>) {
     this.store.dispatch(new GetNotes());
@@ -74,50 +75,37 @@ export class NotesComponent {
   }
 
   /**
-   * Retrieve the badge css class for a given documentation string
-   *
-   * @returns The resulting class as string
-   */
-  public badgeClass(t: string): string {
-    if (t === this.kep) {
-      return 'badge-primary';
-    } else if (t === 'official') {
-      return 'badge-success';
-    }
-    return 'badge-secondary';
-  }
-
-  /**
-   * Sanitize the documentation description
-   *
-   * @param doc The documentation to be processed
-   *
-   * @returns The resulting description as string
-   */
-  public saneKEPDescription(doc: Documentation): string {
-    const stripped = doc.description
-      .replace(/[\[\]]/g, '') // remove brackets
-      .replace(this.kep, '') // remove 'KEP'
-      .trim();
-
-    if (stripped === '') {
-      // write out KEP
-      return 'Kubernetes Enhancement Proposal';
-    }
-
-    // all other sort of descriptions
-    return stripped;
-  }
-
-  /**
    * Retrieve the collapse css class based on the current filter
    *
    * @returns The resulting class as string
    */
   public collapseClass(): string {
-    if (!this.filter.optionIsEmpty(OptionType.documentation)) {
+    /* if (!this.filter.optionIsEmpty(OptionType.owningSigs)) {
       return 'show';
-    }
+    } */
     return '';
+  }
+
+  /**
+   * Returns the table of contents from a markdown string
+   *
+   * @returns The resulting string
+   */
+  public toc(md: string): string {
+    const toc = md.substring(
+      md.lastIndexOf(this.tocStart) + this.tocStart.length,
+      md.lastIndexOf(this.tocEnd),
+    );
+    const result = toc.replace(/\[(.*)\]\(.*\)/g, '$1');
+    return result;
+  }
+
+  /**
+   * Strips the table of contents from a markdown string
+   *
+   * @returns The resulting string
+   */
+  public stripToc(md: string): string {
+    return md.substring(md.lastIndexOf(this.tocEnd));
   }
 }

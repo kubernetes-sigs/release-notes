@@ -2,11 +2,8 @@
  * All available option types
  */
 export enum OptionType {
-  areas = 'areas',
-  kinds = 'kinds',
-  releaseVersions = 'releaseVersions',
-  sigs = 'sigs',
-  documentation = 'documentation',
+  participatingSigs = 'participatingSigs',
+  owningSigs = 'owningSig',
 }
 
 /**
@@ -27,11 +24,8 @@ export class Options {
    * The private data store
    */
   private store: OptionData = new Map([
-    [OptionType.areas, new Set()],
-    [OptionType.kinds, new Set()],
-    [OptionType.releaseVersions, new Set()],
-    [OptionType.sigs, new Set()],
-    [OptionType.documentation, new Set()],
+    [OptionType.owningSigs, new Set()],
+    [OptionType.participatingSigs, new Set()],
   ]);
 
   /**
@@ -82,10 +76,7 @@ export class Options {
    * Sort the internal data structures by its defined logical order
    */
   private sort() {
-    [OptionType.areas, OptionType.kinds, OptionType.sigs, OptionType.documentation].forEach(x =>
-      this.sort_set(x),
-    );
-    this.sort_set(OptionType.releaseVersions, (a, b) => (a < b ? 1 : -1));
+    [OptionType.owningSigs, OptionType.participatingSigs].forEach(x => this.sort_set(x));
   }
 
   /**

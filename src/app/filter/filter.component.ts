@@ -4,7 +4,7 @@ import { skip } from 'rxjs/operators';
 import { Options, OptionType } from '@app/shared/model/options.model';
 import { Filter } from '@app/shared/model/filter.model';
 import { Settings } from '@app/shared/model/settings.model';
-import { Note } from '@app/shared/model/notes.model';
+import { Kep } from '@app/shared/model/notes.model';
 import { getAllNotesSelector } from '@app/notes/notes.reducer';
 import { State } from '@app/app.reducer';
 import { UpdateFilter } from './filter.actions';
@@ -20,7 +20,7 @@ export class FilterComponent implements OnInit {
   options: Options = new Options();
   filter: Filter = new Filter();
   settings: Settings = new Settings();
-  notes: Note[] = [];
+  keps: Kep[] = [];
 
   /**
    * FilterComponent's constructor
@@ -31,9 +31,9 @@ export class FilterComponent implements OnInit {
    * Runs after component initialization
    */
   ngOnInit() {
-    this.store.pipe(select(getAllNotesSelector)).subscribe(notes => {
-      if (notes) {
-        this.notes = notes;
+    this.store.pipe(select(getAllNotesSelector)).subscribe(keps => {
+      if (keps) {
+        this.keps = keps;
         this.updateOptions();
       }
     });
@@ -54,34 +54,19 @@ export class FilterComponent implements OnInit {
   }
 
   /**
-   * Update the options from the provided notes
+   * Update the options from the provided keps
    */
   updateOptions(): void {
     // Reset the options
     this.options = new Options();
 
     // Populate the new options
-    for (const note of Object.values(this.notes)) {
-      if (OptionType.areas in note) {
-        this.options.add(OptionType.areas, note.areas);
+    for (const kep of Object.values(this.keps)) {
+      if (OptionType.owningSigs in kep) {
+        this.options.add(OptionType.owningSigs, [kep.owningSig]);
       }
-      if (OptionType.kinds in note) {
-        this.options.add(OptionType.kinds, note.kinds);
-      }
-      if (OptionType.sigs in note) {
-        this.options.add(OptionType.sigs, note.sigs);
-      }
-      if (OptionType.documentation in note) {
-        this.options.add(
-          OptionType.documentation,
-          note.documentation.map(x => x.type.toString()),
-        );
-      }
-      if (
-        !this.options.get(OptionType.releaseVersions).has(note.release_version) &&
-        (this.settings.displayPreReleases || !this.filter.isPreRelease(note.release_version))
-      ) {
-        this.options.get(OptionType.releaseVersions).add(note.release_version);
+      if (OptionType.participatingSigs in kep) {
+        this.options.add(OptionType.participatingSigs, kep.participatingSigs);
       }
     }
 

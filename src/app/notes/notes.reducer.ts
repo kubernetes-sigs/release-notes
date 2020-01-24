@@ -1,12 +1,12 @@
 import { createSelector } from '@ngrx/store';
 import { ActionTypes, NotesAction } from './notes.actions';
-import { Note } from '@app/shared/model/notes.model';
+import { Kep } from '@app/shared/model/notes.model';
 import { State as RootState } from '@app/app.reducer';
 
 export interface State {
   error: string | null;
-  filteredNotes: Note[];
-  notes: Note[];
+  filteredNotes: Kep[];
+  notes: Kep[];
 }
 
 export const initialState: State = {

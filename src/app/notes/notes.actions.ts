@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Note } from '@app/shared/model/notes.model';
+import { Kep } from '@app/shared/model/notes.model';
 import { Filter } from '@app/shared/model/filter.model';
 
 export enum ActionTypes {
@@ -19,12 +19,12 @@ export class Failed implements Action {
 
 export class DoFilter implements Action {
   readonly type = ActionTypes.DoFilter;
-  constructor(public notes: Note[], public filter: Filter) {}
+  constructor(public notes: Kep[], public filter: Filter) {}
 }
 
 export class DoFilterSuccess implements Action {
   readonly type = ActionTypes.DoFilterSuccess;
-  constructor(public notes: Note[]) {}
+  constructor(public notes: Kep[]) {}
 }
 
 export class GetNotes implements Action {
@@ -34,7 +34,7 @@ export class GetNotes implements Action {
 
 export class GetNotesSuccess implements Action {
   readonly type = ActionTypes.GetNotesSuccess;
-  constructor(public payload: Note[]) {}
+  constructor(public payload: Kep[]) {}
 }
 
 export type NotesAction = Failed | DoFilter | DoFilterSuccess | GetNotes | GetNotesSuccess;

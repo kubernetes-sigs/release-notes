@@ -4,64 +4,39 @@
 <ng-container *ngFor="let note of filteredNotes | paginate: { itemsPerPage: 10, currentPage: p }">
   <div class="card">
     <div class="card-header">
-      <a target="_blank" href="{{ note.pr_url }}">#{{ note.pr_number }}</a> by
-      <a target="_blank" href="{{ note.author_url }}">{{ note.author }}</a>
+      <a target="_blank" href="#">#{{ note.title }}</a> by
+      <a target="_blank" href="#">{{ note.authors }} </a>
+      <span>(owned by {{ note.owningSig }})</span>
+      <br />
+      <span>{{ note.creationDate }} (Updated: {{ note.lastUpdated }})</span>
+
       <a
-        ngbTooltip="Additional Documentation"
+        ngbTooltip="Show"
         placement="right"
         tooltipClass="documentationTooltip"
-        *ngIf="note.documentation"
         class="text-secondary"
-        id="documentationButton-{{ note.pr_number }}"
+        id="documentationButton-{{ note.id }}"
         data-toggle="collapse"
-        href="#documentationContent-{{ note.pr_number }}"
+        href="#documentationContent-{{ note.id }}"
       >
         <fa-icon class="icon" [icon]="faBook" size="lg"></fa-icon>
       </a>
-      <span
-        (click)="toggleFilter(OptionType.releaseVersions, note.release_version)"
-        class="k8s-badge float-sm-right badge badge-dark"
-        >{{ note.release_version }}</span
-      >
 
+      <span class="k8s-badge float-sm-right badge badge-dark"
+        >Reviewed by: {{ note.reviewers }}</span
+      >
       <span
-        *ngFor="let sig of note.sigs"
-        (click)="toggleFilter(OptionType.sigs, sig)"
+        *ngFor="let sig of note.participatingSigs"
         class="k8s-badge float-sm-right badge badge-success"
         >{{ sig }}</span
       >
-      <span
-        *ngFor="let kind of note.kinds"
-        (click)="toggleFilter(OptionType.kinds, kind)"
-        class="k8s-badge float-sm-right badge badge-primary"
-        >{{ kind }}</span
-      >
-      <span
-        *ngFor="let area of note.areas"
-        (click)="toggleFilter(OptionType.areas, area)"
-        class="k8s-badge float-sm-right badge badge-secondary"
-        >{{ area }}</span
-      >
+      <span class="k8s-badge float-sm-right badge badge-success">Editor: {{ note.editor }}</span>
+      <span class="k8s-badge float-sm-right badge badge-primary">{{ note.status }}</span>
     </div>
     <div class="card-body">
-      <div [innerHTML]="note.markdown | markdown"></div>
-      <div
-        *ngIf="note.documentation"
-        class="collapse {{ collapseClass() }}"
-        id="documentationContent-{{ note.pr_number }}"
-      >
-        <h6>Additional Documentation</h6>
-        <ul>
-          <li *ngFor="let doc of note.documentation">
-            <a href="{{ doc.url }}" target="_blank">
-              <span *ngIf="doc.description; else elseBlock">
-                {{ saneKEPDescription(doc) }}
-              </span>
-              <ng-template #elseBlock>{{ doc.url }}</ng-template>
-              <span class="badge doc-badge {{ badgeClass(doc.type) }}">{{ doc.type }}</span>
-            </a>
-          </li>
-        </ul>
+      <div [innerHTML]="toc(note.markdown) | markdown"></div>
+      <div class="collapse {{ collapseClass() }}" id="documentationContent-{{ note.id }}">
+        <div [innerHTML]="stripToc(note.markdown) | markdown"></div>
       </div>
     </div>
   </div>

@@ -1,29 +1,17 @@
-export interface Note {
-  commit: string;
-  text: string;
+export interface Kep {
+  id: string;
+  title: string;
+  authors: string[];
+  owningSig: string;
+  participatingSigs: string[];
+  reviewers: string[];
+  approvers: string[];
+  editor: string;
+  creationDate: Date;
+  lastUpdated: Date;
+  status: string;
+  seeAlso: string[];
+  replaces: string[];
+  supersededBy: string[];
   markdown: string;
-  author: string;
-  authorUrl: string;
-  prUrl: string;
-  prNumber: number;
-  areas: string[];
-  kinds: string[];
-  sigs: string[];
-  feature: boolean;
-  duplicate: boolean;
-  action_required: boolean;
-  release_version: string;
-  documentation: Documentation[];
-}
-
-export interface Documentation {
-  description: string | null;
-  url: string;
-  type: DocType;
-}
-
-export enum DocType {
-  external = 1,
-  kep,
-  official,
 }

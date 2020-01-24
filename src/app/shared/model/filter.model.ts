@@ -30,8 +30,8 @@ export class Filter extends Options {
       return false;
     }
     let empty = true;
-    this.data.forEach((value: OptionSet, key: string) => {
-      if (key !== OptionType.releaseVersions && value.size > 0) {
+    this.data.forEach((value: OptionSet, _: string) => {
+      if (value.size > 0) {
         empty = false;
       }
     });

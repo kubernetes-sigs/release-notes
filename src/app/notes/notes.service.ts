@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Note } from '@app/shared/model/notes.model';
+import { Kep } from '@app/shared/model/notes.model';
 import { LoggerService } from '@shared/services/logger.service';
 import { assets } from '@env/assets';
 
@@ -19,7 +19,7 @@ export class NotesService {
    *
    * @returns The NoteList as observable
    */
-  getNotes(): Observable<Note[]> {
+  getNotes(): Observable<Kep[]> {
     this.logger.debug(`Gathering notes from ${assets.length} assets`);
 
     const observables = [];
@@ -35,12 +35,14 @@ export class NotesService {
    *
    * @returns The Note list
    */
-  toNoteList(jsonArray: any[]): Note[] {
+  toNoteList(jsonArray: any[]): Kep[] {
     const list = [];
 
     for (let i = 0, len = jsonArray.length; i < len; i++) {
-      for (const value of Object.values(jsonArray[i])) {
-        list.push(value);
+      const data = jsonArray[i];
+      for (const key of Object.keys(data)) {
+        data[key].id = key;
+        list.push(data[key]);
       }
     }
 
