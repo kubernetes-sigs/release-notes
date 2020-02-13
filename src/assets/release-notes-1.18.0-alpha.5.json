@@ -1,0 +1,15 @@
+{
+  "88017": {
+    "commit": "50c8f73a4b23b18ec0f87a45748a063c740055c4",
+    "text": "Make Azure clients only retry on specified HTTP status codes",
+    "markdown": "Make Azure clients only retry on specified HTTP status codes ([#88017](https://github.com/kubernetes/kubernetes/pull/88017), [@feiskyer](https://github.com/feiskyer)) [SIG Cloud Provider]",
+    "author": "feiskyer",
+    "author_url": "https://github.com/feiskyer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88017",
+    "pr_number": 88017,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"],
+    "release_version": "1.18.0-alpha.5"
+  }
+}
