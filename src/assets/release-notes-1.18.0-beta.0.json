@@ -1,0 +1,369 @@
+{
+  "80724": {
+    "commit": "8ca96f3e071a7d45ffdf2cffb3c9122104fc0497",
+    "text": "Adds alpha OIDC discovery support for the service account token issuer. Offers `/.well-known/openid-configuration` and `/openid/v1/jwks` paths on the API server. These paths are subject to the usual authorization for `nonResourceURLs`. The associated feature gate is `ServiceAccountIssuerDiscovery` and is disabled by default due to the alpha feature status.",
+    "markdown": "Adds alpha OIDC discovery support for the service account token issuer. Offers `/.well-known/openid-configuration` and `/openid/v1/jwks` paths on the API server. These paths are subject to the usual authorization for `nonResourceURLs`. The associated feature gate is `ServiceAccountIssuerDiscovery` and is disabled by default due to the alpha feature status. ([#80724](https://github.com/kubernetes/kubernetes/pull/80724), [@cceckman](https://github.com/cceckman)) [SIG API Machinery, Auth, Cluster Lifecycle and Testing]",
+    "documentation": [
+      {
+        "description": "KEP",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-auth/20190730-oidc-discovery.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "cceckman",
+    "author_url": "https://github.com/cceckman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/80724",
+    "pr_number": 80724,
+    "areas": ["apiserver", "dependency", "release-eng", "test"],
+    "kinds": ["api-change"],
+    "sigs": ["api-machinery", "auth", "cluster-lifecycle", "testing"],
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "82070": {
+    "commit": "a70e57495564b726adb0c1b8bd17ae1aeff0e8b3",
+    "text": "kubectl cluster-info dump --output-directory=xxx now generates files with an extension depending on the output format.",
+    "markdown": "Kubectl cluster-info dump --output-directory=xxx now generates files with an extension depending on the output format. ([#82070](https://github.com/kubernetes/kubernetes/pull/82070), [@olivierlemasle](https://github.com/olivierlemasle)) [SIG CLI]",
+    "author": "olivierlemasle",
+    "author_url": "https://github.com/olivierlemasle",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/82070",
+    "pr_number": 82070,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"],
+    "release_version": "1.18.0-beta.0"
+  },
+  "84984": {
+    "commit": "7fe64ccb82c3b543e554fbf06d6a222179a4d092",
+    "text": "Garbage collector now can correctly orphan ControllerRevisions when StatefulSets are deleted with orphan propagation policy.",
+    "markdown": "Garbage collector now can correctly orphan ControllerRevisions when StatefulSets are deleted with orphan propagation policy. ([#84984](https://github.com/kubernetes/kubernetes/pull/84984), [@cofyc](https://github.com/cofyc)) [SIG Apps]",
+    "author": "cofyc",
+    "author_url": "https://github.com/cofyc",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/84984",
+    "pr_number": 84984,
+    "kinds": ["bug"],
+    "sigs": ["apps"],
+    "release_version": "1.18.0-beta.0"
+  },
+  "86557": {
+    "commit": "2e0cf7e4b62d8dec4d34bd573c55bb8eabe74add",
+    "text": "If lastTimestamp is not set use firstTimestamp when printing event",
+    "markdown": "If lastTimestamp is not set use firstTimestamp when printing event ([#86557](https://github.com/kubernetes/kubernetes/pull/86557), [@soltysh](https://github.com/soltysh)) [SIG CLI]",
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/86557",
+    "pr_number": 86557,
+    "kinds": ["bug"],
+    "sigs": ["cli"],
+    "release_version": "1.18.0-beta.0"
+  },
+  "86810": {
+    "commit": "5bd719b6a6f6ea94fe5791741f98b4341018e1a1",
+    "text": "kubeadm: implemented structured output of 'kubeadm config images list' command in JSON, YAML, Go template and JsonPath formats",
+    "markdown": "Kubeadm: implemented structured output of 'kubeadm config images list' command in JSON, YAML, Go template and JsonPath formats ([#86810](https://github.com/kubernetes/kubernetes/pull/86810), [@bart0sh](https://github.com/bart0sh)) [SIG Cluster Lifecycle]",
+    "author": "bart0sh",
+    "author_url": "https://github.com/bart0sh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/86810",
+    "pr_number": 86810,
+    "areas": ["kubeadm"],
+    "kinds": ["feature"],
+    "sigs": ["cluster-lifecycle"],
+    "feature": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "86982": {
+    "commit": "498b58eff13588c5b882d2e7bf6d4987cea55824",
+    "text": "Add a event to PV when filesystem on PV does not match actual filesystem on disk",
+    "markdown": "Add a event to PV when filesystem on PV does not match actual filesystem on disk ([#86982](https://github.com/kubernetes/kubernetes/pull/86982), [@gnufied](https://github.com/gnufied)) [SIG API Machinery, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Node and Storage]",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/86982",
+    "pr_number": 86982,
+    "areas": ["apiserver", "cloudprovider", "dependency", "kubectl", "kubelet"],
+    "kinds": ["bug"],
+    "sigs": [
+      "api-machinery",
+      "cli",
+      "cloud-provider",
+      "cluster-lifecycle",
+      "instrumentation",
+      "node",
+      "storage"
+    ],
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "87117": {
+    "commit": "48434c3677ea6eb0d1eee927c4bb0a71e3fcb580",
+    "text": "fix a bug in kube-proxy that caused it to crash when using load balancers with a different IP family",
+    "markdown": "Fix a bug in kube-proxy that caused it to crash when using load balancers with a different IP family ([#87117](https://github.com/kubernetes/kubernetes/pull/87117), [@aojea](https://github.com/aojea)) [SIG Network]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87117",
+    "pr_number": 87117,
+    "kinds": ["bug", "cleanup"],
+    "sigs": ["network"],
+    "duplicate_kind": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "87353": {
+    "commit": "b9c57a1aa2c11f82b7716e70f3c9a8f933e241e3",
+    "text": "fix kube-proxy dual-stack configuration validation",
+    "markdown": "Fix kube-proxy dual-stack configuration validation ([#87353](https://github.com/kubernetes/kubernetes/pull/87353), [@aojea](https://github.com/aojea)) [SIG Network]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87353",
+    "pr_number": 87353,
+    "kinds": ["bug", "cleanup"],
+    "sigs": ["network"],
+    "duplicate_kind": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "87590": {
+    "commit": "d88304507d3b3ff8a15f0948c21be5892693a12f",
+    "text": "Azure cloud provider now obtains AAD token who audience claim will not have spn: prefix",
+    "markdown": "Azure cloud provider now obtains AAD token who audience claim will not have spn: prefix ([#87590](https://github.com/kubernetes/kubernetes/pull/87590), [@weinong](https://github.com/weinong)) [SIG Cloud Provider]",
+    "author": "weinong",
+    "author_url": "https://github.com/weinong",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87590",
+    "pr_number": 87590,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"],
+    "release_version": "1.18.0-beta.0"
+  },
+  "87714": {
+    "commit": "a11a8b8691b1e534722671666feda77dd6df5a03",
+    "text": "Support server-side dry-run in kubectl with --dry-run=server for commands including apply, patch, create, run and expose.",
+    "markdown": "Support server-side dry-run in kubectl with --dry-run=server for commands including apply, patch, create, run and expose. ([#87714](https://github.com/kubernetes/kubernetes/pull/87714), [@julianvmodesto](https://github.com/julianvmodesto)) [SIG API Machinery, CLI and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-api-machinery/0015-dry-run.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "julianvmodesto",
+    "author_url": "https://github.com/julianvmodesto",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87714",
+    "pr_number": 87714,
+    "areas": ["kubectl", "test"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "cli", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "87751": {
+    "commit": "f0c14f291f46e4183058e086d8dd115bf2600dcf",
+    "text": "The PostFilter of scheduler framework is renamed to PreScore.",
+    "markdown": "The PostFilter of scheduler framework is renamed to PreScore. ([#87751](https://github.com/kubernetes/kubernetes/pull/87751), [@skilxn-go](https://github.com/skilxn-go)) [SIG Scheduling and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/20180409-scheduling-framework.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "skilxn-go",
+    "author_url": "https://github.com/skilxn-go",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87751",
+    "pr_number": 87751,
+    "areas": ["test"],
+    "kinds": ["api-change", "cleanup"],
+    "sigs": ["scheduling", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "action_required": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "87945": {
+    "commit": "177506d87c1a03656f4cedb1fc8d30e9c1eb9738",
+    "text": "add azure disk WriteAccelerator support",
+    "markdown": "Add azure disk WriteAccelerator support ([#87945](https://github.com/kubernetes/kubernetes/pull/87945), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider and Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87945",
+    "pr_number": 87945,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "storage"],
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "87967": {
+    "commit": "029e1a06d74ca9f951cbb0ae5716e7e582d6fcb9",
+    "text": "Controller manager serve workqueue metrics",
+    "markdown": "Controller manager serve workqueue metrics ([#87967](https://github.com/kubernetes/kubernetes/pull/87967), [@zhan849](https://github.com/zhan849)) [SIG API Machinery]",
+    "author": "zhan849",
+    "author_url": "https://github.com/zhan849",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/87967",
+    "pr_number": 87967,
+    "kinds": ["feature"],
+    "sigs": ["api-machinery"],
+    "feature": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "88002": {
+    "commit": "b4db96464b168cc5daf3452fa8f196e51ae7b625",
+    "text": "HardPodAffinityWeight has to be configured via PluginConfig in kubescheduler.config.k8s.io/v1alpha2",
+    "markdown": "HardPodAffinityWeight has to be configured via PluginConfig in kubescheduler.config.k8s.io/v1alpha2 ([#88002](https://github.com/kubernetes/kubernetes/pull/88002), [@alculquicondor](https://github.com/alculquicondor)) [SIG Scheduling and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/20200114-multi-scheduling-profiles.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88002",
+    "pr_number": 88002,
+    "areas": ["test"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["scheduling", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "88032": {
+    "commit": "e92ecdd7ee6447ee08915a7d896126b8593505ea",
+    "text": "CSI Migration migration annotation key is now `kubernetes.io/migrated-to`",
+    "markdown": "CSI Migration migration annotation key is now `kubernetes.io/migrated-to` ([#88032](https://github.com/kubernetes/kubernetes/pull/88032), [@davidz627](https://github.com/davidz627)) [SIG API Machinery, Apps and Cluster Lifecycle]",
+    "author": "davidz627",
+    "author_url": "https://github.com/davidz627",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88032",
+    "pr_number": 88032,
+    "areas": ["apiserver", "dependency"],
+    "kinds": ["api-change", "cleanup"],
+    "sigs": ["api-machinery", "apps", "cluster-lifecycle"],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "88079": {
+    "commit": "b2bf4a8acb7ac48f5428483237fff8fb722802bf",
+    "text": "Fixes kubelet crash in client certificate rotation cases",
+    "markdown": "Fixes kubelet crash in client certificate rotation cases ([#88079](https://github.com/kubernetes/kubernetes/pull/88079), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Auth and Node]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88079",
+    "pr_number": 88079,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "auth", "node"],
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "88084": {
+    "commit": "c2f08b8552e5ee8b783a3a61d7c6370cd1c69c91",
+    "text": "Fix help for api-versions",
+    "markdown": "Fix help for api-versions ([#88084](https://github.com/kubernetes/kubernetes/pull/88084), [@soltysh](https://github.com/soltysh)) [SIG CLI]",
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88084",
+    "pr_number": 88084,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"],
+    "release_version": "1.18.0-beta.0"
+  },
+  "88105": {
+    "commit": "48def7e7c32ac6d68c53ce24b33c92aede537fdd",
+    "text": "The feature PodTopologySpread (featuregate `EvenPodsSpread`) has been enabled by default in 1.18.",
+    "markdown": "The feature PodTopologySpread (featuregate `EvenPodsSpread`) has been enabled by default in 1.18. ([#88105](https://github.com/kubernetes/kubernetes/pull/88105), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG Scheduling and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/20190221-pod-topology-spread.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "Huang-Wei",
+    "author_url": "https://github.com/Huang-Wei",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88105",
+    "pr_number": 88105,
+    "areas": ["test"],
+    "kinds": ["feature"],
+    "sigs": ["scheduling", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "88158": {
+    "commit": "55ea3ac41f6c04e34c3c5b1cfb6e47e4f8cf8d0f",
+    "text": "fix: get azure disk lun timeout issue",
+    "markdown": "Fix: get azure disk lun timeout issue ([#88158](https://github.com/kubernetes/kubernetes/pull/88158), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider and Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88158",
+    "pr_number": 88158,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "storage"],
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "88173": {
+    "commit": "1c60045db0bd6efbb2827063e39f515b95c2bfa4",
+    "text": "Pause image upgraded to 3.2 in kubelet and kubeadm.",
+    "markdown": "Pause image upgraded to 3.2 in kubelet and kubeadm. ([#88173](https://github.com/kubernetes/kubernetes/pull/88173), [@BenTheElder](https://github.com/BenTheElder)) [SIG CLI, Cluster Lifecycle, Node and Testing]",
+    "author": "BenTheElder",
+    "author_url": "https://github.com/BenTheElder",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88173",
+    "pr_number": 88173,
+    "areas": ["kubeadm", "kubectl", "kubelet", "test"],
+    "kinds": ["cleanup"],
+    "sigs": ["cli", "cluster-lifecycle", "node", "testing"],
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "88189": {
+    "commit": "3b22fcc7bdcf5cb6eac2e4bb10f3b943ba94e2f2",
+    "text": "Remove `FilteredNodesStatuses` argument from `PreScore`'s interface.",
+    "markdown": "Remove `FilteredNodesStatuses` argument from `PreScore`'s interface. ([#88189](https://github.com/kubernetes/kubernetes/pull/88189), [@skilxn-go](https://github.com/skilxn-go)) [SIG Scheduling and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-scheduling/20180409-scheduling-framework.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "skilxn-go",
+    "author_url": "https://github.com/skilxn-go",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88189",
+    "pr_number": 88189,
+    "areas": ["test"],
+    "kinds": ["cleanup"],
+    "sigs": ["scheduling", "testing"],
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "88201": {
+    "commit": "8b2f08f39d4221d0366224914f022d2a37b68ae9",
+    "text": "fix: update azure disk max count",
+    "markdown": "Fix: update azure disk max count ([#88201](https://github.com/kubernetes/kubernetes/pull/88201), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider and Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88201",
+    "pr_number": 88201,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "storage"],
+    "duplicate": true,
+    "release_version": "1.18.0-beta.0"
+  },
+  "88209": {
+    "commit": "3ed0f1bec132e00dbdd3f7afb0c6e4b13239eff7",
+    "text": "Fix route conflicted operations when updating multiple routes together",
+    "markdown": "Fix route conflicted operations when updating multiple routes together ([#88209](https://github.com/kubernetes/kubernetes/pull/88209), [@feiskyer](https://github.com/feiskyer)) [SIG Cloud Provider]",
+    "author": "feiskyer",
+    "author_url": "https://github.com/feiskyer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/88209",
+    "pr_number": 88209,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"],
+    "release_version": "1.18.0-beta.0"
+  }
+}
