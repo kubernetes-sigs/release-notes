@@ -1,0 +1,62 @@
+{
+  "89735": {
+    "commit": "3b1b2d469eacb2d45b112dbe1f4ed0a0e399d96a",
+    "text": "kubeadm increased to 5 minutes its timeout for the TLS bootstrapping process to complete upon join",
+    "markdown": "Kubeadm increased to 5 minutes its timeout for the TLS bootstrapping process to complete upon join ([#89735](https://github.com/kubernetes/kubernetes/pull/89735), [@rosti](https://github.com/rosti)) [SIG Cluster Lifecycle]",
+    "author": "rosti",
+    "author_url": "https://github.com/rosti",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/89735",
+    "pr_number": 89735,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"],
+    "release_version": "1.18.5",
+    "DataFields": null
+  },
+  "91207": {
+    "commit": "71b0f5b2f42e4b0fe08100546003191b36b0734a",
+    "text": "Fixed: log timestamps now include trailing zeros to maintain a fixed width",
+    "markdown": "Fixed: log timestamps now include trailing zeros to maintain a fixed width ([#91207](https://github.com/kubernetes/kubernetes/pull/91207), [@iamchuckss](https://github.com/iamchuckss)) [SIG Apps and Node]",
+    "author": "iamchuckss",
+    "author_url": "https://github.com/iamchuckss",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/91207",
+    "pr_number": 91207,
+    "areas": ["kubelet"],
+    "kinds": ["api-change", "cleanup"],
+    "sigs": ["apps", "node"],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "release_version": "1.18.5",
+    "DataFields": null
+  },
+  "91307": {
+    "commit": "3f0bd3272e9f11e9791788b02f6be28f6045ea4e",
+    "text": "Fixes CSI volume attachment scaling issue by using informers.",
+    "markdown": "Fixes CSI volume attachment scaling issue by using informers. ([#91307](https://github.com/kubernetes/kubernetes/pull/91307), [@yuga711](https://github.com/yuga711)) [SIG API Machinery, Apps, Node, Storage and Testing]",
+    "author": "yuga711",
+    "author_url": "https://github.com/yuga711",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/91307",
+    "pr_number": 91307,
+    "areas": ["kubelet", "test"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "apps", "node", "storage", "testing"],
+    "duplicate": true,
+    "release_version": "1.18.5",
+    "DataFields": null
+  },
+  "92493": {
+    "commit": "378cb5b1391c38f6b8a5b582c335393722f82bc1",
+    "text": "- hyperkube: Use debian-hyperkube-base@v1.1.0 image\n\n  A previous release built hyperkube using the debian-hyperkube-base@v1.0.0,\n  which was updated to address a CVE in the CNI plugins.\n  \n  A side-effect of using this new image was that the networking packages\n  (namely `iptables`) drifted from the versions used in the kube-proxy images.\n\n  The following issues were filed on kube-proxy failures when using hyperkube:\n  - https://github.com/kubernetes/kubernetes/issues/92275\n  - https://github.com/kubernetes/kubernetes/issues/92272\n  - https://github.com/kubernetes/kubernetes/issues/92250\n\n  To address this, the new debian-hyperkube-base image (v1.1.0) uses the\n  debian-iptables base image (v12.1.0), which includes iptables-wrapper, a\n  script used to determine the correct iptables mode to run in.",
+    "markdown": "- hyperkube: Use debian-hyperkube-base@v1.1.0 image\n  \n    A previous release built hyperkube using the debian-hyperkube-base@v1.0.0,\n    which was updated to address a CVE in the CNI plugins.\n    \n    A side-effect of using this new image was that the networking packages\n    (namely `iptables`) drifted from the versions used in the kube-proxy images.\n  \n    The following issues were filed on kube-proxy failures when using hyperkube:\n    - https://github.com/kubernetes/kubernetes/issues/92275\n    - https://github.com/kubernetes/kubernetes/issues/92272\n    - https://github.com/kubernetes/kubernetes/issues/92250\n  \n    To address this, the new debian-hyperkube-base image (v1.1.0) uses the\n    debian-iptables base image (v12.1.0), which includes iptables-wrapper, a\n    script used to determine the correct iptables mode to run in. ([#92493](https://github.com/kubernetes/kubernetes/pull/92493), [@justaugustus](https://github.com/justaugustus)) [SIG Cluster Lifecycle and Release]",
+    "author": "justaugustus",
+    "author_url": "https://github.com/justaugustus",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/92493",
+    "pr_number": 92493,
+    "areas": ["release-eng"],
+    "kinds": ["regression"],
+    "sigs": ["cluster-lifecycle", "release"],
+    "duplicate": true,
+    "release_version": "1.18.5",
+    "DataFields": null
+  }
+}
