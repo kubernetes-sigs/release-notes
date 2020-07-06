@@ -90,10 +90,7 @@ export class NotesEffects {
           for (const key of Object.keys(note)) {
             if (
               typeof note[key] === 'string' &&
-              note[key]
-                .toUpperCase()
-                .trim()
-                .includes(filter.text.toUpperCase().trim())
+              note[key].toUpperCase().trim().includes(filter.text.toUpperCase().trim())
             ) {
               filteredNotes.add(note);
               break;

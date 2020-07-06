@@ -13,7 +13,7 @@ describe('NotesService', () => {
       providers: [LoggerService],
     }).compileComponents();
 
-    service = TestBed.get(NotesService);
+    service = TestBed.inject(NotesService);
   });
 
   it('should be created', () => {

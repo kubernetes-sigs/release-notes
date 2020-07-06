@@ -25,8 +25,8 @@ describe('NotesEffects', () => {
       providers: [NotesEffects, provideMockActions(() => actions), LoggerService, NotesService],
     });
 
-    effects = TestBed.get(NotesEffects);
-    notesService = TestBed.get(NotesService);
+    effects = TestBed.inject(NotesEffects);
+    notesService = TestBed.inject(NotesService);
   });
 
   describe('GetNotes', () => {

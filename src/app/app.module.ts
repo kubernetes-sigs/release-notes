@@ -59,11 +59,19 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         },
       },
     }),
-    StoreModule.forRoot({
-      filter: filterReducer,
-      notes: notesReducer,
-      settings: settingsReducer,
-    }),
+    StoreModule.forRoot(
+      {
+        filter: filterReducer,
+        notes: notesReducer,
+        settings: settingsReducer,
+      },
+      {
+        runtimeChecks: {
+          strictStateImmutability: false,
+          strictActionImmutability: false,
+        },
+      },
+    ),
     EffectsModule.forRoot([FilterEffects, NotesEffects, SettingsEffects]),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
     FontAwesomeModule,

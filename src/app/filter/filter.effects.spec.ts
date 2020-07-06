@@ -19,7 +19,7 @@ describe('FilterEffects', () => {
       providers: [FilterEffects, provideMockActions(() => actions), LoggerService],
     });
 
-    effects = TestBed.get(FilterEffects);
+    effects = TestBed.inject(FilterEffects);
   });
 
   describe('GetFilter', () => {
