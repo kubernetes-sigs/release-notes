@@ -19,7 +19,7 @@ describe('SettingsEffects', () => {
       providers: [SettingsEffects, provideMockActions(() => actions), LoggerService],
     });
 
-    effects = TestBed.get(SettingsEffects);
+    effects = TestBed.inject(SettingsEffects);
   });
 
   describe('GetSettings', () => {

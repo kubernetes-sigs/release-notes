@@ -45,7 +45,7 @@ describe('NotesComponent', () => {
 
     fixture = TestBed.createComponent(NotesComponent);
     component = fixture.componentInstance;
-    store = TestBed.get(Store);
+    store = TestBed.inject(Store);
 
     spyOn(store, 'dispatch').and.callThrough();
   }));

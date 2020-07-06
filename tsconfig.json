@@ -1,25 +1,14 @@
+/*
+  This is a "Solution Style" tsconfig.json file, and is used by editors and TypeScript’s language server to improve development experience.
+  It is not intended to be used to perform a compilation.
+
+  To learn more about this file see: https://angular.io/config/solution-tsconfig.
+*/
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "downlevelIteration": true,
-    "outDir": "./dist/out-tsc",
-    "paths": {
-      "@app/*": ["./src/app/*"],
-      "@env/*": ["./src/environments/*"],
-      "@shared/*": ["src/app/shared/*"]
-    },
-    "sourceMap": true,
-    "declaration": false,
-    "module": "es2015",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es6",
-    "typeRoots": ["node_modules/@types"],
-    "lib": ["es2018", "dom"],
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
-  }
+  "files": [],
+  "references": [
+    {
+      "path": "./src/tsconfig.app.json"
+    }
+  ]
 }

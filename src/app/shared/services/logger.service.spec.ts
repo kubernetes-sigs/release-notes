@@ -13,7 +13,7 @@ describe('LoggerService', () => {
       providers: [LoggerService],
     }).compileComponents();
     injector = getTestBed();
-    service = injector.get(LoggerService);
+    service = injector.inject(LoggerService);
 
     spyOn(global.console, 'log').and.callThrough();
     spyOn(global.console, 'warn').and.callThrough();
