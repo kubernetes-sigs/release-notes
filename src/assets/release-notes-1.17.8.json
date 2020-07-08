@@ -1,0 +1,69 @@
+{
+  "89735": {
+    "commit": "b3015ca7d5724618621ec4dcccdf708a30625eaa",
+    "text": "kubeadm increased to 5 minutes its timeout for the TLS bootstrapping process to complete upon join",
+    "markdown": "Kubeadm increased to 5 minutes its timeout for the TLS bootstrapping process to complete upon join ([#89735](https://github.com/kubernetes/kubernetes/pull/89735), [@rosti](https://github.com/rosti)) [SIG Cluster Lifecycle]",
+    "author": "rosti",
+    "author_url": "https://github.com/rosti",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/89735",
+    "pr_number": 89735,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"],
+    "release_version": "1.17.8"
+  },
+  "91055": {
+    "commit": "6c458a5e0be0daf705b25490b379c3d280635e4a",
+    "text": "If firstTimestamp is not set use firstTimestamp or eventTime when printing event",
+    "markdown": "If firstTimestamp is not set use firstTimestamp or eventTime when printing event ([#91055](https://github.com/kubernetes/kubernetes/pull/91055), [@soltysh](https://github.com/soltysh)) [SIG CLI]",
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/91055",
+    "pr_number": 91055,
+    "kinds": ["bug"],
+    "sigs": ["cli"],
+    "release_version": "1.17.8"
+  },
+  "91207": {
+    "commit": "3cceda5ca5fff8510629392ce2eb67f2d33f37bd",
+    "text": "Fixed: log timestamps now include trailing zeros to maintain a fixed width",
+    "markdown": "Fixed: log timestamps now include trailing zeros to maintain a fixed width ([#91207](https://github.com/kubernetes/kubernetes/pull/91207), [@iamchuckss](https://github.com/iamchuckss)) [SIG Apps and Node]",
+    "author": "iamchuckss",
+    "author_url": "https://github.com/iamchuckss",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/91207",
+    "pr_number": 91207,
+    "areas": ["kubelet"],
+    "kinds": ["api-change", "cleanup"],
+    "sigs": ["apps", "node"],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "release_version": "1.17.8"
+  },
+  "91307": {
+    "commit": "4442f69fdeea2120d7bc584cd5fa66ddd5f693d6",
+    "text": "Fixes CSI volume attachment scaling issue by using informers.",
+    "markdown": "Fixes CSI volume attachment scaling issue by using informers. ([#91307](https://github.com/kubernetes/kubernetes/pull/91307), [@yuga711](https://github.com/yuga711)) [SIG API Machinery, Apps, Node, Storage and Testing]",
+    "author": "yuga711",
+    "author_url": "https://github.com/yuga711",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/91307",
+    "pr_number": 91307,
+    "areas": ["kubelet", "test"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "apps", "node", "storage", "testing"],
+    "duplicate": true,
+    "release_version": "1.17.8"
+  },
+  "92494": {
+    "commit": "c978a81856af58bbbbcf67c7f0183c33bfb5feb1",
+    "text": "- hyperkube: Use debian-hyperkube-base@v1.1.0 image\n\n  A previous release built hyperkube using the debian-hyperkube-base@v1.0.0,\n  which was updated to address a CVE in the CNI plugins.\n  \n  A side-effect of using this new image was that the networking packages\n  (namely `iptables`) drifted from the versions used in the kube-proxy images.\n\n  The following issues were filed on kube-proxy failures when using hyperkube:\n  - https://github.com/kubernetes/kubernetes/issues/92275\n  - https://github.com/kubernetes/kubernetes/issues/92272\n  - https://github.com/kubernetes/kubernetes/issues/92250\n\n  To address this, the new debian-hyperkube-base image (v1.1.0) uses the\n  debian-iptables base image (v12.1.0), which includes iptables-wrapper, a\n  script used to determine the correct iptables mode to run in.",
+    "markdown": "- hyperkube: Use debian-hyperkube-base@v1.1.0 image\n  \n    A previous release built hyperkube using the debian-hyperkube-base@v1.0.0,\n    which was updated to address a CVE in the CNI plugins.\n    \n    A side-effect of using this new image was that the networking packages\n    (namely `iptables`) drifted from the versions used in the kube-proxy images.\n  \n    The following issues were filed on kube-proxy failures when using hyperkube:\n    - https://github.com/kubernetes/kubernetes/issues/92275\n    - https://github.com/kubernetes/kubernetes/issues/92272\n    - https://github.com/kubernetes/kubernetes/issues/92250\n  \n    To address this, the new debian-hyperkube-base image (v1.1.0) uses the\n    debian-iptables base image (v12.1.0), which includes iptables-wrapper, a\n    script used to determine the correct iptables mode to run in. ([#92494](https://github.com/kubernetes/kubernetes/pull/92494), [@justaugustus](https://github.com/justaugustus)) [SIG Cluster Lifecycle and Release]",
+    "author": "justaugustus",
+    "author_url": "https://github.com/justaugustus",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/92494",
+    "pr_number": 92494,
+    "kinds": ["regression"],
+    "sigs": ["cluster-lifecycle", "release"],
+    "duplicate": true,
+    "release_version": "1.17.8"
+  }
+}
