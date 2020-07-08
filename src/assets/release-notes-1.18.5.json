@@ -10,8 +10,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "1.18.5",
-    "DataFields": null
+    "release_version": "1.18.5"
   },
   "91207": {
     "commit": "71b0f5b2f42e4b0fe08100546003191b36b0734a",
@@ -26,8 +25,7 @@
     "sigs": ["apps", "node"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "1.18.5",
-    "DataFields": null
+    "release_version": "1.18.5"
   },
   "91307": {
     "commit": "3f0bd3272e9f11e9791788b02f6be28f6045ea4e",
@@ -41,8 +39,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "apps", "node", "storage", "testing"],
     "duplicate": true,
-    "release_version": "1.18.5",
-    "DataFields": null
+    "release_version": "1.18.5"
   },
   "92493": {
     "commit": "378cb5b1391c38f6b8a5b582c335393722f82bc1",
@@ -56,7 +53,6 @@
     "kinds": ["regression"],
     "sigs": ["cluster-lifecycle", "release"],
     "duplicate": true,
-    "release_version": "1.18.5",
-    "DataFields": null
+    "release_version": "1.18.5"
   }
 }
