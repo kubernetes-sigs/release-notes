@@ -44,7 +44,7 @@
       >
     </div>
     <div class="card-body">
-      <div [innerHTML]="note.markdown | markdown"></div>
+      <div [innerHTML]="saneMarkdown(note.markdown) | markdown"></div>
       <div
         *ngIf="note.documentation"
         class="collapse {{ collapseClass() }}"
