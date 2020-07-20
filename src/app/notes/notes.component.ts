@@ -113,6 +113,18 @@ export class NotesComponent implements OnInit {
   }
 
   /**
+   * Sanitize the markdown
+   *
+   * @param markdown The markdown string to be processed
+   *
+   * @returns The resulting markdown as string
+   */
+  public saneMarkdown(markdown: string): string {
+    // remove trailing "(#…, @…) [SIG …]"
+    return markdown.replace(/ \(.*\) \[SIG .*\]$/, '');
+  }
+
+  /**
    * Retrieve the collapse css class based on the current filter
    *
    * @returns The resulting class as string
