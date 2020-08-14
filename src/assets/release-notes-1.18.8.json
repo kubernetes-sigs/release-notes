@@ -10,6 +10,7 @@
     "areas": ["dependency", "release-eng", "security", "test"],
     "kinds": ["cleanup"],
     "sigs": ["release", "testing"],
-    "duplicate": true
+    "duplicate": true,
+    "release_version": "1.18.8"
   }
 }
