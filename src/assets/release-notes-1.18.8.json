@@ -1,0 +1,15 @@
+{
+  "93953": {
+    "commit": "e2dc4848ea15e7ced9ee9416b15d4cf812ea68ca",
+    "text": "Kubernetes is now built with go1.13.15",
+    "markdown": "Kubernetes is now built with go1.13.15 ([#93953](https://github.com/kubernetes/kubernetes/pull/93953), [@justaugustus](https://github.com/justaugustus)) [SIG Release and Testing]",
+    "author": "justaugustus",
+    "author_url": "https://github.com/justaugustus",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/93953",
+    "pr_number": 93953,
+    "areas": ["dependency", "release-eng", "security", "test"],
+    "kinds": ["cleanup"],
+    "sigs": ["release", "testing"],
+    "duplicate": true
+  }
+}
