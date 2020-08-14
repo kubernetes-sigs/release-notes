@@ -3,6 +3,7 @@ export const assets = [
   'assets/release-notes-1.19.0-rc.3.json',
   'assets/release-notes-1.19.0-rc.2.json',
   'assets/release-notes-1.18.8.json',
+  'assets/release-notes-1.18.7.json',
   'assets/release-notes-1.18.6.json',
   'assets/release-notes-1.17.11.json',
   'assets/release-notes-1.17.10.json',
