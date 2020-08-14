@@ -10,7 +10,8 @@
     "areas": ["kubelet", "test"],
     "kinds": ["bug"],
     "sigs": ["node", "testing"],
-    "duplicate": true
+    "duplicate": true,
+    "release_version": "1.17.10"
   },
   "92330": {
     "commit": "51850d26c3877e9b46a879b88747a6ed21b092fb",
@@ -22,7 +23,8 @@
     "pr_number": 92330,
     "areas": ["provider/azure"],
     "kinds": ["bug"],
-    "sigs": ["cloud-provider"]
+    "sigs": ["cloud-provider"],
+    "release_version": "1.17.10"
   },
   "93034": {
     "commit": "f25074a1d5776520144379af190fa68a67ee881c",
@@ -34,7 +36,8 @@
     "pr_number": 93034,
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
-    "sigs": ["cloud-provider"]
+    "sigs": ["cloud-provider"],
+    "release_version": "1.17.10"
   },
   "93052": {
     "commit": "55afe5a4b4b33e7cb11e492772cdc06d182b0104",
@@ -47,7 +50,8 @@
     "areas": ["provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "storage"],
-    "duplicate": true
+    "duplicate": true,
+    "release_version": "1.17.10"
   },
   "93233": {
     "commit": "79569e22b50897990a483a35c33a2b0e43b80138",
@@ -60,7 +64,8 @@
     "areas": ["dependency", "release-eng", "test"],
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "release", "testing"],
-    "duplicate": true
+    "duplicate": true,
+    "release_version": "1.17.10"
   },
   "93316": {
     "commit": "7d89b9ad1791ee0a4f4aa173d2899644f966f5f3",
@@ -72,7 +77,8 @@
     "pr_number": 93316,
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
-    "sigs": ["cloud-provider"]
+    "sigs": ["cloud-provider"],
+    "release_version": "1.17.10"
   },
   "93643": {
     "commit": "1033539d98c069444b042f26b05441d0317b4516",
@@ -84,7 +90,8 @@
     "pr_number": 93643,
     "areas": ["apiserver"],
     "kinds": ["regression"],
-    "sigs": ["api-machinery"]
+    "sigs": ["api-machinery"],
+    "release_version": "1.17.10"
   },
   "93812": {
     "commit": "da707e8b3e96e2f5d91ed474c16c5edde7192bf2",
@@ -97,7 +104,8 @@
     "areas": ["apiserver", "cloudprovider", "dependency", "kubectl"],
     "kinds": ["bug"],
     "sigs": ["api-machinery", "cli", "cloud-provider", "cluster-lifecycle", "instrumentation"],
-    "duplicate": true
+    "duplicate": true,
+    "release_version": "1.17.10"
   },
   "93924": {
     "commit": "769b8ae9f2b42bedb25736a46fdcc32cefa70ca0",
@@ -110,6 +118,7 @@
     "areas": ["dependency", "security"],
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "cluster-lifecycle", "release"],
-    "duplicate": true
+    "duplicate": true,
+    "release_version": "1.17.10"
   }
 }
