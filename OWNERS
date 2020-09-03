@@ -10,6 +10,7 @@ reviewers:
   - marpaia
   - onyiny-ang
   - saschagrunert
+  - puerco
 labels:
   - sig/release
   - area/release-eng
