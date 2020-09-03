@@ -11,7 +11,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "storage", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "73032": {
     "commit": "7151131d79674d073e716063a03f8cbd67671e33",
@@ -26,7 +26,7 @@
     "sigs": ["api-machinery", "cli", "instrumentation", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "77979": {
     "commit": "2da917d3701904939683ac545c7869c1e89b7840",
@@ -38,7 +38,7 @@
     "pr_number": 77979,
     "kinds": ["cleanup"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "80831": {
     "commit": "8ce1b535ee8f95d467f679708bf1700230d0cccc",
@@ -64,7 +64,7 @@
     "kinds": ["bug"],
     "sigs": ["node", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "81185": {
     "commit": "3a0417cc4bb492ceea8fc2041d65c32f4ac23527",
@@ -77,7 +77,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "81443": {
     "commit": "ba35704b510f918254c3ba826fb63608f6ed2dd6",
@@ -92,7 +92,7 @@
     "sigs": ["api-machinery", "node"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "82785": {
     "commit": "e6c323ffe85ed058ecd99ca0906c101d2332ff0f",
@@ -104,7 +104,7 @@
     "pr_number": 82785,
     "kinds": ["documentation"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "83906": {
     "commit": "825eb77c883c8c53c165cb34eb694d5d90ac0ab6",
@@ -118,7 +118,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "apps", "node", "scheduling"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "85218": {
     "commit": "34c8b26c9f1fb41eb2e4e8a5e2ff8b38f5ad0431",
@@ -132,7 +132,7 @@
     "kinds": ["feature"],
     "sigs": ["node"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "85920": {
     "commit": "b461633ff0534089f6bd98aea1cd4df596091b75",
@@ -145,7 +145,7 @@
     "areas": ["cloudprovider"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "86070": {
     "commit": "b607c7cd52e9e6a747e6455ba3e47ca3f44b848b",
@@ -166,7 +166,7 @@
     "kinds": ["feature"],
     "sigs": ["cluster-lifecycle"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "86481": {
     "commit": "e7852bff43b358bcce7c77a352e171eca200c005",
@@ -180,7 +180,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "auth"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "86968": {
     "commit": "47a9952337dada2cd57f3b2b3aeccac500277318",
@@ -194,7 +194,7 @@
     "kinds": ["bug", "deprecation"],
     "sigs": ["storage"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "87273": {
     "commit": "7e75a5ef43b3e1db761e8152ac654cfa67dd62bd",
@@ -209,7 +209,7 @@
     "sigs": ["node"],
     "feature": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "87498": {
     "commit": "d3c3907e10e4a9812a3faea00bbd3b4e61e82ac0",
@@ -222,7 +222,7 @@
     "areas": ["kubectl"],
     "kinds": ["cleanup"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "87582": {
     "commit": "71c352dee310747e2999326898a98a24cba3856d",
@@ -235,7 +235,7 @@
     "kinds": ["feature"],
     "sigs": ["scheduling"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88124": {
     "commit": "a2aaae2dd512de6e84a968e9c9eb663ab73cceeb",
@@ -256,7 +256,7 @@
     "kinds": ["feature"],
     "sigs": ["cluster-lifecycle"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88156": {
     "commit": "7dbc140e028b3d0ca831395912c1995e569b1775",
@@ -268,7 +268,7 @@
     "pr_number": 88156,
     "kinds": ["cleanup"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88165": {
     "commit": "73a7fdcd2a3297c2752130ed1a12bb29e510447b",
@@ -281,7 +281,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88464": {
     "commit": "6747678a396ada2f4761ff104495ddcc3ef050b3",
@@ -293,7 +293,7 @@
     "pr_number": 88464,
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88480": {
     "commit": "6c499314cdfe53579dce9a19d0cc55676a3e2be8",
@@ -306,7 +306,7 @@
     "areas": ["kubelet", "kubelet-api"],
     "kinds": ["api-change"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88515": {
     "commit": "393bb44ea95e4690775bbf7ea73fc695f6ce5e6c",
@@ -321,7 +321,7 @@
     "sigs": ["docs", "node"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88532": {
     "commit": "3c159bb10fa1a86af2d5c49703ce96c04eabe7b2",
@@ -335,7 +335,7 @@
     "kinds": ["cleanup"],
     "sigs": ["cloud-provider", "network", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88541": {
     "commit": "42c94f35a73128ee0a48e240d31b3efc825c5461",
@@ -348,7 +348,7 @@
     "areas": ["ipvs"],
     "kinds": ["bug"],
     "sigs": ["network"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88638": {
     "commit": "f2534f2c20d722f539e1e51c0f10c3caa8121b43",
@@ -363,7 +363,7 @@
     "sigs": ["api-machinery", "cloud-provider", "release", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88649": {
     "commit": "1faf097f3f7294322a574d2c813d21657ab61a81",
@@ -377,7 +377,7 @@
     "kinds": ["deprecation"],
     "sigs": ["cli", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88676": {
     "commit": "51b2d02717399e4ef1c207ea5d913a8bdb7bd994",
@@ -392,7 +392,7 @@
     "sigs": ["cluster-lifecycle", "release"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88723": {
     "commit": "7814f3aaf7ae2f84d1bc1f7443e4d892b94a1759",
@@ -407,7 +407,7 @@
     "sigs": ["cli"],
     "feature": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88842": {
     "commit": "70e09f2c24f170f985e4a6d7cf7101e32c97ea2a",
@@ -421,7 +421,7 @@
     "kinds": ["api-change"],
     "sigs": ["node", "scheduling"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88871": {
     "commit": "0c8ac83e04391678112296a749c7040b9efa0333",
@@ -434,7 +434,7 @@
     "areas": ["kubelet"],
     "kinds": ["bug"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88885": {
     "commit": "53a707daaecf6683ff69568d0a07a72f580a8351",
@@ -448,7 +448,7 @@
     "kinds": ["cleanup"],
     "sigs": ["cli", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88893": {
     "commit": "ed4c2dbf9211bec3e080488b0fd67a9725759a45",
@@ -463,7 +463,7 @@
     "sigs": ["api-machinery", "scheduling", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88924": {
     "commit": "b7a6d53f5eea4cca40870ddf278d5c6bfc55ae7c",
@@ -478,7 +478,7 @@
     "sigs": ["architecture", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88932": {
     "commit": "59033b5ee460679dfe8e80e34962baccdfc5d5dd",
@@ -503,7 +503,7 @@
     "kinds": ["feature"],
     "sigs": ["network"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88936": {
     "commit": "240a72b5c0aed6eb96b0c27cf0a82a9124eb57fe",
@@ -526,7 +526,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88970": {
     "commit": "105c0c695112c4dcf53e4a96f7876bd7094352e5",
@@ -540,7 +540,7 @@
     "kinds": ["bug", "cleanup"],
     "sigs": ["node"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88985": {
     "commit": "4bc907f3c956ffb808fdcfb4f8fc07825b8d2339",
@@ -554,7 +554,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "cli"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "88987": {
     "commit": "42972f2a37c56b5f850086a7330b34ae6592f8ac",
@@ -567,7 +567,7 @@
     "kinds": ["bug", "flake"],
     "sigs": ["storage"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89105": {
     "commit": "de931d569e005d916f8f146fc27fdac1c713a0ea",
@@ -591,7 +591,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89128": {
     "commit": "30cefca5a63a82b1f143a7c3ed37b3b5c4df0d61",
@@ -612,7 +612,7 @@
     "kinds": ["api-change", "cleanup"],
     "sigs": ["node"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89142": {
     "commit": "8aca6dc710fc77c587a2b4c4c5969c0dbf2ef390",
@@ -624,7 +624,7 @@
     "pr_number": 89142,
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89145": {
     "commit": "c1a66a4b0254fe711ce28d7ca2c78258273ffe98",
@@ -636,7 +636,7 @@
     "pr_number": 89145,
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89147": {
     "commit": "1a8561464e33a63869ef9606dcda50895a0101f4",
@@ -648,7 +648,7 @@
     "pr_number": 89147,
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89151": {
     "commit": "0804667ff1870843fd2fa76f7e5ee37db644d2bd",
@@ -662,7 +662,7 @@
     "kinds": ["feature"],
     "sigs": ["api-machinery"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89169": {
     "commit": "a98840bc3b01d6e7d234c1db8067681117cecac4",
@@ -677,7 +677,7 @@
     "sigs": ["api-machinery", "cloud-provider"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89172": {
     "commit": "99d0559ab4aadc2392b6eb9f54e3c9128bb31cd5",
@@ -689,7 +689,7 @@
     "pr_number": 89172,
     "kinds": ["bug"],
     "sigs": ["storage"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89214": {
     "commit": "295b53f7b43491015be2b5ebcdc08909ae3da584",
@@ -703,7 +703,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "cluster-lifecycle", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89248": {
     "commit": "5ba0dd0fb65ddf5e00d906336b174e34e49c9e86",
@@ -717,7 +717,7 @@
     "kinds": ["feature"],
     "sigs": ["cloud-provider"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89250": {
     "commit": "173b5ee6f7b58fd437f78b6fc5b606919c5f4efd",
@@ -733,7 +733,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89252": {
     "commit": "d20b6cd44d64864761a8a7913ba54e5cb52a1ee6",
@@ -747,7 +747,7 @@
     "sigs": ["apps", "node"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89275": {
     "commit": "cadbfd806b4a5d0c45533fb3b3074f804d91800e",
@@ -763,7 +763,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89298": {
     "commit": "dd35908c7f8f387418b4437061a20e4cded98918",
@@ -776,7 +776,7 @@
     "kinds": ["api-change", "cleanup"],
     "sigs": ["scheduling"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89319": {
     "commit": "ca82b3281f426add48421aa54114d8f54f7d4ce5",
@@ -797,7 +797,7 @@
       "storage"
     ],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89328": {
     "commit": "a9d915c5263ebd095673bbd18e41a5c1f2dc9b72",
@@ -812,7 +812,7 @@
     "sigs": ["cloud-provider", "storage"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89337": {
     "commit": "d3df233d9ce2147096f1448f5aa50e530b0cbcda",
@@ -825,7 +825,7 @@
     "areas": ["cloudprovider"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89341": {
     "commit": "6273449fe06574b3b192b92fe487ddfbd16837af",
@@ -839,7 +839,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "cli", "cloud-provider", "cluster-lifecycle", "instrumentation"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89350": {
     "commit": "cabf5d1cdcfce5bae7c5d5fcfff979d1ea6d6e87",
@@ -855,7 +855,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89367": {
     "commit": "5be91f997ae56f488c11f8443f5a897dc450a885",
@@ -868,7 +868,7 @@
     "areas": ["cloudprovider"],
     "kinds": ["cleanup"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89370": {
     "commit": "62108be6d9f9617886871c062a59a39521c34050",
@@ -880,7 +880,7 @@
     "pr_number": 89370,
     "kinds": ["cleanup"],
     "sigs": ["scheduling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89384": {
     "commit": "1442df8ab3157c62b801e02765eb03536868d934",
@@ -893,7 +893,7 @@
     "kinds": ["feature"],
     "sigs": ["scheduling"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89401": {
     "commit": "11277d4acaa6edf90977c8733ef2314db2cf1cf0",
@@ -906,7 +906,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89438": {
     "commit": "c4fd09d80a3cbcb11d202b78987ad66ab4fd9904",
@@ -920,7 +920,7 @@
     "sigs": ["apps", "network"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89444": {
     "commit": "044a4ce21de7e89308be6cedc59fbf1cbb6b30b9",
@@ -941,7 +941,7 @@
       "storage"
     ],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89460": {
     "commit": "47f5d2923f3f35adc66b4797a95720f67c948b4e",
@@ -961,7 +961,7 @@
     "kinds": ["cleanup"],
     "sigs": ["testing", "windows"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89461": {
     "commit": "1e2ddd12616064ea406757f58efa4a9a087f4f1d",
@@ -981,7 +981,7 @@
     "kinds": ["cleanup"],
     "sigs": ["cloud-provider", "cluster-lifecycle"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89462": {
     "commit": "a2919085480d3cb621a2a65ef38d50549abfafc2",
@@ -994,7 +994,7 @@
     "areas": ["test"],
     "kinds": ["cleanup"],
     "sigs": ["testing"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89505": {
     "commit": "4362bf7919f20c0f0ab49a740e466a4835059b42",
@@ -1008,7 +1008,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "cli", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89511": {
     "commit": "a329e679223fe1a420d89f5e49f80019ad81a93d",
@@ -1022,7 +1022,7 @@
     "sigs": ["cloud-provider", "storage"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89537": {
     "commit": "903f1e63f9ac8b82fa5b8759194e3611a90a6d3b",
@@ -1035,7 +1035,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89540": {
     "commit": "fca2963aa23602d8e5e9f8e658660791242462f7",
@@ -1049,7 +1049,7 @@
     "kinds": ["bug"],
     "sigs": ["instrumentation", "node"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89551": {
     "commit": "897c10e7b26e715642b367e0c47bccd69ba3c4c6",
@@ -1063,7 +1063,7 @@
     "kinds": ["bug"],
     "sigs": ["cli", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89562": {
     "commit": "0fa225f6387611a53d313084fd82d1601da64041",
@@ -1076,7 +1076,7 @@
     "areas": ["cloudprovider"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89583": {
     "commit": "79bf624746ffe869c973ef1719c39149bc7b2a5e",
@@ -1088,7 +1088,7 @@
     "pr_number": 89583,
     "kinds": ["bug"],
     "sigs": ["auth"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89588": {
     "commit": "2da163bcf573b89b922f0b99907ff026a06725d1",
@@ -1102,7 +1102,7 @@
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89589": {
     "commit": "e178cacb974e9b3cbb011d96fcc784dc17e9bf20",
@@ -1114,7 +1114,7 @@
     "pr_number": 89589,
     "kinds": ["bug"],
     "sigs": ["storage"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89593": {
     "commit": "7f1d09f43990e69940f6e6d2fff0189788a7376a",
@@ -1128,7 +1128,7 @@
     "kinds": ["feature"],
     "sigs": ["cluster-lifecycle"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89594": {
     "commit": "52ba6dc5606d0f698a468e16f7b66bcd49c5c44f",
@@ -1144,7 +1144,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89596": {
     "commit": "4f90253b580d1e1654b07f8287b74da3d93658b5",
@@ -1157,7 +1157,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89602": {
     "commit": "9cbb46e39ff83748c7e926c8b73d527980bb120f",
@@ -1170,7 +1170,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89604": {
     "commit": "b4c82622ec9d1e58ae2c9f901e51353f0661cf20",
@@ -1183,7 +1183,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89612": {
     "commit": "489d3712ea16e5afe2d4941b8fc2a397a81ac9c3",
@@ -1195,7 +1195,7 @@
     "pr_number": 89612,
     "kinds": ["bug"],
     "sigs": ["network"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89629": {
     "commit": "d9b084a9d187cf96fe259791d640ac187fade884",
@@ -1209,7 +1209,7 @@
     "kinds": ["bug"],
     "sigs": ["architecture", "storage", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89644": {
     "commit": "3c082d5a6032ce19efb6347ace8f50295f368dca",
@@ -1229,7 +1229,7 @@
     "areas": ["dependency"],
     "kinds": ["cleanup"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89646": {
     "commit": "933c30359291bf2f4adf01d3359deafaf61c143d",
@@ -1243,7 +1243,7 @@
     "kinds": ["bug", "cleanup"],
     "sigs": ["cli"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89652": {
     "commit": "38f0a8bc74bed92bef87e20a79c36c5feea78b3d",
@@ -1257,7 +1257,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89660": {
     "commit": "0c3c2cd6ac8c9ffefc38f9746034e546331b9cd6",
@@ -1271,7 +1271,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "cli", "cluster-lifecycle"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89666": {
     "commit": "4bba193bea805300dd64f73c89eafaf016770e7a",
@@ -1293,7 +1293,7 @@
     "sigs": ["cli", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89674": {
     "commit": "6652347ceea958c0004ce959e8fd3137ff5ef064",
@@ -1313,7 +1313,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89677": {
     "commit": "788a073c79fea816282b87ab2946181821df4531",
@@ -1326,7 +1326,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89683": {
     "commit": "45a230aecca0bfbc2d3442bc4eb5c670f0fe6e25",
@@ -1340,7 +1340,7 @@
     "kinds": ["feature"],
     "sigs": ["instrumentation"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89696": {
     "commit": "561e86e241d651c20953af15b26ce1c66e014a71",
@@ -1352,7 +1352,7 @@
     "pr_number": 89696,
     "kinds": ["bug"],
     "sigs": ["auth"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89706": {
     "commit": "f2e3981aba52fd0b9ededcc17affb0c37c648caa",
@@ -1365,7 +1365,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "auth"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89720": {
     "commit": "0f2cccc98c3bf2a512ec55cbeba89dbfe7c768cf",
@@ -1388,7 +1388,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89722": {
     "commit": "8ae26096f7714b8ba95f62cf5018073dde2d1dfb",
@@ -1401,7 +1401,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89735": {
     "commit": "b984f59fa31d4a8b2b5c12a54f474a6df6d86673",
@@ -1414,7 +1414,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89741": {
     "commit": "facda9abfd8c68f59d00a03fe07ef835ddfe2b42",
@@ -1427,7 +1427,7 @@
     "kinds": ["bug"],
     "sigs": ["auth", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89768": {
     "commit": "60df45fa55746fa2e9c9c116d09c5280cba9059f",
@@ -1440,7 +1440,7 @@
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "storage"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89778": {
     "commit": "53f3699cf936b14e04b8533e51e8e7ffe0eeb7ef",
@@ -1454,7 +1454,7 @@
     "kinds": ["api-change"],
     "sigs": ["api-machinery", "apps", "cli", "network", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89794": {
     "commit": "01df16aee8297041e32e0c7a2194a2749361d642",
@@ -1466,7 +1466,7 @@
     "pr_number": 89794,
     "kinds": ["cleanup"],
     "sigs": ["storage"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89795": {
     "commit": "15c3e492b3ad896f36f2ca388108362961b57a19",
@@ -1481,7 +1481,7 @@
     "sigs": ["cli", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89822": {
     "commit": "07c556f40e136abeb895233bfd3e012f4afb21ad",
@@ -1496,7 +1496,7 @@
     "sigs": ["api-machinery", "cloud-provider"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89833": {
     "commit": "ec00b4fcc2d0ad494275558e780606b1d9b3e469",
@@ -1510,7 +1510,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "cli", "cloud-provider", "cluster-lifecycle", "instrumentation"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89845": {
     "commit": "c70e3e93bd5b8ea0f9cb262e5e7b233a27740b20",
@@ -1522,7 +1522,7 @@
     "pr_number": 89845,
     "kinds": ["cleanup"],
     "sigs": ["apps"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89848": {
     "commit": "c1f1b1bceb8e6dfbc0083617a25f17dd8d57340b",
@@ -1536,7 +1536,7 @@
     "kinds": ["bug"],
     "sigs": ["cli", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89857": {
     "commit": "b3db9d3c6c790c62f50f7bd9ef6abbca3d69362c",
@@ -1548,7 +1548,7 @@
     "pr_number": 89857,
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89861": {
     "commit": "190ae06518c33bff173a0ac6d115b38fbfe882a5",
@@ -1561,7 +1561,7 @@
     "areas": ["kubectl"],
     "kinds": ["cleanup"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89895": {
     "commit": "ea2d784545330a061245c4667b1d01f2a1faa3ab",
@@ -1575,7 +1575,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "cluster-lifecycle", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89901": {
     "commit": "616a8c7fa3f9742f42b28c321405b7770afecc8a",
@@ -1597,7 +1597,7 @@
     "sigs": ["cluster-lifecycle", "node"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89902": {
     "commit": "871ca4b2a75decc0a810b804252dff493a20984c",
@@ -1611,7 +1611,7 @@
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "network", "scalability"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89908": {
     "commit": "1edbfe1745a2794a5e8dabe90a51abb962891ddd",
@@ -1624,7 +1624,7 @@
     "kinds": ["bug", "cleanup"],
     "sigs": ["scheduling"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89913": {
     "commit": "db999c96343c10e83d72ff4bb82e775f09edf0a6",
@@ -1638,7 +1638,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "cli"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89937": {
     "commit": "342bcf55e8b0b03b74232e55c39b0885feace21c",
@@ -1652,7 +1652,7 @@
     "kinds": ["bug"],
     "sigs": ["network", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89963": {
     "commit": "695cd49c40fb174728245814fd2db25f9b801d42",
@@ -1664,7 +1664,7 @@
     "pr_number": 89963,
     "kinds": ["bug"],
     "sigs": ["autoscaling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89970": {
     "commit": "08e1fd3bb947faf465e8a67d5c7106dbd10840c0",
@@ -1678,7 +1678,7 @@
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle", "node"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89999": {
     "commit": "5655350b2b08d5ac6589e8e0fbe1abd9cffe08c3",
@@ -1690,7 +1690,7 @@
     "pr_number": 89999,
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90018": {
     "commit": "775feed217bf48035cb66bb7214a6c66385c73f7",
@@ -1704,7 +1704,7 @@
     "kinds": ["api-change"],
     "sigs": ["api-machinery", "apps", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90023": {
     "commit": "864b4bcc1e595917f483b5f23451072a679214db",
@@ -1719,7 +1719,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90057": {
     "commit": "ec79307b04882128ea70df0f884424568afb3b27",
@@ -1733,7 +1733,7 @@
     "sigs": ["apps", "cloud-provider"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90061": {
     "commit": "f4112710f5bbfbd9cc7a68ede0df519af30d5e40",
@@ -1755,7 +1755,7 @@
     "sigs": ["node", "windows"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90063": {
     "commit": "3c871adc5fe5ce51af436adf94ceaddc666b5a35",
@@ -1769,7 +1769,7 @@
     "kinds": ["feature"],
     "sigs": ["cluster-lifecycle"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90094": {
     "commit": "8d7aaa5e7b1a8b008439b29b940c9f74a75f5e71",
@@ -1790,7 +1790,7 @@
     "kinds": ["feature"],
     "sigs": ["cli"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90099": {
     "commit": "5668dbdc6e60f54d45f2022fddf8a92359cdcac5",
@@ -1802,7 +1802,7 @@
     "pr_number": 90099,
     "kinds": ["cleanup"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90143": {
     "commit": "b8b4186a14045ab66b150b5a92276d02b8a73a3e",
@@ -1815,7 +1815,7 @@
     "areas": ["kubeadm"],
     "kinds": ["deprecation"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90162": {
     "commit": "f9532e46632f487363d8e1b499f92c854b905189",
@@ -1829,7 +1829,7 @@
     "kinds": ["bug"],
     "sigs": ["release", "storage"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90172": {
     "commit": "aadaa5d6a917fcb354bce80a0bd1830c95cfbcc3",
@@ -1842,7 +1842,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90175": {
     "commit": "a9f47c3a70c2a9460485329e5adf4a53b5e55084",
@@ -1856,7 +1856,7 @@
     "kinds": ["cleanup"],
     "sigs": ["instrumentation", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90180": {
     "commit": "8cb57dd09add121c2c6c768979bd009e2f660712",
@@ -1870,7 +1870,7 @@
     "kinds": ["cleanup"],
     "sigs": ["architecture", "network", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90187": {
     "commit": "6079cebfae672335e958e03e7b0c258ba264d28f",
@@ -1885,7 +1885,7 @@
     "sigs": ["api-machinery", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90191": {
     "commit": "5fb9e35e57bf0ccdfa52d9f05a27ff641470d430",
@@ -1907,7 +1907,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90218": {
     "commit": "8be6307c565901d9cd9cf035613cef9bacaaf212",
@@ -1921,7 +1921,7 @@
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "scalability"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90227": {
     "commit": "5157383b8436fd9e97a674ba6ae795d37efcc345",
@@ -1934,7 +1934,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90242": {
     "commit": "4820b6cbdbf4abab4c5b15a1d00b0bd9f1b57f88",
@@ -1948,7 +1948,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "cloud-provider", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90243": {
     "commit": "e95106106b1e24056a98fd08740b5c5e6a00f8d7",
@@ -1963,7 +1963,7 @@
     "sigs": ["api-machinery", "cli", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90288": {
     "commit": "180af4240c42906f072112e7ac7818f4b3574c5a",
@@ -1976,7 +1976,7 @@
     "kinds": ["cleanup"],
     "sigs": ["apps", "instrumentation", "network", "scalability"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90307": {
     "commit": "57108f6c3ea285284ef693be6d86d4bbd1d8a143",
@@ -1990,7 +1990,7 @@
     "sigs": ["auth", "node"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90328": {
     "commit": "95a81f2776956ca9c6dc0b4f8f5d9278826506ba",
@@ -2003,7 +2003,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90342": {
     "commit": "04dec17d5b81c77367f4750fa9fb9006069b9156",
@@ -2017,7 +2017,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "autoscaling", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90373": {
     "commit": "6107b140aef29254d8ae3255e7dd4e684b276283",
@@ -2029,7 +2029,7 @@
     "pr_number": 90373,
     "kinds": ["bug"],
     "sigs": ["scheduling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90377": {
     "commit": "7fdc1275d947ddfd566e6f6343ccf4fa2c30995d",
@@ -2043,7 +2043,7 @@
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "node"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90394": {
     "commit": "52243decf14b5330c04f043604e6ed82ee667588",
@@ -2057,7 +2057,7 @@
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90408": {
     "commit": "ef1bc416b8fb5d871f184a9d0a8215b037eca26f",
@@ -2072,7 +2072,7 @@
     "sigs": ["cloud-provider", "node"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90419": {
     "commit": "561b2aba940393b9f33b51bd36e8b80192b7cccb",
@@ -2085,7 +2085,7 @@
     "areas": ["kubelet"],
     "kinds": ["bug"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90425": {
     "commit": "40cb93bf95ecde2aba16cf4749ee1478b3f8ef9d",
@@ -2098,7 +2098,7 @@
     "areas": ["provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90449": {
     "commit": "e00e89ae1c1c916a1a0314c4c547344a9d1c51b6",
@@ -2111,7 +2111,7 @@
     "kinds": ["api-change", "cleanup"],
     "sigs": ["apps"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90458": {
     "commit": "686f8b121c54c9447e3fd9e1fafd38afa35deeba",
@@ -2125,7 +2125,7 @@
     "sigs": ["api-machinery", "auth"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90463": {
     "commit": "b9ac921f31d71a9cb7980de6085229db06dd8cd2",
@@ -2138,7 +2138,7 @@
     "kinds": ["api-change", "cleanup", "deprecation"],
     "sigs": ["autoscaling"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90468": {
     "commit": "7fdb2b16aee06853ef78b359c9a3d25da194732b",
@@ -2153,7 +2153,7 @@
     "sigs": ["api-machinery", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90469": {
     "commit": "5fc4f4d54812405720c2f4b39e4577d6f41a2aab",
@@ -2166,7 +2166,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90475": {
     "commit": "ba43630708b8a06b2d8989cd5ce5fcc4cefa747b",
@@ -2179,7 +2179,7 @@
     "kinds": ["feature"],
     "sigs": ["scheduling"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90476": {
     "commit": "7f744be14e2ff4823f77c6f36f6cdd518dbdde4b",
@@ -2191,7 +2191,7 @@
     "pr_number": 90476,
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90494": {
     "commit": "03cd30b9d7f7b9ee8ed6b1b61dbdb9c47d2d7784",
@@ -2205,7 +2205,7 @@
     "kinds": ["api-change", "cleanup"],
     "sigs": ["node"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90499": {
     "commit": "2ca3347dc0c4352cf0fee655fa4e08b65194513e",
@@ -2219,7 +2219,7 @@
     "kinds": ["api-change", "cleanup"],
     "sigs": ["node"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90502": {
     "commit": "850fddb49298ee3e7b2aeb6a33a57861cc87c246",
@@ -2232,7 +2232,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90513": {
     "commit": "8caddda753fa919a7b41222f2dd6cb8b48fe2515",
@@ -2246,7 +2246,7 @@
     "kinds": ["design"],
     "sigs": ["cluster-lifecycle"],
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90534": {
     "commit": "68ade56a4703a780cb0989bce9239d4059ae4e1a",
@@ -2259,7 +2259,7 @@
     "kinds": ["bug", "regression"],
     "sigs": ["auth"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90537": {
     "commit": "df1a4c4e554d36ee3f75e8d4c1ca45addb224337",
@@ -2272,7 +2272,7 @@
     "kinds": ["bug", "cleanup"],
     "sigs": ["network"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90544": {
     "commit": "7f0c05b90916dd923fc4710a1de4a884224b7e17",
@@ -2286,7 +2286,7 @@
     "sigs": ["scheduling"],
     "feature": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90555": {
     "commit": "b6514880d4ae05b97b3e7924e3a5fb79b1024b7c",
@@ -2299,7 +2299,7 @@
     "areas": ["dependency"],
     "kinds": ["bug"],
     "sigs": ["network"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90559": {
     "commit": "ac963ad5b23f5e02335f37732c78643a0d89e626",
@@ -2312,7 +2312,7 @@
     "kinds": ["api-change", "cleanup", "deprecation"],
     "sigs": ["scalability"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90560": {
     "commit": "3546d6267c4db0f4d7db2fa2aa42374fd5ba93e4",
@@ -2326,7 +2326,7 @@
     "kinds": ["feature"],
     "sigs": ["api-machinery"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90569": {
     "commit": "5b76272c353ab345de83238eddb7224c71443b91",
@@ -2340,7 +2340,7 @@
     "kinds": ["feature"],
     "sigs": ["cli"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90592": {
     "commit": "656a01fb044d6d45a9b5fc7ceb06fc0b77018407",
@@ -2352,7 +2352,7 @@
     "pr_number": 90592,
     "kinds": ["api-change"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90608": {
     "commit": "ab207be846f96a0114a87edd310a0b49e8046b91",
@@ -2364,7 +2364,7 @@
     "pr_number": 90608,
     "kinds": ["cleanup"],
     "sigs": ["storage"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90615": {
     "commit": "6b594c25c80310febd834648c81b442f95b85cc6",
@@ -2378,7 +2378,7 @@
     "kinds": ["cleanup"],
     "sigs": ["architecture", "network", "release", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90628": {
     "commit": "f372c5417b2053827e14bc4086ee7828ba674d53",
@@ -2392,7 +2392,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "node"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90630": {
     "commit": "87e5d4e4dec69471a2d2e026174af239a6d73702",
@@ -2406,7 +2406,7 @@
     "sigs": ["api-machinery", "cloud-provider"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90645": {
     "commit": "3b024339bd67b80e79a161bc295f6fe609eff076",
@@ -2419,7 +2419,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90660": {
     "commit": "d4ce66fe0b70ea55f76f2feda9a2255b9575c2b5",
@@ -2433,7 +2433,7 @@
     "kinds": ["bug"],
     "sigs": ["scheduling", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90671": {
     "commit": "501781abe4290e19e9b42d292b0b295ea129dea6",
@@ -2446,7 +2446,7 @@
     "kinds": ["api-change", "cleanup", "deprecation"],
     "sigs": ["storage"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90672": {
     "commit": "3f4f018acd4b2167a3746f106006692c4c339921",
@@ -2459,7 +2459,7 @@
     "kinds": ["api-change", "cleanup", "deprecation"],
     "sigs": ["api-machinery"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90673": {
     "commit": "6c0278ed45db8a183c0e792a7ce28bbd7b6f9209",
@@ -2472,7 +2472,7 @@
     "kinds": ["api-change", "cleanup", "deprecation"],
     "sigs": ["api-machinery"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90674": {
     "commit": "9dce6a6f199ba193c9fbe1ff7fd2f8431a3f8682",
@@ -2487,7 +2487,7 @@
     "sigs": ["cloud-provider", "release", "scalability"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90697": {
     "commit": "d8a513ef999ee4cbdee66a5c9062cddce13584bb",
@@ -2501,7 +2501,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "release"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90737": {
     "commit": "68cbb35ebc3b1d64e9434cc297c8e8a97dad07c6",
@@ -2514,7 +2514,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "cloud-provider"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90749": {
     "commit": "4d813c136004cebc49495b53759ddf2b81e8f39c",
@@ -2527,7 +2527,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90769": {
     "commit": "70948498bcc696e66780edb4e4652366d4862e65",
@@ -2541,7 +2541,7 @@
     "sigs": ["apps", "network"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90782": {
     "commit": "be02fe578588592ee67811ed809eef0a4495537a",
@@ -2554,7 +2554,7 @@
     "areas": ["dependency", "release-eng", "security"],
     "kinds": ["cleanup"],
     "sigs": ["release"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90785": {
     "commit": "590365cb70c83564f4df6261932b500056b32fbb",
@@ -2567,7 +2567,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90788": {
     "commit": "89ba90573f163ee3452b526f30348a035d54e870",
@@ -2580,7 +2580,7 @@
     "areas": ["kubeadm"],
     "kinds": ["cleanup"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90820": {
     "commit": "e6e29fbbc3118e5d69177be5121e40ecea19f572",
@@ -2593,7 +2593,7 @@
     "kinds": ["feature"],
     "sigs": ["scheduling"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90822": {
     "commit": "05f6812c2da4c3af8d133159c06546f464b2d63f",
@@ -2608,7 +2608,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90823": {
     "commit": "a3978d0df4bc6b74e8758129ea02ddf082c1f279",
@@ -2622,7 +2622,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "cloud-provider", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90836": {
     "commit": "1bec45d48e6fd401c804da8a6520ef2d81a01c94",
@@ -2637,7 +2637,7 @@
     "sigs": ["cloud-provider"],
     "feature": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90840": {
     "commit": "2e4bab80651b6d9d1db42b2805f654a0cfa469dd",
@@ -2650,7 +2650,7 @@
     "areas": ["kubeadm"],
     "kinds": ["cleanup"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90853": {
     "commit": "bc9c5afaf05e893f04883e3584b5c4e81eaddb3d",
@@ -2665,7 +2665,7 @@
     "sigs": ["network", "node", "windows"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90857": {
     "commit": "696e60d95162cb4cacd0891933969cb27572d65b",
@@ -2678,7 +2678,7 @@
     "kinds": ["feature"],
     "sigs": ["cli"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90861": {
     "commit": "052f9c8e7d5920117a0a6e9cb219789d54733e1f",
@@ -2692,7 +2692,7 @@
     "kinds": ["cleanup"],
     "sigs": ["architecture", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90874": {
     "commit": "f00932fa46feabfb1f222a6a7bee0a3109727042",
@@ -2706,7 +2706,7 @@
     "kinds": ["feature"],
     "sigs": ["cloud-provider"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90878": {
     "commit": "13010d199c49623f33e2af12fff698bb92738efa",
@@ -2720,7 +2720,7 @@
     "kinds": ["bug"],
     "sigs": ["storage", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90880": {
     "commit": "cf36d9b8e90ca6624e84813bd8ceb561031e818c",
@@ -2734,7 +2734,7 @@
     "kinds": ["cleanup"],
     "sigs": ["apps", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90886": {
     "commit": "501cc1a895ed677828445aa3962f0b7c8e91030b",
@@ -2747,7 +2747,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90892": {
     "commit": "bb4a21161f972f97ea04ac7cfaafae70fce8228a",
@@ -2762,7 +2762,7 @@
     "sigs": ["cluster-lifecycle"],
     "feature": true,
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90896": {
     "commit": "3fc7831cd8a7044793b624a63a0573810b224a94",
@@ -2785,7 +2785,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90907": {
     "commit": "f3a8eccd32e5649b0d8c6725c0c253fb4436bd02",
@@ -2799,7 +2799,7 @@
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "storage"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90909": {
     "commit": "8623c261508c24c80fa1732296f754619c030298",
@@ -2814,7 +2814,7 @@
     "sigs": ["network", "windows"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90911": {
     "commit": "ded1f58779d0d2570735a6ebe7428d57a100ca97",
@@ -2830,7 +2830,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90943": {
     "commit": "74b857cb0ef7ae4d441da3fb36be11e67a165bf6",
@@ -2844,7 +2844,7 @@
     "kinds": ["feature"],
     "sigs": ["cloud-provider"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90948": {
     "commit": "3f8f9998b04b427a2cb22db49ae87c332427fe52",
@@ -2857,7 +2857,7 @@
     "areas": ["kubelet", "security"],
     "kinds": ["bug"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90949": {
     "commit": "428b500c5a93daded135f347428724334163859a",
@@ -2870,7 +2870,7 @@
     "areas": ["kubelet", "security"],
     "kinds": ["bug"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90960": {
     "commit": "f097cee1566983cd1838f7d02b08ccc2b0921acd",
@@ -2885,7 +2885,7 @@
     "sigs": ["cli", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90963": {
     "commit": "98d404d2809c90e262b0f356d1a95bfbed1227c9",
@@ -2899,7 +2899,7 @@
     "kinds": ["bug"],
     "sigs": ["release", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90967": {
     "commit": "eab28c7ab403190a9ac86b0544c81462cdc0fc2e",
@@ -2913,7 +2913,7 @@
     "kinds": ["feature"],
     "sigs": ["api-machinery"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90970": {
     "commit": "694a9c242e003ff899cc2aa1e69656df1da856e0",
@@ -2926,7 +2926,7 @@
     "areas": ["kubeadm"],
     "kinds": ["cleanup"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "90989": {
     "commit": "e5aabaec18bdc6278efa2c715de8f1c96ff0a18e",
@@ -2938,7 +2938,7 @@
     "pr_number": 90989,
     "kinds": ["bug"],
     "sigs": ["scheduling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91046": {
     "commit": "8a9206c9b2fa551f12595b14f71553a5920bfe4e",
@@ -2952,7 +2952,7 @@
     "kinds": ["cleanup"],
     "sigs": ["apps", "node"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91093": {
     "commit": "590f1a46ee6a845cac0bef2553a190fddc2e10fc",
@@ -2966,7 +2966,7 @@
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "node"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91097": {
     "commit": "565487fc020fa2100ca9fa67bd1d3f0a216e0ee4",
@@ -2979,7 +2979,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91113": {
     "commit": "7c3f7065dbf4aeeab3704c193927386deda8b305",
@@ -2995,7 +2995,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91126": {
     "commit": "938875582b66437d15ca51556ac6b56b4714af02",
@@ -3007,7 +3007,7 @@
     "pr_number": 91126,
     "kinds": ["bug"],
     "sigs": ["scheduling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91138": {
     "commit": "413bc1a1d238efb7c4ba9e3aac2c381c93295aec",
@@ -3020,7 +3020,7 @@
     "kinds": ["feature"],
     "sigs": ["scheduling"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91145": {
     "commit": "02637bb25016c5362dc945406df0b2114868ecf2",
@@ -3033,7 +3033,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91148": {
     "commit": "5bace308406ac9738bcae474cb99d7ff1c334d66",
@@ -3048,7 +3048,7 @@
     "sigs": ["auth", "node"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91154": {
     "commit": "c0455a18531aec2af0f4a879a0364b40c2e19a59",
@@ -3063,7 +3063,7 @@
     "sigs": ["auth", "cloud-provider"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91168": {
     "commit": "9eb097c4b07ea59c674a69e19c1519f0d10f2fa8",
@@ -3076,7 +3076,7 @@
     "kinds": ["bug", "cleanup"],
     "sigs": ["scheduling"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91171": {
     "commit": "d17947ea3a0af86be45052836ef301ad36432f84",
@@ -3091,7 +3091,7 @@
     "sigs": ["api-machinery", "cloud-provider"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91177": {
     "commit": "eda07adf6e3ef8d066ba95a9b1039a13d2e3f8ea",
@@ -3107,7 +3107,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91179": {
     "commit": "40076c856ed78f445d8d568b75460dc39c79583d",
@@ -3121,7 +3121,7 @@
     "kinds": ["feature"],
     "sigs": ["cluster-lifecycle"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91182": {
     "commit": "dee4a7cd8453fffdac3691435ef40fce32519669",
@@ -3135,7 +3135,7 @@
     "kinds": ["api-change", "cleanup"],
     "sigs": ["node"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91184": {
     "commit": "4e975b9fc293903231260bb6bbd70b0493f35e2c",
@@ -3148,7 +3148,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91194": {
     "commit": "6a0e01880ad7ea4c110040c3be417516c0bf6bca",
@@ -3161,7 +3161,7 @@
     "kinds": ["api-change", "documentation"],
     "sigs": ["apps"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91196": {
     "commit": "aba339c63ad308b8976471cea3206cf857d6f7d9",
@@ -3174,7 +3174,7 @@
     "areas": ["provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91207": {
     "commit": "b98d9407cfdc24c477ab8066d1fb69ea0983a2f9",
@@ -3189,7 +3189,7 @@
     "sigs": ["apps", "node"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91240": {
     "commit": "9e06faa1fbf473107de53b1a4d9e731d2b4eaa1e",
@@ -3204,7 +3204,7 @@
     "sigs": ["cloud-provider", "scalability", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91252": {
     "commit": "4b9b9ab75376b7b53876ab6b2be42d0940c7eb26",
@@ -3216,7 +3216,7 @@
     "pr_number": 91252,
     "kinds": ["bug"],
     "sigs": ["scheduling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91258": {
     "commit": "7ba332a839c844ef4ba0191ddca2ce3601d283af",
@@ -3229,7 +3229,7 @@
     "kinds": ["feature"],
     "sigs": ["scheduling"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91275": {
     "commit": "dcbdf1a7e1f057ec15fcd1a598fdd88d2926a67d",
@@ -3243,7 +3243,7 @@
     "kinds": ["api-change", "cleanup"],
     "sigs": ["node"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91307": {
     "commit": "98f250f883e69f30926b19f0cd02846c0b5bc804",
@@ -3257,7 +3257,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "apps", "node", "storage", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91308": {
     "commit": "83f343011f566130b813e81c84c40d218d10fecc",
@@ -3278,7 +3278,7 @@
     "kinds": ["cleanup"],
     "sigs": ["cli", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91311": {
     "commit": "07586f67d9abe3c9c51b6636153402bbfe69ba5b",
@@ -3292,7 +3292,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "network", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91314": {
     "commit": "454c13d09cab57065f722b6baa305b2104ed0e09",
@@ -3307,7 +3307,7 @@
     "sigs": ["scheduling", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91319": {
     "commit": "68e4c1eda1265a5bc2315c4fd78305af4cbcb4d9",
@@ -3322,7 +3322,7 @@
     "sigs": ["apps", "cloud-provider", "scalability", "storage"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91329": {
     "commit": "f01d848c4808bdaaa1378511c343a63a650f8cf1",
@@ -3338,7 +3338,7 @@
     "feature": true,
     "duplicate": true,
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91342": {
     "commit": "dd649bb7ef4788bfe65c93ebc974962d64476b39",
@@ -3350,7 +3350,7 @@
     "pr_number": 91342,
     "kinds": ["bug"],
     "sigs": ["apps"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91349": {
     "commit": "774c9a6db6f89d8ca837cb15f8a46369f22ce804",
@@ -3364,7 +3364,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "cloud-provider", "cluster-lifecycle", "network", "scheduling"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91357": {
     "commit": "1a80caef4acdf1070eee19a64f95587f15083b35",
@@ -3377,7 +3377,7 @@
     "kinds": ["bug", "cleanup"],
     "sigs": ["network"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91370": {
     "commit": "f91c1ef60e808ed4070619e0f7c53849757cf26c",
@@ -3391,7 +3391,7 @@
     "kinds": ["cleanup"],
     "sigs": ["cloud-provider", "network", "release", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91373": {
     "commit": "c00cd246dcb7bdd04f82b1883cdef880c4af4e75",
@@ -3404,7 +3404,7 @@
     "areas": ["kubelet", "kubelet-api"],
     "kinds": ["cleanup"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91381": {
     "commit": "205d5c58296357365bfa834ecabb384c1c1042c3",
@@ -3420,7 +3420,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91399": {
     "commit": "5a529aa3a0dd3a050c5302329681e871ef6c162e",
@@ -3433,7 +3433,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91400": {
     "commit": "d01cc01ab4455d1c0db84d2cc79d963a1b15d292",
@@ -3446,7 +3446,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91405": {
     "commit": "d49d045a35a67359b7ddb018c679ed2a645e5f19",
@@ -3459,7 +3459,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91408": {
     "commit": "26f0227019c8b12e33a4e91f07e9528d57fa87da",
@@ -3482,7 +3482,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91420": {
     "commit": "c682b313d9bae1ade89e5553daf31095c7a84e39",
@@ -3507,7 +3507,7 @@
     "kinds": ["api-change"],
     "sigs": ["scheduling"],
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91448": {
     "commit": "472a4e9ce281b6aac13d80f09e2fd925cb209e03",
@@ -3520,7 +3520,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "cluster-lifecycle", "instrumentation", "scheduling"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91455": {
     "commit": "2bf8e27737fae20748a0614724f78c38c81b48a3",
@@ -3532,7 +3532,7 @@
     "pr_number": 91455,
     "kinds": ["cleanup"],
     "sigs": ["storage"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91502": {
     "commit": "d1586ea3f916b98b82c175102092c4af305da45f",
@@ -3547,7 +3547,7 @@
     "sigs": ["api-machinery", "auth", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91504": {
     "commit": "6dbb92de3d06a241d89f599f31a425672d9d7d40",
@@ -3560,7 +3560,7 @@
     "kinds": ["feature"],
     "sigs": ["storage"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91521": {
     "commit": "e7a949f966095a0258c417f7b40fd2d4ea393514",
@@ -3574,7 +3574,7 @@
     "sigs": ["api-machinery", "instrumentation"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91522": {
     "commit": "36083e429212a2e46c7243942748a258eb714b61",
@@ -3588,7 +3588,7 @@
     "sigs": ["api-machinery", "cluster-lifecycle", "instrumentation", "scheduling"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91526": {
     "commit": "908847c01e9640ffce2ffda5acf88d92c48a5148",
@@ -3602,7 +3602,7 @@
     "kinds": ["feature"],
     "sigs": ["cloud-provider"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91527": {
     "commit": "faff3c5378c801eefa8f6bfcc4e988924979b5fb",
@@ -3616,7 +3616,7 @@
     "sigs": ["apps", "network"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91532": {
     "commit": "13a4a71e993c08ee80574ec53b48a2b8d684a478",
@@ -3632,7 +3632,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91547": {
     "commit": "6a526e86336d65c2853d7b9889575e209f348277",
@@ -3646,7 +3646,7 @@
     "sigs": ["scheduling"],
     "feature": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91558": {
     "commit": "84861d210258f5b3744c6605088f1e9f72fc9a28",
@@ -3661,7 +3661,7 @@
     "sigs": ["auth", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91562": {
     "commit": "80f1d65f4774be84e8b32f4531dc2bc5a15d8095",
@@ -3675,7 +3675,7 @@
     "kinds": ["feature"],
     "sigs": ["cli"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91577": {
     "commit": "1e3eeba9fa31da244056bdf97a34b4b71ef3f42c",
@@ -3690,7 +3690,7 @@
     "sigs": ["apps", "node"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91578": {
     "commit": "3918393e04324f709832c52ef86cab3ea8e76cd1",
@@ -3703,7 +3703,7 @@
     "areas": ["kubelet", "kubelet-api"],
     "kinds": ["cleanup"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91580": {
     "commit": "4e3dea81c1b105f09c2937cf4add05f06c187476",
@@ -3724,7 +3724,7 @@
     "kinds": ["api-change"],
     "sigs": ["scheduling", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91603": {
     "commit": "819ad44c90d7c2658f09a19738f020b47ff3f1f4",
@@ -3743,7 +3743,7 @@
     "pr_number": 91603,
     "kinds": ["api-change"],
     "sigs": ["scheduling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91616": {
     "commit": "1da70ed0fc1e45701f84aceafff5814731acca4d",
@@ -3757,7 +3757,7 @@
     "kinds": ["feature"],
     "sigs": ["cli"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91625": {
     "commit": "67afc8ea3ce2b00c27681cb774d6928f05b20fe0",
@@ -3776,7 +3776,7 @@
     "pr_number": 91625,
     "kinds": ["api-change"],
     "sigs": ["scheduling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91630": {
     "commit": "7bd4c53b275f5ce4378119783802350e7de09073",
@@ -3790,7 +3790,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "node"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91635": {
     "commit": "0615d4c3e8f278b7384565786d72ab87cb2c40d0",
@@ -3803,7 +3803,7 @@
     "areas": ["release-eng"],
     "kinds": ["bug"],
     "sigs": ["release"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91637": {
     "commit": "4efed0327654afd66346b58ae33f1f6432a274e2",
@@ -3827,7 +3827,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91685": {
     "commit": "3f8bb1bf50fb5a13a5823bdbc49bd6c2198752db",
@@ -3843,7 +3843,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91690": {
     "commit": "d585527c7097f75fbd5d890ea565b94768bee86c",
@@ -3858,7 +3858,7 @@
     "sigs": ["api-machinery", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91691": {
     "commit": "eda662b2fd1beb31f6117d20a2c850f4e216bd77",
@@ -3872,7 +3872,7 @@
     "kinds": ["bug"],
     "sigs": ["auth", "cli"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91699": {
     "commit": "907a526919139b559d421dc3ad10647ebe6e4522",
@@ -3888,7 +3888,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91701": {
     "commit": "98de6bd142c2c0168a436c7c6619001fcb894abd",
@@ -3902,7 +3902,7 @@
     "sigs": ["network", "windows"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91725": {
     "commit": "f496b9fb4aa8ab4f3feaea83f0d68c001100b2e8",
@@ -3914,7 +3914,7 @@
     "pr_number": 91725,
     "kinds": ["bug"],
     "sigs": ["network"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91738": {
     "commit": "9e70d6f805e0787dc71d59b6db15d76766a657ef",
@@ -3928,7 +3928,7 @@
     "kinds": ["bug"],
     "sigs": ["storage", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91745": {
     "commit": "fe43b104ba28271f06cae81100e9baf38bc26391",
@@ -3942,7 +3942,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "auth", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91748": {
     "commit": "dbfc3aa877b5beda2ecdfb38911c311b250a4973",
@@ -3957,7 +3957,7 @@
     "sigs": ["api-machinery", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91750": {
     "commit": "5248bef370d1966ff5e963aec7412b9bcb9c5469",
@@ -3971,7 +3971,7 @@
     "kinds": ["bug"],
     "sigs": ["scheduling", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91780": {
     "commit": "908956846574c620fecacaaf414b7f7c38d20644",
@@ -3986,7 +3986,7 @@
     "sigs": ["auth", "node"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91793": {
     "commit": "17630c34cf3c9e32ba688b6e191d45638c87b94a",
@@ -4011,7 +4011,7 @@
     "kinds": ["feature"],
     "sigs": ["scheduling"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91805": {
     "commit": "46afcb75d3eb6b77ad0e5e464034aa2bd0df8ca9",
@@ -4025,7 +4025,7 @@
     "sigs": ["api-machinery", "cluster-lifecycle", "instrumentation"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91811": {
     "commit": "eeba1b39fff8e09cd5343b6667d5f1bfce5fad3c",
@@ -4039,7 +4039,7 @@
     "kinds": ["cleanup"],
     "sigs": ["instrumentation", "storage", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91818": {
     "commit": "9ccf6f7de7875f9ae5bc8414f93d4047ba698860",
@@ -4052,7 +4052,7 @@
     "areas": ["apiserver"],
     "kinds": ["cleanup"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91831": {
     "commit": "60b800358f77848c4fac5376796e8a82b9039eb4",
@@ -4065,7 +4065,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91855": {
     "commit": "9ad74781c756fa2d9c4b328f594a933774bd5ef6",
@@ -4078,7 +4078,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91856": {
     "commit": "2930723a2518a65c44fd190fd3d45b3f795d8eda",
@@ -4091,7 +4091,7 @@
     "areas": ["dependency"],
     "kinds": ["cleanup"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91858": {
     "commit": "7fc3d9771b35b0c55397990079bfc84544d9e4c4",
@@ -4104,7 +4104,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91863": {
     "commit": "4a91ecb9762adc089680c45c93d0342bf8a350e1",
@@ -4119,7 +4119,7 @@
     "sigs": ["cloud-provider", "node", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91883": {
     "commit": "2c7d431a20b9dbe24fa18afa9e988b8bf7bbce6c",
@@ -4133,7 +4133,7 @@
     "kinds": ["deprecation"],
     "sigs": ["scheduling", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91889": {
     "commit": "257d11dc35b3d5441e5695b6055fc77227e05464",
@@ -4146,7 +4146,7 @@
     "areas": ["cloudprovider"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91890": {
     "commit": "2bcebed5b9066acdd4b9a06d317b052bd111ddb1",
@@ -4159,7 +4159,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91925": {
     "commit": "4cc44fbef626e87e59f7e9e7bd0bf9ec447a3c39",
@@ -4172,7 +4172,7 @@
     "areas": ["release-eng"],
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91930": {
     "commit": "ae7dce72ce8aa73b924f4ba9040231a14f938358",
@@ -4187,7 +4187,7 @@
     "sigs": ["node"],
     "feature": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91945": {
     "commit": "d81ff3864c0ad79db3be45d9603fbbc397e3d71f",
@@ -4200,7 +4200,7 @@
     "areas": ["kubelet"],
     "kinds": ["cleanup"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91946": {
     "commit": "f861a04ee79c909b0913bf57d0adf175990af1d3",
@@ -4215,7 +4215,7 @@
     "sigs": ["cli"],
     "feature": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91948": {
     "commit": "bef57a7edb74a5110b867c958642ac2b28c6f540",
@@ -4228,7 +4228,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91952": {
     "commit": "0a5d70617f4a796e56708d5f5f342aa87e68178c",
@@ -4241,7 +4241,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91957": {
     "commit": "65544c96d7c9bb67f5336eeb68b8cd5d5f9649ae",
@@ -4255,7 +4255,7 @@
     "kinds": ["api-change"],
     "sigs": ["api-machinery", "apps", "network", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91980": {
     "commit": "a463b25c9d170b14b5c3183c8604ebb906a97509",
@@ -4276,7 +4276,7 @@
     "kinds": ["feature"],
     "sigs": ["cluster-lifecycle"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "91995": {
     "commit": "3a2e96efff7860ffb06eeba6d8603be53cb5125e",
@@ -4290,7 +4290,7 @@
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "cluster-lifecycle"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92001": {
     "commit": "96c057ab48a367270bf6e34b8595809dc87f00da",
@@ -4313,7 +4313,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92010": {
     "commit": "6bb7e8ab83b22c9de7b7f36b1ccbe7ae0871a1b8",
@@ -4326,7 +4326,7 @@
     "kinds": ["feature"],
     "sigs": ["scheduling"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92017": {
     "commit": "d71a09271c02d952cdde5c7adc4b2669d8a98643",
@@ -4348,7 +4348,7 @@
     "sigs": ["cluster-lifecycle"],
     "feature": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92035": {
     "commit": "73fa63a86d1d47d82b435ca85c2f350da06b08b9",
@@ -4362,7 +4362,7 @@
     "kinds": ["bug"],
     "sigs": ["network", "node"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92049": {
     "commit": "83a15867b1ba3a341ab6acde6a63a5f5d080ae6c",
@@ -4377,7 +4377,7 @@
     "sigs": ["scheduling", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92069": {
     "commit": "81f84d3a1764e883441ff155a3c0fdc724a1b304",
@@ -4391,7 +4391,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "cli", "cloud-provider", "cluster-lifecycle", "instrumentation"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92075": {
     "commit": "0703d684486f59dc51f717f2df4c53a65afd94fc",
@@ -4406,7 +4406,7 @@
     "sigs": ["api-machinery", "cloud-provider", "instrumentation"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92118": {
     "commit": "c1d7a07d14a4e7af14e5a69c54dc21128f12dbab",
@@ -4419,7 +4419,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92166": {
     "commit": "73d6be90d303bbfaf68e98b5f6c6752a4c70cbfd",
@@ -4432,7 +4432,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92183": {
     "commit": "19f0a54d6b656f719d5ac446c6a2400e261acd5b",
@@ -4446,7 +4446,7 @@
     "kinds": ["feature"],
     "sigs": ["cluster-lifecycle"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92196": {
     "commit": "78b503d9f8e5334b38b2676b3b938a19f0f25484",
@@ -4459,7 +4459,7 @@
     "areas": ["kubelet"],
     "kinds": ["bug"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92200": {
     "commit": "b3033da9a1d0909393bcef734adb87b1d0ece60a",
@@ -4473,7 +4473,7 @@
     "kinds": ["api-change"],
     "sigs": ["scheduling", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92202": {
     "commit": "79a70883403df8c9eeb1caff991d74a9220b4d8b",
@@ -4494,7 +4494,7 @@
     "sigs": ["instrumentation", "scheduling"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92219": {
     "commit": "08ab50d1a870d12044081f58c6f9fa18b989597f",
@@ -4515,7 +4515,7 @@
       "node"
     ],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92224": {
     "commit": "c2c6e752f72498cc82814649f98046fbc3d74f46",
@@ -4528,7 +4528,7 @@
     "areas": ["cloudprovider"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92227": {
     "commit": "c232e4fae9c6059abc47ea0cf92fd815e79b038e",
@@ -4541,7 +4541,7 @@
     "areas": ["cloudprovider"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92257": {
     "commit": "e201c6b8df1f3d09ddfcf7c82e6b85eb8ddcbde9",
@@ -4554,7 +4554,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92268": {
     "commit": "8adcd7978edddaf64665504c75016ed227acf249",
@@ -4575,7 +4575,7 @@
     "sigs": ["instrumentation", "scheduling"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92310": {
     "commit": "2234e2b9db382f3d3fa312c9701750e0ad8899ae",
@@ -4596,7 +4596,7 @@
     "kinds": ["feature"],
     "sigs": ["cli"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92329": {
     "commit": "da37b7ff2b4aa340c7bd6e367e87ff72224f5ab0",
@@ -4611,7 +4611,7 @@
     "sigs": ["api-machinery"],
     "feature": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92330": {
     "commit": "981f6751f858d8b9360bc11310bbc5eb1761469a",
@@ -4624,7 +4624,7 @@
     "areas": ["provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92331": {
     "commit": "70302466f4deeef5838cc420e770b2f9e2fe1425",
@@ -4638,7 +4638,7 @@
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "storage"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92339": {
     "commit": "6316f4f5828a57d348eb37014174cc30756f2a20",
@@ -4651,7 +4651,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92349": {
     "commit": "f9ad7db9a61d73411b2927707ec04bc25f7f4166",
@@ -4665,7 +4665,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "cloud-provider", "cluster-lifecycle", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92350": {
     "commit": "f6eeab819c3f9ebbba973eb1ccffc69401d8930e",
@@ -4679,7 +4679,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "cloud-provider"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92356": {
     "commit": "27687161d9ac0566c64a6db6f1fa2d393b6fd2f8",
@@ -4694,7 +4694,7 @@
     "sigs": ["cloud-provider", "storage"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92387": {
     "commit": "94a08e159aa2820ac2a0d96daa66421cfa17058f",
@@ -4722,7 +4722,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92391": {
     "commit": "4fc5c1eda2e0e87b4bff23b9e3e36118d0363b7d",
@@ -4737,7 +4737,7 @@
     "sigs": ["scheduling", "testing"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92407": {
     "commit": "f7b79c4ca45d9bfd3afa671e5ab4482a0c190530",
@@ -4752,7 +4752,7 @@
     "sigs": ["api-machinery", "cluster-lifecycle", "instrumentation", "node"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92438": {
     "commit": "4de511a4cfdb8e49e804be18245911bf3270fb2f",
@@ -4790,7 +4790,7 @@
     ],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92440": {
     "commit": "a5b0e4419631d30daa1c76527dc8c9976042c289",
@@ -4803,7 +4803,7 @@
     "kinds": ["feature"],
     "sigs": ["network"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92442": {
     "commit": "93e76f50815acef86ccecbc29e9cf25474052dea",
@@ -4817,7 +4817,7 @@
     "kinds": ["bug"],
     "sigs": ["node", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92501": {
     "commit": "281023790fd27eec7bfaa7e26ff1efd45a95fb09",
@@ -4831,7 +4831,7 @@
     "kinds": ["cleanup"],
     "sigs": ["release", "scheduling", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92513": {
     "commit": "2585d78c79054a6d85620eb5430a1498bb747967",
@@ -4844,7 +4844,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "cli"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92531": {
     "commit": "c5941e283fd7e37e953832d6743e7ea3b556ab7a",
@@ -4856,7 +4856,7 @@
     "pr_number": 92531,
     "kinds": ["bug"],
     "sigs": ["scheduling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92537": {
     "commit": "ed06981eab5e037b7d5b090b257054abb4d42ea0",
@@ -4870,7 +4870,7 @@
     "kinds": ["api-change", "bug"],
     "sigs": ["api-machinery"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92546": {
     "commit": "a28e807c832cfd054c4c7767a27e380a5f0bed05",
@@ -4883,7 +4883,7 @@
     "areas": ["custom-resources"],
     "kinds": ["cleanup"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92572": {
     "commit": "4670138c957841d0dd906dad155da670bf7ddc28",
@@ -4896,7 +4896,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92576": {
     "commit": "8b9c9eade3447a9c2d0ac089bd960dc71996cb84",
@@ -4909,7 +4909,7 @@
     "areas": ["kubectl"],
     "kinds": ["bug"],
     "sigs": ["cli"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92604": {
     "commit": "19883b50f80399225b72f826ad345bd8b411cb58",
@@ -4921,7 +4921,7 @@
     "pr_number": 92604,
     "kinds": ["bug"],
     "sigs": ["scheduling"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92609": {
     "commit": "d3aafb231b3c4460fc82f47185e2c3f7074282c2",
@@ -4935,7 +4935,7 @@
     "kinds": ["feature"],
     "sigs": ["network"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92610": {
     "commit": "88c1386e0cd39e1939a923e44e799bc639ee4275",
@@ -4949,7 +4949,7 @@
     "kinds": ["cleanup"],
     "sigs": ["cluster-lifecycle"],
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92644": {
     "commit": "4c853bb28f57f87fbb2c1c6f2845c701d90c2350",
@@ -4963,7 +4963,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92650": {
     "commit": "15a9430ae5b773171fbfbd41cd10284b66e1ab96",
@@ -4977,7 +4977,7 @@
     "sigs": ["instrumentation", "scheduling"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92651": {
     "commit": "3727879ea5941acd9f7ecfc93aa65be176f778bc",
@@ -4994,7 +4994,7 @@
     "duplicate": true,
     "duplicate_kind": true,
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92660": {
     "commit": "cada2eb74d66bc2f7a80541d9a47980ba9e72d93",
@@ -5007,7 +5007,7 @@
     "areas": ["code-generation"],
     "kinds": ["api-change"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92661": {
     "commit": "49dced762da7bc9f74474e9f8f3efe198ff46767",
@@ -5029,7 +5029,7 @@
     ],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92665": {
     "commit": "efb56da4a5f8cf1f775ee20dbfbf78cbf13978e9",
@@ -5051,7 +5051,7 @@
     "sigs": ["node", "testing"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92667": {
     "commit": "f7a13de36c4584464adc991c7a3d1f38f610232e",
@@ -5067,7 +5067,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92681": {
     "commit": "1e360540f8e63e706bf92a63d8a28b0444e13d30",
@@ -5080,7 +5080,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92716": {
     "commit": "bf94f27e76c541db57098ed69aea47d889703669",
@@ -5093,7 +5093,7 @@
     "areas": ["kubeadm"],
     "kinds": ["cleanup"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92718": {
     "commit": "a2978e3ddb1ce167366536aab312a25ca7d22d5d",
@@ -5106,7 +5106,7 @@
     "areas": ["provider/gcp"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92720": {
     "commit": "046ac5100ed723697457fef1d1acb5b5c9214fad",
@@ -5119,7 +5119,7 @@
     "areas": ["kubeadm", "security"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92736": {
     "commit": "10aeb93e07fa4ea2bacd39b5832b36ade868a726",
@@ -5132,7 +5132,7 @@
     "kinds": ["feature"],
     "sigs": ["network"],
     "feature": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92740": {
     "commit": "af29f81af6f5afc0ad48cd2d3d5472a9ca4d4cc8",
@@ -5145,7 +5145,7 @@
     "areas": ["kubeadm"],
     "kinds": ["deprecation"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92753": {
     "commit": "82baa26905c94398a0d19e1b1ecf54eb8acb6029",
@@ -5158,7 +5158,7 @@
     "areas": ["kubeadm"],
     "kinds": ["bug"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92784": {
     "commit": "0cb7e320a5bbd0bbd4fe32c9c88956058160376c",
@@ -5196,7 +5196,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92786": {
     "commit": "a26e5881d8aa38aaa0a56c78050fd4ea14611c9f",
@@ -5210,7 +5210,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery", "auth", "node"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92791": {
     "commit": "429f968988f8756761af3364f00a287f0374b379",
@@ -5223,7 +5223,7 @@
     "areas": ["apiserver"],
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92793": {
     "commit": "b9da08a33ebde3aa73c5fd999888dd29dd4aad87",
@@ -5236,7 +5236,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92816": {
     "commit": "5a5cb56e11c8fdc223b3438f5170bf02381337f9",
@@ -5250,7 +5250,7 @@
     "sigs": ["cloud-provider", "storage"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92824": {
     "commit": "c9c5c23634937b6e27283ae68d37f92608a988f3",
@@ -5263,7 +5263,7 @@
     "areas": ["cloudprovider", "dependency"],
     "kinds": ["cleanup"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92825": {
     "commit": "23903c7f7c3094e453a8eacb9bc8d35b0d6d29d5",
@@ -5278,7 +5278,7 @@
     "sigs": ["cloud-provider", "storage"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92836": {
     "commit": "76e3b255e19a0aa9b2d81facdcf6987ed90a5cd2",
@@ -5291,7 +5291,7 @@
     "kinds": ["cleanup", "failing-test", "flake"],
     "sigs": ["network"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92838": {
     "commit": "67ec4b3cd73dc541e7d8996a8b7d2a98357544f7",
@@ -5304,7 +5304,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92842": {
     "commit": "71bfb73751964a82b50c79860dfd6bf72f4fcd24",
@@ -5319,7 +5319,7 @@
     "sigs": ["api-machinery", "instrumentation"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92881": {
     "commit": "f41a20444a58f7318a4bdb7d3c18499706d92c63",
@@ -5332,7 +5332,7 @@
     "areas": ["kubeadm"],
     "kinds": ["deprecation"],
     "sigs": ["cluster-lifecycle"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92905": {
     "commit": "539b0a5a0f8c1d96ee6752f2aa5d6d949eb0f513",
@@ -5347,7 +5347,7 @@
     "sigs": ["cloud-provider", "storage"],
     "duplicate": true,
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92910": {
     "commit": "7d1daa09383d32fe7a325d6275d9bd51cba45ee5",
@@ -5360,7 +5360,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "cli"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92916": {
     "commit": "8398bc3b53cb51b341e14ae2a2cea01cedbf7904",
@@ -5373,7 +5373,7 @@
     "areas": ["kubelet"],
     "kinds": ["bug"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92919": {
     "commit": "6b5dc3770851fdc1f356e36fd17810c744181fb1",
@@ -5394,7 +5394,7 @@
       "node"
     ],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92941": {
     "commit": "dcf60e04ddd6c50c8bf9b0c9d913bf82bff44333",
@@ -5407,7 +5407,7 @@
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
     "action_required": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "92986": {
     "commit": "d9c3d15018b0bb3733b887b55430355dddbb65af",
@@ -5421,7 +5421,7 @@
     "kinds": ["bug"],
     "sigs": ["node", "storage"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93034": {
     "commit": "75b555241578ac60cbdef21e01604f2bba8d040d",
@@ -5434,7 +5434,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93043": {
     "commit": "0a7050f531f8fa4de19e8aa4feb274aee4d8340c",
@@ -5447,7 +5447,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93052": {
     "commit": "58893f34432e68a53b7abefcb9b924b22f8a3867",
@@ -5461,7 +5461,7 @@
     "kinds": ["bug"],
     "sigs": ["cloud-provider", "storage"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93080": {
     "commit": "7ace19b2ee7fd33859856a3fa659698a4aba7024",
@@ -5474,7 +5474,7 @@
     "areas": ["dependency"],
     "kinds": ["bug"],
     "sigs": ["network"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93088": {
     "commit": "afecf524ddc1da091fea466ec443183e5fded77b",
@@ -5488,7 +5488,7 @@
     "kinds": ["cleanup"],
     "sigs": ["release", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93107": {
     "commit": "5df1e53dac1c6d85e6954ffb9548ec458fb6718c",
@@ -5501,7 +5501,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93121": {
     "commit": "4804fbe4c157795769bfd9ec6ee021c5d98e76a7",
@@ -5515,7 +5515,7 @@
     "kinds": ["cleanup"],
     "sigs": ["cloud-provider", "scheduling"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93189": {
     "commit": "b6174e605fd6e23b48131dec9e45043b38372c3c",
@@ -5528,7 +5528,7 @@
     "areas": ["kubelet"],
     "kinds": ["bug"],
     "sigs": ["node"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93198": {
     "commit": "363c3b89f570142da5c43b1ccbd99629f03e0ee0",
@@ -5542,7 +5542,7 @@
     "kinds": ["cleanup"],
     "sigs": ["release", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93256": {
     "commit": "b467072a55ae35afc5678ffbbbdf8ce36da421a7",
@@ -5556,7 +5556,7 @@
     "sigs": ["instrumentation", "scheduling"],
     "feature": true,
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93263": {
     "commit": "1fdd8fb213e0361e8f18b1dd152dddb4c88ad183",
@@ -5570,7 +5570,7 @@
     "kinds": ["bug"],
     "sigs": ["node", "windows"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93264": {
     "commit": "9a20f30745477423e8776bb0d05316c00648f49b",
@@ -5611,7 +5611,7 @@
     "feature": true,
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93316": {
     "commit": "e6ee924f6c7973d6e864547f115a85d0c2623e2a",
@@ -5624,7 +5624,7 @@
     "areas": ["cloudprovider", "provider/azure"],
     "kinds": ["bug"],
     "sigs": ["cloud-provider"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93408": {
     "commit": "c0ec2eee41794796dee230f75478602b707f2be2",
@@ -5636,7 +5636,7 @@
     "pr_number": 93408,
     "kinds": ["bug"],
     "sigs": ["api-machinery"],
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93442": {
     "commit": "9d8a87b5c76c19032d1ba0ed4d72eae429e99928",
@@ -5649,7 +5649,7 @@
     "kinds": ["bug"],
     "sigs": ["apps", "network"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93570": {
     "commit": "b7d44329f3514a65af9048224329a4897cf4d31d",
@@ -5663,7 +5663,7 @@
     "sigs": ["api-machinery", "apps", "cluster-lifecycle"],
     "duplicate": true,
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93600": {
     "commit": "ec560b9737537be8c688776461bc700e8ddedb9d",
@@ -5677,7 +5677,7 @@
     "kinds": ["bug", "regression"],
     "sigs": ["api-machinery"],
     "duplicate_kind": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "93667": {
     "commit": "c3816157f97cc068600b0dbebdbe80733ee5c3eb",
@@ -5691,7 +5691,7 @@
     "kinds": ["cleanup"],
     "sigs": ["api-machinery", "release", "testing"],
     "duplicate": true,
-    "release_version": "v1.19.0"
+    "release_version": "1.19.0"
   },
   "89069": {
     "commit": "f899ad704ae6bd87560a3e21b9cfbb8bdeef404e",
