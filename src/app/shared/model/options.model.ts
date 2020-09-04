@@ -85,7 +85,18 @@ export class Options {
     [OptionType.areas, OptionType.kinds, OptionType.sigs, OptionType.documentation].forEach(x =>
       this.sort_set(x),
     );
-    this.sort_set(OptionType.releaseVersions, (a, b) => (a < b ? 1 : -1));
+    this.sort_set(OptionType.releaseVersions, (a, b) =>
+      a
+        .split('.')
+        .map(n => +n + 100000)
+        .join('.') <
+      b
+        .split('.')
+        .map(n => +n + 100000)
+        .join('.')
+        ? 1
+        : -1,
+    );
   }
 
   /**
