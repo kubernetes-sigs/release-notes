@@ -5705,6 +5705,7 @@
     "kinds": ["cleanup", "deprecation"],
     "sigs": ["api-machinery", "auth", "cluster-lifecycle", "scalability", "scheduling", "testing"],
     "duplicate": true,
-    "action_required": true
+    "action_required": true,
+    "release_version": "1.19.0"
   }
 }
