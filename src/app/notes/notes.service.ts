@@ -65,6 +65,11 @@ export class NotesService {
    * @returns The release version
    */
   private releaseVersionFromPath(path: string): string {
-    return path.replace(/^.*release-notes-/, '').replace(/.json$/, '');
+    // Enforce asset path syntax
+    const regex = /^.*release-notes-[0-9]\.[0-9]+\.[0-9]+.*\.json$/;
+    if (!path.match(regex)) {
+      throw new Error(`Asset path "${path}" does not match regex ${regex}`);
+    }
+    return path.replace(/^.*release-notes-/, '').replace(/\.json$/, '');
   }
 }
