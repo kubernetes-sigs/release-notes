@@ -1,0 +1,68 @@
+{
+  "71746": {
+    "commit": "b4a02c359b79bb6b612b8d862364763a790f52b9",
+    "text": "Expand kubectl wait to work with more types of selectors.",
+    "markdown": "Expand kubectl wait to work with more types of selectors. ([#71746](https://github.com/kubernetes/kubernetes/pull/71746), [@rctl](https://github.com/rctl)) Courtesy of SIG CLI, and SIG Testing",
+    "author": "rctl",
+    "author_url": "https://github.com/rctl",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/71746",
+    "pr_number": 71746,
+    "areas": ["kubectl"],
+    "kinds": ["feature"],
+    "sigs": ["cli", "testing"],
+    "feature": true,
+    "release_version": "1.14.0"
+  },
+  "72832": {
+    "commit": "235b32e8ad978d0ef0b801baacb5bdecd6e2d5f7",
+    "text": "The CustomPodDNS feature gate has graduated to GA, and can no longer be disabled. The feature gate will be removed in v1.16",
+    "markdown": "The CustomPodDNS feature gate has graduated to GA, and can no longer be disabled. The feature gate will be removed in v1.16 ([#72832](https://github.com/kubernetes/kubernetes/pull/72832), [@MrHohn](https://github.com/MrHohn)) Courtesy of SIG Apps, SIG Network, and SIG Node",
+    "author": "MrHohn",
+    "author_url": "https://github.com/MrHohn",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/72832",
+    "pr_number": 72832,
+    "areas": ["kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["apps", "network", "node"],
+    "feature": true,
+    "release_version": "1.14.0"
+  },
+  "59176": {
+    "commit": "73ccf56edd86924a6043f8b682777854a5d79efd",
+    "text": "exit kube-proxy when configuration file changes",
+    "markdown": "exit kube-proxy when configuration file changes ([#59176](https://github.com/kubernetes/kubernetes/pull/59176), [@dixudx](https://github.com/dixudx))",
+    "author": "dixudx",
+    "author_url": "https://github.com/dixudx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/59176",
+    "pr_number": 59176,
+    "sigs": ["cluster-lifecycle", "testing"],
+    "duplicate": true,
+    "release_version": "1.14.0"
+  },
+  "73250": {
+    "commit": "46b2255e97580ca5908770affb768ab2ed4dbf65",
+    "text": "The `rules` field in RBAC Role and ClusterRole objects is now correctly reported as optional in the openapi schema.",
+    "markdown": "The `rules` field in RBAC Role and ClusterRole objects is now correctly reported as optional in the openapi schema. ([#73250](https://github.com/kubernetes/kubernetes/pull/73250), [@liggitt](https://github.com/liggitt))",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/73250",
+    "pr_number": 73250,
+    "kinds": ["api-change", "bug"],
+    "sigs": ["architecture", "auth"],
+    "duplicate": true,
+    "release_version": "1.14.0"
+  },
+  "70309": {
+    "commit": "b0a455b8119b15bad1ddfe2c67fca5b212163740",
+    "text": "AWS ELB health checks will now use HTTPS/SSL protocol for HTTPS/SSL backends.",
+    "markdown": "AWS ELB health checks will now use HTTPS/SSL protocol for HTTPS/SSL backends. ([#70309](https://github.com/kubernetes/kubernetes/pull/70309), [@2rs2ts](https://github.com/2rs2ts))",
+    "author": "2rs2ts",
+    "author_url": "https://github.com/2rs2ts",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/70309",
+    "pr_number": 70309,
+    "kinds": ["bug"],
+    "sigs": ["aws", "cloud-provider"],
+    "duplicate": true,
+    "release_version": "1.14.0"
+  }
+}

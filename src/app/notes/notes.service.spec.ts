@@ -25,6 +25,11 @@ describe('NotesService', () => {
   });
 
   it('should succeed to convert to note list', () => {
-    expect(service.toNoteList([notesMock, notesMock])).toEqual(notesMock.concat(notesMock));
+    expect(
+      service.toNoteList([
+        [notesMock, '0.1.0'],
+        [notesMock, '0.2.0'],
+      ]),
+    ).toEqual(notesMock.concat(notesMock));
   });
 });

@@ -1,0 +1,78 @@
+{
+  "60771": {
+    "commit": "d1e7bb297c02bbbcb46dd7eeebae41cd042bb48c",
+    "text": "Fixes a bug where the kube-apiserver won't start if a broken webhook is installed and the client ca configmap is empty",
+    "markdown": "Fixes a bug where the kube-apiserver won't start if a broken webhook is installed and the client ca configmap is empty ([#60771](https://github.com/kubernetes/kubernetes/pull/60771), [@jennybuckley](https://github.com/jennybuckley))",
+    "author": "jennybuckley",
+    "author_url": "https://github.com/jennybuckley",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/60771",
+    "pr_number": 60771,
+    "areas": ["apiserver", "test"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "testing"],
+    "duplicate": true,
+    "release_version": "1.15.0"
+  },
+  "62159": {
+    "commit": "ec89794c843751899547a685f6579bca86e52e59",
+    "text": "fix bug for regular empty file",
+    "markdown": "fix bug for regular empty file ([#62159](https://github.com/kubernetes/kubernetes/pull/62159), [@dixudx](https://github.com/dixudx))",
+    "author": "dixudx",
+    "author_url": "https://github.com/dixudx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/62159",
+    "pr_number": 62159,
+    "kinds": ["bug"],
+    "sigs": ["storage"],
+    "release_version": "1.15.0"
+  },
+  "65782": {
+    "commit": "e67c266a72bf7b379a2b283a9989804f2282bac5",
+    "text": "Implementing deduplication logic for v1beta1.Event API",
+    "markdown": "Implementing deduplication logic for v1beta1.Event API ([#65782](https://github.com/kubernetes/kubernetes/pull/65782), [@yastij](https://github.com/yastij))",
+    "author": "yastij",
+    "author_url": "https://github.com/yastij",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/65782",
+    "pr_number": 65782,
+    "areas": ["apiserver", "dependency", "release-eng"],
+    "sigs": ["api-machinery", "release"],
+    "duplicate": true,
+    "release_version": "1.15.0"
+  },
+  "66635": {
+    "commit": "4e397d971a72f5bc6dbffbacca7297f17e17c572",
+    "text": "The `system:aws-cloud-provider` cluster role, deprecated in v1.13, is no longer auto-created. Deployments using the AWS cloud provider should grant required permissions to the `aws-cloud-provider` service account in the `kube-system` namespace as part of deployment. ",
+    "markdown": "The `system:aws-cloud-provider` cluster role, deprecated in v1.13, is no longer auto-created. Deployments using the AWS cloud provider should grant required permissions to the `aws-cloud-provider` service account in the `kube-system` namespace as part of deployment.  ([#66635](https://github.com/kubernetes/kubernetes/pull/66635), [@wgliang](https://github.com/wgliang))",
+    "author": "wgliang",
+    "author_url": "https://github.com/wgliang",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/66635",
+    "pr_number": 66635,
+    "sigs": ["auth", "aws", "cloud-provider"],
+    "duplicate": true,
+    "release_version": "1.15.0"
+  },
+  "66928": {
+    "commit": "cf76868b3430be015cc1e8443a216bf863a9b9f7",
+    "text": "kubelet now allows use of XFS quotas (on XFS and suitably configured ext4fs filesystems) to monitor storage consumption for ephemeral storage (currently for emptydir volumes only).  This method of monitoring consumption is faster and more accurate than the old method of walking the filesystem tree.  It does not enforce limits, only monitors consumption.  To utilize this functionality, you must set the feature  gate `LocalStorageCapacityIsolationFSQuotaMonitoring=true`. For ext4fs filesystems, you must create the\nfilesystem with `mkfs.ext4 -O project \u003cblock_device\u003e` and run `tune2fs -Q prjquota `block device`; XFS\nfilesystems need no additional preparation.  The filesystem must be mounted with option `project` in\n`/etc/fstab`.  If your primary partition is the root filesystem, you must also add `rootflags=pquota` to your\nGRUB config file.",
+    "markdown": "kubelet now allows use of XFS quotas (on XFS and suitably configured ext4fs filesystems) to monitor storage consumption for ephemeral storage (currently for emptydir volumes only).  This method of monitoring consumption is faster and more accurate than the old method of walking the filesystem tree.  It does not enforce limits, only monitors consumption.  To utilize this functionality, you must set the feature  gate `LocalStorageCapacityIsolationFSQuotaMonitoring=true`. For ext4fs filesystems, you must create the\nfilesystem with `mkfs.ext4 -O project \u003cblock_device\u003e` and run `tune2fs -Q prjquota `block device`; XFS\nfilesystems need no additional preparation.  The filesystem must be mounted with option `project` in\n`/etc/fstab`.  If your primary partition is the root filesystem, you must also add `rootflags=pquota` to your\nGRUB config file. ([#66928](https://github.com/kubernetes/kubernetes/pull/66928), [@RobertKrawitz](https://github.com/RobertKrawitz)) Courtesy of SIG API Machinery, SIG Apps, SIG CLI, SIG Cloud Provider, SIG Cluster Lifecycle, SIG Node, SIG Release, SIG Scheduling, SIG Storage, and SIG Testing",
+    "author": "RobertKrawitz",
+    "author_url": "https://github.com/RobertKrawitz",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/66928",
+    "pr_number": 66928,
+    "areas": ["apiserver", "kubeadm", "kubectl", "kubelet", "test"],
+    "kinds": ["feature"],
+    "sigs": [
+      "api-machinery",
+      "apps",
+      "cli",
+      "cloud-provider",
+      "cluster-lifecycle",
+      "node",
+      "release",
+      "scheduling",
+      "storage",
+      "testing"
+    ],
+    "feature": true,
+    "release_version": "1.15.0"
+  }
+}
