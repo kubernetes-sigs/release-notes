@@ -1,0 +1,39 @@
+{
+  "94367": {
+    "commit": "de697e7fe8aad8ab88f61e7d68fe383a208ea75a",
+    "text": "Update CNI plugins to v0.8.7",
+    "markdown": "Update CNI plugins to v0.8.7 ([#94367](https://github.com/kubernetes/kubernetes/pull/94367), [@justaugustus](https://github.com/justaugustus)) [SIG Cloud Provider, Network, Node, Release and Testing]",
+    "author": "justaugustus",
+    "author_url": "https://github.com/justaugustus",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94367",
+    "pr_number": 94367,
+    "areas": ["dependency", "provider/gcp", "release-eng", "test"],
+    "kinds": ["cleanup"],
+    "sigs": ["cloud-provider", "network", "node", "release", "testing"],
+    "duplicate": true
+  },
+  "94580": {
+    "commit": "19706d90d877845f3ef0788241698e0257214b9b",
+    "text": "Fixed a panic in kubectl debug when pod has multiple init containers or ephemeral containers",
+    "markdown": "Fixed a panic in kubectl debug when pod has multiple init containers or ephemeral containers ([#94580](https://github.com/kubernetes/kubernetes/pull/94580), [@kiyoshim55](https://github.com/kiyoshim55)) [SIG CLI]",
+    "author": "kiyoshim55",
+    "author_url": "https://github.com/kiyoshim55",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94580",
+    "pr_number": 94580,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"]
+  },
+  "94654": {
+    "commit": "0f098f50f5ee85a36c7dc8d5829ceb411b7ca8f7",
+    "text": "Fix conversions for custom metrics.",
+    "markdown": "Fix conversions for custom metrics. ([#94654](https://github.com/kubernetes/kubernetes/pull/94654), [@wojtek-t](https://github.com/wojtek-t)) [SIG Instrumentation]",
+    "author": "wojtek-t",
+    "author_url": "https://github.com/wojtek-t",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94654",
+    "pr_number": 94654,
+    "kinds": ["api-change", "bug"],
+    "sigs": ["instrumentation"],
+    "duplicate_kind": true
+  }
+}
