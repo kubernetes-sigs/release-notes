@@ -1,0 +1,123 @@
+{
+  "90227": {
+    "commit": "db1127b9317001f33eba9bc7e366f06bdba402f7",
+    "text": "Fix kubectl printer to correctly handle timestamps of events emitted using events.k8s.io API",
+    "markdown": "Fix kubectl printer to correctly handle timestamps of events emitted using events.k8s.io API ([#90227](https://github.com/kubernetes/kubernetes/pull/90227), [@gosoon](https://github.com/gosoon)) [SIG CLI]",
+    "author": "gosoon",
+    "author_url": "https://github.com/gosoon",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/90227",
+    "pr_number": 90227,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"]
+  },
+  "94666": {
+    "commit": "09e5ba1d2db61f077e748f96a6e296991548dfa9",
+    "text": "Do not fail sorting empty elements.",
+    "markdown": "Do not fail sorting empty elements. ([#94666](https://github.com/kubernetes/kubernetes/pull/94666), [@soltysh](https://github.com/soltysh)) [SIG CLI]",
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94666",
+    "pr_number": 94666,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"]
+  },
+  "94817": {
+    "commit": "007a5fbcc53dc2e4fdfee8b3154f1a1588614ab6",
+    "text": "Fix etcd_object_counts metric reported by kube-apiserver",
+    "markdown": "Fix etcd_object_counts metric reported by kube-apiserver ([#94817](https://github.com/kubernetes/kubernetes/pull/94817), [@tkashem](https://github.com/tkashem)) [SIG API Machinery]",
+    "author": "tkashem",
+    "author_url": "https://github.com/tkashem",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94817",
+    "pr_number": 94817,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "94885": {
+    "commit": "19a5249b7e00242554ba2bed7eb4654099c948f0",
+    "text": "fix: detach azure disk broken on Azure Stack",
+    "markdown": "Fix: detach azure disk broken on Azure Stack ([#94885](https://github.com/kubernetes/kubernetes/pull/94885), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94885",
+    "pr_number": 94885,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "94935": {
+    "commit": "ce6c18577e3b2e7f92ccbc8b1bdbb97560b2e9b7",
+    "text": "Fixed a bug where improper storage and comparison of endpoints led to excessive API traffic from the endpoints controller",
+    "markdown": "Fixed a bug where improper storage and comparison of endpoints led to excessive API traffic from the endpoints controller ([#94935](https://github.com/kubernetes/kubernetes/pull/94935), [@damemi](https://github.com/damemi)) [SIG Apps, Network and Testing]",
+    "author": "damemi",
+    "author_url": "https://github.com/damemi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94935",
+    "pr_number": 94935,
+    "areas": ["test"],
+    "kinds": ["bug"],
+    "sigs": ["apps", "network", "testing"],
+    "duplicate": true
+  },
+  "94988": {
+    "commit": "222082fe7cf7badd0c9437e198aea45cb3ce6a00",
+    "text": "kubeadm: warn but do not error out on missing \"ca.key\" files for root CA, front-proxy CA and etcd CA, during \"kubeadm join --control-plane\" if the user has provided all certificates, keys and kubeconfig files which require signing with the given CA keys.",
+    "markdown": "Kubeadm: warn but do not error out on missing \"ca.key\" files for root CA, front-proxy CA and etcd CA, during \"kubeadm join --control-plane\" if the user has provided all certificates, keys and kubeconfig files which require signing with the given CA keys. ([#94988](https://github.com/kubernetes/kubernetes/pull/94988), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94988",
+    "pr_number": 94988,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"]
+  },
+  "95177": {
+    "commit": "a825051f3b1aa0398fb160862114ce5ea6df7a8d",
+    "text": "fix detach azure disk issue when vm not exist",
+    "markdown": "Fix detach azure disk issue when vm not exist ([#95177](https://github.com/kubernetes/kubernetes/pull/95177), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95177",
+    "pr_number": 95177,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "95245": {
+    "commit": "744dec9d5d21b577e96d0d850f576a6a9f21819d",
+    "text": "Masks ceph RBD adminSecrets in logs when logLevel \u003e= 4",
+    "markdown": "Masks ceph RBD adminSecrets in logs when logLevel \u003e= 4 ([#95245](https://github.com/kubernetes/kubernetes/pull/95245), [@sfowl](https://github.com/sfowl)) [SIG Storage]",
+    "author": "sfowl",
+    "author_url": "https://github.com/sfowl",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95245",
+    "pr_number": 95245,
+    "kinds": ["cleanup"],
+    "sigs": ["storage"]
+  },
+  "95348": {
+    "commit": "3083d19435a209039f7d0bee00581877fa0bfe1e",
+    "text": "Prevent logging of docker config contents if file is malformed",
+    "markdown": "Prevent logging of docker config contents if file is malformed ([#95348](https://github.com/kubernetes/kubernetes/pull/95348), [@sfowl](https://github.com/sfowl)) [SIG Auth and Node]",
+    "author": "sfowl",
+    "author_url": "https://github.com/sfowl",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95348",
+    "pr_number": 95348,
+    "kinds": ["design"],
+    "sigs": ["auth", "node"],
+    "duplicate": true
+  },
+  "95376": {
+    "commit": "4a28e05c65265915ce8418c84205323fc5540852",
+    "text": "Fix the `cloudprovider_azure_api_request_duration_seconds` metric buckets to correctly capture the latency metrics. Previously, the majority of the calls would fall in the \"+Inf\" bucket.",
+    "markdown": "Fix the `cloudprovider_azure_api_request_duration_seconds` metric buckets to correctly capture the latency metrics. Previously, the majority of the calls would fall in the \"+Inf\" bucket. ([#95376](https://github.com/kubernetes/kubernetes/pull/95376), [@marwanad](https://github.com/marwanad)) [SIG Cloud Provider and Instrumentation]",
+    "author": "marwanad",
+    "author_url": "https://github.com/marwanad",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95376",
+    "pr_number": 95376,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "instrumentation"],
+    "duplicate": true
+  }
+}
