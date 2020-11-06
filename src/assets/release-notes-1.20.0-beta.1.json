@@ -1,0 +1,344 @@
+{
+  "92343": {
+    "commit": "5937e7eef7352921fde6324eba2db96fa32966d9",
+    "text": "kubectl: print error if users place flags before plugin name",
+    "markdown": "Kubectl: print error if users place flags before plugin name ([#92343](https://github.com/kubernetes/kubernetes/pull/92343), [@knight42](https://github.com/knight42)) [SIG CLI]",
+    "author": "knight42",
+    "author_url": "https://github.com/knight42",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/92343",
+    "pr_number": 92343,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"]
+  },
+  "92998": {
+    "commit": "0446ecaa812b5ab4c907e0e946a30b0c2ff27507",
+    "text": "kubectl: the `generator` flag of `kubectl autoscale` has been deprecated and has no effect, it will be removed in a feature release",
+    "markdown": "Kubectl: the `generator` flag of `kubectl autoscale` has been deprecated and has no effect, it will be removed in a feature release ([#92998](https://github.com/kubernetes/kubernetes/pull/92998), [@SataQiu](https://github.com/SataQiu)) [SIG CLI]",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/92998",
+    "pr_number": 92998,
+    "areas": ["kubectl"],
+    "kinds": ["cleanup"],
+    "sigs": ["cli"]
+  },
+  "93166": {
+    "commit": "24a9d07bf810c846a79444cb4ea4adee90d4a821",
+    "text": "Added support to kube-proxy for externalTrafficPolicy=Local setting via Direct Server Return (DSR) load balancers on Windows.",
+    "markdown": "Added support to kube-proxy for externalTrafficPolicy=Local setting via Direct Server Return (DSR) load balancers on Windows. ([#93166](https://github.com/kubernetes/kubernetes/pull/93166), [@elweb9858](https://github.com/elweb9858)) [SIG Network]",
+    "author": "elweb9858",
+    "author_url": "https://github.com/elweb9858",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/93166",
+    "pr_number": 93166,
+    "kinds": ["bug"],
+    "sigs": ["network"]
+  },
+  "93244": {
+    "commit": "6af838c3d1027f41d286ef21b2e52ae60315a358",
+    "text": "kube-apiserver: The timeout used when making health check calls to etcd can now be configured with `--etcd-healthcheck-timeout`. The default timeout is 2 seconds, matching the previous behavior.",
+    "markdown": "Kube-apiserver: The timeout used when making health check calls to etcd can now be configured with `--etcd-healthcheck-timeout`. The default timeout is 2 seconds, matching the previous behavior. ([#93244](https://github.com/kubernetes/kubernetes/pull/93244), [@Sh4d1](https://github.com/Sh4d1)) [SIG API Machinery]",
+    "author": "Sh4d1",
+    "author_url": "https://github.com/Sh4d1",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/93244",
+    "pr_number": 93244,
+    "areas": ["apiserver"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery"],
+    "feature": true
+  },
+  "93258": {
+    "commit": "bf67247124363a3767190999d7795fe86edad9dc",
+    "text": "+ `TokenRequest` and `TokenRequestProjection` features have been promoted to GA. This feature allows generating service account tokens that are not visible in Secret objects and are tied to the lifetime of a Pod object. See https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/\u0026#35;service-account-token-volume-projection for details on configuring and using this feature. The `TokenRequest` and `TokenRequestProjection` feature gates will be removed in v1.21.\n+ kubeadm's kube-apiserver Pod manifest now includes the following flags by default \"--service-account-key-file\", \"--service-account-signing-key-file\", \"--service-account-issuer\".",
+    "markdown": "+ `TokenRequest` and `TokenRequestProjection` features have been promoted to GA. This feature allows generating service account tokens that are not visible in Secret objects and are tied to the lifetime of a Pod object. See https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/\u0026#35;service-account-token-volume-projection for details on configuring and using this feature. The `TokenRequest` and `TokenRequestProjection` feature gates will be removed in v1.21.\n  + kubeadm's kube-apiserver Pod manifest now includes the following flags by default \"--service-account-key-file\", \"--service-account-signing-key-file\", \"--service-account-issuer\". ([#93258](https://github.com/kubernetes/kubernetes/pull/93258), [@zshihang](https://github.com/zshihang)) [SIG API Machinery, Auth, Cluster Lifecycle, Storage and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/blob/master/keps/sig-auth/1205-bound-service-account-tokens/README.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "zshihang",
+    "author_url": "https://github.com/zshihang",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/93258",
+    "pr_number": 93258,
+    "areas": ["apiserver", "kubeadm", "test"],
+    "kinds": ["api-change"],
+    "sigs": ["api-machinery", "auth", "cluster-lifecycle", "storage", "testing"],
+    "duplicate": true
+  },
+  "94066": {
+    "commit": "5ee72a49cbc6665bcf71d3970614cf97d9f838a7",
+    "text": "kube-apiserver: added support for compressing rotated audit log files with `--audit-log-compress`",
+    "markdown": "Kube-apiserver: added support for compressing rotated audit log files with `--audit-log-compress` ([#94066](https://github.com/kubernetes/kubernetes/pull/94066), [@lojies](https://github.com/lojies)) [SIG API Machinery and Auth]",
+    "author": "lojies",
+    "author_url": "https://github.com/lojies",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94066",
+    "pr_number": 94066,
+    "areas": ["apiserver"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "auth"],
+    "feature": true,
+    "duplicate": true
+  },
+  "95117": {
+    "commit": "c5ecae737d2eb668adab12cefa3644f550fc9e8a",
+    "text": "fake dynamic client: document that List does not preserve TypeMeta in UnstructuredList",
+    "markdown": "Fake dynamic client: document that List does not preserve TypeMeta in UnstructuredList ([#95117](https://github.com/kubernetes/kubernetes/pull/95117), [@andrewsykim](https://github.com/andrewsykim)) [SIG API Machinery]",
+    "author": "andrewsykim",
+    "author_url": "https://github.com/andrewsykim",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95117",
+    "pr_number": 95117,
+    "kinds": ["documentation"],
+    "sigs": ["api-machinery"]
+  },
+  "95196": {
+    "commit": "e91cb0b1b5fde130ab6ee9dad672f090aad90016",
+    "text": "Certain fields on  Service objects will be automatically cleared when changing the service's `type` to a mode that does not need those fields.  For example, changing from type=LoadBalancer to type=ClusterIP will clear the NodePort assignments, rather than forcing the user to clear them.",
+    "markdown": "Certain fields on  Service objects will be automatically cleared when changing the service's `type` to a mode that does not need those fields.  For example, changing from type=LoadBalancer to type=ClusterIP will clear the NodePort assignments, rather than forcing the user to clear them. ([#95196](https://github.com/kubernetes/kubernetes/pull/95196), [@thockin](https://github.com/thockin)) [SIG API Machinery, Apps, Network and Testing]",
+    "author": "thockin",
+    "author_url": "https://github.com/thockin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95196",
+    "pr_number": 95196,
+    "areas": ["test"],
+    "kinds": ["api-change", "bug"],
+    "sigs": ["api-machinery", "apps", "network", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "95207": {
+    "commit": "3b51cd1b1e9529d541a46bf754f40bc2f24dba8b",
+    "text": "A new metric `apiserver_request_filter_duration_seconds` has been introduced that \nmeasures request filter latency in seconds.",
+    "markdown": "A new metric `apiserver_request_filter_duration_seconds` has been introduced that \n  measures request filter latency in seconds. ([#95207](https://github.com/kubernetes/kubernetes/pull/95207), [@tkashem](https://github.com/tkashem)) [SIG API Machinery and Instrumentation]",
+    "author": "tkashem",
+    "author_url": "https://github.com/tkashem",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95207",
+    "pr_number": 95207,
+    "areas": ["apiserver"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "instrumentation"],
+    "feature": true,
+    "duplicate": true
+  },
+  "95489": {
+    "commit": "53913a7c676c4bd21d6d3a58e6d6305729abaa9b",
+    "text": "client-go credential plugins can now be passed in the current cluster information via the KUBERNETES_EXEC_INFO environment variable.",
+    "markdown": "Client-go credential plugins can now be passed in the current cluster information via the KUBERNETES_EXEC_INFO environment variable. ([#95489](https://github.com/kubernetes/kubernetes/pull/95489), [@ankeesler](https://github.com/ankeesler)) [SIG API Machinery and Auth]",
+    "documentation": [
+      {
+        "description": "Need to update",
+        "url": "https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins",
+        "type": "official"
+      }
+    ],
+    "author": "ankeesler",
+    "author_url": "https://github.com/ankeesler",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95489",
+    "pr_number": 95489,
+    "areas": ["apiserver", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "auth"],
+    "feature": true,
+    "duplicate": true
+  },
+  "95531": {
+    "commit": "ad6a2af7d8bc33a440e6c2edd399fb2bf291e36b",
+    "text": "`MatchNodeSelectorTerms` function moved to `k8s.io/component-helpers`",
+    "markdown": "`MatchNodeSelectorTerms` function moved to `k8s.io/component-helpers` ([#95531](https://github.com/kubernetes/kubernetes/pull/95531), [@damemi](https://github.com/damemi)) [SIG Apps, Scheduling and Storage]",
+    "author": "damemi",
+    "author_url": "https://github.com/damemi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95531",
+    "pr_number": 95531,
+    "areas": ["dependency"],
+    "kinds": ["cleanup"],
+    "sigs": ["apps", "scheduling", "storage"],
+    "duplicate": true
+  },
+  "95603": {
+    "commit": "9a4dfec2be193a864ec5b98c4043394dbe7251c6",
+    "text": "Introduce api-extensions category which will return: mutating admission configs, validating admission configs, CRDs and APIServices when used in kubectl get, for example.",
+    "markdown": "Introduce api-extensions category which will return: mutating admission configs, validating admission configs, CRDs and APIServices when used in kubectl get, for example. ([#95603](https://github.com/kubernetes/kubernetes/pull/95603), [@soltysh](https://github.com/soltysh)) [SIG API Machinery]",
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95603",
+    "pr_number": 95603,
+    "kinds": ["feature"],
+    "sigs": ["api-machinery"],
+    "feature": true
+  },
+  "95641": {
+    "commit": "f315d49f74118fed4092f72fd4c9983664ddabac",
+    "text": "Changed: default \"Accept: */*\" header added to HTTP probes. See https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/\u0026#35;http-probes (https://github.com/kubernetes/website/pull/24756)",
+    "markdown": "Changed: default \"Accept: */*\" header added to HTTP probes. See https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/\u0026#35;http-probes (https://github.com/kubernetes/website/pull/24756) ([#95641](https://github.com/kubernetes/kubernetes/pull/95641), [@fonsecas72](https://github.com/fonsecas72)) [SIG Network and Node]",
+    "author": "fonsecas72",
+    "author_url": "https://github.com/fonsecas72",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95641",
+    "pr_number": 95641,
+    "kinds": ["feature"],
+    "sigs": ["network", "node"],
+    "feature": true,
+    "duplicate": true
+  },
+  "95856": {
+    "commit": "1968e961653e10d121d6941fed2c9ca68d719554",
+    "text": "**Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.**:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "**Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.**:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#95856](https://github.com/kubernetes/kubernetes/pull/95856), [@knight42](https://github.com/knight42)) [SIG API Machinery, Node and Testing]",
+    "author": "knight42",
+    "author_url": "https://github.com/knight42",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95856",
+    "pr_number": 95856,
+    "areas": ["apiserver", "test"],
+    "kinds": ["cleanup", "deprecation"],
+    "sigs": ["api-machinery", "node", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true,
+    "action_required": true
+  },
+  "95871": {
+    "commit": "2729b8e375143434fc4977fe49eaea572567dac3",
+    "text": "v1helpers.MatchNodeSelectorTerms now accepts just a Node and a list of Terms",
+    "markdown": "V1helpers.MatchNodeSelectorTerms now accepts just a Node and a list of Terms ([#95871](https://github.com/kubernetes/kubernetes/pull/95871), [@damemi](https://github.com/damemi)) [SIG Apps, Scheduling and Storage]",
+    "author": "damemi",
+    "author_url": "https://github.com/damemi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95871",
+    "pr_number": 95871,
+    "kinds": ["cleanup"],
+    "sigs": ["apps", "scheduling", "storage"],
+    "duplicate": true
+  },
+  "95894": {
+    "commit": "f78d095d52a9fef3a9ae5355eb5af0d1d5088e9e",
+    "text": "Services will now have a `clusterIPs` field to go with `clusterIP`.  `clusterIPs[0]` is a synonym for `clusterIP` and will be syncronized on create and update operations.",
+    "markdown": "Services will now have a `clusterIPs` field to go with `clusterIP`.  `clusterIPs[0]` is a synonym for `clusterIP` and will be syncronized on create and update operations. ([#95894](https://github.com/kubernetes/kubernetes/pull/95894), [@thockin](https://github.com/thockin)) [SIG Network]",
+    "author": "thockin",
+    "author_url": "https://github.com/thockin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95894",
+    "pr_number": 95894,
+    "kinds": ["api-change", "bug"],
+    "sigs": ["network"],
+    "duplicate_kind": true
+  },
+  "95909": {
+    "commit": "096819c9635035abb4c4ec2bcaf4db8c35250cb7",
+    "text": "When creating a PVC with the volume.beta.kubernetes.io/storage-provisioner annotation already set, the PV controller might have incorrectly deleted the newly provisioned PV instead of binding it to the PVC, depending on timing and system load.",
+    "markdown": "When creating a PVC with the volume.beta.kubernetes.io/storage-provisioner annotation already set, the PV controller might have incorrectly deleted the newly provisioned PV instead of binding it to the PVC, depending on timing and system load. ([#95909](https://github.com/kubernetes/kubernetes/pull/95909), [@pohly](https://github.com/pohly)) [SIG Apps and Storage]",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95909",
+    "pr_number": 95909,
+    "kinds": ["bug"],
+    "sigs": ["apps", "storage"],
+    "duplicate": true
+  },
+  "95933": {
+    "commit": "cd99c63570eb1489dd631c12ea86db708dbdcd59",
+    "text": "Fix bug in JSON path parser where an error occurs when a range is empty",
+    "markdown": "Fix bug in JSON path parser where an error occurs when a range is empty ([#95933](https://github.com/kubernetes/kubernetes/pull/95933), [@brianpursley](https://github.com/brianpursley)) [SIG API Machinery]",
+    "author": "brianpursley",
+    "author_url": "https://github.com/brianpursley",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95933",
+    "pr_number": 95933,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "95961": {
+    "commit": "a69a4a4bf02248130b7aaacb74f031fe3faad485",
+    "text": "fix k8s.io/apimachinery/pkg/api/meta.SetStatusCondition to update ObservedGeneration",
+    "markdown": "Fix k8s.io/apimachinery/pkg/api/meta.SetStatusCondition to update ObservedGeneration ([#95961](https://github.com/kubernetes/kubernetes/pull/95961), [@KnicKnic](https://github.com/KnicKnic)) [SIG API Machinery]",
+    "author": "KnicKnic",
+    "author_url": "https://github.com/KnicKnic",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95961",
+    "pr_number": 95961,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "95985": {
+    "commit": "917dcbabe107dfe18c01791d3f58ec9c9cd411a4",
+    "text": "Fixed a regression which prevented pods with `docker/default` seccomp annotations from being created in 1.19 if a PodSecurityPolicy was in place which did not allow `runtime/default` seccomp profiles.",
+    "markdown": "Fixed a regression which prevented pods with `docker/default` seccomp annotations from being created in 1.19 if a PodSecurityPolicy was in place which did not allow `runtime/default` seccomp profiles. ([#95985](https://github.com/kubernetes/kubernetes/pull/95985), [@saschagrunert](https://github.com/saschagrunert)) [SIG Auth]",
+    "documentation": [
+      {
+        "description": "KEP",
+        "url": "https://github.com/kubernetes/enhancements/blob/d80faa7/keps/sig-node/20190717-seccomp-ga.md",
+        "type": "KEP"
+      }
+    ],
+    "author": "saschagrunert",
+    "author_url": "https://github.com/saschagrunert",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95985",
+    "pr_number": 95985,
+    "kinds": ["bug", "regression"],
+    "sigs": ["auth"],
+    "duplicate_kind": true
+  },
+  "96051": {
+    "commit": "2ee1003430ea42060b48de9b28ecab2ce846c366",
+    "text": "Add a new flag to set priority for the kubelet on Windows nodes so that workloads cannot overwhelm the node there by disrupting kubelet process.",
+    "markdown": "Add a new flag to set priority for the kubelet on Windows nodes so that workloads cannot overwhelm the node there by disrupting kubelet process. ([#96051](https://github.com/kubernetes/kubernetes/pull/96051), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla)) [SIG Node and Windows]",
+    "author": "ravisantoshgudimetla",
+    "author_url": "https://github.com/ravisantoshgudimetla",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96051",
+    "pr_number": 96051,
+    "areas": ["kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["node", "windows"],
+    "feature": true,
+    "duplicate": true
+  },
+  "96052": {
+    "commit": "d16112f76c454b0b08beaff440a4540f7f8eb469",
+    "text": "Disable watchcache for events",
+    "markdown": "Disable watchcache for events ([#96052](https://github.com/kubernetes/kubernetes/pull/96052), [@wojtek-t](https://github.com/wojtek-t)) [SIG API Machinery]",
+    "author": "wojtek-t",
+    "author_url": "https://github.com/wojtek-t",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96052",
+    "pr_number": 96052,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "96058": {
+    "commit": "3cfcf3a74fc24e6b4b3f58710fe454d1bc3644cc",
+    "text": "`kubectl debug` gains support for changing container images when copying a pod for debugging, similar to how `kubectl set image` works. See `kubectl help debug` for more information.",
+    "markdown": "`kubectl debug` gains support for changing container images when copying a pod for debugging, similar to how `kubectl set image` works. See `kubectl help debug` for more information. ([#96058](https://github.com/kubernetes/kubernetes/pull/96058), [@verb](https://github.com/verb)) [SIG CLI]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-cli/1441-kubectl-debug",
+        "type": "KEP"
+      }
+    ],
+    "author": "verb",
+    "author_url": "https://github.com/verb",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96058",
+    "pr_number": 96058,
+    "areas": ["kubectl"],
+    "kinds": ["feature"],
+    "sigs": ["cli"],
+    "feature": true
+  },
+  "96092": {
+    "commit": "43edb4063262751bbb6ba18daf3fe9582ae3b2f9",
+    "text": "Disabled `LocalStorageCapacityIsolation` feature gate is honored during scheduling.",
+    "markdown": "Disabled `LocalStorageCapacityIsolation` feature gate is honored during scheduling. ([#96092](https://github.com/kubernetes/kubernetes/pull/96092), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG Scheduling]",
+    "author": "Huang-Wei",
+    "author_url": "https://github.com/Huang-Wei",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96092",
+    "pr_number": 96092,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "96144": {
+    "commit": "2c1ede513d786eec9f942f2e8b5d351b2caa6245",
+    "text": "skip [k8s.io/kubernetes@v1.19.0/test/e2e/storage/testsuites/base.go:162]: Driver azure-disk doesn't support snapshot type DynamicSnapshot -- skipping\nskip [k8s.io/kubernetes@v1.19.0/test/e2e/storage/testsuites/base.go:185]: Driver azure-disk doesn't support ntfs -- skipping",
+    "markdown": "Skip [k8s.io/kubernetes@v1.19.0/test/e2e/storage/testsuites/base.go:162]: Driver azure-disk doesn't support snapshot type DynamicSnapshot -- skipping\n  skip [k8s.io/kubernetes@v1.19.0/test/e2e/storage/testsuites/base.go:185]: Driver azure-disk doesn't support ntfs -- skipping ([#96144](https://github.com/kubernetes/kubernetes/pull/96144), [@qinpingli](https://github.com/qinpingli)) [SIG Storage and Testing]",
+    "author": "qinpingli",
+    "author_url": "https://github.com/qinpingli",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96144",
+    "pr_number": 96144,
+    "areas": ["test"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "testing"],
+    "duplicate": true
+  }
+}
