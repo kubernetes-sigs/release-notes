@@ -1,0 +1,107 @@
+{
+  "89857": {
+    "commit": "75acfa2edc738e435b4778d941f6255273c28e5a",
+    "text": "kube-apiserver: multiple comma-separated protocols in a single X-Stream-Protocol-Version header are now recognized, in addition to multiple headers, complying with RFC2616",
+    "markdown": "Kube-apiserver: multiple comma-separated protocols in a single X-Stream-Protocol-Version header are now recognized, in addition to multiple headers, complying with RFC2616 ([#89857](https://github.com/kubernetes/kubernetes/pull/89857), [@tedyu](https://github.com/tedyu)) [SIG API Machinery]",
+    "author": "tedyu",
+    "author_url": "https://github.com/tedyu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/89857",
+    "pr_number": 89857,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "94107": {
+    "commit": "1a07c25dbc66ec0777a78d00d686efbddfedb5f8",
+    "text": "kube-proxy now trims extra spaces found in loadBalancerSourceRanges to match Service validation.",
+    "markdown": "Kube-proxy now trims extra spaces found in loadBalancerSourceRanges to match Service validation. ([#94107](https://github.com/kubernetes/kubernetes/pull/94107), [@robscott](https://github.com/robscott)) [SIG Network]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94107",
+    "pr_number": 94107,
+    "kinds": ["bug"],
+    "sigs": ["network"]
+  },
+  "94489": {
+    "commit": "1d87b9bb6799ec60823c3c6659d2f3d3534f50d8",
+    "text": "An issues preventing volume expand controller to annotate the PVC with `volume.kubernetes.io/storage-resizer` when the PVC StorageClass is already updated to the out-of-tree provisioner is now fixed.",
+    "markdown": "An issues preventing volume expand controller to annotate the PVC with `volume.kubernetes.io/storage-resizer` when the PVC StorageClass is already updated to the out-of-tree provisioner is now fixed. ([#94489](https://github.com/kubernetes/kubernetes/pull/94489), [@ialidzhikov](https://github.com/ialidzhikov)) [SIG API Machinery, Apps and Storage]",
+    "author": "ialidzhikov",
+    "author_url": "https://github.com/ialidzhikov",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94489",
+    "pr_number": 94489,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "apps", "storage"],
+    "duplicate": true
+  },
+  "94853": {
+    "commit": "cb44353350386abc3a2c53f2612ca6b8853ea51f",
+    "text": "fix azure file migration panic",
+    "markdown": "Fix azure file migration panic ([#94853](https://github.com/kubernetes/kubernetes/pull/94853), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/94853",
+    "pr_number": 94853,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "95260": {
+    "commit": "efe9c34311eb33697760adebc2031696e013099d",
+    "text": "Fixes high CPU usage in kubectl drain",
+    "markdown": "Fixes high CPU usage in kubectl drain ([#95260](https://github.com/kubernetes/kubernetes/pull/95260), [@amandahla](https://github.com/amandahla)) [SIG CLI]",
+    "author": "amandahla",
+    "author_url": "https://github.com/amandahla",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95260",
+    "pr_number": 95260,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"]
+  },
+  "95427": {
+    "commit": "97ec03fb316f04ebafce700c547e48fa07293cb3",
+    "text": "Fixed a bug in client-go where new clients with customized `Dial`, `Proxy`, `GetCert` config may get stale HTTP transports.",
+    "markdown": "Fixed a bug in client-go where new clients with customized `Dial`, `Proxy`, `GetCert` config may get stale HTTP transports. ([#95427](https://github.com/kubernetes/kubernetes/pull/95427), [@roycaihw](https://github.com/roycaihw)) [SIG API Machinery]",
+    "author": "roycaihw",
+    "author_url": "https://github.com/roycaihw",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95427",
+    "pr_number": 95427,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "95456": {
+    "commit": "a70c45e3b1926e789f680e3073a0d37a117cd36d",
+    "text": "fix azure disk data loss issue on Windows when unmount disk",
+    "markdown": "Fix azure disk data loss issue on Windows when unmount disk ([#95456](https://github.com/kubernetes/kubernetes/pull/95456), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider and Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95456",
+    "pr_number": 95456,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "storage"],
+    "duplicate": true
+  },
+  "95463": {
+    "commit": "2332b5c1a13877fb36198921dcaf958c22c77086",
+    "text": "fix azure disk attach failure for disk size bigger than 4TB",
+    "markdown": "Fix azure disk attach failure for disk size bigger than 4TB ([#95463](https://github.com/kubernetes/kubernetes/pull/95463), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95463",
+    "pr_number": 95463,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "96117": {
+    "commit": "56fd0fef0709a148d01faf37418aa2de25a47e6a",
+    "text": "Disable watchcache for events.k8.io/Event resource for compatibility with core/Event.",
+    "markdown": "Disable watchcache for events.k8.io/Event resource for compatibility with core/Event. ([#96117](https://github.com/kubernetes/kubernetes/pull/96117), [@wojtek-t](https://github.com/wojtek-t)) [SIG Scalability]",
+    "author": "wojtek-t",
+    "author_url": "https://github.com/wojtek-t",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96117",
+    "pr_number": 96117,
+    "kinds": ["bug"],
+    "sigs": ["scalability"]
+  }
+}
