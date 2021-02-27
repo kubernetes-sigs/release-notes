@@ -1,0 +1,61 @@
+{
+  "97013": {
+    "commit": "2e6adaa8735f3566d9ee1d6bea7de650b12d24c6",
+    "text": "Fixed FibreChannel volume plugin corrupting filesystems on detach of multipath volumes.",
+    "markdown": "Fixed FibreChannel volume plugin corrupting filesystems on detach of multipath volumes. ([#97013](https://github.com/kubernetes/kubernetes/pull/97013), [@jsafrane](https://github.com/jsafrane)) [SIG Storage]",
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97013",
+    "pr_number": 97013,
+    "kinds": ["bug"],
+    "sigs": ["storage"]
+  },
+  "97016": {
+    "commit": "6af63cd8ac4ed62c48b8abe511b7d9026f0a29c3",
+    "text": "kubeadm: Fixes a kubeadm upgrade bug that could cause a custom CoreDNS configuration to be replaced with the default.",
+    "markdown": "Kubeadm: Fixes a kubeadm upgrade bug that could cause a custom CoreDNS configuration to be replaced with the default. ([#97016](https://github.com/kubernetes/kubernetes/pull/97016), [@rajansandeep](https://github.com/rajansandeep)) [SIG Cluster Lifecycle]",
+    "author": "rajansandeep",
+    "author_url": "https://github.com/rajansandeep",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97016",
+    "pr_number": 97016,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"]
+  },
+  "97018": {
+    "commit": "27131c75720a40f9ede336365f0a3640f71c01bf",
+    "text": "AcceleratorStats will be available in the Summary API of kubelet when cri_stats_provider is used.",
+    "markdown": "AcceleratorStats will be available in the Summary API of kubelet when cri_stats_provider is used. ([#97018](https://github.com/kubernetes/kubernetes/pull/97018), [@ruiwen-zhao](https://github.com/ruiwen-zhao)) [SIG Node]",
+    "author": "ruiwen-zhao",
+    "author_url": "https://github.com/ruiwen-zhao",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97018",
+    "pr_number": 97018,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "97175": {
+    "commit": "75bdfd3be1ca27e4cde3b7f7233e2a92ca8e2e3f",
+    "text": "Fixed a bug in kubelet that will saturate CPU utilization after containerd got restarted.",
+    "markdown": "Fixed a bug in kubelet that will saturate CPU utilization after containerd got restarted. ([#97175](https://github.com/kubernetes/kubernetes/pull/97175), [@hanlins](https://github.com/hanlins)) [SIG Node]",
+    "author": "hanlins",
+    "author_url": "https://github.com/hanlins",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97175",
+    "pr_number": 97175,
+    "areas": ["dependency"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "97284": {
+    "commit": "79def505b4004ac3b14b2cd6ae68160ba3d9c0e8",
+    "text": "kubeadm now installs version 3.4.13 of etcd when creating a cluster with v1.19",
+    "markdown": "Kubeadm now installs version 3.4.13 of etcd when creating a cluster with v1.19 ([#97284](https://github.com/kubernetes/kubernetes/pull/97284), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97284",
+    "pr_number": 97284,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"]
+  }
+}
