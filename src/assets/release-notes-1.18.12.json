@@ -1,0 +1,14 @@
+{
+  "96474": {
+    "commit": "5414417eb833b0ebd34bddcf6d6094f963919fb4",
+    "text": "Metric names for CSI and flexvolume drivers will include the driver name as well as the CSI plugin name.",
+    "markdown": "Metric names for CSI and flexvolume drivers will include the driver name as well as the CSI plugin name. ([#96474](https://github.com/kubernetes/kubernetes/pull/96474), [@mattcary](https://github.com/mattcary)) [SIG Instrumentation and Storage]",
+    "author": "mattcary",
+    "author_url": "https://github.com/mattcary",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96474",
+    "pr_number": 96474,
+    "kinds": ["bug"],
+    "sigs": ["instrumentation", "storage"],
+    "duplicate": true
+  }
+}
