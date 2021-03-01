@@ -1,0 +1,110 @@
+{
+  "95316": {
+    "commit": "8463d625c784f0027029fa77b8e3cc0b366df726",
+    "text": "client-go header logging (at verbosity levels \u003e= 9) now masks `Authorization` header contents",
+    "markdown": "Client-go header logging (at verbosity levels \u003e= 9) now masks `Authorization` header contents ([#95316](https://github.com/kubernetes/kubernetes/pull/95316), [@sfowl](https://github.com/sfowl)) [SIG API Machinery]",
+    "author": "sfowl",
+    "author_url": "https://github.com/sfowl",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95316",
+    "pr_number": 95316,
+    "kinds": ["cleanup"],
+    "sigs": ["api-machinery"]
+  },
+  "95770": {
+    "commit": "88ff242d66afbfcd08f59591de8c68f79ac4ae96",
+    "text": "Remove ready file and its directory (which is created during volume SetUp) during emptyDir volume TearDown.",
+    "markdown": "Remove ready file and its directory (which is created during volume SetUp) during emptyDir volume TearDown. ([#95770](https://github.com/kubernetes/kubernetes/pull/95770), [@jingxu97](https://github.com/jingxu97)) [SIG Storage]",
+    "author": "jingxu97",
+    "author_url": "https://github.com/jingxu97",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95770",
+    "pr_number": 95770,
+    "kinds": ["bug"],
+    "sigs": ["storage"]
+  },
+  "95910": {
+    "commit": "e338cf2c6d297aa603b50ad3a301f761b4173aa6",
+    "text": "exposes and sets a default timeout for the SubjectAccessReview client for DelegatingAuthorizationOptions",
+    "markdown": "Exposes and sets a default timeout for the SubjectAccessReview client for DelegatingAuthorizationOptions ([#95910](https://github.com/kubernetes/kubernetes/pull/95910), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery and Cloud Provider]",
+    "author": "p0lyn0mial",
+    "author_url": "https://github.com/p0lyn0mial",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95910",
+    "pr_number": 95910,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "cloud-provider"],
+    "duplicate": true
+  },
+  "96297": {
+    "commit": "0ca9e41100fbace1643c19d50dd9117b7ec46e7f",
+    "text": "fix the panic when kubelet registers if a node object already exists with no Status.Capacity or Status.Allocatable",
+    "markdown": "Fix the panic when kubelet registers if a node object already exists with no Status.Capacity or Status.Allocatable ([#96297](https://github.com/kubernetes/kubernetes/pull/96297), [@SataQiu](https://github.com/SataQiu)) [SIG Node]",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96297",
+    "pr_number": 96297,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "96850": {
+    "commit": "2b45e9febc44ea3753e6fdb3b9f37a98dfbecd43",
+    "text": "volumebinding: report UnschedulableAndUnresolvable status instead of an error when PVC not found",
+    "markdown": "Volumebinding: report UnschedulableAndUnresolvable status instead of an error when PVC not found ([#96850](https://github.com/kubernetes/kubernetes/pull/96850), [@cofyc](https://github.com/cofyc)) [SIG Scheduling and Storage]",
+    "author": "cofyc",
+    "author_url": "https://github.com/cofyc",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96850",
+    "pr_number": 96850,
+    "kinds": ["bug"],
+    "sigs": ["scheduling", "storage"],
+    "duplicate": true
+  },
+  "97013": {
+    "commit": "7f39880d02b17cad03004843addf5825a510fc1d",
+    "text": "Fixed FibreChannel volume plugin corrupting filesystems on detach of multipath volumes.",
+    "markdown": "Fixed FibreChannel volume plugin corrupting filesystems on detach of multipath volumes. ([#97013](https://github.com/kubernetes/kubernetes/pull/97013), [@jsafrane](https://github.com/jsafrane)) [SIG Storage]",
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97013",
+    "pr_number": 97013,
+    "kinds": ["bug"],
+    "sigs": ["storage"]
+  },
+  "97017": {
+    "commit": "33612aec1395d3bd89e165e9a3c9cf28d8cc7350",
+    "text": "AcceleratorStats will be available in the Summary API of kubelet when cri_stats_provider is used.",
+    "markdown": "AcceleratorStats will be available in the Summary API of kubelet when cri_stats_provider is used. ([#97017](https://github.com/kubernetes/kubernetes/pull/97017), [@ruiwen-zhao](https://github.com/ruiwen-zhao)) [SIG Node]",
+    "author": "ruiwen-zhao",
+    "author_url": "https://github.com/ruiwen-zhao",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97017",
+    "pr_number": 97017,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "97176": {
+    "commit": "bc9a352fe400ebe5fb4fab2e3a5450838f43877a",
+    "text": "Fixed a bug in kubelet that will saturate CPU utilization after containerd got restarted.",
+    "markdown": "Fixed a bug in kubelet that will saturate CPU utilization after containerd got restarted. ([#97176](https://github.com/kubernetes/kubernetes/pull/97176), [@hanlins](https://github.com/hanlins)) [SIG Node]",
+    "author": "hanlins",
+    "author_url": "https://github.com/hanlins",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97176",
+    "pr_number": 97176,
+    "areas": ["dependency"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "97246": {
+    "commit": "9509687f7a1bdf95be51cedb2d48367a7d79b7a2",
+    "text": "Kubernetes is now built using go1.15.5\n- build: Update to k/repo-infra@v0.1.3 (supports go1.15.5)",
+    "markdown": "Kubernetes is now built using go1.15.5\n  - build: Update to k/repo-infra@v0.1.3 (supports go1.15.5) ([#97246](https://github.com/kubernetes/kubernetes/pull/97246), [@justaugustus](https://github.com/justaugustus)) [SIG Cloud Provider, Release and Testing]",
+    "author": "justaugustus",
+    "author_url": "https://github.com/justaugustus",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97246",
+    "pr_number": 97246,
+    "areas": ["dependency", "provider/gcp", "release-eng", "security", "test"],
+    "kinds": ["feature"],
+    "sigs": ["cloud-provider", "release", "testing"],
+    "feature": true,
+    "duplicate": true
+  }
+}
