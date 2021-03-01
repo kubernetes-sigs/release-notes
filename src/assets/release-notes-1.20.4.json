@@ -1,0 +1,16 @@
+{
+  "99081": {
+    "commit": "7b505449b58b944acec206c54659739e398be49f",
+    "text": "NONE",
+    "markdown": "NONE ([#99081](https://github.com/kubernetes/kubernetes/pull/99081), [@heyste](https://github.com/heyste)) [SIG Architecture, Scheduling and Testing]",
+    "author": "heyste",
+    "author_url": "https://github.com/heyste",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99081",
+    "pr_number": 99081,
+    "areas": ["conformance", "release-eng", "test"],
+    "kinds": ["cleanup"],
+    "sigs": ["architecture", "scheduling", "testing"],
+    "duplicate": true,
+    "do_not_publish": true
+  }
+}
