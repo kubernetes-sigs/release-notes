@@ -1,0 +1,101 @@
+{
+  "97006": {
+    "commit": "14aae2068246cecefe795cd0e191300a94646337",
+    "text": "Fix missing cadvisor machine metrics.",
+    "markdown": "Fix missing cadvisor machine metrics. ([#97006](https://github.com/kubernetes/kubernetes/pull/97006), [@lingsamuel](https://github.com/lingsamuel)) [SIG Node]",
+    "author": "lingsamuel",
+    "author_url": "https://github.com/lingsamuel",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97006",
+    "pr_number": 97006,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "97082": {
+    "commit": "7ba16016e29427c6f7cdcf66133c1aea1d79201a",
+    "text": "fix: azure file latency issue for metadata-heavy workloads",
+    "markdown": "Fix: azure file latency issue for metadata-heavy workloads ([#97082](https://github.com/kubernetes/kubernetes/pull/97082), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider and Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97082",
+    "pr_number": 97082,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "storage"],
+    "duplicate": true
+  },
+  "97417": {
+    "commit": "49b1bd0d4671470427a36dcf5fb2ea19436c64a6",
+    "text": "fix Azure file share not deleted issue when the namespace is deleted",
+    "markdown": "Fix Azure file share not deleted issue when the namespace is deleted ([#97417](https://github.com/kubernetes/kubernetes/pull/97417), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider and Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97417",
+    "pr_number": 97417,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "storage"],
+    "duplicate": true
+  },
+  "97427": {
+    "commit": "1f38674b708c155ae6484761bd679589265c8a5b",
+    "text": "Fixed bug in CPUManager with race on container map access",
+    "markdown": "Fixed bug in CPUManager with race on container map access ([#97427](https://github.com/kubernetes/kubernetes/pull/97427), [@klueska](https://github.com/klueska)) [SIG Node]",
+    "author": "klueska",
+    "author_url": "https://github.com/klueska",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97427",
+    "pr_number": 97427,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "97740": {
+    "commit": "cd49890c836fa2e2c2b472f93b9c6ca535321d8b",
+    "text": "GCE Internal LoadBalancer sync loop will now release the ILB IP address upon sync failure. An error in ILB forwarding rule creation will no longer leak IP addresses.",
+    "markdown": "GCE Internal LoadBalancer sync loop will now release the ILB IP address upon sync failure. An error in ILB forwarding rule creation will no longer leak IP addresses. ([#97740](https://github.com/kubernetes/kubernetes/pull/97740), [@prameshj](https://github.com/prameshj)) [SIG Cloud Provider and Network]",
+    "author": "prameshj",
+    "author_url": "https://github.com/prameshj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97740",
+    "pr_number": 97740,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "network"],
+    "duplicate": true
+  },
+  "97828": {
+    "commit": "7d11fca8dc8ebd0ff9520ac3245518ddf06983c2",
+    "text": "fix counting error in service/nodeport/loadbalancer quota check",
+    "markdown": "Fix counting error in service/nodeport/loadbalancer quota check ([#97828](https://github.com/kubernetes/kubernetes/pull/97828), [@pacoxu](https://github.com/pacoxu)) [SIG API Machinery and Network]",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97828",
+    "pr_number": 97828,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "network"],
+    "duplicate": true
+  },
+  "97848": {
+    "commit": "f69a730e049c29ccb9abdfaecf907a1be2e6c313",
+    "text": "kubeadm: avoid detection of the container runtime for commands that do not need it",
+    "markdown": "Kubeadm: avoid detection of the container runtime for commands that do not need it ([#97848](https://github.com/kubernetes/kubernetes/pull/97848), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97848",
+    "pr_number": 97848,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"]
+  },
+  "97996": {
+    "commit": "88ee6d777fa343bfeec0cf5b7b0e83ef0bd8321d",
+    "text": "Avoid marking node as Ready until node has synced with API servers at least once",
+    "markdown": "Avoid marking node as Ready until node has synced with API servers at least once ([#97996](https://github.com/kubernetes/kubernetes/pull/97996), [@ehashman](https://github.com/ehashman)) [SIG Node]",
+    "author": "ehashman",
+    "author_url": "https://github.com/ehashman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97996",
+    "pr_number": 97996,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  }
+}
