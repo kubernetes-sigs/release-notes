@@ -1,0 +1,77 @@
+{
+  "97082": {
+    "commit": "883187a70121bfcbd09b7e67220d643004cfde31",
+    "text": "fix: azure file latency issue for metadata-heavy workloads",
+    "markdown": "Fix: azure file latency issue for metadata-heavy workloads ([#97082](https://github.com/kubernetes/kubernetes/pull/97082), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider and Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97082",
+    "pr_number": 97082,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "storage"],
+    "duplicate": true
+  },
+  "97417": {
+    "commit": "ff7724e814937a6c8a717c720b52e59365131294",
+    "text": "fix Azure file share not deleted issue when the namespace is deleted",
+    "markdown": "Fix Azure file share not deleted issue when the namespace is deleted ([#97417](https://github.com/kubernetes/kubernetes/pull/97417), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider and Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97417",
+    "pr_number": 97417,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "storage"],
+    "duplicate": true
+  },
+  "97427": {
+    "commit": "324937c63754fe2151b5984207680c051d320e4a",
+    "text": "Fixed bug in CPUManager with race on container map access",
+    "markdown": "Fixed bug in CPUManager with race on container map access ([#97427](https://github.com/kubernetes/kubernetes/pull/97427), [@klueska](https://github.com/klueska)) [SIG Node]",
+    "author": "klueska",
+    "author_url": "https://github.com/klueska",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97427",
+    "pr_number": 97427,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "97740": {
+    "commit": "9032005c85615254cad5a47d05471dafa4b451ae",
+    "text": "GCE Internal LoadBalancer sync loop will now release the ILB IP address upon sync failure. An error in ILB forwarding rule creation will no longer leak IP addresses.",
+    "markdown": "GCE Internal LoadBalancer sync loop will now release the ILB IP address upon sync failure. An error in ILB forwarding rule creation will no longer leak IP addresses. ([#97740](https://github.com/kubernetes/kubernetes/pull/97740), [@prameshj](https://github.com/prameshj)) [SIG Cloud Provider and Network]",
+    "author": "prameshj",
+    "author_url": "https://github.com/prameshj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97740",
+    "pr_number": 97740,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider", "network"],
+    "duplicate": true
+  },
+  "97829": {
+    "commit": "86f024826b25167f7ee1066999a9a4f6e9044573",
+    "text": "fix counting error in service/nodeport/loadbalancer quota check",
+    "markdown": "Fix counting error in service/nodeport/loadbalancer quota check ([#97829](https://github.com/kubernetes/kubernetes/pull/97829), [@pacoxu](https://github.com/pacoxu)) [SIG API Machinery and Network]",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97829",
+    "pr_number": 97829,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "network"],
+    "duplicate": true
+  },
+  "97849": {
+    "commit": "31a2434728adcbf71d379475c56d6afd14b93a9d",
+    "text": "kubeadm: avoid detection of the container runtime for commands that do not need it",
+    "markdown": "Kubeadm: avoid detection of the container runtime for commands that do not need it ([#97849](https://github.com/kubernetes/kubernetes/pull/97849), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97849",
+    "pr_number": 97849,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"]
+  }
+}

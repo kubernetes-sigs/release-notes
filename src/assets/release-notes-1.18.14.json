@@ -1,0 +1,60 @@
+{
+  "85920": {
+    "commit": "2946dbb17ec36bcea275d974459838ba3a9c14fa",
+    "text": "Cordoned nodes are now deregistered from AWS target groups.",
+    "markdown": "Cordoned nodes are now deregistered from AWS target groups. ([#85920](https://github.com/kubernetes/kubernetes/pull/85920), [@hoelzro](https://github.com/hoelzro)) [SIG Cloud Provider]",
+    "author": "hoelzro",
+    "author_url": "https://github.com/hoelzro",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/85920",
+    "pr_number": 85920,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "95316": {
+    "commit": "16bf87fc78f1e51bdb65a67b8981279f43786eba",
+    "text": "client-go header logging (at verbosity levels \u003e= 9) now masks `Authorization` header contents",
+    "markdown": "Client-go header logging (at verbosity levels \u003e= 9) now masks `Authorization` header contents ([#95316](https://github.com/kubernetes/kubernetes/pull/95316), [@sfowl](https://github.com/sfowl)) [SIG API Machinery]",
+    "author": "sfowl",
+    "author_url": "https://github.com/sfowl",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95316",
+    "pr_number": 95316,
+    "kinds": ["cleanup"],
+    "sigs": ["api-machinery"]
+  },
+  "95770": {
+    "commit": "6b60d02c5f740237ca2e90320ce1dbee5e561ba7",
+    "text": "Remove ready file and its directory (which is created during volume SetUp) during emptyDir volume TearDown.",
+    "markdown": "Remove ready file and its directory (which is created during volume SetUp) during emptyDir volume TearDown. ([#95770](https://github.com/kubernetes/kubernetes/pull/95770), [@jingxu97](https://github.com/jingxu97)) [SIG Storage]",
+    "author": "jingxu97",
+    "author_url": "https://github.com/jingxu97",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/95770",
+    "pr_number": 95770,
+    "kinds": ["bug"],
+    "sigs": ["storage"]
+  },
+  "96158": {
+    "commit": "4c00c3c459261e8ff3381c1070ddf798f0131956",
+    "text": "Add a new flag to set priority for the kubelet on Windows nodes so that workloads cannot overwhelm the node there by disrupting kubelet process.",
+    "markdown": "Add a new flag to set priority for the kubelet on Windows nodes so that workloads cannot overwhelm the node there by disrupting kubelet process. ([#96158](https://github.com/kubernetes/kubernetes/pull/96158), [@ravisantoshgudimetla](https://github.com/ravisantoshgudimetla)) [SIG Node]",
+    "author": "ravisantoshgudimetla",
+    "author_url": "https://github.com/ravisantoshgudimetla",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/96158",
+    "pr_number": 96158,
+    "areas": ["kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["node"],
+    "feature": true
+  },
+  "97013": {
+    "commit": "e33abf2608bcc6b667c08f8aa9c4679d5f02fb01",
+    "text": "Fixed FibreChannel volume plugin corrupting filesystems on detach of multipath volumes.",
+    "markdown": "Fixed FibreChannel volume plugin corrupting filesystems on detach of multipath volumes. ([#97013](https://github.com/kubernetes/kubernetes/pull/97013), [@jsafrane](https://github.com/jsafrane)) [SIG Storage]",
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/97013",
+    "pr_number": 97013,
+    "kinds": ["bug"],
+    "sigs": ["storage"]
+  }
+}
