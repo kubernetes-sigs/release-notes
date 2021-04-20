@@ -12,7 +12,7 @@ Local requirements:
 
 - node/npm
 - golang > 1.11 (to run the release-notes JSON tool)
-- `go get k8s.io/release/cmd/release-notes`
+- `git clone https://github.com/kubernetes-sigs/release-notes.git`
   (to generate any additional notes for development)
 
 Run `npm install && npm start` from the root dir to start up the angular
