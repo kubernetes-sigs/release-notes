@@ -1,4 +1,5 @@
 export const assets = [
+  'assets/release-notes-1.22.0-alpha.2.json',
   'assets/release-notes-1.21.0.json',
   'assets/release-notes-1.20.4.json',
   'assets/release-notes-1.20.3.json',
