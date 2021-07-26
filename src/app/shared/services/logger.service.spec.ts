@@ -15,9 +15,9 @@ describe('LoggerService', () => {
     injector = getTestBed();
     service = injector.inject(LoggerService);
 
-    spyOn(global.console, 'log').and.callThrough();
-    spyOn(global.console, 'warn').and.callThrough();
-    spyOn(global.console, 'error').and.callThrough();
+    jest.spyOn(global.console, 'log').and.callThrough();
+    jest.spyOn(global.console, 'warn').and.callThrough();
+    jest.spyOn(global.console, 'error').and.callThrough();
   });
 
   describe('error', () => {
