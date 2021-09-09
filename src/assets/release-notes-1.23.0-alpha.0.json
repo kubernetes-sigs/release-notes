@@ -1,0 +1,169 @@
+{
+  "101047": {
+    "commit": "76b09061362c789878fae5e7c3e0f65c82a40f50",
+    "text": "Fix winkernel kube-proxy to only use dual stack when host and networking supports it",
+    "markdown": "Fix winkernel kube-proxy to only use dual stack when host and networking supports it ([#101047](https://github.com/kubernetes/kubernetes/pull/101047), [@jsturtevant](https://github.com/jsturtevant)) [SIG Network and Windows]",
+    "author": "jsturtevant",
+    "author_url": "https://github.com/jsturtevant",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101047",
+    "pr_number": 101047,
+    "kinds": ["bug"],
+    "sigs": ["network", "windows"],
+    "duplicate": true
+  },
+  "101370": {
+    "commit": "4101c8b3cb3f8acc09e5bf04118a62910eb530ad",
+    "text": "Create HPA with follow：",
+    "markdown": "Create HPA with follow： ([#101370](https://github.com/kubernetes/kubernetes/pull/101370), [@RyanAoh](https://github.com/RyanAoh)) [SIG Autoscaling]",
+    "author": "RyanAoh",
+    "author_url": "https://github.com/RyanAoh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101370",
+    "pr_number": 101370,
+    "kinds": ["bug"],
+    "sigs": ["autoscaling"],
+    "do_not_publish": true
+  },
+  "103439": {
+    "commit": "d9b8c5f992cdeeda33180f5ac2683e9445cbc146",
+    "text": "Fixed azure disk translation issue due to lower case `managed` kind.",
+    "markdown": "Fixed azure disk translation issue due to lower case `managed` kind. ([#103439](https://github.com/kubernetes/kubernetes/pull/103439), [@andyzhangx](https://github.com/andyzhangx))",
+    "documentation": [
+      {
+        "description": "follow guide",
+        "url": "https://docs.microsoft.com/en-us/azure/virtual-machines/windows/convert-unmanaged-to-managed-disks",
+        "type": "external"
+      }
+    ],
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103439",
+    "pr_number": 103439,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "cloud-provider"],
+    "duplicate": true
+  },
+  "103654": {
+    "commit": "b09bbd808ae3a4101897f3036214604a36ba6f6c",
+    "text": "The `constants/variables` from k8s.io for STABLE metrics is now supported.",
+    "markdown": "The `constants/variables` from k8s.io for STABLE metrics is now supported. ([#103654](https://github.com/kubernetes/kubernetes/pull/103654), [@coffeepac](https://github.com/coffeepac))",
+    "author": "coffeepac",
+    "author_url": "https://github.com/coffeepac",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103654",
+    "pr_number": 103654,
+    "areas": ["test", "kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["node", "auth", "instrumentation", "testing"],
+    "feature": true,
+    "duplicate": true
+  },
+  "103703": {
+    "commit": "7fd021ba6af9f7466acd1cc104e5d46bc7e6cd6f",
+    "text": "Aggregated roles no longer include write access to EndpointSlices. This rolls back part of a change that was introduced earlier in the Kubernetes 1.22 cycle.",
+    "markdown": "Aggregated roles no longer include write access to EndpointSlices. This rolls back part of a change that was introduced earlier in the Kubernetes 1.22 cycle. ([#103703](https://github.com/kubernetes/kubernetes/pull/103703), [@robscott](https://github.com/robscott)) [SIG Auth and Network]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103703",
+    "pr_number": 103703,
+    "kinds": ["bug"],
+    "sigs": ["network", "auth"],
+    "duplicate": true
+  },
+  "103704": {
+    "commit": "e847b849c4d170b872d6020bfc2263d02c05e369",
+    "text": "The `system:aggregate-to-edit` role no longer includes write access to the Endpoints API. For new Kubernetes 1.22 clusters, the `edit` and `admin` roles will no longer include that access in newly created Kubernetes 1.22 clusters. This will have no affect on existing clusters upgrading to Kubernetes 1.22. To retain write access to Endpoints in the aggregated `edit` and `admin` roles for newly created 1.22 clusters, refer to https://github.com/kubernetes/website/pull/29025.",
+    "markdown": "The `system:aggregate-to-edit` role no longer includes write access to the Endpoints API. For new Kubernetes 1.22 clusters, the `edit` and `admin` roles will no longer include that access in newly created Kubernetes 1.22 clusters. This will have no affect on existing clusters upgrading to Kubernetes 1.22. To retain write access to Endpoints in the aggregated `edit` and `admin` roles for newly created 1.22 clusters, refer to https://github.com/kubernetes/website/pull/29025. ([#103704](https://github.com/kubernetes/kubernetes/pull/103704), [@robscott](https://github.com/robscott)) [SIG Auth and Network]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103704",
+    "pr_number": 103704,
+    "kinds": ["bug"],
+    "sigs": ["network", "auth"],
+    "duplicate": true
+  },
+  "103747": {
+    "commit": "7303b2ce4e0de8d97e677eee880fa12b4d4939c1",
+    "text": "Revert addition of Add PersistentVolumeClaimDeletePoilcy to StatefulSet API.",
+    "markdown": "Revert addition of Add PersistentVolumeClaimDeletePoilcy to StatefulSet API. ([#103747](https://github.com/kubernetes/kubernetes/pull/103747), [@mattcary](https://github.com/mattcary)) [SIG API Machinery and Apps]",
+    "author": "mattcary",
+    "author_url": "https://github.com/mattcary",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103747",
+    "pr_number": 103747,
+    "kinds": ["bug", "api-change"],
+    "sigs": ["api-machinery", "apps"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "103751": {
+    "commit": "3d1076ebf310820a2e6163a48f1485e1ab2d670b",
+    "text": "Scheduler resource metrics over fractional binary quantities (2.5Gi, 1.1Ki) were incorrectly reported as very small values.",
+    "markdown": "Scheduler resource metrics over fractional binary quantities (2.5Gi, 1.1Ki) were incorrectly reported as very small values. ([#103751](https://github.com/kubernetes/kubernetes/pull/103751), [@y-tag](https://github.com/y-tag)) [SIG API Machinery and Scheduling]",
+    "author": "y-tag",
+    "author_url": "https://github.com/y-tag",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103751",
+    "pr_number": 103751,
+    "kinds": ["bug"],
+    "sigs": ["scheduling", "api-machinery"],
+    "duplicate": true
+  },
+  "103785": {
+    "commit": "9f47110aa29094ed2878cf1d85874cb59214664a",
+    "text": "The reason and message fields for pod status are no longer reset unless the phase also changes.",
+    "markdown": "The reason and message fields for pod status are no longer reset unless the phase also changes. ([#103785](https://github.com/kubernetes/kubernetes/pull/103785), [@smarterclayton](https://github.com/smarterclayton)) [SIG Node]",
+    "author": "smarterclayton",
+    "author_url": "https://github.com/smarterclayton",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103785",
+    "pr_number": 103785,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "103793": {
+    "commit": "e2b6816953c9c52b98c129a3e9c2dac4ee925ef0",
+    "text": "Deprecate `apiserver_longrunning_gauge` and `apiserver_register_watchers` in 1.23.0.",
+    "markdown": "Deprecate `apiserver_longrunning_gauge` and `apiserver_register_watchers` in 1.23.0. ([#103793](https://github.com/kubernetes/kubernetes/pull/103793), [@yan-lgtm](https://github.com/yan-lgtm))",
+    "author": "yan-lgtm",
+    "author_url": "https://github.com/yan-lgtm",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103793",
+    "pr_number": 103793,
+    "areas": ["apiserver"],
+    "kinds": ["cleanup"],
+    "sigs": ["api-machinery", "cluster-lifecycle", "instrumentation"],
+    "duplicate": true
+  },
+  "103794": {
+    "commit": "9f09064104e097efc1fd03fd920b3dee5929e2f5",
+    "text": "fix: Provide IPv6 support for internal load balancer.",
+    "markdown": "Fix: Provide IPv6 support for internal load balancer. ([#103794](https://github.com/kubernetes/kubernetes/pull/103794), [@nilo19](https://github.com/nilo19))",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103794",
+    "pr_number": 103794,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "103801": {
+    "commit": "019e8f71b6a83eb548148f42a4a6ca4ff54c58e2",
+    "text": "kubeadm: external etcd endpoints passed in the `ClusterConfiguration` that have Unicode characters are no longer IDNA encoded (converted to Punycode). They are now just URL encoded as per Go's implementation of RFC-3986, have duplicate \"/\" removed from the URL paths, and passed like that directly to the `kube-apiserver` `--etcd-servers` flag. If you have etcd endpoints that have Unicode characters, it is advisable to encode them in advance with tooling that is fully IDNA compliant. If you don't do that, the Go standard library (used in k8s and etcd) would do it for you when making requests to the endpoints.",
+    "markdown": "Kubeadm: external etcd endpoints passed in the `ClusterConfiguration` that have Unicode characters are no longer IDNA encoded (converted to Punycode). They are now just URL encoded as per Go's implementation of RFC-3986, have duplicate \"/\" removed from the URL paths, and passed like that directly to the `kube-apiserver` `--etcd-servers` flag. If you have etcd endpoints that have Unicode characters, it is advisable to encode them in advance with tooling that is fully IDNA compliant. If you don't do that, the Go standard library (used in k8s and etcd) would do it for you when making requests to the endpoints. ([#103801](https://github.com/kubernetes/kubernetes/pull/103801), [@gkarthiks](https://github.com/gkarthiks))",
+    "author": "gkarthiks",
+    "author_url": "https://github.com/gkarthiks",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103801",
+    "pr_number": 103801,
+    "areas": ["kubeadm", "dependency", "code-organization"],
+    "kinds": ["cleanup"],
+    "sigs": ["cluster-lifecycle"]
+  },
+  "98913": {
+    "commit": "38239d3025d916f739c6f588925491a9d83df5bf",
+    "text": "Update `migratecmd/kube-proxy/app` logs to structured logging.",
+    "markdown": "Update `migratecmd/kube-proxy/app` logs to structured logging. ([#98913](https://github.com/kubernetes/kubernetes/pull/98913), [@yxxhero](https://github.com/yxxhero))",
+    "author": "yxxhero",
+    "author_url": "https://github.com/yxxhero",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/98913",
+    "pr_number": 98913,
+    "kinds": ["cleanup"],
+    "sigs": ["network"]
+  }
+}
