@@ -2,7 +2,7 @@
   "100125": {
     "commit": "0734820279ccce8c6034d9d122392fe3a0c7535e",
     "text": "kube-apiserver: events created via the `events.k8s.io` API group for cluster-scoped objects are now permitted in the default namespace as well for compatibility with events clients and the `v1` API",
-    "markdown": "Kube-apiserver: events created via the `events.k8s.io` API group for cluster-scoped objects are now permitted in the default namespace as well for compatibility with events clients and the `v1` API ([#100125](https://github.com/kubernetes/kubernetes/pull/100125), [@h4ghhh](https://github.com/h4ghhh)) [SIG API Machinery, Apps and Testing]",
+    "markdown": "Kube-apiserver: events created via the `events.k8s.io` API group for cluster-scoped objects are now permitted in the default namespace as well for compatibility with events clients and the `v1` API ([#100125](https://github.com/kubernetes/kubernetes/pull/100125), [@h4ghhh](https://github.com/h4ghhh))",
     "author": "h4ghhh",
     "author_url": "https://github.com/h4ghhh",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/100125",
@@ -15,7 +15,7 @@
   "102242": {
     "commit": "a48a2efbd45ad77901dd09f2665d8cc1e1d8dbf6",
     "text": "Remove 'master' as a valid EgressSelection type in the EgressSelectorConfiguration API.",
-    "markdown": "Remove 'master' as a valid EgressSelection type in the EgressSelectorConfiguration API. ([#102242](https://github.com/kubernetes/kubernetes/pull/102242), [@pacoxu](https://github.com/pacoxu)) [SIG API Machinery and Cloud Provider]",
+    "markdown": "Remove 'master' as a valid EgressSelection type in the EgressSelectorConfiguration API. ([#102242](https://github.com/kubernetes/kubernetes/pull/102242), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/102242",
@@ -28,8 +28,8 @@
   },
   "103172": {
     "commit": "fed612c9f8e00cc2d228bbe7afa66f4623085916",
-    "text": "The deprecated --experimental-bootstrap-kubeconfig flag has been removed.\nThis can be set via --bootstrap-kubeconfig.",
-    "markdown": "The deprecated --experimental-bootstrap-kubeconfig flag has been removed.\n  This can be set via --bootstrap-kubeconfig. ([#103172](https://github.com/kubernetes/kubernetes/pull/103172), [@niulechuan](https://github.com/niulechuan)) [SIG Node]",
+    "text": "The deprecated `--experimental-bootstrap-kubeconfig` flag has been removed.\nThis can be set via `--bootstrap-kubeconfig`.",
+    "markdown": "The deprecated `--experimental-bootstrap-kubeconfig` flag has been removed.\n  This can be set via `--bootstrap-kubeconfig`. ([#103172](https://github.com/kubernetes/kubernetes/pull/103172), [@niulechuan](https://github.com/niulechuan))",
     "author": "niulechuan",
     "author_url": "https://github.com/niulechuan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103172",
@@ -40,8 +40,8 @@
   },
   "103174": {
     "commit": "16823fceb00fc19bbb15bbefd063bf07d66ee96a",
-    "text": "Changes behaviour of kube-proxy start; does not attempt to set specific sysctl values (which does not work in recent Kernel versions anymore in non-init namespaces), when the current sysctl values are already set higher.",
-    "markdown": "Changes behaviour of kube-proxy start; does not attempt to set specific sysctl values (which does not work in recent Kernel versions anymore in non-init namespaces), when the current sysctl values are already set higher. ([#103174](https://github.com/kubernetes/kubernetes/pull/103174), [@Napsty](https://github.com/Napsty)) [SIG Network]",
+    "text": "Changes behaviour of kube-proxy start; does not attempt to set specific `sysctl` values (which does not work in recent Kernel versions anymore in non-init namespaces), when the current sysctl values are already set higher.",
+    "markdown": "Changes behaviour of kube-proxy start; does not attempt to set specific `sysctl` values (which does not work in recent Kernel versions anymore in non-init namespaces), when the current sysctl values are already set higher. ([#103174](https://github.com/kubernetes/kubernetes/pull/103174), [@Napsty](https://github.com/Napsty))",
     "author": "Napsty",
     "author_url": "https://github.com/Napsty",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/103174",
@@ -52,7 +52,7 @@
   "104163": {
     "commit": "e8653fe24a8517120b2a3cfb94c4a9ed36591cd9",
     "text": "The `SupportPodPidsLimit` and  `SupportNodePidsLimit` feature gates that are GA since v1.20 are unconditionally enabled, and can no longer be specified via the `--feature-gates` argument.",
-    "markdown": "The `SupportPodPidsLimit` and  `SupportNodePidsLimit` feature gates that are GA since v1.20 are unconditionally enabled, and can no longer be specified via the `--feature-gates` argument. ([#104163](https://github.com/kubernetes/kubernetes/pull/104163), [@ialidzhikov](https://github.com/ialidzhikov)) [SIG Node]",
+    "markdown": "The `SupportPodPidsLimit` and  `SupportNodePidsLimit` feature gates that are GA since v1.20 are unconditionally enabled, and can no longer be specified via the `--feature-gates` argument. ([#104163](https://github.com/kubernetes/kubernetes/pull/104163), [@ialidzhikov](https://github.com/ialidzhikov))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -75,7 +75,7 @@
   "104167": {
     "commit": "9ff99adc60fe52798555d683c0cb682dd6f69c4d",
     "text": "The `BoundServiceAccountTokenVolume` feature gate that is GA since v1.22 is unconditionally enabled, and can no longer be specified via the `--feature-gates` argument.",
-    "markdown": "The `BoundServiceAccountTokenVolume` feature gate that is GA since v1.22 is unconditionally enabled, and can no longer be specified via the `--feature-gates` argument. ([#104167](https://github.com/kubernetes/kubernetes/pull/104167), [@ialidzhikov](https://github.com/ialidzhikov)) [SIG Auth]",
+    "markdown": "The `BoundServiceAccountTokenVolume` feature gate that is GA since v1.22 is unconditionally enabled, and can no longer be specified via the `--feature-gates` argument. ([#104167](https://github.com/kubernetes/kubernetes/pull/104167), [@ialidzhikov](https://github.com/ialidzhikov))",
     "author": "ialidzhikov",
     "author_url": "https://github.com/ialidzhikov",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104167",
@@ -85,8 +85,8 @@
   },
   "104483": {
     "commit": "48d844ec64bd83a378418d420ba455fa28043cbc",
-    "text": "client-go impersonation config can specify a UID to pass impersonated uid information through in requests.",
-    "markdown": "Client-go impersonation config can specify a UID to pass impersonated uid information through in requests. ([#104483](https://github.com/kubernetes/kubernetes/pull/104483), [@margocrawf](https://github.com/margocrawf)) [SIG API Machinery, Auth and Testing]",
+    "text": "Client-go impersonation config can specify a UID to pass impersonated uid information through in requests.",
+    "markdown": "Client-go impersonation config can specify a UID to pass impersonated uid information through in requests. ([#104483](https://github.com/kubernetes/kubernetes/pull/104483), [@margocrawf](https://github.com/margocrawf))",
     "author": "margocrawf",
     "author_url": "https://github.com/margocrawf",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104483",
@@ -101,7 +101,7 @@
   "104624": {
     "commit": "fa2657b8b2f839b88834579917abda1a816a1970",
     "text": "kubelet: turn the KubeletConfiguration v1beta1 `ResolverConfig` field from a `string` to `*string`.",
-    "markdown": "Kubelet: turn the KubeletConfiguration v1beta1 `ResolverConfig` field from a `string` to `*string`. ([#104624](https://github.com/kubernetes/kubernetes/pull/104624), [@Haleygo](https://github.com/Haleygo)) [SIG Cluster Lifecycle and Node]",
+    "markdown": "Kubelet: turn the KubeletConfiguration v1beta1 `ResolverConfig` field from a `string` to `*string`. ([#104624](https://github.com/kubernetes/kubernetes/pull/104624), [@Haleygo](https://github.com/Haleygo))",
     "author": "Haleygo",
     "author_url": "https://github.com/Haleygo",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104624",
@@ -115,8 +115,8 @@
   },
   "104670": {
     "commit": "5d7ac70051f4e5e85834852c30d07c5b0cd3c6d0",
-    "text": "turn on CSIMigrationAzureDisk by default on 1.23",
-    "markdown": "Turn on CSIMigrationAzureDisk by default on 1.23 ([#104670](https://github.com/kubernetes/kubernetes/pull/104670), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider]",
+    "text": "Turn on CSIMigrationAzureDisk by default on 1.23",
+    "markdown": "Turn on CSIMigrationAzureDisk by default on 1.23 ([#104670](https://github.com/kubernetes/kubernetes/pull/104670), [@andyzhangx](https://github.com/andyzhangx))",
     "author": "andyzhangx",
     "author_url": "https://github.com/andyzhangx",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104670",
@@ -128,8 +128,8 @@
   },
   "104691": {
     "commit": "a53e2eaeaba064309dceca2dc27f3ac09c6375b0",
-    "text": "IPv6DualStack feature moved to stable.\nController Manager flags for the node IPAM controller have slightly changed:\n1. When configuring a dual-stack cluster, the user must specify both --node-cidr-mask-size-ipv4 and --node-cidr-mask-size-ipv6 to set the per-node IP mask sizes, instead of the previous --node-cidr-mask-size flag.\n2. The --node-cidr-mask-size flag is mutually exclusive with --node-cidr-mask-size-ipv4 and --node-cidr-mask-size-ipv6.\n3. Single-stack clusters do not need to change, but may choose to use the more specific flags.  Users can use either the older --node-cidr-mask-size flag or one of the newer --node-cidr-mask-size-ipv4 or --node-cidr-mask-size-ipv6 flags to configure the per-node IP mask size, provided that the flag's IP family matches the cluster's IP family (--cluster-cidr).",
-    "markdown": "IPv6DualStack feature moved to stable.\n  Controller Manager flags for the node IPAM controller have slightly changed:\n  1. When configuring a dual-stack cluster, the user must specify both --node-cidr-mask-size-ipv4 and --node-cidr-mask-size-ipv6 to set the per-node IP mask sizes, instead of the previous --node-cidr-mask-size flag.\n  2. The --node-cidr-mask-size flag is mutually exclusive with --node-cidr-mask-size-ipv4 and --node-cidr-mask-size-ipv6.\n  3. Single-stack clusters do not need to change, but may choose to use the more specific flags.  Users can use either the older --node-cidr-mask-size flag or one of the newer --node-cidr-mask-size-ipv4 or --node-cidr-mask-size-ipv6 flags to configure the per-node IP mask size, provided that the flag's IP family matches the cluster's IP family (--cluster-cidr). ([#104691](https://github.com/kubernetes/kubernetes/pull/104691), [@khenidak](https://github.com/khenidak)) [SIG API Machinery, Apps, Auth, Cloud Provider, Cluster Lifecycle, Network, Node and Testing]",
+    "text": "Promote `IPv6DualStack` feature to stable.\nController Manager flags for the node IPAM controller have slightly changed:\n1. When configuring a dual-stack cluster, the user must specify both `--node-cidr-mask-size-ipv4` and `--node-cidr-mask-size-ipv6` to set the per-node IP mask sizes, instead of the previous `--node-cidr-mask-size` flag.\n2. The `--node-cidr-mask-size` flag is mutually exclusive with `--node-cidr-mask-size-ipv4` and `--node-cidr-mask-size-ipv6`.\n3. Single-stack clusters do not need to change, but may choose to use the more specific flags.  Users can use either the older `--node-cidr-mask-size` flag or one of the newer `--node-cidr-mask-size-ipv4` or `--node-cidr-mask-size-ipv6` flags to configure the per-node IP mask size, provided that the flag's IP family matches the cluster's IP family (--cluster-cidr).",
+    "markdown": "Promote `IPv6DualStack` feature to stable.\n  Controller Manager flags for the node IPAM controller have slightly changed:\n  1. When configuring a dual-stack cluster, the user must specify both `--node-cidr-mask-size-ipv4` and `--node-cidr-mask-size-ipv6` to set the per-node IP mask sizes, instead of the previous `--node-cidr-mask-size` flag.\n  2. The `--node-cidr-mask-size` flag is mutually exclusive with `--node-cidr-mask-size-ipv4` and `--node-cidr-mask-size-ipv6`.\n  3. Single-stack clusters do not need to change, but may choose to use the more specific flags.  Users can use either the older `--node-cidr-mask-size` flag or one of the newer `--node-cidr-mask-size-ipv4` or `--node-cidr-mask-size-ipv6` flags to configure the per-node IP mask size, provided that the flag's IP family matches the cluster's IP family (--cluster-cidr). ([#104691](https://github.com/kubernetes/kubernetes/pull/104691), [@khenidak](https://github.com/khenidak))",
     "documentation": [
       {
         "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/563-dual-stack",
@@ -184,7 +184,7 @@
   "104847": {
     "commit": "d5719800bf044b67a538c679dbd808def36bcf0f",
     "text": "When a static pod file is deleted and recreated while using a fixed UID, the pod was not properly restarted.",
-    "markdown": "When a static pod file is deleted and recreated while using a fixed UID, the pod was not properly restarted. ([#104847](https://github.com/kubernetes/kubernetes/pull/104847), [@smarterclayton](https://github.com/smarterclayton)) [SIG Node and Testing]",
+    "markdown": "When a static pod file is deleted and recreated while using a fixed UID, the pod was not properly restarted. ([#104847](https://github.com/kubernetes/kubernetes/pull/104847), [@smarterclayton](https://github.com/smarterclayton))",
     "author": "smarterclayton",
     "author_url": "https://github.com/smarterclayton",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104847",
@@ -196,8 +196,8 @@
   },
   "104854": {
     "commit": "91f820eee42a8126d95d1d706ae20740c9d57913",
-    "text": "kubeadm: switch the preflight check (called 'Swap') that verifies if swap is enabled on Linux hosts to report a warning instead of an error. This is related to the graduation of the NodeSwap feature gate in the kubelet to Beta and being enabled by default in 1.23 - allows swap support on Linux hosts. In the next release of kubeadm (1.24) the preflight check will be removed, thus we recommend that you stop using it - e.g. via --ignore-preflight-errors or the kubeadm config.",
-    "markdown": "Kubeadm: switch the preflight check (called 'Swap') that verifies if swap is enabled on Linux hosts to report a warning instead of an error. This is related to the graduation of the NodeSwap feature gate in the kubelet to Beta and being enabled by default in 1.23 - allows swap support on Linux hosts. In the next release of kubeadm (1.24) the preflight check will be removed, thus we recommend that you stop using it - e.g. via --ignore-preflight-errors or the kubeadm config. ([#104854](https://github.com/kubernetes/kubernetes/pull/104854), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: switch the preflight check (called 'Swap') that verifies if swap is enabled on Linux hosts to report a warning instead of an error. This is related to the graduation of the NodeSwap feature gate in the kubelet to Beta and being enabled by default in 1.23 - allows swap support on Linux hosts. In the next release of kubeadm (1.24) the preflight check will be removed, thus we recommend that you stop using it - e.g. via `--ignore-preflight-errors` or the kubeadm config.",
+    "markdown": "Kubeadm: switch the preflight check (called 'Swap') that verifies if swap is enabled on Linux hosts to report a warning instead of an error. This is related to the graduation of the NodeSwap feature gate in the kubelet to Beta and being enabled by default in 1.23 - allows swap support on Linux hosts. In the next release of kubeadm (1.24) the preflight check will be removed, thus we recommend that you stop using it - e.g. via `--ignore-preflight-errors` or the kubeadm config. ([#104854](https://github.com/kubernetes/kubernetes/pull/104854), [@pacoxu](https://github.com/pacoxu))",
     "documentation": [
       {
         "description": "[KEP]",
@@ -215,8 +215,8 @@
   },
   "104908": {
     "commit": "060f5b88d0d554fd8b38333ed25b8e73614ab630",
-    "text": "migrate pkg/proxy to structured logs",
-    "markdown": "Migrate pkg/proxy to structured logs ([#104908](https://github.com/kubernetes/kubernetes/pull/104908), [@CIPHERTron](https://github.com/CIPHERTron)) [SIG Network]",
+    "text": "Migrate pkg/proxy to structured logging",
+    "markdown": "Migrate pkg/proxy to structured logging ([#104908](https://github.com/kubernetes/kubernetes/pull/104908), [@CIPHERTron](https://github.com/CIPHERTron))",
     "author": "CIPHERTron",
     "author_url": "https://github.com/CIPHERTron",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104908",
@@ -239,7 +239,7 @@
   "104923": {
     "commit": "486ca678a03ef1bceb903376bc8f1757a1293fe0",
     "text": "XFS-filesystems are now force-formatted (option `-f`) in order to avoid problems being formatted due to detection of magic super-blocks. This aligns with the behaviour of formatting of ext3/4 filesystems.",
-    "markdown": "XFS-filesystems are now force-formatted (option `-f`) in order to avoid problems being formatted due to detection of magic super-blocks. This aligns with the behaviour of formatting of ext3/4 filesystems. ([#104923](https://github.com/kubernetes/kubernetes/pull/104923), [@davidkarlsen](https://github.com/davidkarlsen)) [SIG Storage]",
+    "markdown": "XFS-filesystems are now force-formatted (option `-f`) in order to avoid problems being formatted due to detection of magic super-blocks. This aligns with the behaviour of formatting of ext3/4 filesystems. ([#104923](https://github.com/kubernetes/kubernetes/pull/104923), [@davidkarlsen](https://github.com/davidkarlsen))",
     "author": "davidkarlsen",
     "author_url": "https://github.com/davidkarlsen",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104923",
@@ -250,7 +250,7 @@
   "104928": {
     "commit": "5449ce7c5c9c3ed0e96b8b078c6c07a346b2891f",
     "text": "Migrate cmd/proxy/app and pkg/proxy/meta_proxier to structured logging",
-    "markdown": "Migrate cmd/proxy/app and pkg/proxy/meta_proxier to structured logging ([#104928](https://github.com/kubernetes/kubernetes/pull/104928), [@jyz0309](https://github.com/jyz0309)) [SIG Apps, Cluster Lifecycle, Network, Node and Testing]",
+    "markdown": "Migrate cmd/proxy/app and pkg/proxy/meta_proxier to structured logging ([#104928](https://github.com/kubernetes/kubernetes/pull/104928), [@jyz0309](https://github.com/jyz0309))",
     "author": "jyz0309",
     "author_url": "https://github.com/jyz0309",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104928",
@@ -262,8 +262,8 @@
   },
   "104942": {
     "commit": "8975906dfc87732e063bb30e36b181a031988a52",
-    "text": "kubeadm: do not check if the '/etc/kubernetes/manifests' folder is empty on joining worker nodes during preflight",
-    "markdown": "Kubeadm: do not check if the '/etc/kubernetes/manifests' folder is empty on joining worker nodes during preflight ([#104942](https://github.com/kubernetes/kubernetes/pull/104942), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: do not check if the `/etc/kubernetes/manifests` folder is empty on joining worker nodes during preflight",
+    "markdown": "Kubeadm: do not check if the `/etc/kubernetes/manifests` folder is empty on joining worker nodes during preflight ([#104942](https://github.com/kubernetes/kubernetes/pull/104942), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104942",
@@ -275,9 +275,9 @@
     "duplicate_kind": true
   },
   "104944": {
-    "commit": "acbeaf8b8e1ee8de55f8167ac9c41d6c7526f9dd",
+    "commit": "615c69643bdb34c001da2f08d1ed4d85b4ef6b1b",
     "text": "Migrate `cmd/proxy/{config, healthcheck, winkernel}` to structured logging",
-    "markdown": "Migrate `cmd/proxy/{config, healthcheck, winkernel}` to structured logging ([#104944](https://github.com/kubernetes/kubernetes/pull/104944), [@jyz0309](https://github.com/jyz0309)) [SIG Network]",
+    "markdown": "Migrate `cmd/proxy/{config, healthcheck, winkernel}` to structured logging ([#104944](https://github.com/kubernetes/kubernetes/pull/104944), [@jyz0309](https://github.com/jyz0309))",
     "author": "jyz0309",
     "author_url": "https://github.com/jyz0309",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104944",
@@ -289,7 +289,7 @@
   "104983": {
     "commit": "5b489e2846a7fb959252dc5a04fe21ec844e9fad",
     "text": "The kube-apiserver's Prometheus metrics have been extended with some that describe the costs of handling LIST requests.  They are as follows.\n- *apiserver_cache_list_total*: Counter of LIST requests served from watch cache, broken down by resource_prefix and index_name\n- *apiserver_cache_list_fetched_objects_total*: Counter of objects read from watch cache in the course of serving a LIST request, broken down by resource_prefix and index_name\n- *apiserver_cache_list_evaluated_objects_total*: Counter of objects tested in the course of serving a LIST request from watch cache, broken down by resource_prefix\n- *apiserver_cache_list_returned_objects_total*: Counter of objects returned for a LIST request from watch cache, broken down by resource_prefix\n- *apiserver_storage_list_total*: Counter of LIST requests served from etcd, broken down by resource\n- *apiserver_storage_list_fetched_objects_total*: Counter of objects read from etcd in the course of serving a LIST request, broken down by resource\n- *apiserver_storage_list_evaluated_objects_total*: Counter of objects tested in the course of serving a LIST request from etcd, broken down by resource\n- *apiserver_storage_list_returned_objects_total*: Counter of objects returned for a LIST request from etcd, broken down by resource",
-    "markdown": "The kube-apiserver's Prometheus metrics have been extended with some that describe the costs of handling LIST requests.  They are as follows.\n  - *apiserver_cache_list_total*: Counter of LIST requests served from watch cache, broken down by resource_prefix and index_name\n  - *apiserver_cache_list_fetched_objects_total*: Counter of objects read from watch cache in the course of serving a LIST request, broken down by resource_prefix and index_name\n  - *apiserver_cache_list_evaluated_objects_total*: Counter of objects tested in the course of serving a LIST request from watch cache, broken down by resource_prefix\n  - *apiserver_cache_list_returned_objects_total*: Counter of objects returned for a LIST request from watch cache, broken down by resource_prefix\n  - *apiserver_storage_list_total*: Counter of LIST requests served from etcd, broken down by resource\n  - *apiserver_storage_list_fetched_objects_total*: Counter of objects read from etcd in the course of serving a LIST request, broken down by resource\n  - *apiserver_storage_list_evaluated_objects_total*: Counter of objects tested in the course of serving a LIST request from etcd, broken down by resource\n  - *apiserver_storage_list_returned_objects_total*: Counter of objects returned for a LIST request from etcd, broken down by resource ([#104983](https://github.com/kubernetes/kubernetes/pull/104983), [@MikeSpreitzer](https://github.com/MikeSpreitzer)) [SIG API Machinery and Instrumentation]",
+    "markdown": "The kube-apiserver's Prometheus metrics have been extended with some that describe the costs of handling LIST requests.  They are as follows.\n  - *apiserver_cache_list_total*: Counter of LIST requests served from watch cache, broken down by resource_prefix and index_name\n  - *apiserver_cache_list_fetched_objects_total*: Counter of objects read from watch cache in the course of serving a LIST request, broken down by resource_prefix and index_name\n  - *apiserver_cache_list_evaluated_objects_total*: Counter of objects tested in the course of serving a LIST request from watch cache, broken down by resource_prefix\n  - *apiserver_cache_list_returned_objects_total*: Counter of objects returned for a LIST request from watch cache, broken down by resource_prefix\n  - *apiserver_storage_list_total*: Counter of LIST requests served from etcd, broken down by resource\n  - *apiserver_storage_list_fetched_objects_total*: Counter of objects read from etcd in the course of serving a LIST request, broken down by resource\n  - *apiserver_storage_list_evaluated_objects_total*: Counter of objects tested in the course of serving a LIST request from etcd, broken down by resource\n  - *apiserver_storage_list_returned_objects_total*: Counter of objects returned for a LIST request from etcd, broken down by resource ([#104983](https://github.com/kubernetes/kubernetes/pull/104983), [@MikeSpreitzer](https://github.com/MikeSpreitzer))",
     "author": "MikeSpreitzer",
     "author_url": "https://github.com/MikeSpreitzer",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104983",
@@ -303,7 +303,7 @@
   "104986": {
     "commit": "924f1968828da3b0c20a9eea2e19236a47fa689f",
     "text": "Headless Services with no selector which were created without dual-stack enabled will be defaulted to RequireDualStack instead of PreferDualStack.  This is consistent with such Services which are created with dual-stack enabled.",
-    "markdown": "Headless Services with no selector which were created without dual-stack enabled will be defaulted to RequireDualStack instead of PreferDualStack.  This is consistent with such Services which are created with dual-stack enabled. ([#104986](https://github.com/kubernetes/kubernetes/pull/104986), [@thockin](https://github.com/thockin)) [SIG Network]",
+    "markdown": "Headless Services with no selector which were created without dual-stack enabled will be defaulted to RequireDualStack instead of PreferDualStack.  This is consistent with such Services which are created with dual-stack enabled. ([#104986](https://github.com/kubernetes/kubernetes/pull/104986), [@thockin](https://github.com/thockin))",
     "author": "thockin",
     "author_url": "https://github.com/thockin",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/104986",
@@ -313,8 +313,8 @@
   },
   "105034": {
     "commit": "73d51a21dbe7504a00423877e272a279a21a115f",
-    "text": "kubeadm: remove the --port flag from the manifest for the kube-scheduler since the flag has been a NO-OP since 1.23 and insecure serving was removed for the component.",
-    "markdown": "Kubeadm: remove the --port flag from the manifest for the kube-scheduler since the flag has been a NO-OP since 1.23 and insecure serving was removed for the component. ([#105034](https://github.com/kubernetes/kubernetes/pull/105034), [@pacoxu](https://github.com/pacoxu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: remove the `--port` flag from the manifest for the kube-scheduler since the flag has been a NO-OP since 1.23 and insecure serving was removed for the component.",
+    "markdown": "Kubeadm: remove the `--port` flag from the manifest for the kube-scheduler since the flag has been a NO-OP since 1.23 and insecure serving was removed for the component. ([#105034](https://github.com/kubernetes/kubernetes/pull/105034), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105034",
@@ -325,8 +325,8 @@
   },
   "105035": {
     "commit": "f06ce08d63db87da3d5cf6aaf8a50c858e5d8a35",
-    "text": "migrated pkg/proxy/winuserspace to structured logging",
-    "markdown": "Migrated pkg/proxy/winuserspace to structured logging ([#105035](https://github.com/kubernetes/kubernetes/pull/105035), [@shivanshu1333](https://github.com/shivanshu1333)) [SIG Network]",
+    "text": "Migrated pkg/proxy/winuserspace to structured logging",
+    "markdown": "Migrated pkg/proxy/winuserspace to structured logging ([#105035](https://github.com/kubernetes/kubernetes/pull/105035), [@shivanshu1333](https://github.com/shivanshu1333))",
     "author": "shivanshu1333",
     "author_url": "https://github.com/shivanshu1333",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105035",
@@ -336,9 +336,9 @@
     "sigs": ["network"]
   },
   "105046": {
-    "commit": "fb70ca9b7b24ce90b19b0d565ae43e6af20458ad",
+    "commit": "609306dd5b69fa1b43796724af934b3c2029e2f1",
     "text": "Fix system default topology spreading when nodes don't have zone labels. Pods correctly spread by default now.",
-    "markdown": "Fix system default topology spreading when nodes don't have zone labels. Pods correctly spread by default now. ([#105046](https://github.com/kubernetes/kubernetes/pull/105046), [@alculquicondor](https://github.com/alculquicondor)) [SIG Scheduling]",
+    "markdown": "Fix system default topology spreading when nodes don't have zone labels. Pods correctly spread by default now. ([#105046](https://github.com/kubernetes/kubernetes/pull/105046), [@alculquicondor](https://github.com/alculquicondor))",
     "author": "alculquicondor",
     "author_url": "https://github.com/alculquicondor",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105046",
@@ -347,9 +347,9 @@
     "sigs": ["scheduling"]
   },
   "105069": {
-    "commit": "63e7ee43bb5394abd6dd5010be47ebcb22ec0ef8",
-    "text": "makes the etcd client (used by the API server) retry certain types of errors. The full list of retriable (codes.Unavailable) errors can be found at https://github.com/etcd-io/etcd/blob/main/api/v3rpc/rpctypes/error.go#L72",
-    "markdown": "Makes the etcd client (used by the API server) retry certain types of errors. The full list of retriable (codes.Unavailable) errors can be found at https://github.com/etcd-io/etcd/blob/main/api/v3rpc/rpctypes/error.go#L72 ([#105069](https://github.com/kubernetes/kubernetes/pull/105069), [@p0lyn0mial](https://github.com/p0lyn0mial)) [SIG API Machinery]",
+    "commit": "83171562b0954b2e19eb69943f01a44779cc7a8f",
+    "text": "Make the etcd client (used by the API server) retry certain types of errors. The full list of retriable (codes.Unavailable) errors can be found at https://github.com/etcd-io/etcd/blob/main/api/v3rpc/rpctypes/error.go#L72",
+    "markdown": "Make the etcd client (used by the API server) retry certain types of errors. The full list of retriable (codes.Unavailable) errors can be found at https://github.com/etcd-io/etcd/blob/main/api/v3rpc/rpctypes/error.go#L72 ([#105069](https://github.com/kubernetes/kubernetes/pull/105069), [@p0lyn0mial](https://github.com/p0lyn0mial))",
     "author": "p0lyn0mial",
     "author_url": "https://github.com/p0lyn0mial",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105069",
@@ -377,7 +377,7 @@
   "105158": {
     "commit": "d385d0602a1075837bf8713b9f56964c154aede7",
     "text": "Update build images to Debian 11 (Bullseye)\n- debian-base:bullseye-v1.0.0\n- debian-iptables:bullseye-v1.0.0\n- go-runner:v2.3.1-go1.17.1-bullseye.0\n- kube-cross:v1.23.0-go1.17.1-bullseye.1\n- setcap:bullseye-v1.0.0\n- cluster/images/etcd: Build 3.5.0-2 image\n- test/conformance/image: Update runner image to base-debian11",
-    "markdown": "Update build images to Debian 11 (Bullseye)\n  - debian-base:bullseye-v1.0.0\n  - debian-iptables:bullseye-v1.0.0\n  - go-runner:v2.3.1-go1.17.1-bullseye.0\n  - kube-cross:v1.23.0-go1.17.1-bullseye.1\n  - setcap:bullseye-v1.0.0\n  - cluster/images/etcd: Build 3.5.0-2 image\n  - test/conformance/image: Update runner image to base-debian11 ([#105158](https://github.com/kubernetes/kubernetes/pull/105158), [@justaugustus](https://github.com/justaugustus)) [SIG API Machinery, Architecture, Release and Testing]",
+    "markdown": "Update build images to Debian 11 (Bullseye)\n  - debian-base:bullseye-v1.0.0\n  - debian-iptables:bullseye-v1.0.0\n  - go-runner:v2.3.1-go1.17.1-bullseye.0\n  - kube-cross:v1.23.0-go1.17.1-bullseye.1\n  - setcap:bullseye-v1.0.0\n  - cluster/images/etcd: Build 3.5.0-2 image\n  - test/conformance/image: Update runner image to base-debian11 ([#105158](https://github.com/kubernetes/kubernetes/pull/105158), [@justaugustus](https://github.com/justaugustus))",
     "author": "justaugustus",
     "author_url": "https://github.com/justaugustus",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105158",
@@ -412,9 +412,9 @@
     "sigs": ["cloud-provider"]
   },
   "105196": {
-    "commit": "16fdb2f39148e8843e999780fc7bd3ee161349fb",
+    "commit": "603a4e1931613978e0d73cd940e1ab3ee6d7ce1a",
     "text": "Enhanced error message for nodes not selected by scheduler due to pod's PersistentVolumeClaim(s) bound to PersistentVolume(s) that do not exist.",
-    "markdown": "Enhanced error message for nodes not selected by scheduler due to pod's PersistentVolumeClaim(s) bound to PersistentVolume(s) that do not exist. ([#105196](https://github.com/kubernetes/kubernetes/pull/105196), [@yibozhuang](https://github.com/yibozhuang)) [SIG Scheduling and Storage]",
+    "markdown": "Enhanced error message for nodes not selected by scheduler due to pod's PersistentVolumeClaim(s) bound to PersistentVolume(s) that do not exist. ([#105196](https://github.com/kubernetes/kubernetes/pull/105196), [@yibozhuang](https://github.com/yibozhuang))",
     "author": "yibozhuang",
     "author_url": "https://github.com/yibozhuang",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105196",
@@ -465,7 +465,7 @@
   "105214": {
     "commit": "aec9acda6818684a2e9b98b22ee8d0ab23e77580",
     "text": "Fix job controller syncs: In case of conflicts, ensure that the sync happens with the most up to date information. Improves reliability of JobTrackingWithFinalizers.",
-    "markdown": "Fix job controller syncs: In case of conflicts, ensure that the sync happens with the most up to date information. Improves reliability of JobTrackingWithFinalizers. ([#105214](https://github.com/kubernetes/kubernetes/pull/105214), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps]",
+    "markdown": "Fix job controller syncs: In case of conflicts, ensure that the sync happens with the most up to date information. Improves reliability of JobTrackingWithFinalizers. ([#105214](https://github.com/kubernetes/kubernetes/pull/105214), [@alculquicondor](https://github.com/alculquicondor))",
     "author": "alculquicondor",
     "author_url": "https://github.com/alculquicondor",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/105214",
@@ -473,6 +473,18 @@
     "kinds": ["bug", "flake"],
     "sigs": ["apps"],
     "duplicate_kind": true
+  },
+  "105215": {
+    "commit": "e2e938066de97345e0c440b469ead42cbe0e7984",
+    "text": "Kubelet's Node Grace Shutdown will terminate probes when shutting down.",
+    "markdown": "Kubelet's Node Grace Shutdown will terminate probes when shutting down. ([#105215](https://github.com/kubernetes/kubernetes/pull/105215), [@rphillips](https://github.com/rphillips)) [SIG Node]",
+    "author": "rphillips",
+    "author_url": "https://github.com/rphillips",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105215",
+    "pr_number": 105215,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
   },
   "105267": {
     "commit": "528cd3014544c9ae7f97fa5315fe10f069e57f48",
@@ -486,10 +498,24 @@
     "sigs": ["network", "apps"],
     "duplicate": true
   },
+  "92433": {
+    "commit": "c4fc9bba6c292970f7f8e82b8033afbe31f07c9a",
+    "text": "The etcd container image now supports Windows.",
+    "markdown": "The etcd container image now supports Windows. ([#92433](https://github.com/kubernetes/kubernetes/pull/92433), [@claudiubelu](https://github.com/claudiubelu)) [SIG API Machinery and Windows]",
+    "author": "claudiubelu",
+    "author_url": "https://github.com/claudiubelu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/92433",
+    "pr_number": 92433,
+    "areas": ["release-eng"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "windows"],
+    "feature": true,
+    "duplicate": true
+  },
   "92853": {
     "commit": "7bff8adaf683dc7e25b5548e2c16e7393ff8a036",
     "text": "Add mechanism to load simple sniffer class into fluentd-elasticsearch image",
-    "markdown": "Add mechanism to load simple sniffer class into fluentd-elasticsearch image ([#92853](https://github.com/kubernetes/kubernetes/pull/92853), [@cosmo0920](https://github.com/cosmo0920)) [SIG Cloud Provider and Instrumentation]",
+    "markdown": "Add mechanism to load simple sniffer class into fluentd-elasticsearch image ([#92853](https://github.com/kubernetes/kubernetes/pull/92853), [@cosmo0920](https://github.com/cosmo0920))",
     "author": "cosmo0920",
     "author_url": "https://github.com/cosmo0920",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/92853",
