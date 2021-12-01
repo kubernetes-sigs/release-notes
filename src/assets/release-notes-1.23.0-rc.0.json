@@ -1,0 +1,139 @@
+{
+  "102915": {
+    "commit": "91b7fb4dc9f5d98583ee63be51dac7b6c0704b10",
+    "text": "Support pod priority based node graceful shutdown.",
+    "markdown": "Support pod priority based node graceful shutdown. ([#102915](https://github.com/kubernetes/kubernetes/pull/102915), [@wzshiming](https://github.com/wzshiming))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/2712-pod-priority-based-graceful-node-shutdown",
+        "type": "KEP"
+      }
+    ],
+    "author": "wzshiming",
+    "author_url": "https://github.com/wzshiming",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102915",
+    "pr_number": 102915,
+    "areas": ["test", "kubelet"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["node", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "105916": {
+    "commit": "8f9dd0a14c55e8c92d65b8c152ca6eaf53aad02f",
+    "text": "Performs strict server side schema validation requests via the `fieldValidation=[Strict,Warn,Ignore]`.",
+    "markdown": "Performs strict server side schema validation requests via the `fieldValidation=[Strict,Warn,Ignore]`. ([#105916](https://github.com/kubernetes/kubernetes/pull/105916), [@kevindelgado](https://github.com/kevindelgado))",
+    "documentation": [
+      {
+        "description": "[KEP-2885](",
+        "url": "https://github.com/kubernetes/enhancements/issues/2885)",
+        "type": "KEP"
+      }
+    ],
+    "author": "kevindelgado",
+    "author_url": "https://github.com/kevindelgado",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105916",
+    "pr_number": 105916,
+    "areas": ["test", "kubelet", "apiserver", "provider/gcp", "code-generation", "dependency"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "auth", "apps", "testing", "cloud-provider"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "106463": {
+    "commit": "e4952f32b79b69bfa9333ff9da26a2da13859148",
+    "text": "Add gRPC probe to Pod.Spec.Container.{Liveness,Readiness,Startup}Probe",
+    "markdown": "Add gRPC probe to Pod.Spec.Container.{Liveness,Readiness,Startup}Probe ([#106463](https://github.com/kubernetes/kubernetes/pull/106463), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG API Machinery, Apps, CLI, Node and Testing]",
+    "author": "SergeyKanzhelev",
+    "author_url": "https://github.com/SergeyKanzhelev",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106463",
+    "pr_number": 106463,
+    "areas": ["test", "kubelet", "kubectl"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["node", "api-machinery", "apps", "cli", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "106501": {
+    "commit": "d766ab88f7608c7f15afdb702c017a19af6e2b74",
+    "text": "CRI v1 is now the project default. If a container runtime does not support the v1 API, Kubernetes will fall back to the v1alpha2 implementation.",
+    "markdown": "CRI v1 is now the project default. If a container runtime does not support the v1 API, Kubernetes will fall back to the v1alpha2 implementation. ([#106501](https://github.com/kubernetes/kubernetes/pull/106501), [@ehashman](https://github.com/ehashman))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/2040",
+        "type": "KEP"
+      }
+    ],
+    "author": "ehashman",
+    "author_url": "https://github.com/ehashman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106501",
+    "pr_number": 106501,
+    "areas": ["test", "kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["network", "node", "testing"],
+    "feature": true,
+    "duplicate": true
+  },
+  "106507": {
+    "commit": "37ae94f9ed45a7b4dac73129d9b9786c1d492ee0",
+    "text": "The `kube-Proxy` now correctly filters out unready endpoints for Services with Topology.",
+    "markdown": "The `kube-Proxy` now correctly filters out unready endpoints for Services with Topology. ([#106507](https://github.com/kubernetes/kubernetes/pull/106507), [@robscott](https://github.com/robscott))",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106507",
+    "pr_number": 106507,
+    "kinds": ["bug"],
+    "sigs": ["network"]
+  },
+  "106510": {
+    "commit": "084b28f6d58aaf82b9cc05d80232b31ce517c8c0",
+    "text": "Topology Aware Hints now ignores unready endpoints when assigning hints.",
+    "markdown": "Topology Aware Hints now ignores unready endpoints when assigning hints. ([#106510](https://github.com/kubernetes/kubernetes/pull/106510), [@robscott](https://github.com/robscott))",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106510",
+    "pr_number": 106510,
+    "kinds": ["bug"],
+    "sigs": ["network", "apps"],
+    "duplicate": true
+  },
+  "106520": {
+    "commit": "316ac13d00bf9dd2ee6e2690d6d1749e4d35550b",
+    "text": "kubelet: the printing of flags at the start of kubelet now uses the final logging configuration.",
+    "markdown": "Kubelet: the printing of flags at the start of kubelet now uses the final logging configuration. ([#106520](https://github.com/kubernetes/kubernetes/pull/106520), [@pohly](https://github.com/pohly))",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106520",
+    "pr_number": 106520,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "99728": {
+    "commit": "b8af116327cd5d8e5411cbac04e7d4d11d22485d",
+    "text": "Added a feature gate `StatefulSetAutoDeletePVC`, which allows PVCs automatically created for StatefulSet pods to be automatically deleted.",
+    "markdown": "Added a feature gate `StatefulSetAutoDeletePVC`, which allows PVCs automatically created for StatefulSet pods to be automatically deleted. ([#99728](https://github.com/kubernetes/kubernetes/pull/99728), [@mattcary](https://github.com/mattcary))",
+    "documentation": [
+      {
+        "description": "KEP",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/1847-autoremove-statefulset-pvcs",
+        "type": "KEP"
+      }
+    ],
+    "author": "mattcary",
+    "author_url": "https://github.com/mattcary",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99728",
+    "pr_number": 99728,
+    "areas": ["test"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "auth", "apps", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  }
+}
