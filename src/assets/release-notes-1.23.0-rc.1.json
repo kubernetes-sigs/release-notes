@@ -1,0 +1,37 @@
+{
+  "106661": {
+    "commit": "3cb339a0a1e21a6e94fe14ccf3aca22a36f569f7",
+    "text": "kube-apiserver: Server Side Apply merge order is reverted to match v1.22 behavior until `http://issue.k8s.io/104641` is resolved.",
+    "markdown": "Kube-apiserver: Server Side Apply merge order is reverted to match v1.22 behavior until `http://issue.k8s.io/104641` is resolved. ([#106661](https://github.com/kubernetes/kubernetes/pull/106661), [@liggitt](https://github.com/liggitt))",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106661",
+    "pr_number": 106661,
+    "areas": ["test", "apiserver", "kubectl", "cloudprovider", "code-generation", "dependency"],
+    "kinds": ["regression"],
+    "sigs": [
+      "storage",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
+  "106808": {
+    "commit": "114a5695f313a532e8b9aa32a7225f5b2d202561",
+    "text": "Reverts the CRI API version surfaced by dockershim to `v1alpha2`.",
+    "markdown": "Reverts the CRI API version surfaced by dockershim to `v1alpha2`. ([#106808](https://github.com/kubernetes/kubernetes/pull/106808), [@saschagrunert](https://github.com/saschagrunert))",
+    "author": "saschagrunert",
+    "author_url": "https://github.com/saschagrunert",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106808",
+    "pr_number": 106808,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["network", "node"],
+    "duplicate": true
+  }
+}
