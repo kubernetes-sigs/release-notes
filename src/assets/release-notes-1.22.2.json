@@ -1,0 +1,96 @@
+{
+  "104446": {
+    "commit": "c44c96afc3452b8055de9d374e72e38ea6b8126d",
+    "text": "fix: skip case sensitivity when checking Azure NSG rules\nfix: ensure InstanceShutdownByProviderID return false for creating Azure VMs",
+    "markdown": "Fix: skip case sensitivity when checking Azure NSG rules\n  fix: ensure InstanceShutdownByProviderID return false for creating Azure VMs ([#104446](https://github.com/kubernetes/kubernetes/pull/104446), [@feiskyer](https://github.com/feiskyer)) [SIG Cloud Provider]",
+    "author": "feiskyer",
+    "author_url": "https://github.com/feiskyer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104446",
+    "pr_number": 104446,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "104469": {
+    "commit": "5b5fde6e6d31436f793eb19e43a678738ff606a5",
+    "text": "Fixes a regression that could cause panics in LRU caches in controller-manager, kubelet, kube-apiserver, or client-go EventSourceObjectSpamFilter",
+    "markdown": "Fixes a regression that could cause panics in LRU caches in controller-manager, kubelet, kube-apiserver, or client-go EventSourceObjectSpamFilter ([#104469](https://github.com/kubernetes/kubernetes/pull/104469), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation and Storage]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104469",
+    "pr_number": 104469,
+    "areas": ["apiserver", "kubectl", "cloudprovider", "code-generation", "dependency"],
+    "kinds": ["bug", "regression"],
+    "sigs": [
+      "storage",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "cli",
+      "instrumentation",
+      "cloud-provider"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "104529": {
+    "commit": "4633a2655535f95a088b8f841d383d1263cafc84",
+    "text": "Fixed occasional pod cgroup freeze when using cgroup v1 and systemd driver.",
+    "markdown": "Fixed occasional pod cgroup freeze when using cgroup v1 and systemd driver. ([#104529](https://github.com/kubernetes/kubernetes/pull/104529), [@kolyshkin](https://github.com/kolyshkin)) [SIG Node]",
+    "author": "kolyshkin",
+    "author_url": "https://github.com/kolyshkin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104529",
+    "pr_number": 104529,
+    "areas": ["kubelet", "dependency"],
+    "kinds": ["bug"],
+    "sigs": ["node"]
+  },
+  "104672": {
+    "commit": "55e0e348c3e66629dc7b3fb5023e7d36845fc285",
+    "text": "When using `kubectl replace` (or the equivalent API call) on a Service, the caller no longer needs to do a read-modify-write cycle to fetch the allocated values for `.spec.clusterIP` and `.spec.ports[].nodePort`.  Instead the API server will automatically carry these forward from the original object when the new object does not specify them.",
+    "markdown": "When using `kubectl replace` (or the equivalent API call) on a Service, the caller no longer needs to do a read-modify-write cycle to fetch the allocated values for `.spec.clusterIP` and `.spec.ports[].nodePort`.  Instead the API server will automatically carry these forward from the original object when the new object does not specify them. ([#104672](https://github.com/kubernetes/kubernetes/pull/104672), [@thockin](https://github.com/thockin)) [SIG Network]",
+    "author": "thockin",
+    "author_url": "https://github.com/thockin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104672",
+    "pr_number": 104672,
+    "kinds": ["bug"],
+    "sigs": ["network"]
+  },
+  "104876": {
+    "commit": "b868b62fa6d2026a845eaace1257f77ea4dba6ad",
+    "text": "Fix Job tracking with finalizers for more than 500 pods, ensuring all finalizers are removed before counting the Pod.",
+    "markdown": "Fix Job tracking with finalizers for more than 500 pods, ensuring all finalizers are removed before counting the Pod. ([#104876](https://github.com/kubernetes/kubernetes/pull/104876), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104876",
+    "pr_number": 104876,
+    "kinds": ["bug"],
+    "sigs": ["apps"]
+  },
+  "104905": {
+    "commit": "4193f7fe6b30bca6cf30741a6460c6c532c2dc42",
+    "text": "Kubernetes is now built with Golang 1.16.8",
+    "markdown": "Kubernetes is now built with Golang 1.16.8 ([#104905](https://github.com/kubernetes/kubernetes/pull/104905), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104905",
+    "pr_number": 104905,
+    "areas": ["test", "security", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  },
+  "104988": {
+    "commit": "aeff924339a6f34e424a654227a8073e88a70b89",
+    "text": "kube-apiserver: Fixes handling of CRD schemas containing literal null values in enums",
+    "markdown": "Kube-apiserver: Fixes handling of CRD schemas containing literal null values in enums ([#104988](https://github.com/kubernetes/kubernetes/pull/104988), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Apps and Network]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104988",
+    "pr_number": 104988,
+    "kinds": ["api-change"],
+    "sigs": ["network", "api-machinery", "apps"],
+    "duplicate": true
+  }
+}
