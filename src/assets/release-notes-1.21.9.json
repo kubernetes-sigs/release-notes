@@ -1,0 +1,120 @@
+{
+  "107040": {
+    "commit": "77c154cd24510ae52cc8cf1e3a6f0cb571cc08ca",
+    "text": "mount-utils: Detect potential stale file handle",
+    "markdown": "Mount-utils: Detect potential stale file handle ([#107040](https://github.com/kubernetes/kubernetes/pull/107040), [@andyzhangx](https://github.com/andyzhangx)) [SIG Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107040",
+    "pr_number": 107040,
+    "kinds": ["bug"],
+    "sigs": ["storage"]
+  },
+  "107169": {
+    "commit": "2e334188600b2de59aa46010d6f4768b724c28de",
+    "text": "An inefficient lock in EndpointSlice controller metrics cache has been reworked. Network programming latency may be significantly reduced in certain scenarios, especially in clusters with a large number of Services.",
+    "markdown": "An inefficient lock in EndpointSlice controller metrics cache has been reworked. Network programming latency may be significantly reduced in certain scenarios, especially in clusters with a large number of Services. ([#107169](https://github.com/kubernetes/kubernetes/pull/107169), [@robscott](https://github.com/robscott)) [SIG Apps and Network]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107169",
+    "pr_number": 107169,
+    "kinds": ["bug"],
+    "sigs": ["network", "apps"],
+    "duplicate": true
+  },
+  "107188": {
+    "commit": "f3ca839a68ed6759943a0764ba58d56e49eaf6bf",
+    "text": "Updates konnectivity-network-proxy to v0.0.27. This includes a memory leak fix for the network proxy",
+    "markdown": "Updates konnectivity-network-proxy to v0.0.27. This includes a memory leak fix for the network proxy ([#107188](https://github.com/kubernetes/kubernetes/pull/107188), [@rata](https://github.com/rata)) [SIG API Machinery and Cloud Provider]",
+    "author": "rata",
+    "author_url": "https://github.com/rata",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107188",
+    "pr_number": 107188,
+    "areas": ["apiserver", "cloudprovider", "provider/gcp", "dependency"],
+    "kinds": ["cleanup"],
+    "sigs": ["api-machinery", "cloud-provider"],
+    "duplicate": true
+  },
+  "107336": {
+    "commit": "9f84a2776c252e676ed5be7218723f729cff0166",
+    "text": "client-go: fix that paged list calls with ResourceVersionMatch set would fail once paging kicked in.",
+    "markdown": "Client-go: fix that paged list calls with ResourceVersionMatch set would fail once paging kicked in. ([#107336](https://github.com/kubernetes/kubernetes/pull/107336), [@fasaxc](https://github.com/fasaxc)) [SIG API Machinery]",
+    "author": "fasaxc",
+    "author_url": "https://github.com/fasaxc",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107336",
+    "pr_number": 107336,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "107345": {
+    "commit": "6136462d36278740da1f4ae8790370544c67076a",
+    "text": "Fix a panic when using invalid output format in kubectl create secret command",
+    "markdown": "Fix a panic when using invalid output format in kubectl create secret command ([#107345](https://github.com/kubernetes/kubernetes/pull/107345), [@rikatz](https://github.com/rikatz)) [SIG CLI]",
+    "author": "rikatz",
+    "author_url": "https://github.com/rikatz",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107345",
+    "pr_number": 107345,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"]
+  },
+  "107460": {
+    "commit": "1599206edd14997c66b139ab18c57e05a10686ec",
+    "text": "Fixes a rare race condition handling requests that timeout",
+    "markdown": "Fixes a rare race condition handling requests that timeout ([#107460](https://github.com/kubernetes/kubernetes/pull/107460), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107460",
+    "pr_number": 107460,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "107569": {
+    "commit": "ead7dd5756727441261492410c202114c8446cbc",
+    "text": "kube-apiserver: when merging lists, Server Side Apply now prefers the order of the submitted request instead of the existing persisted object",
+    "markdown": "Kube-apiserver: when merging lists, Server Side Apply now prefers the order of the submitted request instead of the existing persisted object ([#107569](https://github.com/kubernetes/kubernetes/pull/107569), [@jiahuif](https://github.com/jiahuif)) [SIG API Machinery, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Storage and Testing]",
+    "author": "jiahuif",
+    "author_url": "https://github.com/jiahuif",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107569",
+    "pr_number": 107569,
+    "areas": ["test", "apiserver", "kubectl", "cloudprovider", "code-generation", "dependency"],
+    "kinds": ["feature"],
+    "sigs": [
+      "storage",
+      "api-machinery",
+      "cluster-lifecycle",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "107615": {
+    "commit": "235fe6027190d6bf5af29982e217fc8bdbd8689a",
+    "text": "Kubernetes is now built with Golang 1.16.13",
+    "markdown": "Kubernetes is now built with Golang 1.16.13 ([#107615](https://github.com/kubernetes/kubernetes/pull/107615), [@palnabarun](https://github.com/palnabarun)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "palnabarun",
+    "author_url": "https://github.com/palnabarun",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107615",
+    "pr_number": 107615,
+    "areas": ["test", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  },
+  "107639": {
+    "commit": "e05865d8d36eb1d8d85479781b727d76534da320",
+    "text": "An issue preventing the daemonset controller to retry on status updates that failed because of conflicts is now fixed.",
+    "markdown": "An issue preventing the daemonset controller to retry on status updates that failed because of conflicts is now fixed. ([#107639](https://github.com/kubernetes/kubernetes/pull/107639), [@ialidzhikov](https://github.com/ialidzhikov)) [SIG Apps]",
+    "author": "ialidzhikov",
+    "author_url": "https://github.com/ialidzhikov",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107639",
+    "pr_number": 107639,
+    "kinds": ["bug"],
+    "sigs": ["apps"]
+  }
+}

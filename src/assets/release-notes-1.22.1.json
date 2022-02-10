@@ -1,0 +1,76 @@
+{
+  "103958": {
+    "commit": "b01ed54644d815bf83e4bea059e5e5cd5f2cefcb",
+    "text": "kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and time to read the headers of incoming requests",
+    "markdown": "Kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and time to read the headers of incoming requests ([#103958](https://github.com/kubernetes/kubernetes/pull/103958), [@liggitt](https://github.com/liggitt)) [SIG API Machinery and Node]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103958",
+    "pr_number": 103958,
+    "areas": ["kubelet", "apiserver"],
+    "kinds": ["cleanup"],
+    "sigs": ["node", "api-machinery"],
+    "duplicate": true
+  },
+  "104009": {
+    "commit": "807ed8ece4e4eb71f1fe29e1113544de34fabcae",
+    "text": "kube-proxy: delete stale conntrack UDP entries for loadbalancer ingress IP.",
+    "markdown": "Kube-proxy: delete stale conntrack UDP entries for loadbalancer ingress IP. ([#104009](https://github.com/kubernetes/kubernetes/pull/104009), [@aojea](https://github.com/aojea)) [SIG Network]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104009",
+    "pr_number": 104009,
+    "kinds": ["bug"],
+    "sigs": ["network"]
+  },
+  "104188": {
+    "commit": "9687b775c3e59278330bc7c48ebc7c8659bc66b5",
+    "text": "Fix kube-apiserver metric reporting for the deprecated watch path of /api/\u003cversion\u003e/watch/...",
+    "markdown": "Fix kube-apiserver metric reporting for the deprecated watch path of /api/\u003cversion\u003e/watch/... ([#104188](https://github.com/kubernetes/kubernetes/pull/104188), [@wojtek-t](https://github.com/wojtek-t)) [SIG API Machinery and Instrumentation]",
+    "author": "wojtek-t",
+    "author_url": "https://github.com/wojtek-t",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104188",
+    "pr_number": 104188,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "instrumentation"],
+    "duplicate": true
+  },
+  "104200": {
+    "commit": "53fb477e69880b8481448be146fd170321712cab",
+    "text": "Kubernetes is now built with Golang 1.16.7",
+    "markdown": "Kubernetes is now built with Golang 1.16.7 ([#104200](https://github.com/kubernetes/kubernetes/pull/104200), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104200",
+    "pr_number": 104200,
+    "areas": ["test", "provider/gcp", "release-eng"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  },
+  "104346": {
+    "commit": "fc794f39eec0961894c64ee26b483f47a765d329",
+    "text": "Pass additional flags to subpath mount to avoid flakes in certain conditions",
+    "markdown": "Pass additional flags to subpath mount to avoid flakes in certain conditions ([#104346](https://github.com/kubernetes/kubernetes/pull/104346), [@mauriciopoppe](https://github.com/mauriciopoppe)) [SIG Storage]",
+    "author": "mauriciopoppe",
+    "author_url": "https://github.com/mauriciopoppe",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104346",
+    "pr_number": 104346,
+    "kinds": ["bug"],
+    "sigs": ["storage"]
+  },
+  "104446": {
+    "commit": "68b9af16871deffd44cb4f96dd3b85eb8b555a8b",
+    "text": "fix: skip case sensitivity when checking Azure NSG rules\nfix: ensure InstanceShutdownByProviderID return false for creating Azure VMs",
+    "markdown": "Fix: skip case sensitivity when checking Azure NSG rules\n  fix: ensure InstanceShutdownByProviderID return false for creating Azure VMs ([#104446](https://github.com/kubernetes/kubernetes/pull/104446), [@feiskyer](https://github.com/feiskyer)) [SIG Cloud Provider]",
+    "author": "feiskyer",
+    "author_url": "https://github.com/feiskyer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104446",
+    "pr_number": 104446,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  }
+}

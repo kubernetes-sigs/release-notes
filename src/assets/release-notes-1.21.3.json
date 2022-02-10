@@ -1,0 +1,76 @@
+{
+  "102516": {
+    "commit": "1a89355a312914dcd92c73bbdda8a4725b922d0b",
+    "text": "serviceOwnsFrontendIP shouldn't report error when the public IP doesn't match",
+    "markdown": "ServiceOwnsFrontendIP shouldn't report error when the public IP doesn't match ([#102516](https://github.com/kubernetes/kubernetes/pull/102516), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102516",
+    "pr_number": 102516,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "102925": {
+    "commit": "397ff0b3cb2d674113f3cb8195e044ebdf88d27b",
+    "text": "Fix scoring for NodeResourcesMostAllocated and NodeResourcesBalancedAllocation plugins when nodes have containers with no requests. This was leaving to under-utilization of small nodes.",
+    "markdown": "Fix scoring for NodeResourcesMostAllocated and NodeResourcesBalancedAllocation plugins when nodes have containers with no requests. This was leaving to under-utilization of small nodes. ([#102925](https://github.com/kubernetes/kubernetes/pull/102925), [@alculquicondor](https://github.com/alculquicondor)) [SIG Scheduling]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102925",
+    "pr_number": 102925,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "102969": {
+    "commit": "9eac5b50dda38c00d29f213fecad250725dd3221",
+    "text": "vSphere: Fix regression during attach disk if datastore is within a storage folder or datastore cluster.",
+    "markdown": "VSphere: Fix regression during attach disk if datastore is within a storage folder or datastore cluster. ([#102969](https://github.com/kubernetes/kubernetes/pull/102969), [@gnufied](https://github.com/gnufied)) [SIG Cloud Provider]",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102969",
+    "pr_number": 102969,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "103133": {
+    "commit": "549dd8a8792390953cac88a44a50b449a0a992e1",
+    "text": "Switch scheduler to generate the merge patch on pod status instead of the full pod",
+    "markdown": "Switch scheduler to generate the merge patch on pod status instead of the full pod ([#103133](https://github.com/kubernetes/kubernetes/pull/103133), [@marwanad](https://github.com/marwanad)) [SIG Scheduling]",
+    "author": "marwanad",
+    "author_url": "https://github.com/marwanad",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103133",
+    "pr_number": 103133,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "103235": {
+    "commit": "f872796713459c1f78ace4db5ea60a2da4bbb2b7",
+    "text": "Updates the following images to pick up CVE fixes:\n- `debian` to v1.8.0\n- `debian-iptables` to v1.6.5\n- `setcap` to v2.0.3",
+    "markdown": "Updates the following images to pick up CVE fixes:\n  - `debian` to v1.8.0\n  - `debian-iptables` to v1.6.5\n  - `setcap` to v2.0.3 ([#103235](https://github.com/kubernetes/kubernetes/pull/103235), [@thejoycekung](https://github.com/thejoycekung)) [SIG API Machinery, Release and Testing]",
+    "author": "thejoycekung",
+    "author_url": "https://github.com/thejoycekung",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103235",
+    "pr_number": 103235,
+    "areas": ["test", "security", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "testing", "release"],
+    "feature": true,
+    "duplicate": true
+  },
+  "103670": {
+    "commit": "73bbff81403196450e8a1c126fb4a750105e0f0b",
+    "text": "Kubernetes is now built with Golang 1.16.6",
+    "markdown": "Kubernetes is now built with Golang 1.16.6 ([#103670](https://github.com/kubernetes/kubernetes/pull/103670), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103670",
+    "pr_number": 103670,
+    "areas": ["test", "security", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  }
+}
