@@ -1,0 +1,131 @@
+{
+  "105835": {
+    "commit": "09c0c5e4efae4620d0721d361013724f4694ecd2",
+    "text": "fix: skip instance not found when decoupling vmss from lb",
+    "markdown": "Fix: skip instance not found when decoupling vmss from lb ([#105835](https://github.com/kubernetes/kubernetes/pull/105835), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105835",
+    "pr_number": 105835,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "106553": {
+    "commit": "0ae362503f0e9022d125897f995826683ff4bc53",
+    "text": "Fixed SELinux relabeling of CSI volumes after CSI driver failure.",
+    "markdown": "Fixed SELinux relabeling of CSI volumes after CSI driver failure. ([#106553](https://github.com/kubernetes/kubernetes/pull/106553), [@jsafrane](https://github.com/jsafrane)) [SIG Node and Storage]",
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106553",
+    "pr_number": 106553,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "node"],
+    "duplicate": true
+  },
+  "106632": {
+    "commit": "dc1777d1b5447fdd223def1e74b1959fb9e058f8",
+    "text": "The scheduler's assumed pods have 2min instead of 30s to receive nodeName pod updates",
+    "markdown": "The scheduler's assumed pods have 2min instead of 30s to receive nodeName pod updates ([#106632](https://github.com/kubernetes/kubernetes/pull/106632), [@ahg-g](https://github.com/ahg-g)) [SIG Scheduling]",
+    "author": "ahg-g",
+    "author_url": "https://github.com/ahg-g",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106632",
+    "pr_number": 106632,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "106839": {
+    "commit": "3772b5d6bf8c21c509a8a12432bfc820a1535e63",
+    "text": "Kubernetes is now built with Golang 1.16.11",
+    "markdown": "Kubernetes is now built with Golang 1.16.11 ([#106839](https://github.com/kubernetes/kubernetes/pull/106839), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106839",
+    "pr_number": 106839,
+    "areas": ["test", "security", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  },
+  "106924": {
+    "commit": "6fc7734c644fe432dd1c4ff038514436e9bc6588",
+    "text": "kubeadm: during execution of the \"check expiration\" command, treat the etcd CA as external if there is a missing etcd CA key file (etcd/ca.key) and perform the proper validation on certificates signed by the etcd CA. Additionally, make sure that the CA for all entries in the output table is included - for both certificates on disk and in kubeconfig files.",
+    "markdown": "Kubeadm: during execution of the \"check expiration\" command, treat the etcd CA as external if there is a missing etcd CA key file (etcd/ca.key) and perform the proper validation on certificates signed by the etcd CA. Additionally, make sure that the CA for all entries in the output table is included - for both certificates on disk and in kubeconfig files. ([#106924](https://github.com/kubernetes/kubernetes/pull/106924), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106924",
+    "pr_number": 106924,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"]
+  },
+  "106929": {
+    "commit": "bd026f753f684e44b0ef9a6ae6b81018717c5f10",
+    "text": "kubeadm: allow the \"certs check-expiration\" command to not require the existence of the cluster CA key (ca.key file) when checking the expiration of managed certificates in kubeconfig files.",
+    "markdown": "Kubeadm: allow the \"certs check-expiration\" command to not require the existence of the cluster CA key (ca.key file) when checking the expiration of managed certificates in kubeconfig files. ([#106929](https://github.com/kubernetes/kubernetes/pull/106929), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106929",
+    "pr_number": 106929,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"]
+  },
+  "106961": {
+    "commit": "1c15f1c1d9cb9271322c2445d773783ada646f41",
+    "text": "Update golang.org/x/net to v0.0.0-20211209124913-491a49abca63",
+    "markdown": "Update golang.org/x/net to v0.0.0-20211209124913-491a49abca63 ([#106961](https://github.com/kubernetes/kubernetes/pull/106961), [@cpanato](https://github.com/cpanato)) [SIG API Machinery, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Node and Storage]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106961",
+    "pr_number": 106961,
+    "areas": [
+      "security",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "release-eng",
+      "code-generation",
+      "dependency"
+    ],
+    "kinds": ["feature"],
+    "sigs": [
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "cli",
+      "instrumentation",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true
+  },
+  "106983": {
+    "commit": "72b8d7e028a6fdcaa96c7515085e8dd605795306",
+    "text": "Kubernetes is now built with Golang 1.16.12",
+    "markdown": "Kubernetes is now built with Golang 1.16.12 ([#106983](https://github.com/kubernetes/kubernetes/pull/106983), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106983",
+    "pr_number": 106983,
+    "areas": ["test", "security", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  },
+  "107040": {
+    "commit": "03c1d39a523b50972e38659e6f259c325d54d942",
+    "text": "mount-utils: Detect potential stale file handle",
+    "markdown": "Mount-utils: Detect potential stale file handle ([#107040](https://github.com/kubernetes/kubernetes/pull/107040), [@andyzhangx](https://github.com/andyzhangx)) [SIG Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107040",
+    "pr_number": 107040,
+    "kinds": ["bug"],
+    "sigs": ["storage"]
+  }
+}

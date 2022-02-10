@@ -1,0 +1,52 @@
+{
+  "107406": {
+    "commit": "613b27d36cbfece736af006190bf0ee7fad28daa",
+    "text": "fix: delete non existing Azure disk issue",
+    "markdown": "Fix: delete non existing Azure disk issue ([#107406](https://github.com/kubernetes/kubernetes/pull/107406), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107406",
+    "pr_number": 107406,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "107613": {
+    "commit": "531a28b82ee0211b91fafc4af23cf74a9a06a6b9",
+    "text": "Kubernetes is now built with Golang 1.17.6",
+    "markdown": "Kubernetes is now built with Golang 1.17.6 ([#107613](https://github.com/kubernetes/kubernetes/pull/107613), [@palnabarun](https://github.com/palnabarun)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "palnabarun",
+    "author_url": "https://github.com/palnabarun",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107613",
+    "pr_number": 107613,
+    "areas": ["test", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  },
+  "107689": {
+    "commit": "6d08a56228acda0016975136c00cf9e02f0d1bfb",
+    "text": "Fixes a regression in 1.23 that incorrectly pruned data from array items of a custom resource that set `x-kubernetes-preserve-unknown-fields: true`",
+    "markdown": "Fixes a regression in 1.23 that incorrectly pruned data from array items of a custom resource that set `x-kubernetes-preserve-unknown-fields: true` ([#107689](https://github.com/kubernetes/kubernetes/pull/107689), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107689",
+    "pr_number": 107689,
+    "kinds": ["bug", "regression"],
+    "sigs": ["api-machinery"],
+    "duplicate_kind": true
+  },
+  "107761": {
+    "commit": "f2c6108f462500d26bf875f551cc88916769f8f9",
+    "text": "Fixes static pod add and removes restarts in certain cases.",
+    "markdown": "Fixes static pod add and removes restarts in certain cases. ([#107761](https://github.com/kubernetes/kubernetes/pull/107761), [@rphillips](https://github.com/rphillips)) [SIG Node]",
+    "author": "rphillips",
+    "author_url": "https://github.com/rphillips",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107761",
+    "pr_number": 107761,
+    "areas": ["kubelet"],
+    "kinds": ["regression"],
+    "sigs": ["node"]
+  }
+}
