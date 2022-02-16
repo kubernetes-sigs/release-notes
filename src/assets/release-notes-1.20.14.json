@@ -1,0 +1,73 @@
+{
+  "105834": {
+    "commit": "a02294787ac8d50e426140471975b6a62a5b46f1",
+    "text": "fix: skip instance not found when decoupling vmss from lb",
+    "markdown": "Fix: skip instance not found when decoupling vmss from lb ([#105834](https://github.com/kubernetes/kubernetes/pull/105834), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105834",
+    "pr_number": 105834,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "106554": {
+    "commit": "3fd7ee39c7eb801e1fd12a020a6fd62ba1f9ba43",
+    "text": "Fixed SELinux relabeling of CSI volumes after CSI driver failure.",
+    "markdown": "Fixed SELinux relabeling of CSI volumes after CSI driver failure. ([#106554](https://github.com/kubernetes/kubernetes/pull/106554), [@jsafrane](https://github.com/jsafrane)) [SIG Node and Storage]",
+    "author": "jsafrane",
+    "author_url": "https://github.com/jsafrane",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106554",
+    "pr_number": 106554,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "node"],
+    "duplicate": true
+  },
+  "106686": {
+    "commit": "5d90a1c8367522be43e24721b55ecbdd387dcc7f",
+    "text": "Scheduler's assumed pods have 2min instead of 30s to receive nodeName pod updates",
+    "markdown": "Scheduler's assumed pods have 2min instead of 30s to receive nodeName pod updates ([#106686](https://github.com/kubernetes/kubernetes/pull/106686), [@ahg-g](https://github.com/ahg-g)) [SIG Scheduling]",
+    "author": "ahg-g",
+    "author_url": "https://github.com/ahg-g",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106686",
+    "pr_number": 106686,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "106695": {
+    "commit": "d7fa26d11926f68ec0b7a0ccf26a1a231f45da98",
+    "text": "Ensure Pods are removed from the scheduler cache when the scheduler misses deletion events due to transient errors",
+    "markdown": "Ensure Pods are removed from the scheduler cache when the scheduler misses deletion events due to transient errors ([#106695](https://github.com/kubernetes/kubernetes/pull/106695), [@alculquicondor](https://github.com/alculquicondor)) [SIG Scheduling]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106695",
+    "pr_number": 106695,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "106923": {
+    "commit": "7f6a2bbf48cafe184d839512cac52c0485bc7d05",
+    "text": "kubeadm: during execution of the \"check expiration\" command, treat the etcd CA as external if there is a missing etcd CA key file (etcd/ca.key) and perform the proper validation on certificates signed by the etcd CA. Additionally, make sure that the CA for all entries in the output table is included - for both certificates on disk and in kubeconfig files.",
+    "markdown": "Kubeadm: during execution of the \"check expiration\" command, treat the etcd CA as external if there is a missing etcd CA key file (etcd/ca.key) and perform the proper validation on certificates signed by the etcd CA. Additionally, make sure that the CA for all entries in the output table is included - for both certificates on disk and in kubeconfig files. ([#106923](https://github.com/kubernetes/kubernetes/pull/106923), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106923",
+    "pr_number": 106923,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"]
+  },
+  "106927": {
+    "commit": "bfa3af3abee99b94c8fd32aaa14eee31ef5bae9d",
+    "text": "kubeadm: allow the \"certs check-expiration\" command to not require the existence of the cluster CA key (ca.key file) when checking the expiration of managed certificates in kubeconfig files.",
+    "markdown": "Kubeadm: allow the \"certs check-expiration\" command to not require the existence of the cluster CA key (ca.key file) when checking the expiration of managed certificates in kubeconfig files. ([#106927](https://github.com/kubernetes/kubernetes/pull/106927), [@neolit123](https://github.com/neolit123)) [SIG Cluster Lifecycle]",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106927",
+    "pr_number": 106927,
+    "areas": ["kubeadm"],
+    "kinds": ["bug"],
+    "sigs": ["cluster-lifecycle"]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "105673": {
+    "commit": "82e621070e6382ee5c962ad72e4f48dc8f81e96d",
+    "text": "support more than 100 disk mounts on Windows",
+    "markdown": "Support more than 100 disk mounts on Windows ([#105673](https://github.com/kubernetes/kubernetes/pull/105673), [@andyzhangx](https://github.com/andyzhangx)) [SIG Storage and Windows]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105673",
+    "pr_number": 105673,
+    "kinds": ["bug"],
+    "sigs": ["storage", "windows"],
+    "duplicate": true
+  },
+  "105788": {
+    "commit": "06fc9520a1ca4ea6861e9e828f900dc242700f52",
+    "text": "Fixes hostpath storage e2e tests within SELinux enabled env",
+    "markdown": "Fixes hostpath storage e2e tests within SELinux enabled env ([#105788](https://github.com/kubernetes/kubernetes/pull/105788), [@Elbehery](https://github.com/Elbehery)) [SIG Testing]",
+    "author": "Elbehery",
+    "author_url": "https://github.com/Elbehery",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105788",
+    "pr_number": 105788,
+    "areas": ["test", "e2e-test-framework"],
+    "kinds": ["bug", "failing-test"],
+    "sigs": ["testing"],
+    "duplicate_kind": true
+  },
+  "106124": {
+    "commit": "f5671d1d2b09d8541b3587f69127090155d638d1",
+    "text": "Fix concurrent map access causing panics when logging timed-out API calls.",
+    "markdown": "Fix concurrent map access causing panics when logging timed-out API calls. ([#106124](https://github.com/kubernetes/kubernetes/pull/106124), [@marseel](https://github.com/marseel)) [SIG API Machinery]",
+    "author": "marseel",
+    "author_url": "https://github.com/marseel",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106124",
+    "pr_number": 106124,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "106136": {
+    "commit": "30f791ab949a1d7a500461fb61de04fb850fccb4",
+    "text": "EndpointSlice Mirroring controller now cleans up managed EndpointSlices when a Service selector is added",
+    "markdown": "EndpointSlice Mirroring controller now cleans up managed EndpointSlices when a Service selector is added ([#106136](https://github.com/kubernetes/kubernetes/pull/106136), [@robscott](https://github.com/robscott)) [SIG Apps, Network and Testing]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106136",
+    "pr_number": 106136,
+    "areas": ["test"],
+    "kinds": ["bug"],
+    "sigs": ["network", "apps", "testing"],
+    "duplicate": true
+  },
+  "106148": {
+    "commit": "8c30d1c8f70d8b7a3f4e81c0471a4a42b39e1d02",
+    "text": "Update debian-base, debian-iptables, setcap images to pick up CVE fixes\n- Debian-base to v1.9.0\n- Debian-iptables to v1.6.7",
+    "markdown": "Update debian-base, debian-iptables, setcap images to pick up CVE fixes\n  - Debian-base to v1.9.0\n  - Debian-iptables to v1.6.7 ([#106148](https://github.com/kubernetes/kubernetes/pull/106148), [@cpanato](https://github.com/cpanato)) [SIG Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/106148",
+    "pr_number": 106148,
+    "areas": ["test", "security", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["testing", "release"],
+    "feature": true,
+    "duplicate": true
+  }
+}

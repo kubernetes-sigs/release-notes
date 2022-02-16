@@ -1,0 +1,133 @@
+{
+  "102602": {
+    "commit": "4aceb6799141cb2ed8195a6fa6f028e571eec935",
+    "text": "Updates golang.org/x/text to v0.3.6 to fix CVE-2020-28852",
+    "markdown": "Updates golang.org/x/text to v0.3.6 to fix CVE-2020-28852 ([#102602](https://github.com/kubernetes/kubernetes/pull/102602), [@jonesbr17](https://github.com/jonesbr17)) [SIG API Machinery, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation and Node]",
+    "author": "jonesbr17",
+    "author_url": "https://github.com/jonesbr17",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102602",
+    "pr_number": 102602,
+    "areas": ["apiserver", "kubectl", "cloudprovider", "code-generation", "dependency"],
+    "kinds": ["bug"],
+    "sigs": [
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "cli",
+      "instrumentation",
+      "cloud-provider"
+    ],
+    "duplicate": true
+  },
+  "102665": {
+    "commit": "0416250921607ec3fedbbef3cace81b36634ee18",
+    "text": "Allow CSI drivers to just run offline expansion tests",
+    "markdown": "Allow CSI drivers to just run offline expansion tests ([#102665](https://github.com/kubernetes/kubernetes/pull/102665), [@gnufied](https://github.com/gnufied)) [SIG Storage and Testing]",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102665",
+    "pr_number": 102665,
+    "areas": ["test"],
+    "kinds": ["cleanup"],
+    "sigs": ["storage", "testing"],
+    "duplicate": true
+  },
+  "104687": {
+    "commit": "53027ef444e025c4f303a8615aeb5a23f9352537",
+    "text": "fix: ignore the case when updating Azure tags",
+    "markdown": "Fix: ignore the case when updating Azure tags ([#104687](https://github.com/kubernetes/kubernetes/pull/104687), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104687",
+    "pr_number": 104687,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "104910": {
+    "commit": "be3e7e6d71ab96d50c2d81ba9e228a59bf2c9a06",
+    "text": "Detach volumes from vSphere nodes not tracked by attach-detach controller",
+    "markdown": "Detach volumes from vSphere nodes not tracked by attach-detach controller ([#104910](https://github.com/kubernetes/kubernetes/pull/104910), [@gnufied](https://github.com/gnufied)) [SIG Cloud Provider and Storage]",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104910",
+    "pr_number": 104910,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "cloud-provider"],
+    "duplicate": true
+  },
+  "104990": {
+    "commit": "7ffe8e83b4fd7c2ba911debae510ed2fddd5c56b",
+    "text": "kube-apiserver: Fixes handling of CRD schemas containing literal null values in enums",
+    "markdown": "Kube-apiserver: Fixes handling of CRD schemas containing literal null values in enums ([#104990](https://github.com/kubernetes/kubernetes/pull/104990), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Apps and Network]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104990",
+    "pr_number": 104990,
+    "kinds": ["api-change"],
+    "sigs": ["network", "api-machinery", "apps"],
+    "duplicate": true
+  },
+  "105239": {
+    "commit": "58d0a4b699cd95559a8e56dc851017d023754fe4",
+    "text": "Revert PR #102925 which introduced unexpected scheduling behavior based on balanced resource allocation",
+    "markdown": "Revert PR #102925 which introduced unexpected scheduling behavior based on balanced resource allocation ([#105239](https://github.com/kubernetes/kubernetes/pull/105239), [@damemi](https://github.com/damemi)) [SIG Scheduling]",
+    "author": "damemi",
+    "author_url": "https://github.com/damemi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105239",
+    "pr_number": 105239,
+    "kinds": ["bug", "regression"],
+    "sigs": ["scheduling"],
+    "duplicate_kind": true
+  },
+  "105364": {
+    "commit": "0cf695104d95fb2c1d72f02d4b4d3f0278effbac",
+    "text": "fix: consolidate logs for instance not found error",
+    "markdown": "Fix: consolidate logs for instance not found error ([#105364](https://github.com/kubernetes/kubernetes/pull/105364), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105364",
+    "pr_number": 105364,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "105404": {
+    "commit": "af669d8cc8594bad8acbf1df95e2f24a7c67c5c4",
+    "text": "Fix: ignore not a VMSS error for VMAS nodes in EnsureBackendPoolDeleted.",
+    "markdown": "Fix: ignore not a VMSS error for VMAS nodes in EnsureBackendPoolDeleted. ([#105404](https://github.com/kubernetes/kubernetes/pull/105404), [@ialidzhikov](https://github.com/ialidzhikov)) [SIG Cloud Provider]",
+    "author": "ialidzhikov",
+    "author_url": "https://github.com/ialidzhikov",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105404",
+    "pr_number": 105404,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "105788": {
+    "commit": "3933dc0d422aab293fefe78995a18c1359779d13",
+    "text": "Fixes hostpath storage e2e tests within SELinux enabled env",
+    "markdown": "Fixes hostpath storage e2e tests within SELinux enabled env ([#105788](https://github.com/kubernetes/kubernetes/pull/105788), [@Elbehery](https://github.com/Elbehery)) [SIG Testing]",
+    "author": "Elbehery",
+    "author_url": "https://github.com/Elbehery",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105788",
+    "pr_number": 105788,
+    "areas": ["test", "e2e-test-framework"],
+    "kinds": ["bug", "failing-test"],
+    "sigs": ["testing"],
+    "duplicate_kind": true
+  },
+  "105834": {
+    "commit": "2fd4a8951d557afd6007014fc06b857ab579ecb0",
+    "text": "fix: skip instance not found when decoupling vmss from lb",
+    "markdown": "Fix: skip instance not found when decoupling vmss from lb ([#105834](https://github.com/kubernetes/kubernetes/pull/105834), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105834",
+    "pr_number": 105834,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  }
+}

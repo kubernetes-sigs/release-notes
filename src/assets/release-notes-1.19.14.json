@@ -1,0 +1,27 @@
+{
+  "104130": {
+    "commit": "ae5dbdba9e7357b0800060ae35df78b7ede27bc9",
+    "text": "Fixed a bug in the job controller to not mutate the shared cache",
+    "markdown": "Fixed a bug in the job controller to not mutate the shared cache ([#104130](https://github.com/kubernetes/kubernetes/pull/104130), [@adtac](https://github.com/adtac)) [SIG Apps]",
+    "author": "adtac",
+    "author_url": "https://github.com/adtac",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104130",
+    "pr_number": 104130,
+    "kinds": ["bug"],
+    "sigs": ["apps"]
+  },
+  "104216": {
+    "commit": "20199f9d38d0214c876731fbc6b2ee6a97614726",
+    "text": "Kubernetes 1.19.x is now built using Go 1.15.15",
+    "markdown": "Kubernetes 1.19.x is now built using Go 1.15.15 ([#104216](https://github.com/kubernetes/kubernetes/pull/104216), [@cpanato](https://github.com/cpanato)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "cpanato",
+    "author_url": "https://github.com/cpanato",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104216",
+    "pr_number": 104216,
+    "areas": ["test", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  }
+}

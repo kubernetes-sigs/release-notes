@@ -1,0 +1,66 @@
+{
+  "101084": {
+    "commit": "3a7dfedc682ab10fd9e0fd6fb807762c610aa12e",
+    "text": "EndpointSlice IP validation now matches Endpoints IP validation.",
+    "markdown": "EndpointSlice IP validation now matches Endpoints IP validation. ([#101084](https://github.com/kubernetes/kubernetes/pull/101084), [@robscott](https://github.com/robscott)) [SIG Apps and Network]",
+    "author": "robscott",
+    "author_url": "https://github.com/robscott",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101084",
+    "pr_number": 101084,
+    "kinds": ["bug", "cleanup"],
+    "sigs": ["network", "apps"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "101093": {
+    "commit": "84fe7b48ed6fe1e74655cc2435ebd6f60a9ebc26",
+    "text": "Fixed a bug where startupProbe stopped working after a container's first restart",
+    "markdown": "Fixed a bug where startupProbe stopped working after a container's first restart ([#101093](https://github.com/kubernetes/kubernetes/pull/101093), [@wzshiming](https://github.com/wzshiming)) [SIG Node]",
+    "author": "wzshiming",
+    "author_url": "https://github.com/wzshiming",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101093",
+    "pr_number": 101093,
+    "areas": ["kubelet"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["node"],
+    "duplicate_kind": true
+  },
+  "101114": {
+    "commit": "a60323c2ca88ddbbf9eb3b8915807405757c5132",
+    "text": "We have added a new Priority \u0026 Fairness rule that exempts all probes (/readyz, /healthz, /livez) to prevent \nrestarting of \"healthy\" kube-apiserver instance(s) by kubelet.",
+    "markdown": "We have added a new Priority \u0026 Fairness rule that exempts all probes (/readyz, /healthz, /livez) to prevent \n  restarting of \"healthy\" kube-apiserver instance(s) by kubelet. ([#101114](https://github.com/kubernetes/kubernetes/pull/101114), [@tkashem](https://github.com/tkashem)) [SIG API Machinery]",
+    "author": "tkashem",
+    "author_url": "https://github.com/tkashem",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/101114",
+    "pr_number": 101114,
+    "kinds": ["bug", "api-change"],
+    "sigs": ["api-machinery"],
+    "duplicate_kind": true
+  },
+  "99336": {
+    "commit": "461c190c69f4543b9fa42db8766aead59d810915",
+    "text": "kubelet: improve the performance when waiting for a synchronization of the node list with the kube-apiserver",
+    "markdown": "Kubelet: improve the performance when waiting for a synchronization of the node list with the kube-apiserver ([#99336](https://github.com/kubernetes/kubernetes/pull/99336), [@neolit123](https://github.com/neolit123)) [SIG Node]",
+    "author": "neolit123",
+    "author_url": "https://github.com/neolit123",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99336",
+    "pr_number": 99336,
+    "areas": ["kubelet"],
+    "kinds": ["regression"],
+    "sigs": ["node"]
+  },
+  "99839": {
+    "commit": "1d2742f26c6a5ca4df6e3b48fce5f754baa90224",
+    "text": "Fixed port-forward memory leak for long-running and heavily used connections.",
+    "markdown": "Fixed port-forward memory leak for long-running and heavily used connections. ([#99839](https://github.com/kubernetes/kubernetes/pull/99839), [@saschagrunert](https://github.com/saschagrunert)) [SIG API Machinery and Node]",
+    "author": "saschagrunert",
+    "author_url": "https://github.com/saschagrunert",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/99839",
+    "pr_number": 99839,
+    "areas": ["kubelet"],
+    "kinds": ["bug", "cleanup"],
+    "sigs": ["node", "api-machinery"],
+    "duplicate": true,
+    "duplicate_kind": true
+  }
+}

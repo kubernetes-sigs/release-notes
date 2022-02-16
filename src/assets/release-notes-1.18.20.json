@@ -1,0 +1,16 @@
+{
+  "102838": {
+    "commit": "829f650b0c05adc5ca58b306fc31c39cef91908c",
+    "text": "Reverted the previous fix for portforward cleanup because it introduced a kubelet regression which can lead into segmentation faults.",
+    "markdown": "Reverted the previous fix for portforward cleanup because it introduced a kubelet regression which can lead into segmentation faults. ([#102838](https://github.com/kubernetes/kubernetes/pull/102838), [@saschagrunert](https://github.com/saschagrunert)) [SIG API Machinery and Node]",
+    "author": "saschagrunert",
+    "author_url": "https://github.com/saschagrunert",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102838",
+    "pr_number": 102838,
+    "areas": ["kubelet"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["node", "api-machinery"],
+    "duplicate": true,
+    "duplicate_kind": true
+  }
+}
