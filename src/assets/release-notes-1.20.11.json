@@ -1,0 +1,109 @@
+{
+  "100720": {
+    "commit": "60b6c132c86f35a1891a864859c363350b3ef859",
+    "text": "Metrics changes: Fix exposed buckets of `scheduler_volume_scheduling_duration_seconds_bucket` metric",
+    "markdown": "Metrics changes: Fix exposed buckets of `scheduler_volume_scheduling_duration_seconds_bucket` metric ([#100720](https://github.com/kubernetes/kubernetes/pull/100720), [@dntosas](https://github.com/dntosas)) [SIG Apps, Instrumentation, Scheduling and Storage]",
+    "author": "dntosas",
+    "author_url": "https://github.com/dntosas",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/100720",
+    "pr_number": 100720,
+    "kinds": ["bug"],
+    "sigs": ["scheduling", "storage", "apps", "instrumentation"],
+    "duplicate": true
+  },
+  "103958": {
+    "commit": "b9d77cc50b8d24422f2018ebe5b63e1d1b94236b",
+    "text": "kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and time to read the headers of incoming requests",
+    "markdown": "Kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and time to read the headers of incoming requests ([#103958](https://github.com/kubernetes/kubernetes/pull/103958), [@liggitt](https://github.com/liggitt)) [SIG API Machinery and Node]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103958",
+    "pr_number": 103958,
+    "areas": ["kubelet", "apiserver"],
+    "kinds": ["cleanup"],
+    "sigs": ["node", "api-machinery"],
+    "duplicate": true
+  },
+  "104152": {
+    "commit": "b1821f0249687b549b24aa4acbc6dd088c55ab81",
+    "text": "kube-proxy: delete stale conntrack UDP entries for loadbalancer ingress IP.",
+    "markdown": "Kube-proxy: delete stale conntrack UDP entries for loadbalancer ingress IP. ([#104152](https://github.com/kubernetes/kubernetes/pull/104152), [@aojea](https://github.com/aojea)) [SIG Network]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104152",
+    "pr_number": 104152,
+    "kinds": ["bug"],
+    "sigs": ["network"]
+  },
+  "104348": {
+    "commit": "6e758c1a174685e36110a97724b687af05af0915",
+    "text": "Pass additional flags to subpath mount to avoid flakes in certain conditions",
+    "markdown": "Pass additional flags to subpath mount to avoid flakes in certain conditions ([#104348](https://github.com/kubernetes/kubernetes/pull/104348), [@mauriciopoppe](https://github.com/mauriciopoppe)) [SIG Storage]",
+    "author": "mauriciopoppe",
+    "author_url": "https://github.com/mauriciopoppe",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104348",
+    "pr_number": 104348,
+    "kinds": ["bug"],
+    "sigs": ["storage"]
+  },
+  "104448": {
+    "commit": "c8718b98f5c92f4d34d65c0d2b7c70f454efdd22",
+    "text": "fix: skip case sensitivity when checking Azure NSG rules\nfix: ensure InstanceShutdownByProviderID return false for creating Azure VMs",
+    "markdown": "Fix: skip case sensitivity when checking Azure NSG rules\n  fix: ensure InstanceShutdownByProviderID return false for creating Azure VMs ([#104448](https://github.com/kubernetes/kubernetes/pull/104448), [@feiskyer](https://github.com/feiskyer)) [SIG Cloud Provider]",
+    "author": "feiskyer",
+    "author_url": "https://github.com/feiskyer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104448",
+    "pr_number": 104448,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "104674": {
+    "commit": "c0011e7c6a933dcc7ad1bfc618e3e36001bab521",
+    "text": "When using `kubectl replace` (or the equivalent API call) on a Service, the caller no longer needs to do a read-modify-write cycle to fetch the allocated values for `.spec.clusterIP` and `.spec.ports[].nodePort`.  Instead the API server will automatically carry these forward from the original object when the new object does not specify them.",
+    "markdown": "When using `kubectl replace` (or the equivalent API call) on a Service, the caller no longer needs to do a read-modify-write cycle to fetch the allocated values for `.spec.clusterIP` and `.spec.ports[].nodePort`.  Instead the API server will automatically carry these forward from the original object when the new object does not specify them. ([#104674](https://github.com/kubernetes/kubernetes/pull/104674), [@thockin](https://github.com/thockin)) [SIG Network]",
+    "author": "thockin",
+    "author_url": "https://github.com/thockin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104674",
+    "pr_number": 104674,
+    "kinds": ["bug"],
+    "sigs": ["network"]
+  },
+  "104687": {
+    "commit": "df8e70d3b1f91d7cffd84916239bf81ecfac8ae3",
+    "text": "fix: ignore the case when updating Azure tags",
+    "markdown": "Fix: ignore the case when updating Azure tags ([#104687](https://github.com/kubernetes/kubernetes/pull/104687), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104687",
+    "pr_number": 104687,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "104910": {
+    "commit": "0ab4ffcc746c3fe20469b60fc8cd72aa742d9135",
+    "text": "Detach volumes from vSphere nodes not tracked by attach-detach controller",
+    "markdown": "Detach volumes from vSphere nodes not tracked by attach-detach controller ([#104910](https://github.com/kubernetes/kubernetes/pull/104910), [@gnufied](https://github.com/gnufied)) [SIG Cloud Provider and Storage]",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104910",
+    "pr_number": 104910,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "cloud-provider"],
+    "duplicate": true
+  },
+  "104990": {
+    "commit": "e3b54a4470e8124b58d900af397081bd18766a13",
+    "text": "kube-apiserver: Fixes handling of CRD schemas containing literal null values in enums",
+    "markdown": "Kube-apiserver: Fixes handling of CRD schemas containing literal null values in enums ([#104990](https://github.com/kubernetes/kubernetes/pull/104990), [@liggitt](https://github.com/liggitt)) [SIG API Machinery, Apps and Network]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104990",
+    "pr_number": 104990,
+    "kinds": ["api-change"],
+    "sigs": ["network", "api-machinery", "apps"],
+    "duplicate": true
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "100720": {
+    "commit": "1cb6d75f5eb7fec9d7911b8a0b6a3252a54ddd00",
+    "text": "Metrics changes: Fix exposed buckets of `scheduler_volume_scheduling_duration_seconds_bucket` metric",
+    "markdown": "Metrics changes: Fix exposed buckets of `scheduler_volume_scheduling_duration_seconds_bucket` metric ([#100720](https://github.com/kubernetes/kubernetes/pull/100720), [@dntosas](https://github.com/dntosas)) [SIG Apps, Instrumentation, Scheduling and Storage]",
+    "author": "dntosas",
+    "author_url": "https://github.com/dntosas",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/100720",
+    "pr_number": 100720,
+    "kinds": ["bug"],
+    "sigs": ["scheduling", "storage", "apps", "instrumentation"],
+    "duplicate": true
+  },
+  "103958": {
+    "commit": "9cf0694f8c01dfff1c86411f01482a4b74eb0290",
+    "text": "kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and time to read the headers of incoming requests",
+    "markdown": "Kube-apiserver: sets an upper-bound on the lifetime of idle keep-alive connections and time to read the headers of incoming requests ([#103958](https://github.com/kubernetes/kubernetes/pull/103958), [@liggitt](https://github.com/liggitt)) [SIG API Machinery and Node]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103958",
+    "pr_number": 103958,
+    "areas": ["kubelet", "apiserver"],
+    "kinds": ["cleanup"],
+    "sigs": ["node", "api-machinery"],
+    "duplicate": true
+  },
+  "104130": {
+    "commit": "e00e1b6c769e7d0f948fb89c9386574ee32a063d",
+    "text": "Fixed a bug in the job controller to not mutate the shared cache",
+    "markdown": "Fixed a bug in the job controller to not mutate the shared cache ([#104130](https://github.com/kubernetes/kubernetes/pull/104130), [@adtac](https://github.com/adtac)) [SIG Apps]",
+    "author": "adtac",
+    "author_url": "https://github.com/adtac",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104130",
+    "pr_number": 104130,
+    "kinds": ["bug"],
+    "sigs": ["apps"]
+  },
+  "104340": {
+    "commit": "3e061debee7ceed92b2bf15a3b472c603e206b0c",
+    "text": "Pass additional flags to subpath mount to avoid flakes in certain conditions",
+    "markdown": "Pass additional flags to subpath mount to avoid flakes in certain conditions ([#104340](https://github.com/kubernetes/kubernetes/pull/104340), [@mauriciopoppe](https://github.com/mauriciopoppe)) [SIG Node, Storage and Windows]",
+    "author": "mauriciopoppe",
+    "author_url": "https://github.com/mauriciopoppe",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104340",
+    "pr_number": 104340,
+    "areas": ["kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "node", "windows"],
+    "duplicate": true
+  },
+  "104449": {
+    "commit": "8eb2fbc1bc5a61ebe1a42047525c675338ee5465",
+    "text": "fix: skip case sensitivity when checking Azure NSG rules\nfix: ensure InstanceShutdownByProviderID return false for creating Azure VMs",
+    "markdown": "Fix: skip case sensitivity when checking Azure NSG rules\n  fix: ensure InstanceShutdownByProviderID return false for creating Azure VMs ([#104449](https://github.com/kubernetes/kubernetes/pull/104449), [@feiskyer](https://github.com/feiskyer)) [SIG Cloud Provider]",
+    "author": "feiskyer",
+    "author_url": "https://github.com/feiskyer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104449",
+    "pr_number": 104449,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "104485": {
+    "commit": "964950d83e76a9f2156cbc1fe25b01e82bb8e9b3",
+    "text": "For statically provisioned PVs ensure that we use canonical path whenever possible for attach/detach",
+    "markdown": "For statically provisioned PVs ensure that we use canonical path whenever possible for attach/detach ([#104485](https://github.com/kubernetes/kubernetes/pull/104485), [@gnufied](https://github.com/gnufied)) [SIG Cloud Provider and Storage]",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104485",
+    "pr_number": 104485,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "cloud-provider"],
+    "duplicate": true
+  },
+  "104912": {
+    "commit": "60b45008b836c12462be76fe0228117184566d54",
+    "text": "Fix detach from non-existant nodes and support dangling volumes",
+    "markdown": "Fix detach from non-existant nodes and support dangling volumes ([#104912](https://github.com/kubernetes/kubernetes/pull/104912), [@gnufied](https://github.com/gnufied)) [SIG Cloud Provider and Storage]",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104912",
+    "pr_number": 104912,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "cloud-provider"],
+    "duplicate": true
+  },
+  "105015": {
+    "commit": "1c49fd9363f1714325ba858a9ca909f9c815c443",
+    "text": "Fix race condition in scheduler where a new unschedulable Pod might never be retried.",
+    "markdown": "Fix race condition in scheduler where a new unschedulable Pod might never be retried. ([#105015](https://github.com/kubernetes/kubernetes/pull/105015), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps, Scheduling and Testing]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105015",
+    "pr_number": 105015,
+    "areas": ["test"],
+    "kinds": ["bug"],
+    "sigs": ["scheduling", "apps", "testing"],
+    "duplicate": true
+  }
+}

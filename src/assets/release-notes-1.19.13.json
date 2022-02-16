@@ -1,0 +1,64 @@
+{
+  "102925": {
+    "commit": "78f0e38d422926efc04c30680ca4b523dc168cfa",
+    "text": "Fix scoring for NodeResourcesMostAllocated and NodeResourcesBalancedAllocation plugins when nodes have containers with no requests. This was leaving to under-utilization of small nodes.",
+    "markdown": "Fix scoring for NodeResourcesMostAllocated and NodeResourcesBalancedAllocation plugins when nodes have containers with no requests. This was leaving to under-utilization of small nodes. ([#102925](https://github.com/kubernetes/kubernetes/pull/102925), [@alculquicondor](https://github.com/alculquicondor)) [SIG Scheduling]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102925",
+    "pr_number": 102925,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "103105": {
+    "commit": "1c0ec4bb2b69b6d7390ca99d258f20e2260db227",
+    "text": "Fixes a `cannot convert int64 to float64` error seen using server-side apply with certain CRDs in 1.19.10+",
+    "markdown": "Fixes a `cannot convert int64 to float64` error seen using server-side apply with certain CRDs in 1.19.10+ ([#103105](https://github.com/kubernetes/kubernetes/pull/103105), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103105",
+    "pr_number": 103105,
+    "kinds": ["bug", "regression"],
+    "sigs": ["api-machinery"],
+    "duplicate_kind": true
+  },
+  "103133": {
+    "commit": "070ff5e3a98bc3ecd596ed62bc456079bcff0290",
+    "text": "Switch scheduler to generate the merge patch on pod status instead of the full pod",
+    "markdown": "Switch scheduler to generate the merge patch on pod status instead of the full pod ([#103133](https://github.com/kubernetes/kubernetes/pull/103133), [@marwanad](https://github.com/marwanad)) [SIG Scheduling]",
+    "author": "marwanad",
+    "author_url": "https://github.com/marwanad",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103133",
+    "pr_number": 103133,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "103235": {
+    "commit": "0d1b4d3c06ba9703e8c266dd7b354f7d1d6f7ccc",
+    "text": "Updates the following images to pick up CVE fixes:\n- `debian` to v1.8.0\n- `debian-iptables` to v1.6.5\n- `setcap` to v2.0.3",
+    "markdown": "Updates the following images to pick up CVE fixes:\n  - `debian` to v1.8.0\n  - `debian-iptables` to v1.6.5\n  - `setcap` to v2.0.3 ([#103235](https://github.com/kubernetes/kubernetes/pull/103235), [@thejoycekung](https://github.com/thejoycekung)) [SIG API Machinery, Release and Testing]",
+    "author": "thejoycekung",
+    "author_url": "https://github.com/thejoycekung",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103235",
+    "pr_number": 103235,
+    "areas": ["test", "security", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "testing", "release"],
+    "feature": true,
+    "duplicate": true
+  },
+  "103705": {
+    "commit": "5856238cc2b9489ca7af82a022f0dc79f5fd9c92",
+    "text": "Kubernetes 1.19.x is now built using Go 1.15.14",
+    "markdown": "Kubernetes 1.19.x is now built using Go 1.15.14 ([#103705](https://github.com/kubernetes/kubernetes/pull/103705), [@puerco](https://github.com/puerco)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "puerco",
+    "author_url": "https://github.com/puerco",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103705",
+    "pr_number": 103705,
+    "areas": ["test", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  }
+}
