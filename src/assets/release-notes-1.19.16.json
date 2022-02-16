@@ -1,0 +1,27 @@
+{
+  "104912": {
+    "commit": "719be541719828b82c632e6b13488f739fa7dd33",
+    "text": "Fix detach from non-existant nodes and support dangling volumes",
+    "markdown": "Fix detach from non-existant nodes and support dangling volumes ([#104912](https://github.com/kubernetes/kubernetes/pull/104912), [@gnufied](https://github.com/gnufied)) [SIG Cloud Provider and Storage]",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/104912",
+    "pr_number": 104912,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "cloud-provider"],
+    "duplicate": true
+  },
+  "105526": {
+    "commit": "aab99a0709a488f23a8a0b0c17047072a0319ea6",
+    "text": "Revert PR #102925 which introduced unexpected scheduling behavior based on balanced resource allocation",
+    "markdown": "Revert PR #102925 which introduced unexpected scheduling behavior based on balanced resource allocation ([#105526](https://github.com/kubernetes/kubernetes/pull/105526), [@harisund](https://github.com/harisund)) [SIG Scheduling]",
+    "author": "harisund",
+    "author_url": "https://github.com/harisund",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/105526",
+    "pr_number": 105526,
+    "kinds": ["bug", "regression"],
+    "sigs": ["scheduling"],
+    "duplicate_kind": true
+  }
+}
