@@ -1,0 +1,81 @@
+{
+  "107406": {
+    "commit": "9a46ee28a404cf4d2290dc3420d7816eb42c8893",
+    "text": "fix: delete non existing Azure disk issue",
+    "markdown": "Fix: delete non existing Azure disk issue ([#107406](https://github.com/kubernetes/kubernetes/pull/107406), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107406",
+    "pr_number": 107406,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "107575": {
+    "commit": "a753dace544bbc64b4ea56c7e0adab174dbda62d",
+    "text": "fix Azurefile volumeid collision issue in csi migration",
+    "markdown": "Fix Azurefile volumeid collision issue in csi migration ([#107575](https://github.com/kubernetes/kubernetes/pull/107575), [@andyzhangx](https://github.com/andyzhangx)) [SIG Cloud Provider and Storage]",
+    "author": "andyzhangx",
+    "author_url": "https://github.com/andyzhangx",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107575",
+    "pr_number": 107575,
+    "areas": ["provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["storage", "cloud-provider"],
+    "duplicate": true
+  },
+  "107580": {
+    "commit": "de17b6fef92b8525bf05656672db96b5607499b1",
+    "text": "fix: ignore the case when comparing azure tags in service annotation (azure)",
+    "markdown": "Fix: ignore the case when comparing azure tags in service annotation (azure) ([#107580](https://github.com/kubernetes/kubernetes/pull/107580), [@nilo19](https://github.com/nilo19)) [SIG Cloud Provider]",
+    "author": "nilo19",
+    "author_url": "https://github.com/nilo19",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107580",
+    "pr_number": 107580,
+    "areas": ["cloudprovider", "provider/azure"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "107614": {
+    "commit": "85219d685340a0a21870303a4354e3c4039e245a",
+    "text": "Kubernetes is now built with Golang 1.16.13",
+    "markdown": "Kubernetes is now built with Golang 1.16.13 ([#107614](https://github.com/kubernetes/kubernetes/pull/107614), [@palnabarun](https://github.com/palnabarun)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "palnabarun",
+    "author_url": "https://github.com/palnabarun",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107614",
+    "pr_number": 107614,
+    "areas": ["test", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  },
+  "108101": {
+    "commit": "7204d966affeeee3d84a0e45d0f7fe140a77394f",
+    "text": "Kubernetes is now built with Golang 1.16.14",
+    "markdown": "Kubernetes is now built with Golang 1.16.14 ([#108101](https://github.com/kubernetes/kubernetes/pull/108101), [@xmudrii](https://github.com/xmudrii)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "xmudrii",
+    "author_url": "https://github.com/xmudrii",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/108101",
+    "pr_number": 108101,
+    "areas": ["test", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  },
+  "108141": {
+    "commit": "06aa4b2154cbcb39f8af8b794090343cc5dc7416",
+    "text": "Fixes a regression in v1beta1 PodDisruptionBudget handling of \"strategic merge patch\"-type API requests for the `selector` field. Prior to 1.21, these requests would merge `matchLabels` content and replace `matchExpressions` content. In 1.21, patch requests touching the `selector` field started replacing the entire selector. This is consistent with server-side apply and the v1 PodDisruptionBudget behavior, but should not have been changed for v1beta1.",
+    "markdown": "Fixes a regression in v1beta1 PodDisruptionBudget handling of \"strategic merge patch\"-type API requests for the `selector` field. Prior to 1.21, these requests would merge `matchLabels` content and replace `matchExpressions` content. In 1.21, patch requests touching the `selector` field started replacing the entire selector. This is consistent with server-side apply and the v1 PodDisruptionBudget behavior, but should not have been changed for v1beta1. ([#108141](https://github.com/kubernetes/kubernetes/pull/108141), [@liggitt](https://github.com/liggitt)) [SIG Auth and Testing]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/108141",
+    "pr_number": 108141,
+    "areas": ["test"],
+    "kinds": ["api-change", "regression"],
+    "sigs": ["auth", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true
+  }
+}
