@@ -1,0 +1,25 @@
+{
+  "107461": {
+    "commit": "bd3011edb4db5b2a5d0afbf4569cb70a4783c410",
+    "text": "Fixes a rare race condition handling requests that timeout",
+    "markdown": "Fixes a rare race condition handling requests that timeout ([#107461](https://github.com/kubernetes/kubernetes/pull/107461), [@liggitt](https://github.com/liggitt)) [SIG API Machinery]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107461",
+    "pr_number": 107461,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "107558": {
+    "commit": "2053ae3cfbbe076a43ac3fd433e374d07b467715",
+    "text": "Fixes a panic in kube-scheduler handling pods with invalid selectors",
+    "markdown": "Fixes a panic in kube-scheduler handling pods with invalid selectors ([#107558](https://github.com/kubernetes/kubernetes/pull/107558), [@Zheaoli](https://github.com/Zheaoli)) [SIG Scheduling]",
+    "author": "Zheaoli",
+    "author_url": "https://github.com/Zheaoli",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/107558",
+    "pr_number": 107558,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  }
+}

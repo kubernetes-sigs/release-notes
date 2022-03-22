@@ -1,0 +1,64 @@
+{
+  "102925": {
+    "commit": "e09055bf5ce80b600099222539e1496794063908",
+    "text": "Fix scoring for NodeResourcesMostAllocated and NodeResourcesBalancedAllocation plugins when nodes have containers with no requests. This was leaving to under-utilization of small nodes.",
+    "markdown": "Fix scoring for NodeResourcesMostAllocated and NodeResourcesBalancedAllocation plugins when nodes have containers with no requests. This was leaving to under-utilization of small nodes. ([#102925](https://github.com/kubernetes/kubernetes/pull/102925), [@alculquicondor](https://github.com/alculquicondor)) [SIG Scheduling]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102925",
+    "pr_number": 102925,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "102999": {
+    "commit": "169bed9c3b7830ffe3a2913cd251164ede224986",
+    "text": "vSphere: Fix regression during attach disk if datastore is within a storage folder or datastore cluster.",
+    "markdown": "VSphere: Fix regression during attach disk if datastore is within a storage folder or datastore cluster. ([#102999](https://github.com/kubernetes/kubernetes/pull/102999), [@gnufied](https://github.com/gnufied)) [SIG Cloud Provider]",
+    "author": "gnufied",
+    "author_url": "https://github.com/gnufied",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/102999",
+    "pr_number": 102999,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "103133": {
+    "commit": "2e94d9010bc88163150348ffe87ee62224c0e510",
+    "text": "Switch scheduler to generate the merge patch on pod status instead of the full pod",
+    "markdown": "Switch scheduler to generate the merge patch on pod status instead of the full pod ([#103133](https://github.com/kubernetes/kubernetes/pull/103133), [@marwanad](https://github.com/marwanad)) [SIG Scheduling]",
+    "author": "marwanad",
+    "author_url": "https://github.com/marwanad",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103133",
+    "pr_number": 103133,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "103235": {
+    "commit": "9bdbdaa89a7a29bc31dc55bc62ab7d0c64a5ce75",
+    "text": "Updates the following images to pick up CVE fixes:\n- `debian` to v1.8.0\n- `debian-iptables` to v1.6.5\n- `setcap` to v2.0.3",
+    "markdown": "Updates the following images to pick up CVE fixes:\n  - `debian` to v1.8.0\n  - `debian-iptables` to v1.6.5\n  - `setcap` to v2.0.3 ([#103235](https://github.com/kubernetes/kubernetes/pull/103235), [@thejoycekung](https://github.com/thejoycekung)) [SIG API Machinery, Release and Testing]",
+    "author": "thejoycekung",
+    "author_url": "https://github.com/thejoycekung",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103235",
+    "pr_number": 103235,
+    "areas": ["test", "security", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "testing", "release"],
+    "feature": true,
+    "duplicate": true
+  },
+  "103677": {
+    "commit": "57f38e4e5bb0f2258805fc79e6dcb9933ab7f302",
+    "text": "Kubernetes 1.20.x is now built using Go 1.15.14",
+    "markdown": "Kubernetes 1.20.x is now built using Go 1.15.14 ([#103677](https://github.com/kubernetes/kubernetes/pull/103677), [@puerco](https://github.com/puerco)) [SIG Cloud Provider, Instrumentation, Release and Testing]",
+    "author": "puerco",
+    "author_url": "https://github.com/puerco",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103677",
+    "pr_number": 103677,
+    "areas": ["test", "provider/gcp", "release-eng", "dependency"],
+    "kinds": ["feature"],
+    "sigs": ["instrumentation", "testing", "release", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  }
+}
