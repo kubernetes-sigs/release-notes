@@ -1,0 +1,25 @@
+{
+  "111697": {
+    "commit": "132f29769dfecfc808adc58f756be43171054094",
+    "text": "Clarify that the node-port range (kube-apiserver config) must not overlap the nodes' ephemeral range.",
+    "markdown": "Clarify that the node-port range (kube-apiserver config) must not overlap the nodes' ephemeral range. ([#111697](https://github.com/kubernetes/kubernetes/pull/111697), [@thockin](https://github.com/thockin)) [SIG Network]",
+    "author": "thockin",
+    "author_url": "https://github.com/thockin",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111697",
+    "pr_number": 111697,
+    "areas": ["apiserver"],
+    "kinds": ["documentation"],
+    "sigs": ["network"]
+  },
+  "111773": {
+    "commit": "7b1b8012954bad71b4383efeca2ad256fbd27bf7",
+    "text": "Fix memory leak on kube-scheduler preemption",
+    "markdown": "Fix memory leak on kube-scheduler preemption ([#111773](https://github.com/kubernetes/kubernetes/pull/111773), [@amewayne](https://github.com/amewayne)) [SIG Scheduling]",
+    "author": "amewayne",
+    "author_url": "https://github.com/amewayne",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111773",
+    "pr_number": 111773,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  }
+}
