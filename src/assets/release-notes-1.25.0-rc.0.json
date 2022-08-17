@@ -1,0 +1,96 @@
+{
+  "109090": {
+    "commit": "1473e13d1b224a3debe9995d8aba76b9f8b0d0b2",
+    "text": "NodeIPAM support for multiple ClusterCIDRs (https://github.com/kubernetes/enhancements/issues/2593) introduced as an alpha feature.\n\nSetting feature gate MultiCIDRRangeAllocator=true, determines whether the MultiCIDRRangeAllocator controller can be used, while the kube-controller-manager flag below will pick the active controller.\n\nEnable the MultiCIDRRangeAllocator by setting --cidr-allocator-type=MultiCIDRRangeAllocator flag in kube-controller-manager.",
+    "markdown": "NodeIPAM support for multiple ClusterCIDRs (https://github.com/kubernetes/enhancements/issues/2593) introduced as an alpha feature.\n  \n  Setting feature gate MultiCIDRRangeAllocator=true, determines whether the MultiCIDRRangeAllocator controller can be used, while the kube-controller-manager flag below will pick the active controller.\n  \n  Enable the MultiCIDRRangeAllocator by setting --cidr-allocator-type=MultiCIDRRangeAllocator flag in kube-controller-manager. ([#109090](https://github.com/kubernetes/kubernetes/pull/109090), [@sarveshr7](https://github.com/sarveshr7)) [SIG API Machinery, Apps, Auth, CLI, Cloud Provider, Instrumentation, Network and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/2593",
+        "type": "KEP"
+      }
+    ],
+    "author": "sarveshr7",
+    "author_url": "https://github.com/sarveshr7",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/109090",
+    "pr_number": 109090,
+    "areas": ["test", "apiserver", "kubectl", "code-generation"],
+    "kinds": ["api-change", "feature"],
+    "sigs": [
+      "network",
+      "api-machinery",
+      "auth",
+      "apps",
+      "cli",
+      "instrumentation",
+      "testing",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111113": {
+    "commit": "eefcf6aa801c5db48b564d0464470d623b8bfb79",
+    "text": "Introduces support for handling pod failures with respect to the configured pod failure policy rules",
+    "markdown": "Introduces support for handling pod failures with respect to the configured pod failure policy rules ([#111113](https://github.com/kubernetes/kubernetes/pull/111113), [@mimowo](https://github.com/mimowo)) [SIG API Machinery, Apps, Auth, Scheduling and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3329-retriable-and-non-retriable-failures",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111113",
+    "pr_number": 111113,
+    "areas": ["test", "code-generation"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["scheduling", "api-machinery", "auth", "apps", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111258": {
+    "commit": "64ed9145452d2d1d324d2437566f1ea1ce76f226",
+    "text": "The CSIInlineVolume feature has moved from beta to GA.",
+    "markdown": "The CSIInlineVolume feature has moved from beta to GA. ([#111258](https://github.com/kubernetes/kubernetes/pull/111258), [@dobsonj](https://github.com/dobsonj)) [SIG API Machinery, Apps, Auth, Instrumentation, Storage and Testing]",
+    "author": "dobsonj",
+    "author_url": "https://github.com/dobsonj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111258",
+    "pr_number": 111258,
+    "areas": ["test", "code-generation"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["storage", "api-machinery", "auth", "apps", "instrumentation", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111691": {
+    "commit": "d0c92aedbab1bd448a5271496689ae2a3f11debd",
+    "text": "Remove the recently re-introduced schedulability predicate (by PR: https://github.com/kubernetes/kubernetes/pull/109706) as to not have unschedulable nodes removed from load balancers back-end pools.",
+    "markdown": "Remove the recently re-introduced schedulability predicate (by PR: https://github.com/kubernetes/kubernetes/pull/109706) as to not have unschedulable nodes removed from load balancers back-end pools. ([#111691](https://github.com/kubernetes/kubernetes/pull/111691), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu)) [SIG Cloud Provider and Network]",
+    "author": "alexanderConstantinescu",
+    "author_url": "https://github.com/alexanderConstantinescu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111691",
+    "pr_number": 111691,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["network", "cloud-provider"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "111721": {
+    "commit": "c1e0dac4610649297224804cde4dd62b900b3a13",
+    "text": "Fix memory leak in the job controller related to JobTrackingWithFinalizers",
+    "markdown": "Fix memory leak in the job controller related to JobTrackingWithFinalizers ([#111721](https://github.com/kubernetes/kubernetes/pull/111721), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111721",
+    "pr_number": 111721,
+    "kinds": ["bug", "regression"],
+    "sigs": ["apps"],
+    "duplicate_kind": true
+  }
+}
