@@ -19,7 +19,7 @@ COPY package.json ./
 RUN npm ci && mkdir /ng-app && mv ./node_modules ./ng-app
 WORKDIR /ng-app
 COPY . .
-RUN $(npm bin)/ng build --prod --output-path=dist
+RUN $(npm bin)/ng build --configuration production --build-optimizer --output-path dist
 
 FROM nginx:alpine
 COPY nginx-gzip.conf /etc/nginx/conf.d/
