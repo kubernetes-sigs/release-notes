@@ -39,6 +39,7 @@
     "@ngrx/effects": "^14.3.1",
     "@ngrx/store": "^14.3.1",
     "@ngrx/store-devtools": "^14.3.1",
+    "@popperjs/core": "^2.11.6",
     "bootstrap": "^4.6.0",
     "concurrently": "5.3.0",
     "es6-promise": "^4.2.8",
