@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Actions, Effect, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { catchError, exhaustMap, map } from 'rxjs/operators';
 import { ActionTypes, DoFilterSuccess, DoFilter, Failed, GetNotesSuccess } from './notes.actions';
@@ -10,8 +10,8 @@ import { LoggerService } from '@shared/services/logger.service';
 
 @Injectable()
 export class NotesEffects {
-  @Effect()
-  getNotes$ = this.actions$.pipe(
+  
+  getNotes$ = createEffect(() => this.actions$.pipe(
     ofType(ActionTypes.GetNotes),
     exhaustMap(() =>
       this.notesService.getNotes().pipe(
@@ -28,10 +28,10 @@ export class NotesEffects {
         }),
       ),
     ),
-  );
+  ));
 
-  @Effect()
-  doFilter$ = this.actions$.pipe(
+  
+  doFilter$ = createEffect(() => this.actions$.pipe(
     ofType(ActionTypes.DoFilter),
     map((action: DoFilter) => {
       return {
@@ -102,7 +102,7 @@ export class NotesEffects {
       this.logger.debug('[Notes Effects:DoFilter] SUCCESS (filtered)');
       return of(new DoFilterSuccess([...filteredNotes]));
     }),
-  );
+  ));
 
   constructor(
     private actions$: Actions,

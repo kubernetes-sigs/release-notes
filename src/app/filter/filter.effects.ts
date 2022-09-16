@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Actions, Effect, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { exhaustMap, map } from 'rxjs/operators';
 import { ActionTypes, UpdateFilterSuccess, UpdateFilter } from './filter.actions';
@@ -7,8 +7,8 @@ import { LoggerService } from '@shared/services/logger.service';
 
 @Injectable()
 export class FilterEffects {
-  @Effect()
-  updateFilter$ = this.actions$.pipe(
+  
+  updateFilter$ = createEffect(() => this.actions$.pipe(
     ofType(ActionTypes.UpdateFilter),
     map((action: UpdateFilter) => action.filter),
     exhaustMap(filter => {
@@ -17,7 +17,7 @@ export class FilterEffects {
       Object.assign(copy, filter);
       return of(new UpdateFilterSuccess(copy));
     }),
-  );
+  ));
 
   constructor(private actions$: Actions, private logger: LoggerService) {}
 }
