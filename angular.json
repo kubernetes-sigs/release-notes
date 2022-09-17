@@ -18,8 +18,14 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/favicon.png", "src/assets"],
-            "styles": ["src/styles.css", "node_modules/bootstrap/dist/css/bootstrap.css"],
+            "assets": [
+              "src/favicon.png",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
+            ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/popper.js/dist/umd/popper.min.js",
@@ -60,7 +66,11 @@
               ]
             },
             "test": {
-              "assets": ["src/favicon.png", "src/assets", "src/testdata"],
+              "assets": [
+                "src/favicon.png",
+                "src/assets",
+                "src/testdata"
+              ],
               "budgets": [
                 {
                   "type": "anyComponentStyle",
@@ -96,11 +106,23 @@
           "options": {
             "browserTarget": "relnotes:build"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }
