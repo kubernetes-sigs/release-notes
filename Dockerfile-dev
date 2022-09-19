@@ -11,7 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-FROM node:latest as ui-builder
+ARG BASE="node:latest"
+FROM ${BASE} as ui-builder
 COPY package-lock.json ./
 COPY package.json ./
 RUN npm ci && mkdir /ng-app && mv ./node_modules ./ng-app
