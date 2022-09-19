@@ -1,5 +1,6 @@
 import { TestBed, getTestBed } from '@angular/core/testing';
 import { LoggerService, Verbosity } from './logger.service';
+import {jest} from '@jest/globals'
 
 describe('LoggerService', () => {
   let service: LoggerService;
@@ -15,10 +16,15 @@ describe('LoggerService', () => {
     injector = getTestBed();
     service = injector.inject(LoggerService);
 
-    spyOn(global.console, 'log').and.callThrough();
-    spyOn(global.console, 'warn').and.callThrough();
-    spyOn(global.console, 'error').and.callThrough();
+    jest.spyOn(global.console, 'log');
+    jest.spyOn(global.console, 'warn');
+    jest.spyOn(global.console, 'error');
   });
+  afterEach(() => {
+    jest.spyOn(global.console, 'log').mockReset();
+    jest.spyOn(global.console, 'warn').mockReset();
+    jest.spyOn(global.console, 'error').mockReset();
+  })
 
   describe('error', () => {
     it('should log', () => {

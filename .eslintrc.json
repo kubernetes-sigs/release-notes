@@ -3,6 +3,9 @@
   "ignorePatterns": [
     "projects/**/*"
   ],
+  "env": {
+    "jest": true
+  },
   "overrides": [
     {
       "files": [
