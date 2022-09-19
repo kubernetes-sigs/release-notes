@@ -3,7 +3,7 @@ import { Store, StoreModule, combineReducers } from '@ngrx/store';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { State } from '@app/app.reducer';
-import {jest} from '@jest/globals'
+import { jest } from '@jest/globals';
 
 import { NotesComponent } from './notes.component';
 import { notesReducer } from './notes.reducer';

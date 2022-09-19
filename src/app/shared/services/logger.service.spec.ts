@@ -1,6 +1,6 @@
 import { TestBed, getTestBed } from '@angular/core/testing';
 import { LoggerService, Verbosity } from './logger.service';
-import {jest} from '@jest/globals'
+import { jest } from '@jest/globals';
 
 describe('LoggerService', () => {
   let service: LoggerService;
@@ -24,7 +24,7 @@ describe('LoggerService', () => {
     jest.spyOn(global.console, 'log').mockReset();
     jest.spyOn(global.console, 'warn').mockReset();
     jest.spyOn(global.console, 'error').mockReset();
-  })
+  });
 
   describe('error', () => {
     it('should log', () => {

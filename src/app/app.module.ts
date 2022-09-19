@@ -30,50 +30,53 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        FilterComponent,
-        MainComponent,
-        ModalComponent,
-        NotesComponent,
-        SettingsComponent,
-    ],
-    imports: [
-        HttpClientModule,
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        NgxPaginationModule,
-        NgbModule,
-        MarkdownModule.forRoot({
-            markedOptions: {
-                provide: MarkedOptions,
-                useValue: {
-                    gfm: true,
-                    tables: true,
-                    breaks: false,
-                    pedantic: false,
-                    sanitize: false,
-                    smartLists: true,
-                    smartypants: false,
-                },
-            },
-        }),
-        StoreModule.forRoot({
-            filter: filterReducer,
-            notes: notesReducer,
-            settings: settingsReducer,
-        }, {
-            runtimeChecks: {
-                strictStateImmutability: false,
-                strictActionImmutability: false,
-            },
-        }),
-        EffectsModule.forRoot([FilterEffects, NotesEffects, SettingsEffects]),
-        StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-        FontAwesomeModule,
-    ],
-    providers: [LoggerService],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    FilterComponent,
+    MainComponent,
+    ModalComponent,
+    NotesComponent,
+    SettingsComponent,
+  ],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    NgxPaginationModule,
+    NgbModule,
+    MarkdownModule.forRoot({
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          gfm: true,
+          tables: true,
+          breaks: false,
+          pedantic: false,
+          sanitize: false,
+          smartLists: true,
+          smartypants: false,
+        },
+      },
+    }),
+    StoreModule.forRoot(
+      {
+        filter: filterReducer,
+        notes: notesReducer,
+        settings: settingsReducer,
+      },
+      {
+        runtimeChecks: {
+          strictStateImmutability: false,
+          strictActionImmutability: false,
+        },
+      },
+    ),
+    EffectsModule.forRoot([FilterEffects, NotesEffects, SettingsEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    FontAwesomeModule,
+  ],
+  providers: [LoggerService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
