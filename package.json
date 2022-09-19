@@ -19,7 +19,15 @@
     "update": "ncu -u",
     "doc": "compodoc -p src/tsconfig.app.json",
     "prettier": "prettier --write './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'",
-    "check-prettier": "prettier -c './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'"
+    "check-prettier": "prettier -c './**/*.{ts,json,md,css,scss,less,html,yml,yaml}'",
+    "build-dev-image": "docker build . -f Dockerfile-dev -t relenotes:dev-build",
+    "build-dev-docker": "npm run build-dev-image && docker run relenotes:dev-build npm run build-dev",
+    "build-prod-docker": "npm run build-dev-image && docker run relenotes:dev-build npm run build-prod",
+    "check-prettier-docker": "npm run build-dev-image && docker run relenotes:dev-build npm run check-prettier",
+    "doc-docker": "npm run build-dev-image && docker run relenotes:dev-build npm run doc",
+    "e2e-cy-ci-docker": "npm run build-dev-image && docker run relenotes:dev-build npm run e2e-cy-ci",
+    "lint-docker": "npm run build-dev-image && docker run relenotes:dev-build npm run lint",
+    "test-docker": "npm run build-dev-image && docker run relenotes:dev-build npm run test"
   },
   "private": true,
   "dependencies": {
