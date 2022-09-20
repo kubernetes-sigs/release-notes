@@ -1,8 +1,25 @@
-# See the OWNERS docs at https://go.k8s.io/owners#owners_aliases
+# See the OWNERS docs at https://go.k8s.io/owners
 
 aliases:
   sig-release-leads:
-    - alejandrox1
-    - justaugustus
-    - saschagrunert
-    - tpepper
+    - cpanato # SIG Technical Lead
+    - jeremyrickard # SIG Technical Lead
+    - justaugustus # SIG Chair
+    - puerco # SIG Technical Lead
+    - saschagrunert # SIG Chair
+  release-engineering-approvers:
+    - cpanato # Release Manager
+    - justaugustus # subproject owner / Release Manager
+    - palnabarun # Release Manager
+    - puerco # Release Manager
+    - saschagrunert # subproject owner / Release Manager
+    - Verolop # Release Manager
+    - xmudrii # Release Manager
+  release-engineering-reviewers:
+    - ameukam # Release Manager Associate
+    - jimangel # Release Manager Associate
+    - mkorbi # Release Manager Associate
+    - onlydole # Release Manager Associate
+    - sethmccombs # Release Manager Associate
+    - thejoycekung # Release Manager Associate
+    - wilsonehusin # Release Manager Associate

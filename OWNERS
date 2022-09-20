@@ -1,17 +1,10 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 approvers:
-  - jeefy
-  - marpaia
-  - onyiny-ang
-  - puerco
   - sig-release-leads
+  - release-engineering-approvers
 reviewers:
-  - jeefy
-  - marpaia
-  - onyiny-ang
-  - saschagrunert
-  - puerco
+  - release-engineering-reviewers
 labels:
   - sig/release
   - area/release-eng
