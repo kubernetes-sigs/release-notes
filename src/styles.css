@@ -96,3 +96,7 @@ html {
 input[type='checkbox'] {
   vertical-align: middle;
 }
+
+ngb-modal-backdrop {
+  z-index: 1050 !important;
+}

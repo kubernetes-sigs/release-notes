@@ -33,7 +33,6 @@ describe('Release Notes App', () => {
   const v1150entry4 = '#66635';
   const v1150entry5 = '#66928';
   const v1160entry1 = '#74416';
-  const v1170entry1 = '#69263';
   const v1160entry1DocumentationButton = `${documentationButton}-${v1160entry1.replace('#', '')}`;
   const v1160entry1DocumentationContent = `${documentationContent}-${v1160entry1.replace('#', '')}`;
   const preReleaseSetting = '#preReleaseSetting';
@@ -46,7 +45,7 @@ describe('Release Notes App', () => {
     cy.title().should('include', 'Kubernetes Release Notes');
   });
 
-  it(`should everything be visible`, () => {
+  it(`should have everything visible`, () => {
     cy.get(cards).should('be.visible');
     cy.get(option1140).should('be.visible');
     cy.get(option1150).should('be.visible');

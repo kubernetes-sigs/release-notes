@@ -78,6 +78,5 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   ],
   providers: [LoggerService],
   bootstrap: [AppComponent],
-  entryComponents: [ModalComponent],
 })
 export class AppModule {}
