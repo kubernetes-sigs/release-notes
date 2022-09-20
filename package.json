@@ -53,7 +53,7 @@
     "concurrently": "5.3.0",
     "es6-promise": "^4.2.8",
     "es6-shim": "^0.35.6",
-    "jquery": "^3.5.1",
+    "jquery": "^3.6.1",
     "ngx-markdown": "^14.0.1",
     "ngx-pagination": "^6.0.2",
     "npm-check-updates": "^11.1.1",
