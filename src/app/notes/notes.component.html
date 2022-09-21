@@ -13,33 +13,32 @@
         *ngIf="note.documentation"
         class="text-secondary"
         id="documentationButton-{{ note.pr_number }}"
-        data-toggle="collapse"
-        href="#documentationContent-{{ note.pr_number }}"
-      >
+        data-bs-toggle="collapse"
+        href="#documentationContent-{{ note.pr_number }}">
         <fa-icon class="icon" [icon]="faBook" size="lg"></fa-icon>
       </a>
       <span
         (click)="toggleFilter(OptionType.releaseVersions, note.release_version)"
-        class="k8s-badge float-sm-right badge badge-dark badge-release-version"
+        class="k8s-badge float-sm-end badge rounded-pill text-bg-dark badge-release-version"
         >{{ note.release_version }}</span
       >
 
       <span
         *ngFor="let sig of note.sigs"
         (click)="toggleFilter(OptionType.sigs, sig)"
-        class="k8s-badge float-sm-right badge badge-success badge-sig"
+        class="k8s-badge float-sm-end badge rounded-pill text-bg-success badge-sig"
         >{{ sig }}</span
       >
       <span
         *ngFor="let kind of note.kinds"
         (click)="toggleFilter(OptionType.kinds, kind)"
-        class="k8s-badge float-sm-right badge badge-primary badge-kind"
+        class="k8s-badge float-sm-end badge rounded-pill text-bg-primary badge-kind"
         >{{ kind }}</span
       >
       <span
         *ngFor="let area of note.areas"
         (click)="toggleFilter(OptionType.areas, area)"
-        class="k8s-badge float-sm-right badge badge-secondary badge-area"
+        class="k8s-badge float-sm-end badge rounded-pill text-bg-secondary badge-area"
         >{{ area }}</span
       >
     </div>
@@ -48,8 +47,7 @@
       <div
         *ngIf="note.documentation"
         class="collapse {{ collapseClass() }}"
-        id="documentationContent-{{ note.pr_number }}"
-      >
+        id="documentationContent-{{ note.pr_number }}">
         <h6>Additional Documentation</h6>
         <ul>
           <li *ngFor="let doc of note.documentation">
