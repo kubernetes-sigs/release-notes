@@ -7,8 +7,7 @@
           type="checkbox"
           [id]="optionCheckboxID(entry)"
           [ngModel]="filter.data.get(data.key).has(entry)"
-          (ngModelChange)="updateFilter(data.key, entry, $event)"
-        />
+          (ngModelChange)="updateFilter(data.key, entry, $event)" />
         {{ entry }}
       </label>
     </div>
