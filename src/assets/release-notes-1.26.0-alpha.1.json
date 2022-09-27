@@ -11,19 +11,6 @@
     "kinds": ["bug"],
     "sigs": ["node"]
   },
-  "110695": {
-    "commit": "5ade6c833fdde89618791b130bd2e9cad9519842",
-    "text": "NONE",
-    "markdown": "NONE ([#110695](https://github.com/kubernetes/kubernetes/pull/110695), [@lokichoggio](https://github.com/lokichoggio)) [SIG Apps and Autoscaling]",
-    "author": "lokichoggio",
-    "author_url": "https://github.com/lokichoggio",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110695",
-    "pr_number": 110695,
-    "kinds": ["cleanup"],
-    "sigs": ["autoscaling", "apps"],
-    "duplicate": true,
-    "do_not_publish": true
-  },
   "110972": {
     "commit": "71ef1ea68df05cafaabd59d8cf486ace5baeebf5",
     "text": "Kubeadm will cleanup the stale data on best effort basis. Stale data will be removed when each reset phase are executed, default etcd data directory will be cleanup when the `remove-etcd-member` phase are executed.",
@@ -95,19 +82,6 @@
     "duplicate": true,
     "duplicate_kind": true
   },
-  "111379": {
-    "commit": "9efbe6eb9b648bfdf95ccf228175ff57f7ba8f43",
-    "text": "\"NONE\"",
-    "markdown": "\"NONE\" ([#111379](https://github.com/kubernetes/kubernetes/pull/111379), [@muyangren2](https://github.com/muyangren2)) [SIG Network]",
-    "author": "muyangren2",
-    "author_url": "https://github.com/muyangren2",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111379",
-    "pr_number": 111379,
-    "areas": ["ipvs"],
-    "kinds": ["cleanup"],
-    "sigs": ["network"],
-    "do_not_publish": true
-  },
   "111512": {
     "commit": "065a761547fcb6cb4944abac1541c8a0b76a5fe1",
     "text": "kubeadm: \"show-join-command\" has been added as a new separate phase at the end of \"kubeadm init\". You can skip printing the join information by using \"kubeadm init --skip-phases=show-join-command\". Executing only this phase on demand will throw an error because the phase needs dependencies such as bootstrap tokens to be pre-populated.",
@@ -135,18 +109,6 @@
     "sigs": ["node", "api-machinery"],
     "duplicate": true,
     "duplicate_kind": true
-  },
-  "111533": {
-    "commit": "0d7e51b2e806543c245c70829510258c8a907c7c",
-    "text": "NoneNone",
-    "markdown": "NoneNone ([#111533](https://github.com/kubernetes/kubernetes/pull/111533), [@zhoumingcheng](https://github.com/zhoumingcheng)) [SIG CLI]",
-    "author": "zhoumingcheng",
-    "author_url": "https://github.com/zhoumingcheng",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111533",
-    "pr_number": 111533,
-    "areas": ["kubectl"],
-    "kinds": ["cleanup"],
-    "sigs": ["cli"]
   },
   "111554": {
     "commit": "2b5475b3fa5fefdb784f9b04bef3fab666ef19d7",
