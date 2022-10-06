@@ -64,6 +64,7 @@ export class Options {
   public add(optionType: OptionType, input: string[]) {
     this.data.set(optionType, this.merge(this.data.get(optionType), input));
     this.sort();
+    console.log(this)
   }
 
   /**
