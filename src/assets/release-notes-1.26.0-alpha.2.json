@@ -294,18 +294,6 @@
     "sigs": ["instrumentation", "architecture"],
     "duplicate": true
   },
-  "112672": {
-    "commit": "0094662cbbca3d3f3e2e4fbb6ee4eb65f26d197a",
-    "text": "\"NONE\"",
-    "markdown": "\"NONE\" ([#112672](https://github.com/kubernetes/kubernetes/pull/112672), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Instrumentation]",
-    "author": "yangjunmyfm192085",
-    "author_url": "https://github.com/yangjunmyfm192085",
-    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112672",
-    "pr_number": 112672,
-    "kinds": ["cleanup"],
-    "sigs": ["instrumentation"],
-    "do_not_publish": true
-  },
   "112690": {
     "commit": "d2ae6fbeb10fe3c68f631b59a266e729688058a9",
     "text": "Add `kubernetes_feature_enabled` metric series to track whether each active feature gate is enabled.",
