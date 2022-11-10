@@ -35,7 +35,7 @@
     "@angular/common": "^14.2.2",
     "@angular/compiler": "^14.2.2",
     "@angular/core": "^14.2.2",
-    "@angular/forms": "^14.2.2",
+    "@angular/forms": "^14.2.10",
     "@angular/localize": "^14.2.2",
     "@angular/platform-browser": "^14.2.2",
     "@angular/platform-browser-dynamic": "^14.2.2",
