@@ -1,0 +1,110 @@
+{
+  "111023": {
+    "commit": "d1c0171aed848900daa07212370c991c19c318b1",
+    "text": "Add a `ResourceClaim` API (in the resource.k8s.io/v1alpha1 API group and\nbehind the `DynamicResourceAllocation` feature gate).\nThe new API is more flexible than the existing Device Plugins feature of Kubernetes because it\nallows Pods to request (claim) special kinds of resources, which can be available at node level, cluster\nlevel, or following any other model you implement.",
+    "markdown": "Add a `ResourceClaim` API (in the resource.k8s.io/v1alpha1 API group and\n  behind the `DynamicResourceAllocation` feature gate).\n  The new API is more flexible than the existing Device Plugins feature of Kubernetes because it\n  allows Pods to request (claim) special kinds of resources, which can be available at node level, cluster\n  level, or following any other model you implement. ([#111023](https://github.com/kubernetes/kubernetes/pull/111023), [@pohly](https://github.com/pohly)) [SIG API Machinery, Apps, Architecture, Auth, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Node, Release, Scheduling, Storage and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/3063",
+        "type": "KEP"
+      }
+    ],
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111023",
+    "pr_number": 111023,
+    "areas": [
+      "test",
+      "kubelet",
+      "apiserver",
+      "kubectl",
+      "cloudprovider",
+      "provider/gcp",
+      "release-eng",
+      "code-generation",
+      "e2e-test-framework",
+      "dependency"
+    ],
+    "kinds": ["api-change", "feature"],
+    "sigs": [
+      "scheduling",
+      "storage",
+      "node",
+      "api-machinery",
+      "cluster-lifecycle",
+      "auth",
+      "apps",
+      "cli",
+      "instrumentation",
+      "testing",
+      "release",
+      "architecture",
+      "cloud-provider"
+    ],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113375": {
+    "commit": "cc704f97784c3359db4690b97201ebfe6b481869",
+    "text": "PodDisruptionBudget adds an alpha `spec.unhealthyPodEvictionPolicy` field. When the `PDBUnhealthyPodEvictionPolicy` feature-gate is enabled in `kube-apiserver`, setting this field to `\"AlwaysAllow\"` allows pods to be evicted if they do not have a ready condition, regardless of whether the PodDisruptionBudget is currently healthy.",
+    "markdown": "PodDisruptionBudget adds an alpha `spec.unhealthyPodEvictionPolicy` field. When the `PDBUnhealthyPodEvictionPolicy` feature-gate is enabled in `kube-apiserver`, setting this field to `\"AlwaysAllow\"` allows pods to be evicted if they do not have a ready condition, regardless of whether the PodDisruptionBudget is currently healthy. ([#113375](https://github.com/kubernetes/kubernetes/pull/113375), [@atiratree](https://github.com/atiratree)) [SIG API Machinery, Apps, Auth and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3017-pod-healthy-policy-for-pdb",
+        "type": "KEP"
+      }
+    ],
+    "author": "atiratree",
+    "author_url": "https://github.com/atiratree",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113375",
+    "pr_number": 113375,
+    "areas": ["test", "code-generation"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "auth", "apps", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "113819": {
+    "commit": "763f68ef77ec0745d0f0772f381bc7af6001121a",
+    "text": "Promote kubectl alpha events to kubectl events",
+    "markdown": "Promote kubectl alpha events to kubectl events ([#113819](https://github.com/kubernetes/kubernetes/pull/113819), [@soltysh](https://github.com/soltysh)) [SIG CLI and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/1440",
+        "type": "KEP"
+      }
+    ],
+    "author": "soltysh",
+    "author_url": "https://github.com/soltysh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113819",
+    "pr_number": 113819,
+    "areas": ["test", "kubectl"],
+    "kinds": ["feature"],
+    "sigs": ["cli", "testing"],
+    "feature": true,
+    "duplicate": true
+  },
+  "113856": {
+    "commit": "af7cc0a60fa01138d56d9f46eee5cd06d01d20f1",
+    "text": "Known issue: Job field `.spec.podFailurePolicy.rules[*].onExitCode` might be ignored if the Pod is deleted before it terminates.",
+    "markdown": "Known issue: Job field `.spec.podFailurePolicy.rules[*].onExitCode` might be ignored if the Pod is deleted before it terminates. ([#113856](https://github.com/kubernetes/kubernetes/pull/113856), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/e3f3faeb899e5739db4bbbd60a56715f6a4e8b45/keps/sig-apps/3329-retriable-and-non-retriable-failures",
+        "type": "KEP"
+      }
+    ],
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113856",
+    "pr_number": 113856,
+    "kinds": ["bug"],
+    "sigs": ["apps"]
+  }
+}
