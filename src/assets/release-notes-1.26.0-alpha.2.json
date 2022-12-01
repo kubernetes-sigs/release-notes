@@ -1,4 +1,19 @@
 {
+  "103177": {
+    "commit": "42808c8343671e6783ba4c901dcd619bed648c3d",
+    "text": "Added a method `StreamWithContext` to `remotecommand.Executor` to support cancelable SPDY executor stream.",
+    "markdown": "Added a method `StreamWithContext` to `remotecommand.Executor` to support cancelable SPDY executor stream. ([#103177](https://github.com/kubernetes/kubernetes/pull/103177), [@arkbriar](https://github.com/arkbriar))",
+    "author": "arkbriar",
+    "author_url": "https://github.com/arkbriar",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/103177",
+    "pr_number": 103177,
+    "areas": ["test", "kubelet", "kubectl", "e2e-test-framework"],
+    "kinds": ["bug", "feature"],
+    "sigs": ["node", "api-machinery", "cli", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "107896": {
     "commit": "00532e305a3958ec08ce4453d9f234c4a0fbbbf8",
     "text": "A new `pod_status_sync_duration_seconds` histogram is reported at alpha metrics stability that estimates how long the Kubelet takes to write a pod status change once it is detected.",
@@ -38,10 +53,56 @@
     "feature": true,
     "duplicate": true
   },
+  "109505": {
+    "commit": "78cca63817936d03dfc5e7f176f7c3a33c55a80e",
+    "text": "Removed raising an error when setting an annotation with the same value, just ignore it.",
+    "markdown": "Removed raising an error when setting an annotation with the same value, just ignore it. ([#109505](https://github.com/kubernetes/kubernetes/pull/109505), [@zigarn](https://github.com/zigarn))",
+    "author": "zigarn",
+    "author_url": "https://github.com/zigarn",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/109505",
+    "pr_number": 109505,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"]
+  },
+  "110268": {
+    "commit": "818de5a5451630bd9f629f4fd02bda7d616e3868",
+    "text": "'The iptables kube-proxy backend now process service/endpoint changes\nmore efficiently in very large clusters.'",
+    "markdown": "'The iptables kube-proxy backend now process service/endpoint changes\n  more efficiently in very large clusters.' ([#110268](https://github.com/kubernetes/kubernetes/pull/110268), [@danwinship](https://github.com/danwinship))",
+    "author": "danwinship",
+    "author_url": "https://github.com/danwinship",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/110268",
+    "pr_number": 110268,
+    "areas": ["ipvs"],
+    "kinds": ["feature"],
+    "sigs": ["network", "instrumentation"],
+    "feature": true,
+    "duplicate": true
+  },
+  "111616": {
+    "commit": "d6ab1da1b57d3dcb740482abd70385aee6946181",
+    "text": "Kubelet external Credential Provider feature is moved to GA. Credential Provider Plugin and Credential Provider Config APIs updated from `v1beta1` to `v1` with no API changes.",
+    "markdown": "Kubelet external Credential Provider feature is moved to GA. Credential Provider Plugin and Credential Provider Config APIs updated from `v1beta1` to `v1` with no API changes. ([#111616](https://github.com/kubernetes/kubernetes/pull/111616), [@ndixita](https://github.com/ndixita))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/2133-kubelet-credential-providers",
+        "type": "KEP"
+      }
+    ],
+    "author": "ndixita",
+    "author_url": "https://github.com/ndixita",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/111616",
+    "pr_number": 111616,
+    "areas": ["test", "kubelet", "code-generation"],
+    "kinds": ["api-change"],
+    "sigs": ["scheduling", "node", "api-machinery", "testing"],
+    "duplicate": true
+  },
   "112043": {
     "commit": "2eda22a653307ba2d466a9dd49373133abefa682",
-    "text": "The test/e2e/framework was refactored so that the core framework is smaller. Optional functionality like resource monitoring, log size monitoring, metrics gathering and debug information dumping must be imported by specific e2e test suites. Init packages are provided which can be imported to re-enable the functionality that traditionally was in the core framework. If you have code that no longer compiles because of this PR, you can use the script [from a commit message](https://github.com/kubernetes/kubernetes/pull/112043/commits/dfdf88d4faafa6fd39988832ea0ef6d668f490e9) to update that code.",
-    "markdown": "The test/e2e/framework was refactored so that the core framework is smaller. Optional functionality like resource monitoring, log size monitoring, metrics gathering and debug information dumping must be imported by specific e2e test suites. Init packages are provided which can be imported to re-enable the functionality that traditionally was in the core framework. If you have code that no longer compiles because of this PR, you can use the script [from a commit message](https://github.com/kubernetes/kubernetes/pull/112043/commits/dfdf88d4faafa6fd39988832ea0ef6d668f490e9) to update that code. ([#112043](https://github.com/kubernetes/kubernetes/pull/112043), [@pohly](https://github.com/pohly)) [SIG API Machinery, Apps, Architecture, Auth, Autoscaling, CLI, Cloud Provider, Cluster Lifecycle, Instrumentation, Network, Node, Scheduling, Storage, Testing and Windows]",
+    "text": "Refactored `test/e2e/framework` so that the core framework is smaller. Optional functionality like resource monitoring, log size monitoring, metrics gathering and debug information dumping must be imported by specific e2e test suites. Init packages are provided which can be imported to re-enable the functionality that traditionally was in the core framework. If you have code that no longer compiles because of this PR, you can use the script [from a commit message](https://github.com/kubernetes/kubernetes/pull/112043/commits/dfdf88d4faafa6fd39988832ea0ef6d668f490e9) to update that code.",
+    "markdown": "Refactored `test/e2e/framework` so that the core framework is smaller. Optional functionality like resource monitoring, log size monitoring, metrics gathering and debug information dumping must be imported by specific e2e test suites. Init packages are provided which can be imported to re-enable the functionality that traditionally was in the core framework. If you have code that no longer compiles because of this PR, you can use the script [from a commit message](https://github.com/kubernetes/kubernetes/pull/112043/commits/dfdf88d4faafa6fd39988832ea0ef6d668f490e9) to update that code. ([#112043](https://github.com/kubernetes/kubernetes/pull/112043), [@pohly](https://github.com/pohly))",
     "author": "pohly",
     "author_url": "https://github.com/pohly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112043",
@@ -69,8 +130,8 @@
   },
   "112058": {
     "commit": "ac868b17d638a427ca3f9510aa5ab9b6731a6e48",
-    "text": "Updated cri-tools to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0)",
-    "markdown": "Updated cri-tools to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0) ([#112058](https://github.com/kubernetes/kubernetes/pull/112058), [@saschagrunert](https://github.com/saschagrunert)) [SIG Cloud Provider and Release]",
+    "text": "Updated `cri-tools` to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0)",
+    "markdown": "Updated `cri-tools` to [v1.25.0(https://github.com/kubernetes-sigs/cri-tools/releases/tag/v1.25.0) ([#112058](https://github.com/kubernetes/kubernetes/pull/112058), [@saschagrunert](https://github.com/saschagrunert))",
     "author": "saschagrunert",
     "author_url": "https://github.com/saschagrunert",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112058",
@@ -106,6 +167,33 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "112127": {
+    "commit": "2ee024a4df28086883a148adedc744c5d4925a9b",
+    "text": "Fixed `DaemonSet` to update the status even if it fails to create a pod.",
+    "markdown": "Fixed `DaemonSet` to update the status even if it fails to create a pod. ([#112127](https://github.com/kubernetes/kubernetes/pull/112127), [@gjkim42](https://github.com/gjkim42))",
+    "author": "gjkim42",
+    "author_url": "https://github.com/gjkim42",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112127",
+    "pr_number": 112127,
+    "areas": ["test"],
+    "kinds": ["bug"],
+    "sigs": ["apps", "testing"],
+    "duplicate": true
+  },
+  "112133": {
+    "commit": "7df6c02288833c7be66f425e03c1e858d2343f1f",
+    "text": "In 'kube-proxy`: The \"userspace\" proxy mode (deprecated for over a year) is no\nlonger supported on either Linux or Windows. Users should use \"iptables\" or \"ipvs\"\non Linux, or \"kernelspace\" on Windows.\n",
+    "markdown": "In 'kube-proxy`: The \"userspace\" proxy mode (deprecated for over a year) is no\n  longer supported on either Linux or Windows. Users should use \"iptables\" or \"ipvs\"\n  on Linux, or \"kernelspace\" on Windows.\n   ([#112133](https://github.com/kubernetes/kubernetes/pull/112133), [@knabben](https://github.com/knabben))",
+    "author": "knabben",
+    "author_url": "https://github.com/knabben",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112133",
+    "pr_number": 112133,
+    "areas": ["test", "code-generation", "e2e-test-framework"],
+    "kinds": ["cleanup", "api-change"],
+    "sigs": ["network", "scalability", "api-machinery", "windows", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "112184": {
     "commit": "5bcdc82911abb0411943898a6252f4f1eeb4d99f",
     "text": "Kubelet now cleans up the Node's cloud node IP annotation correctly if you\nstop using `--node-ip`. (In particular, this fixes the problem where people who\nwere unnecessarily using `--node-ip` with an external cloud provider in 1.23,\nand then running into problems with 1.24, could not fix the problem by just\nremoving the unnecessary `--node-ip` from the kubelet arguments, because\nthat wouldn't remove the annotation that caused the problems.)",
@@ -120,9 +208,9 @@
     "duplicate": true
   },
   "112306": {
-    "commit": "9720af2ba3f0d792c873bfa6e4d54e60736fb7a0",
-    "text": "Introduce v1beta3 for Priority and Fairness with the following changes to the API spec:\n- rename 'assuredConcurrencyShares' (located under spec.limited') to 'nominalConcurrencyShares'\n- apply strategic merge patch annotations to 'Conditions' of flowschemas and prioritylevelconfigurations",
-    "markdown": "Introduce v1beta3 for Priority and Fairness with the following changes to the API spec:\n  - rename 'assuredConcurrencyShares' (located under spec.limited') to 'nominalConcurrencyShares'\n  - apply strategic merge patch annotations to 'Conditions' of flowschemas and prioritylevelconfigurations ([#112306](https://github.com/kubernetes/kubernetes/pull/112306), [@tkashem](https://github.com/tkashem)) [SIG API Machinery and Testing]",
+    "commit": "f4f363fbe470667fe791fa0da137291931524911",
+    "text": "Introduce `v1beta3` for Priority and Fairness with the following changes to the API spec:\n- rename 'assuredConcurrencyShares' (located under `spec.limited') to 'nominalConcurrencyShares'.\n- apply strategic merge patch annotations to 'Conditions' of flowschemas and `prioritylevelconfigurations`.",
+    "markdown": "Introduce `v1beta3` for Priority and Fairness with the following changes to the API spec:\n  - rename 'assuredConcurrencyShares' (located under `spec.limited') to 'nominalConcurrencyShares'.\n  - apply strategic merge patch annotations to 'Conditions' of flowschemas and `prioritylevelconfigurations`. ([#112306](https://github.com/kubernetes/kubernetes/pull/112306), [@tkashem](https://github.com/tkashem))",
     "author": "tkashem",
     "author_url": "https://github.com/tkashem",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112306",
@@ -149,8 +237,8 @@
   },
   "112518": {
     "commit": "8f269d6df2a57544b73d5ca35e04451373ef334c",
-    "text": "Fix that pods running on nodes tainted with NoExecute continue to run when the PodDisruptionConditions feature gate is enabled",
-    "markdown": "Fix that pods running on nodes tainted with NoExecute continue to run when the PodDisruptionConditions feature gate is enabled ([#112518](https://github.com/kubernetes/kubernetes/pull/112518), [@mimowo](https://github.com/mimowo)) [SIG Apps and Auth]",
+    "text": "fixed code to ensure that pods running on nodes tainted with `NoExecute` continue to run when the `PodDisruptionConditions` feature gate is enabled.",
+    "markdown": "Fixed code to ensure that pods running on nodes tainted with `NoExecute` continue to run when the `PodDisruptionConditions` feature gate is enabled. ([#112518](https://github.com/kubernetes/kubernetes/pull/112518), [@mimowo](https://github.com/mimowo))",
     "author": "mimowo",
     "author_url": "https://github.com/mimowo",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112518",
@@ -161,8 +249,8 @@
   },
   "112542": {
     "commit": "02109414e8816ceefce775e8b627d67cad6ced85",
-    "text": "Added validation for the --container-runtime-endpoint flag of kubelet to be non-empty.",
-    "markdown": "Added validation for the --container-runtime-endpoint flag of kubelet to be non-empty. ([#112542](https://github.com/kubernetes/kubernetes/pull/112542), [@astraw99](https://github.com/astraw99)) [SIG Node]",
+    "text": "Added validation for the `--container-runtime-endpoint` flag of kubelet to be non-empty.",
+    "markdown": "Added validation for the `--container-runtime-endpoint` flag of kubelet to be non-empty. ([#112542](https://github.com/kubernetes/kubernetes/pull/112542), [@astraw99](https://github.com/astraw99))",
     "author": "astraw99",
     "author_url": "https://github.com/astraw99",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112542",
@@ -174,8 +262,8 @@
   },
   "112577": {
     "commit": "de693b5e2d165081ef52dda83cd3aa3398f263b0",
-    "text": "The feature gates ServiceLoadBalancerClass and ServiceLBNodePortControl have been removed. These feature gates were enabled (and locked) since v1.24.",
-    "markdown": "The feature gates ServiceLoadBalancerClass and ServiceLBNodePortControl have been removed. These feature gates were enabled (and locked) since v1.24. ([#112577](https://github.com/kubernetes/kubernetes/pull/112577), [@andrewsykim](https://github.com/andrewsykim)) [SIG Apps]",
+    "text": "Removed feature gates `ServiceLoadBalancerClass` and `ServiceLBNodePortControl`. These feature gates were enabled (and locked) since `v1.24`.",
+    "markdown": "Removed feature gates `ServiceLoadBalancerClass` and `ServiceLBNodePortControl`. These feature gates were enabled (and locked) since `v1.24`. ([#112577](https://github.com/kubernetes/kubernetes/pull/112577), [@andrewsykim](https://github.com/andrewsykim))",
     "author": "andrewsykim",
     "author_url": "https://github.com/andrewsykim",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112577",
@@ -186,8 +274,8 @@
   },
   "112579": {
     "commit": "5ce4f98a76b6c87d0c652564cb7e7fb2dacd8c20",
-    "text": "PodOverhead feature gate was removed as the feature is in GA since 1.24",
-    "markdown": "PodOverhead feature gate was removed as the feature is in GA since 1.24 ([#112579](https://github.com/kubernetes/kubernetes/pull/112579), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG Node and Scheduling]",
+    "text": "Removed `PodOverhead` feature gate as the feature is in GA since `v1.24`.",
+    "markdown": "Removed `PodOverhead` feature gate as the feature is in GA since `v1.24`. ([#112579](https://github.com/kubernetes/kubernetes/pull/112579), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev))",
     "author": "SergeyKanzhelev",
     "author_url": "https://github.com/SergeyKanzhelev",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112579",
@@ -198,8 +286,8 @@
   },
   "112580": {
     "commit": "b8e740f2e551531b22684e4cf6cd57da11203b3d",
-    "text": "A new --disable-compression flag has been added to kubectl (default = false). When true, it opts out of response compression for all requests to the apiserver. This can help improve list call latencies significantly when client-server network bandwidth is ample (\u003e30MB/s) or if the server is CPU-constrained.",
-    "markdown": "A new --disable-compression flag has been added to kubectl (default = false). When true, it opts out of response compression for all requests to the apiserver. This can help improve list call latencies significantly when client-server network bandwidth is ample (\u003e30MB/s) or if the server is CPU-constrained. ([#112580](https://github.com/kubernetes/kubernetes/pull/112580), [@shyamjvs](https://github.com/shyamjvs)) [SIG CLI and Testing]",
+    "text": "Added `--disable-compression` flag to `kubectl` (default = false). When true, it opts out of response compression for all requests to the `apiserver`. This can help improve list call latencies significantly when client-server network bandwidth is ample (\u003e30MB/s) or if the server is CPU-constrained.",
+    "markdown": "Added `--disable-compression` flag to `kubectl` (default = false). When true, it opts out of response compression for all requests to the `apiserver`. This can help improve list call latencies significantly when client-server network bandwidth is ample (\u003e30MB/s) or if the server is CPU-constrained. ([#112580](https://github.com/kubernetes/kubernetes/pull/112580), [@shyamjvs](https://github.com/shyamjvs))",
     "author": "shyamjvs",
     "author_url": "https://github.com/shyamjvs",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112580",
@@ -212,8 +300,8 @@
   },
   "112589": {
     "commit": "9c9b29032f76e39b0e36200c88fe2f127389a9fe",
-    "text": "The IndexedJob and SuspendJob feature gates that graduated to GA in 1.24 and were unconditionally enabled have been removed in v1.26",
-    "markdown": "The IndexedJob and SuspendJob feature gates that graduated to GA in 1.24 and were unconditionally enabled have been removed in v1.26 ([#112589](https://github.com/kubernetes/kubernetes/pull/112589), [@SataQiu](https://github.com/SataQiu)) [SIG Apps]",
+    "text": "The `IndexedJob` and `SuspendJob` feature gates that graduated to GA in 1.24 and were unconditionally enabled have been removed in v1.26.",
+    "markdown": "The `IndexedJob` and `SuspendJob` feature gates that graduated to GA in 1.24 and were unconditionally enabled have been removed in v1.26. ([#112589](https://github.com/kubernetes/kubernetes/pull/112589), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112589",
@@ -223,8 +311,8 @@
   },
   "112607": {
     "commit": "3993c23a748b6ff01f116dadb10d07180407021a",
-    "text": "Consider only plugin directory and not entire kubelet root when cleaning up mounts",
-    "markdown": "Consider only plugin directory and not entire kubelet root when cleaning up mounts ([#112607](https://github.com/kubernetes/kubernetes/pull/112607), [@mattcary](https://github.com/mattcary)) [SIG Storage]",
+    "text": "volume mount cleanup now considers only plugin directory and not the entire kubelet root",
+    "markdown": "Volume mount cleanup now considers only plugin directory and not the entire kubelet root ([#112607](https://github.com/kubernetes/kubernetes/pull/112607), [@mattcary](https://github.com/mattcary))",
     "author": "mattcary",
     "author_url": "https://github.com/mattcary",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112607",
@@ -246,8 +334,8 @@
   },
   "112643": {
     "commit": "39e49a91d7fc2fe631bc92a308bd2bf75656ddf8",
-    "text": "The `DynamicKubeletConfig` feature gate has been removed from the API server. Dynamic kubelet reconfiguration now cannot be used even when older nodes are still attempting to rely on it. This is aligned with the Kubernetes version skew policy.",
-    "markdown": "The `DynamicKubeletConfig` feature gate has been removed from the API server. Dynamic kubelet reconfiguration now cannot be used even when older nodes are still attempting to rely on it. This is aligned with the Kubernetes version skew policy. ([#112643](https://github.com/kubernetes/kubernetes/pull/112643), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev)) [SIG API Machinery, Apps, Auth, Node and Testing]",
+    "text": "`DynamicKubeletConfig` feature gate has been removed from the API server.\nDynamic kubelet reconfiguration now can't be used even when older nodes are still\nattempting to rely on it. This is aligned with the Kubernetes version skew policy.\n",
+    "markdown": "`DynamicKubeletConfig` feature gate has been removed from the API server.\n  Dynamic kubelet reconfiguration now can't be used even when older nodes are still\n  attempting to rely on it. This is aligned with the Kubernetes version skew policy.\n   ([#112643](https://github.com/kubernetes/kubernetes/pull/112643), [@SergeyKanzhelev](https://github.com/SergeyKanzhelev))",
     "author": "SergeyKanzhelev",
     "author_url": "https://github.com/SergeyKanzhelev",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112643",
@@ -259,7 +347,7 @@
     "duplicate_kind": true
   },
   "112644": {
-    "commit": "5579ddea8addfca5b4a632409bdbf4aa1af2d419",
+    "commit": "0beafd1a5ae475563d4ebb51fc5d12f22e23afd6",
     "text": "The pod admission error message was improved for usability.",
     "markdown": "The pod admission error message was improved for usability. ([#112644](https://github.com/kubernetes/kubernetes/pull/112644), [@vitorfhc](https://github.com/vitorfhc)) [SIG Node]",
     "author": "vitorfhc",
@@ -272,8 +360,8 @@
   },
   "112650": {
     "commit": "cdbb15c80288947ab670e2419e22992e037f9361",
-    "text": "kubelet: Fix log spam from kubelet_getters.go \"Path does not exist\"",
-    "markdown": "Kubelet: Fix log spam from kubelet_getters.go \"Path does not exist\" ([#112650](https://github.com/kubernetes/kubernetes/pull/112650), [@rphillips](https://github.com/rphillips)) [SIG Node]",
+    "text": "kubelet: fixed log spam from kubelet_getters.go `Path does not exist`.",
+    "markdown": "Kubelet: fixed log spam from kubelet_getters.go `Path does not exist`. ([#112650](https://github.com/kubernetes/kubernetes/pull/112650), [@rphillips](https://github.com/rphillips))",
     "author": "rphillips",
     "author_url": "https://github.com/rphillips",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112650",
@@ -283,9 +371,9 @@
     "sigs": ["node"]
   },
   "112652": {
-    "commit": "8631b2cdf952f7039f2dadf74a7d4d6e0e3c75b2",
-    "text": "Adds a kubernetes_feature_enabled metric which will tell you if a feature is enabled.",
-    "markdown": "Adds a kubernetes_feature_enabled metric which will tell you if a feature is enabled. ([#112652](https://github.com/kubernetes/kubernetes/pull/112652), [@logicalhan](https://github.com/logicalhan)) [SIG Architecture and Instrumentation]",
+    "commit": "80024aefcb0d92db7bbb620e71d45b3bae6a3685",
+    "text": "Added a `kubernetes_feature_enabled` metric which will tell you if a feature is enabled.",
+    "markdown": "Added a `kubernetes_feature_enabled` metric which will tell you if a feature is enabled. ([#112652](https://github.com/kubernetes/kubernetes/pull/112652), [@logicalhan](https://github.com/logicalhan))",
     "author": "logicalhan",
     "author_url": "https://github.com/logicalhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112652",
@@ -294,10 +382,36 @@
     "sigs": ["instrumentation", "architecture"],
     "duplicate": true
   },
+  "112672": {
+    "commit": "0094662cbbca3d3f3e2e4fbb6ee4eb65f26d197a",
+    "text": "\"NONE\"",
+    "markdown": "\"NONE\" ([#112672](https://github.com/kubernetes/kubernetes/pull/112672), [@yangjunmyfm192085](https://github.com/yangjunmyfm192085)) [SIG Instrumentation]",
+    "author": "yangjunmyfm192085",
+    "author_url": "https://github.com/yangjunmyfm192085",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112672",
+    "pr_number": 112672,
+    "kinds": ["cleanup"],
+    "sigs": ["instrumentation"],
+    "do_not_publish": true
+  },
+  "112679": {
+    "commit": "1493da92d9513e383f8382c7e80316a3fa6c94fa",
+    "text": "Deprecated the `apiserver_request_slo_duration_seconds` metric for v1.27 in favor of `apiserver_request_sli_duration_seconds` for naming consistency purposes with other SLI-specific metrics and to avoid any confusion between SLOs and SLIs.",
+    "markdown": "Deprecated the `apiserver_request_slo_duration_seconds` metric for v1.27 in favor of `apiserver_request_sli_duration_seconds` for naming consistency purposes with other SLI-specific metrics and to avoid any confusion between SLOs and SLIs. ([#112679](https://github.com/kubernetes/kubernetes/pull/112679), [@dgrisonnet](https://github.com/dgrisonnet))",
+    "author": "dgrisonnet",
+    "author_url": "https://github.com/dgrisonnet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112679",
+    "pr_number": 112679,
+    "areas": ["apiserver"],
+    "kinds": ["cleanup", "api-change"],
+    "sigs": ["api-machinery", "instrumentation"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
   "112690": {
     "commit": "d2ae6fbeb10fe3c68f631b59a266e729688058a9",
-    "text": "Add `kubernetes_feature_enabled` metric series to track whether each active feature gate is enabled.",
-    "markdown": "Add `kubernetes_feature_enabled` metric series to track whether each active feature gate is enabled. ([#112690](https://github.com/kubernetes/kubernetes/pull/112690), [@logicalhan](https://github.com/logicalhan)) [SIG API Machinery, Architecture, Cluster Lifecycle, Instrumentation, Network, Node and Scheduling]",
+    "text": "Added `kubernetes_feature_enabled` metric series to track whether each active feature gate is enabled.",
+    "markdown": "Added `kubernetes_feature_enabled` metric series to track whether each active feature gate is enabled. ([#112690](https://github.com/kubernetes/kubernetes/pull/112690), [@logicalhan](https://github.com/logicalhan))",
     "author": "logicalhan",
     "author_url": "https://github.com/logicalhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112690",
@@ -316,10 +430,22 @@
     "duplicate": true,
     "duplicate_kind": true
   },
+  "112700": {
+    "commit": "8a42e73540ae43923c5f240a0e9056fc779dd846",
+    "text": "kubectl: fixed a bug where `kubectl convert` did not pick the right API version",
+    "markdown": "Kubectl: fixed a bug where `kubectl convert` did not pick the right API version ([#112700](https://github.com/kubernetes/kubernetes/pull/112700), [@SataQiu](https://github.com/SataQiu))",
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112700",
+    "pr_number": 112700,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"]
+  },
   "112731": {
-    "commit": "8d1ba6a0861d4c11336d2a9895c3800d9fc795c4",
-    "text": "switch kubectl to use `github.com/russross/blackfriday/v2`",
-    "markdown": "Switch kubectl to use `github.com/russross/blackfriday/v2` ([#112731](https://github.com/kubernetes/kubernetes/pull/112731), [@pacoxu](https://github.com/pacoxu)) [SIG CLI]",
+    "commit": "baedc1cd3201421a3c90f30876c1a6ae0b0df927",
+    "text": "Switched kubectl to use `github.com/russross/blackfriday/v2`",
+    "markdown": "Switched kubectl to use `github.com/russross/blackfriday/v2` ([#112731](https://github.com/kubernetes/kubernetes/pull/112731), [@pacoxu](https://github.com/pacoxu))",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112731",
@@ -331,8 +457,8 @@
   },
   "112732": {
     "commit": "edd677694374fb8284b9ddd04caf0698eaf00de5",
-    "text": "kubeadm: support image repository format validation",
-    "markdown": "Kubeadm: support image repository format validation ([#112732](https://github.com/kubernetes/kubernetes/pull/112732), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: now supports image repository format validation.",
+    "markdown": "Kubeadm: now supports image repository format validation. ([#112732](https://github.com/kubernetes/kubernetes/pull/112732), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112732",
@@ -343,9 +469,9 @@
     "feature": true
   },
   "112741": {
-    "commit": "e11f23eb9712c9b4bebf8dd85dcb04441b4fb705",
-    "text": "Expose health check SLI metrics on \"metrics/slis\" for apiserver",
-    "markdown": "Expose health check SLI metrics on \"metrics/slis\" for apiserver ([#112741](https://github.com/kubernetes/kubernetes/pull/112741), [@logicalhan](https://github.com/logicalhan)) [SIG API Machinery, Architecture, Auth and Instrumentation]",
+    "commit": "db13f51db97c114bb550b99efddd985548edc082",
+    "text": "Exposed health check SLI metrics on `metrics/slis` for apiserver.",
+    "markdown": "Exposed health check SLI metrics on `metrics/slis` for apiserver. ([#112741](https://github.com/kubernetes/kubernetes/pull/112741), [@logicalhan](https://github.com/logicalhan))",
     "author": "logicalhan",
     "author_url": "https://github.com/logicalhan",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112741",
@@ -358,8 +484,8 @@
   },
   "112748": {
     "commit": "97d37c29552790384b0a8b8f6f05648f28e07c55",
-    "text": "Lock ServerSideApply feature gate to true with the feature already being GA.",
-    "markdown": "Lock ServerSideApply feature gate to true with the feature already being GA. ([#112748](https://github.com/kubernetes/kubernetes/pull/112748), [@wojtek-t](https://github.com/wojtek-t)) [SIG API Machinery, Apps, Instrumentation and Testing]",
+    "text": "Locked `ServerSideApply` feature gate to true with the feature already being GA.",
+    "markdown": "Locked `ServerSideApply` feature gate to true with the feature already being GA. ([#112748](https://github.com/kubernetes/kubernetes/pull/112748), [@wojtek-t](https://github.com/wojtek-t))",
     "author": "wojtek-t",
     "author_url": "https://github.com/wojtek-t",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112748",
@@ -371,8 +497,8 @@
   },
   "112751": {
     "commit": "e450d35bb303042830a8ebfaad2010908df61208",
-    "text": "kubeadm: fix a bug when performing validation on ClusterConfiguration networking fields",
-    "markdown": "Kubeadm: fix a bug when performing validation on ClusterConfiguration networking fields ([#112751](https://github.com/kubernetes/kubernetes/pull/112751), [@SataQiu](https://github.com/SataQiu)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: fixed a bug when performing validation on `ClusterConfiguration` networking fields.",
+    "markdown": "Kubeadm: fixed a bug when performing validation on `ClusterConfiguration` networking fields. ([#112751](https://github.com/kubernetes/kubernetes/pull/112751), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112751",
@@ -383,7 +509,7 @@
     "duplicate_kind": true
   },
   "112772": {
-    "commit": "2d397e853018d7234d63e376bcb13b6701862c90",
+    "commit": "7c64250cd07172f10d6bafa763d336fe01a8f6b0",
     "text": "kube-apiserver: redirects from backend API servers are no longer followed when checking availability with requests to `/apis/$group/$version`",
     "markdown": "Kube-apiserver: redirects from backend API servers are no longer followed when checking availability with requests to `/apis/$group/$version` ([#112772](https://github.com/kubernetes/kubernetes/pull/112772), [@liggitt](https://github.com/liggitt)) [SIG API Machinery and Testing]",
     "author": "liggitt",
@@ -413,8 +539,8 @@
   },
   "112797": {
     "commit": "8ddbd892f24d895bd49563ddaa7614ef3c21f53f",
-    "text": "kube-apiserver: the unused '--master-service-namespace' flag is deprecated and will be removed in v1.27.",
-    "markdown": "Kube-apiserver: the unused '--master-service-namespace' flag is deprecated and will be removed in v1.27. ([#112797](https://github.com/kubernetes/kubernetes/pull/112797), [@SataQiu](https://github.com/SataQiu)) [SIG API Machinery]",
+    "text": "kube-apiserver: the unused `--master-service-namespace` flag was deprecated and will be removed in v1.27.",
+    "markdown": "Kube-apiserver: the unused `--master-service-namespace` flag was deprecated and will be removed in v1.27. ([#112797](https://github.com/kubernetes/kubernetes/pull/112797), [@SataQiu](https://github.com/SataQiu))",
     "author": "SataQiu",
     "author_url": "https://github.com/SataQiu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112797",
@@ -436,10 +562,31 @@
     "sigs": ["network", "testing", "architecture"],
     "duplicate": true
   },
+  "112824": {
+    "commit": "add46523526f4b342b1d0ad9f472b6ff8fb9eda6",
+    "text": "The ExpandedDNSConfig feature has graduated to beta and is enabled by default. Note that this feature requires container runtime support.",
+    "markdown": "The ExpandedDNSConfig feature has graduated to beta and is enabled by default. Note that this feature requires container runtime support. ([#112824](https://github.com/kubernetes/kubernetes/pull/112824), [@gjkim42](https://github.com/gjkim42)) [SIG Network and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/2595-expanded-dns-config",
+        "type": "KEP"
+      }
+    ],
+    "author": "gjkim42",
+    "author_url": "https://github.com/gjkim42",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/112824",
+    "pr_number": 112824,
+    "areas": ["test"],
+    "kinds": ["feature"],
+    "sigs": ["network", "testing"],
+    "feature": true,
+    "duplicate": true
+  },
   "112837": {
     "commit": "3ef7784b75e0005d96f1d64d55b822f346f85fb5",
-    "text": "Fixes an issue in winkernel proxier that causes proxy rules to leak anytime service backends are modified.",
-    "markdown": "Fixes an issue in winkernel proxier that causes proxy rules to leak anytime service backends are modified. ([#112837](https://github.com/kubernetes/kubernetes/pull/112837), [@daschott](https://github.com/daschott)) [SIG Network and Windows]",
+    "text": "Fixed an issue in `winkernel` proxier that causes proxy rules to leak anytime service backends are modified.",
+    "markdown": "Fixed an issue in `winkernel` proxier that causes proxy rules to leak anytime service backends are modified. ([#112837](https://github.com/kubernetes/kubernetes/pull/112837), [@daschott](https://github.com/daschott))",
     "author": "daschott",
     "author_url": "https://github.com/daschott",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112837",
@@ -450,7 +597,7 @@
     "duplicate_kind": true
   },
   "112884": {
-    "commit": "e11e226b23c0213021a6678002132ad102d488e7",
+    "commit": "01bfbdff2dee3be93d286a8ff53f9e52a1ee9724",
     "text": "Introduce `ComponentSLIs` alpha feature-gate for component SLIs metrics endpoint.",
     "markdown": "Introduce `ComponentSLIs` alpha feature-gate for component SLIs metrics endpoint. ([#112884](https://github.com/kubernetes/kubernetes/pull/112884), [@logicalhan](https://github.com/logicalhan)) [SIG API Machinery]",
     "author": "logicalhan",
@@ -477,8 +624,8 @@
   },
   "112907": {
     "commit": "1b3c3465318543ce94e038f73cd9aa56407cd510",
-    "text": "`registered_metric_total` now reports the number of metrics broken down by stability level and deprecated version",
-    "markdown": "`registered_metric_total` now reports the number of metrics broken down by stability level and deprecated version ([#112907](https://github.com/kubernetes/kubernetes/pull/112907), [@logicalhan](https://github.com/logicalhan)) [SIG Architecture and Instrumentation]",
+    "text": "'`registered_metric_total` will now report the number of metrics broken down by\nstability level and deprecated version.'\n",
+    "markdown": "'`registered_metric_total` will now report the number of metrics broken down by\n  stability level and deprecated version.'\n   ([#112907](https://github.com/kubernetes/kubernetes/pull/112907), [@logicalhan](https://github.com/logicalhan))",
     "documentation": [
       { "description": "[KEP]", "url": "https://kep.k8s.io/3466", "type": "external" }
     ],
