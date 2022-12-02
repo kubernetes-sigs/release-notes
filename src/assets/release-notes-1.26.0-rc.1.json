@@ -1,0 +1,37 @@
+{
+  "113860": {
+    "commit": "7dc36bdf82093c2defa3d0ae1ec68534fe8688c9",
+    "text": "When the feature gates `PodDisruptionConditions` and `JobPodFailurePolicy` are both enabled,\nthe Job controller now does not consider a terminating Pod (a pod that has a `.metadata.deletionTimestamp`)\nas a failure until that Pod is terminal (its `.status.phase` is `Failed` or `Succeeded`).\n\nHowever, the Job controller creates a replacement Pod as soon as the termination becomes apparent.\nOnce the pod terminates, the Job controller evaluates `.backoffLimit` and `.podFailurePolicy` for the\nrelevant Job, taking this now-terminated Pod into consideration.\n\nThis behavior is limited to Jobs with `.spec.podFailurePolicy` set, and only when those two feature\ngates are both enabled.\nIf either of these requirements is not satisfied, the Job controller counts a terminating Pod as an immediate\nfailure, even if that Pod later terminates with `phase: \"Succeeded\"`.",
+    "markdown": "When the feature gates `PodDisruptionConditions` and `JobPodFailurePolicy` are both enabled,\n  the Job controller now does not consider a terminating Pod (a pod that has a `.metadata.deletionTimestamp`)\n  as a failure until that Pod is terminal (its `.status.phase` is `Failed` or `Succeeded`).\n  \n  However, the Job controller creates a replacement Pod as soon as the termination becomes apparent.\n  Once the pod terminates, the Job controller evaluates `.backoffLimit` and `.podFailurePolicy` for the\n  relevant Job, taking this now-terminated Pod into consideration.\n  \n  This behavior is limited to Jobs with `.spec.podFailurePolicy` set, and only when those two feature\n  gates are both enabled.\n  If either of these requirements is not satisfied, the Job controller counts a terminating Pod as an immediate\n  failure, even if that Pod later terminates with `phase: \"Succeeded\"`. ([#113860](https://github.com/kubernetes/kubernetes/pull/113860), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113860",
+    "pr_number": 113860,
+    "kinds": ["bug"],
+    "sigs": ["apps"]
+  },
+  "113955": {
+    "commit": "3f823c0daa002158b12bfb2d53bcfe433516659d",
+    "text": "Fixed a bug that resulted in \"grpc: the client connection is closing\" errors shortly after the Kubernetes API server automatically reloaded its encryption-at-rest config due to an observed change to the file.  This bug was only encountered when the --encryption-provider-config-automatic-reload flag was set to true.",
+    "markdown": "Fixed a bug that resulted in \"grpc: the client connection is closing\" errors shortly after the Kubernetes API server automatically reloaded its encryption-at-rest config due to an observed change to the file.  This bug was only encountered when the --encryption-provider-config-automatic-reload flag was set to true. ([#113955](https://github.com/kubernetes/kubernetes/pull/113955), [@enj](https://github.com/enj)) [SIG API Machinery, Auth and Testing]",
+    "author": "enj",
+    "author_url": "https://github.com/enj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113955",
+    "pr_number": 113955,
+    "areas": ["test", "apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "auth", "testing"],
+    "duplicate": true
+  },
+  "114122": {
+    "commit": "6bdda2da160043c5fcdfd25bbea9e1c1b804c9e5",
+    "text": "Fix endpoint reconciler not being able to delete the apiserver lease on shutdown",
+    "markdown": "Fix endpoint reconciler not being able to delete the apiserver lease on shutdown ([#114122](https://github.com/kubernetes/kubernetes/pull/114122), [@aojea](https://github.com/aojea)) [SIG API Machinery]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/114122",
+    "pr_number": 114122,
+    "kinds": ["regression"],
+    "sigs": ["api-machinery"]
+  }
+}
