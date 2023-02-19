@@ -1,7 +1,7 @@
 {
   "108396": {
     "commit": "2ab3151936f1df6b3ffb4d49bf9dc90218264545",
-    "text": "a new client side metric `rest_client_request_retries_total` has been added that tracks \nthe number of retries sent to the server, partitioned by status code, verb, and host",
+    "text": "A new client side metric `rest_client_request_retries_total` has been added that tracks \nthe number of retries sent to the server, partitioned by status code, verb, and host",
     "markdown": "A new client side metric `rest_client_request_retries_total` has been added that tracks \n  the number of retries sent to the server, partitioned by status code, verb, and host ([#108396](https://github.com/kubernetes/kubernetes/pull/108396), [@tkashem](https://github.com/tkashem)) [SIG API Machinery, Architecture and Instrumentation]",
     "author": "tkashem",
     "author_url": "https://github.com/tkashem",
@@ -14,8 +14,8 @@
   },
   "108984": {
     "commit": "31d6d9a275f574fc72c4993fcac5f2e0e2879574",
-    "text": "add logging-format option to CCMs based on k8s.io/cloud-provider",
-    "markdown": "Add logging-format option to CCMs based on k8s.io/cloud-provider ([#108984](https://github.com/kubernetes/kubernetes/pull/108984), [@LittleFox94](https://github.com/LittleFox94)) [SIG Cloud Provider and Instrumentation]",
+    "text": "Added `logging-format` option to CCMs based on `k8s.io/cloud-provider`",
+    "markdown": "Added `logging-format` option to CCMs based on `k8s.io/cloud-provider` ([#108984](https://github.com/kubernetes/kubernetes/pull/108984), [@LittleFox94](https://github.com/LittleFox94)) [SIG Cloud Provider and Instrumentation]",
     "author": "LittleFox94",
     "author_url": "https://github.com/LittleFox94",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/108984",
@@ -28,8 +28,8 @@
   },
   "111453": {
     "commit": "70dde8d746a07392d945dde32dd7e3b12ca9a043",
-    "text": "Add new -f flag into debug command to be used passing pod or node files instead explicit names.",
-    "markdown": "Add new -f flag into debug command to be used passing pod or node files instead explicit names. ([#111453](https://github.com/kubernetes/kubernetes/pull/111453), [@ardaguclu](https://github.com/ardaguclu)) [SIG CLI and Testing]",
+    "text": "Added new -f flag into debug command to be used passing pod or node files instead explicit names.",
+    "markdown": "Added new -f flag into debug command to be used passing pod or node files instead explicit names. ([#111453](https://github.com/kubernetes/kubernetes/pull/111453), [@ardaguclu](https://github.com/ardaguclu)) [SIG CLI and Testing]",
     "author": "ardaguclu",
     "author_url": "https://github.com/ardaguclu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/111453",
@@ -56,8 +56,8 @@
   },
   "112393": {
     "commit": "2d98d2412a153154396c7089fbe355a56e8a2329",
-    "text": "Two changes to the /debug/api_priority_and_fairness/dump_priority_levels endpoint of API Priority and Fairness: add total number of dispatched, timed-out, rejected and cancelled requests; output now sorted by PriorityLevelName.",
-    "markdown": "Two changes to the /debug/api_priority_and_fairness/dump_priority_levels endpoint of API Priority and Fairness: add total number of dispatched, timed-out, rejected and cancelled requests; output now sorted by PriorityLevelName. ([#112393](https://github.com/kubernetes/kubernetes/pull/112393), [@borgerli](https://github.com/borgerli)) [SIG API Machinery]",
+    "text": "Two changes to the /debug/api_priority_and_fairness/dump_priority_levels endpoint of API Priority and Fairness: add total number of dispatched, timed-out, rejected and cancelled requests; output now sorted by `PriorityLevelName`.",
+    "markdown": "Two changes to the /debug/api_priority_and_fairness/dump_priority_levels endpoint of API Priority and Fairness: add total number of dispatched, timed-out, rejected and cancelled requests; output now sorted by `PriorityLevelName`. ([#112393](https://github.com/kubernetes/kubernetes/pull/112393), [@borgerli](https://github.com/borgerli)) [SIG API Machinery]",
     "author": "borgerli",
     "author_url": "https://github.com/borgerli",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112393",
@@ -69,8 +69,8 @@
   },
   "112624": {
     "commit": "58dec1fa4e52de75cb0c58b0c6ead8481c3ed25b",
-    "text": "kubelet: fix a bug of stoping rendering configmap when enabling fsquota monitoring",
-    "markdown": "Kubelet: fix a bug of stoping rendering configmap when enabling fsquota monitoring ([#112624](https://github.com/kubernetes/kubernetes/pull/112624), [@pacoxu](https://github.com/pacoxu)) [SIG Node and Storage]",
+    "text": "kubelet: fixed a bug of stoping rendering configmap when enabling fsquota monitoring",
+    "markdown": "Kubelet: fixed a bug of stoping rendering configmap when enabling fsquota monitoring ([#112624](https://github.com/kubernetes/kubernetes/pull/112624), [@pacoxu](https://github.com/pacoxu)) [SIG Node and Storage]",
     "author": "pacoxu",
     "author_url": "https://github.com/pacoxu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/112624",
@@ -107,8 +107,8 @@
   },
   "113121": {
     "commit": "fab126d7f380b36525974ed69621195eb06e0d7e",
-    "text": "cacheSize field in EncryptionConfiguration is not supported for KMSv2 provider",
-    "markdown": "CacheSize field in EncryptionConfiguration is not supported for KMSv2 provider ([#113121](https://github.com/kubernetes/kubernetes/pull/113121), [@aramase](https://github.com/aramase)) [SIG API Machinery, Auth and Testing]",
+    "text": "cacheSize field in `EncryptionConfiguration` is not supported for KMSv2 provider",
+    "markdown": "CacheSize field in `EncryptionConfiguration` is not supported for KMSv2 provider ([#113121](https://github.com/kubernetes/kubernetes/pull/113121), [@aramase](https://github.com/aramase)) [SIG API Machinery, Auth and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -143,8 +143,8 @@
   },
   "113534": {
     "commit": "200220ccefad096c5d539037c5bd663feb1210e7",
-    "text": "The `ControllerManagerLeaderMigration ` feature, GA since 1.24, is unconditionally enabled and the feature gate option has been removed.",
-    "markdown": "The `ControllerManagerLeaderMigration ` feature, GA since 1.24, is unconditionally enabled and the feature gate option has been removed. ([#113534](https://github.com/kubernetes/kubernetes/pull/113534), [@pacoxu](https://github.com/pacoxu)) [SIG API Machinery and Cloud Provider]",
+    "text": "The `ControllerManagerLeaderMigration` feature, GA since `1.24`, is unconditionally enabled and the feature gate option has been removed.",
+    "markdown": "The `ControllerManagerLeaderMigration` feature, GA since `1.24`, is unconditionally enabled and the feature gate option has been removed. ([#113534](https://github.com/kubernetes/kubernetes/pull/113534), [@pacoxu](https://github.com/pacoxu)) [SIG API Machinery and Cloud Provider]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -174,8 +174,8 @@
   },
   "114051": {
     "commit": "b8b18ecd85c0c36730cd3361ea41fb6681b1a70c",
-    "text": "Adds scheduler preemption support for pods using `ReadWriteOncePod` PVCs",
-    "markdown": "Adds scheduler preemption support for pods using `ReadWriteOncePod` PVCs ([#114051](https://github.com/kubernetes/kubernetes/pull/114051), [@chrishenzie](https://github.com/chrishenzie)) [SIG Scheduling, Storage and Testing]",
+    "text": "Added scheduler preemption support for pods using `ReadWriteOncePod` PVCs",
+    "markdown": "Added scheduler preemption support for pods using `ReadWriteOncePod` PVCs ([#114051](https://github.com/kubernetes/kubernetes/pull/114051), [@chrishenzie](https://github.com/chrishenzie)) [SIG Scheduling, Storage and Testing]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -234,8 +234,8 @@
   },
   "114418": {
     "commit": "5bb7326c3643f52a7b615e6f63911add4bbcab3b",
-    "text": "New feature gate, ServiceNodePortStaticSubrange, to enable the new strategy in the NodePort Service port allocators, so the node port range is subdivided and dynamic allocated NodePort port for Services are allocated preferentially from the upper range.",
-    "markdown": "New feature gate, ServiceNodePortStaticSubrange, to enable the new strategy in the NodePort Service port allocators, so the node port range is subdivided and dynamic allocated NodePort port for Services are allocated preferentially from the upper range. ([#114418](https://github.com/kubernetes/kubernetes/pull/114418), [@xuzhenglun](https://github.com/xuzhenglun)) [SIG Network]",
+    "text": "New feature gate, `ServiceNodePortStaticSubrange`, to enable the new strategy in the `NodePort` Service port allocators, so the node port range is subdivided and dynamic allocated `NodePort` port for Services are allocated preferentially from the upper range.",
+    "markdown": "New feature gate, `ServiceNodePortStaticSubrange`, to enable the new strategy in the `NodePort` Service port allocators, so the node port range is subdivided and dynamic allocated `NodePort` port for Services are allocated preferentially from the upper range. ([#114418](https://github.com/kubernetes/kubernetes/pull/114418), [@xuzhenglun](https://github.com/xuzhenglun)) [SIG Network]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -325,8 +325,8 @@
   },
   "114605": {
     "commit": "a94caec59c9a33bf2861fcf0b93b6429bdef0d54",
-    "text": "Fix the problem Pod terminating stuck because of trying to umount not actual mounted dir.",
-    "markdown": "Fix the problem Pod terminating stuck because of trying to umount not actual mounted dir. ([#114605](https://github.com/kubernetes/kubernetes/pull/114605), [@mochizuki875](https://github.com/mochizuki875)) [SIG Node and Storage]",
+    "text": "Fixed the problem `Pod` terminating stuck because of trying to umount not actual mounted dir.",
+    "markdown": "Fixed the problem `Pod` terminating stuck because of trying to umount not actual mounted dir. ([#114605](https://github.com/kubernetes/kubernetes/pull/114605), [@mochizuki875](https://github.com/mochizuki875)) [SIG Node and Storage]",
     "author": "mochizuki875",
     "author_url": "https://github.com/mochizuki875",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/114605",
@@ -338,8 +338,8 @@
   },
   "114694": {
     "commit": "201caf28b270d73c31b4f1f358548b1be608446c",
-    "text": "None.",
-    "markdown": "None. ([#114694](https://github.com/kubernetes/kubernetes/pull/114694), [@yanggangtony](https://github.com/yanggangtony)) [SIG Release]",
+    "text": "NONE",
+    "markdown": "NONE ([#114694](https://github.com/kubernetes/kubernetes/pull/114694), [@yanggangtony](https://github.com/yanggangtony)) [SIG Release]",
     "author": "yanggangtony",
     "author_url": "https://github.com/yanggangtony",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/114694",
@@ -364,8 +364,8 @@
   },
   "114731": {
     "commit": "6f3e5e30e5bb4c745338dd47daea02810e68f36d",
-    "text": "k8s.io/component-base/logs now also supports adding command line flags to a flag.FlagSet.",
-    "markdown": "K8s.io/component-base/logs now also supports adding command line flags to a flag.FlagSet. ([#114731](https://github.com/kubernetes/kubernetes/pull/114731), [@pohly](https://github.com/pohly)) [SIG Architecture]",
+    "text": "`k8s.io/component-base/logs` now also supports adding command line flags to a `flag.FlagSet`.",
+    "markdown": "`K8s.io/component-base/logs` now also supports adding command line flags to a `flag.FlagSet`. ([#114731](https://github.com/kubernetes/kubernetes/pull/114731), [@pohly](https://github.com/pohly)) [SIG Architecture]",
     "author": "pohly",
     "author_url": "https://github.com/pohly",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/114731",
@@ -377,8 +377,8 @@
   },
   "114920": {
     "commit": "79886690d48a5b4cd106cb3827851f601821ab65",
-    "text": "Apply configurations can be generated for types with non-builtin map fields",
-    "markdown": "Apply configurations can be generated for types with non-builtin map fields ([#114920](https://github.com/kubernetes/kubernetes/pull/114920), [@astefanutti](https://github.com/astefanutti)) [SIG API Machinery]",
+    "text": "Applied configurations can be generated for types with non-builtin map fields",
+    "markdown": "Applied configurations can be generated for types with non-builtin map fields ([#114920](https://github.com/kubernetes/kubernetes/pull/114920), [@astefanutti](https://github.com/astefanutti)) [SIG API Machinery]",
     "author": "astefanutti",
     "author_url": "https://github.com/astefanutti",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/114920",
@@ -389,8 +389,8 @@
   },
   "114987": {
     "commit": "5ad9e418791de9820f4287bd57ea3594b884c0eb",
-    "text": "Adds the applyconfiguration generator to the code-generator script that generates server-side apply configuration and client APIs",
-    "markdown": "Adds the applyconfiguration generator to the code-generator script that generates server-side apply configuration and client APIs ([#114987](https://github.com/kubernetes/kubernetes/pull/114987), [@astefanutti](https://github.com/astefanutti)) [SIG API Machinery]",
+    "text": "Added the applyconfiguration generator to the `code-generator` script that generates server-side apply configuration and client APIs",
+    "markdown": "Added the applyconfiguration generator to the `code-generator` script that generates server-side apply configuration and client APIs ([#114987](https://github.com/kubernetes/kubernetes/pull/114987), [@astefanutti](https://github.com/astefanutti)) [SIG API Machinery]",
     "author": "astefanutti",
     "author_url": "https://github.com/astefanutti",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/114987",
@@ -447,8 +447,8 @@
   },
   "115038": {
     "commit": "561a35f3582abb25da76d31c7c2abc4277054b04",
-    "text": "kubeadm: fix an etcd learner-mode bug by preparing an etcd static pod manifest before promoting",
-    "markdown": "Kubeadm: fix an etcd learner-mode bug by preparing an etcd static pod manifest before promoting ([#115038](https://github.com/kubernetes/kubernetes/pull/115038), [@tobiasgiese](https://github.com/tobiasgiese)) [SIG Cluster Lifecycle]",
+    "text": "kubeadm: fixed an etcd learner-mode bug by preparing an etcd static pod manifest before promoting",
+    "markdown": "Kubeadm: fixed an etcd learner-mode bug by preparing an etcd static pod manifest before promoting ([#115038](https://github.com/kubernetes/kubernetes/pull/115038), [@tobiasgiese](https://github.com/tobiasgiese)) [SIG Cluster Lifecycle]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -466,8 +466,8 @@
   },
   "115137": {
     "commit": "4df945853e31678f7ac87e43d3328497a3490d35",
-    "text": "Add kubelet Topology Manager metrics to track admission requests processed by it and occured admission errors.",
-    "markdown": "Add kubelet Topology Manager metrics to track admission requests processed by it and occured admission errors. ([#115137](https://github.com/kubernetes/kubernetes/pull/115137), [@swatisehgal](https://github.com/swatisehgal)) [SIG Node and Testing]",
+    "text": "Added kubelet Topology Manager metrics to track admission requests processed by it and occured admission errors.",
+    "markdown": "Added kubelet Topology Manager metrics to track admission requests processed by it and occured admission errors. ([#115137](https://github.com/kubernetes/kubernetes/pull/115137), [@swatisehgal](https://github.com/swatisehgal)) [SIG Node and Testing]",
     "documentation": [
       {
         "description": "KEP",
@@ -506,8 +506,8 @@
   },
   "115179": {
     "commit": "97ab147537f6999249c241e0896245bd961c32ae",
-    "text": "Fix nil pointer error in nodevolumelimits csi logging",
-    "markdown": "Fix nil pointer error in nodevolumelimits csi logging ([#115179](https://github.com/kubernetes/kubernetes/pull/115179), [@sunnylovestiramisu](https://github.com/sunnylovestiramisu)) [SIG Scheduling]",
+    "text": "Fixed nil pointer error in nodevolumelimits csi logging",
+    "markdown": "Fixed nil pointer error in nodevolumelimits csi logging ([#115179](https://github.com/kubernetes/kubernetes/pull/115179), [@sunnylovestiramisu](https://github.com/sunnylovestiramisu)) [SIG Scheduling]",
     "author": "sunnylovestiramisu",
     "author_url": "https://github.com/sunnylovestiramisu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115179",
@@ -573,8 +573,8 @@
   },
   "115322": {
     "commit": "3d6c7efc23011ee7c5a301e9ca340efd33456f60",
-    "text": "Fix a bug that caused to panic the apiserver when trying to allocate a Service with a dynamic ClusterIP and it has been configured with Service CIDRs with a /28 mask for IPv4 and a /124 mask for IPv6",
-    "markdown": "Fix a bug that caused to panic the apiserver when trying to allocate a Service with a dynamic ClusterIP and it has been configured with Service CIDRs with a /28 mask for IPv4 and a /124 mask for IPv6 ([#115322](https://github.com/kubernetes/kubernetes/pull/115322), [@aojea](https://github.com/aojea)) [SIG Testing]",
+    "text": "Fixed a bug that caused to panic the apiserver when trying to allocate a Service with a dynamic `ClusterIP` and it has been configured with Service CIDRs with a /28 mask for IPv4 and a /124 mask for IPv6",
+    "markdown": "Fixed a bug that caused to panic the apiserver when trying to allocate a Service with a dynamic `ClusterIP` and it has been configured with Service CIDRs with a /28 mask for IPv4 and a /124 mask for IPv6 ([#115322](https://github.com/kubernetes/kubernetes/pull/115322), [@aojea](https://github.com/aojea)) [SIG Testing]",
     "author": "aojea",
     "author_url": "https://github.com/aojea",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115322",
@@ -599,8 +599,8 @@
   },
   "115341": {
     "commit": "c9e281df23d66ff1f886b301f15147ab3f6e0074",
-    "text": "Fix the regression that introduced 34s timeout for DELETECOLLECTION calls",
-    "markdown": "Fix the regression that introduced 34s timeout for DELETECOLLECTION calls ([#115341](https://github.com/kubernetes/kubernetes/pull/115341), [@tkashem](https://github.com/tkashem)) [SIG API Machinery]",
+    "text": "Fixed the regression that introduced 34s timeout for DELETECOLLECTION calls",
+    "markdown": "Fixed the regression that introduced 34s timeout for DELETECOLLECTION calls ([#115341](https://github.com/kubernetes/kubernetes/pull/115341), [@tkashem](https://github.com/tkashem)) [SIG API Machinery]",
     "author": "tkashem",
     "author_url": "https://github.com/tkashem",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115341",
@@ -734,8 +734,8 @@
   },
   "115434": {
     "commit": "b2882ed8ad53aa1a66a4cfcfaa808806b7297d89",
-    "text": "Update API reference for Requests, specifying they must not exceed limits",
-    "markdown": "Update API reference for Requests, specifying they must not exceed limits ([#115434](https://github.com/kubernetes/kubernetes/pull/115434), [@ehashman](https://github.com/ehashman)) [SIG Architecture, Docs and Node]",
+    "text": "Updated API reference for Requests, specifying they must not exceed limits",
+    "markdown": "Updated API reference for Requests, specifying they must not exceed limits ([#115434](https://github.com/kubernetes/kubernetes/pull/115434), [@ehashman](https://github.com/ehashman)) [SIG Architecture, Docs and Node]",
     "author": "ehashman",
     "author_url": "https://github.com/ehashman",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115434",
@@ -748,8 +748,8 @@
   },
   "115454": {
     "commit": "95c65ca3a09333baa7e420dbabfcc39c4bfd77fe",
-    "text": "Promote pod resource limit/request metrics to stable.",
-    "markdown": "Promote pod resource limit/request metrics to stable. ([#115454](https://github.com/kubernetes/kubernetes/pull/115454), [@dgrisonnet](https://github.com/dgrisonnet)) [SIG Instrumentation and Scheduling]",
+    "text": "Promoted pod resource `limit/request` metrics to stable.",
+    "markdown": "Promoted pod resource `limit/request` metrics to stable. ([#115454](https://github.com/kubernetes/kubernetes/pull/115454), [@dgrisonnet](https://github.com/dgrisonnet)) [SIG Instrumentation and Scheduling]",
     "author": "dgrisonnet",
     "author_url": "https://github.com/dgrisonnet",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115454",
@@ -761,8 +761,8 @@
   },
   "115464": {
     "commit": "49babf218a0cd4907f8197c33464dd5f7874df0e",
-    "text": "Fix an issue where a CSI migrated volume may be prematurely detached when the CSI driver is not running on the node.\nIf CSI migration is enabled on the node, even the csi-driver is not up and ready, we will still add this volume to DSW.",
-    "markdown": "Fix an issue where a CSI migrated volume may be prematurely detached when the CSI driver is not running on the node.\n  If CSI migration is enabled on the node, even the csi-driver is not up and ready, we will still add this volume to DSW. ([#115464](https://github.com/kubernetes/kubernetes/pull/115464), [@sunnylovestiramisu](https://github.com/sunnylovestiramisu)) [SIG Apps and Storage]",
+    "text": "Fixed an issue where a CSI migrated volume may be prematurely detached when the CSI driver is not running on the node.\nIf CSI migration is enabled on the node, even the csi-driver is not up and ready, we will still add this volume to DSW.",
+    "markdown": "Fixed an issue where a CSI migrated volume may be prematurely detached when the CSI driver is not running on the node.\n  If CSI migration is enabled on the node, even the csi-driver is not up and ready, we will still add this volume to DSW. ([#115464](https://github.com/kubernetes/kubernetes/pull/115464), [@sunnylovestiramisu](https://github.com/sunnylovestiramisu)) [SIG Apps and Storage]",
     "author": "sunnylovestiramisu",
     "author_url": "https://github.com/sunnylovestiramisu",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115464",
@@ -797,8 +797,8 @@
   },
   "115569": {
     "commit": "9b09d0600a69a2eb36b0d136465ccc3c179dacdb",
-    "text": "Enforce nodeName cannot be set along with non-empty schedulingGates",
-    "markdown": "Enforce nodeName cannot be set along with non-empty schedulingGates ([#115569](https://github.com/kubernetes/kubernetes/pull/115569), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG Apps and Scheduling]",
+    "text": "Enforce `nodeName` cannot be set along with non-empty `schedulingGates`",
+    "markdown": "Enforce `nodeName` cannot be set along with non-empty `schedulingGates` ([#115569](https://github.com/kubernetes/kubernetes/pull/115569), [@Huang-Wei](https://github.com/Huang-Wei)) [SIG Apps and Scheduling]",
     "documentation": [
       {
         "description": "[KEP]",
@@ -853,8 +853,8 @@
   },
   "115620": {
     "commit": "27f4bcae5c52a3bb88141f940ec23d907a15cde5",
-    "text": "Fix missing delete events on informer re-lists to ensure all delete events are correctly emitted and using the latest known object state, so that all event handlers and stores always reflect the actual apiserver state as best as possible",
-    "markdown": "Fix missing delete events on informer re-lists to ensure all delete events are correctly emitted and using the latest known object state, so that all event handlers and stores always reflect the actual apiserver state as best as possible ([#115620](https://github.com/kubernetes/kubernetes/pull/115620), [@odinuge](https://github.com/odinuge)) [SIG API Machinery]",
+    "text": "Fixed missing delete events on informer re-lists to ensure all delete events are correctly emitted and using the latest known object state, so that all event handlers and stores always reflect the actual apiserver state as best as possible",
+    "markdown": "Fixed missing delete events on informer re-lists to ensure all delete events are correctly emitted and using the latest known object state, so that all event handlers and stores always reflect the actual apiserver state as best as possible ([#115620](https://github.com/kubernetes/kubernetes/pull/115620), [@odinuge](https://github.com/odinuge)) [SIG API Machinery]",
     "author": "odinuge",
     "author_url": "https://github.com/odinuge",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115620",
@@ -885,8 +885,8 @@
   },
   "115652": {
     "commit": "f5a69ffda93f18368b6a20a7d07ab65b6d91e8f7",
-    "text": "Scheduler doesn't run plugin's Score method when its PreScore method returned a Skip status. In other words, your PreScore/Score plugin can return a Skip status in PreScore if the plugin does nothing in Score for that Pod.",
-    "markdown": "Scheduler doesn't run plugin's Score method when its PreScore method returned a Skip status. In other words, your PreScore/Score plugin can return a Skip status in PreScore if the plugin does nothing in Score for that Pod. ([#115652](https://github.com/kubernetes/kubernetes/pull/115652), [@kidddddddddddddddddddddd](https://github.com/kidddddddddddddddddddddd)) [SIG Scheduling]",
+    "text": "Scheduler doesn't run plugin's `Score` method when its `PreScore` method returned a `Skip` status. In other words, your `PreScore/Score` plugin can return a `Skip` status in `PreScore` if the plugin does nothing in Score for that Pod.",
+    "markdown": "Scheduler doesn't run plugin's `Score` method when its `PreScore` method returned a `Skip` status. In other words, your `PreScore/Score` plugin can return a `Skip` status in `PreScore` if the plugin does nothing in `Score` for that Pod. ([#115652](https://github.com/kubernetes/kubernetes/pull/115652), [@kidddddddddddddddddddddd](https://github.com/kidddddddddddddddddddddd)) [SIG Scheduling]",
     "author": "kidddddddddddddddddddddd",
     "author_url": "https://github.com/kidddddddddddddddddddddd",
     "pr_url": "https://github.com/kubernetes/kubernetes/pull/115652",
