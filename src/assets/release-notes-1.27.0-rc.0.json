@@ -1,0 +1,157 @@
+{
+  "113218": {
+    "commit": "a34e37c9963af5944435b736882bfcd1e81f7e09",
+    "text": "Added a new alpha API: ClusterTrustBundle (`certificates.k8s.io/v1alpha1`).\nA ClusterTrustBundle may be used to distribute [X.509](https://www.itu.int/rec/T-REC-X.509) trust anchors to workloads within the cluster.",
+    "markdown": "Added a new alpha API: ClusterTrustBundle (`certificates.k8s.io/v1alpha1`).\n  A ClusterTrustBundle may be used to distribute [X.509](https://www.itu.int/rec/T-REC-X.509) trust anchors to workloads within the cluster. ([#113218](https://github.com/kubernetes/kubernetes/pull/113218), [@ahmedtd](https://github.com/ahmedtd)) [SIG API Machinery, Auth and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/bddca24910fb349e2eb0ac1c822c77f0f32fe9c6/keps/sig-auth/3257-trust-anchor-sets",
+        "type": "KEP"
+      }
+    ],
+    "author": "ahmedtd",
+    "author_url": "https://github.com/ahmedtd",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/113218",
+    "pr_number": 113218,
+    "areas": ["test", "apiserver", "code-generation"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "auth", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "115331": {
+    "commit": "58d1dc669f80e00e1abecfa1eea65a29ceaf78bd",
+    "text": "Give terminal phase correctly to all pods that will not be restarted. \n\nIn particular, assign Failed phase to pods which are deleted while pending. Also, assign a terminal \nphase (Succeeded or Failed, depending on the exit statuses of the pod containers) to pods which\nare deleted while running.\n\nThis fixes the issue for jobs using pod failure policy (with JobPodFailurePolicy and PodDisruptionConditions \nfeature gates enabled) that their pods could get stuck in the pending phase when deleted.",
+    "markdown": "Give terminal phase correctly to all pods that will not be restarted. \n  \n  In particular, assign Failed phase to pods which are deleted while pending. Also, assign a terminal \n  phase (Succeeded or Failed, depending on the exit statuses of the pod containers) to pods which\n  are deleted while running.\n  \n  This fixes the issue for jobs using pod failure policy (with JobPodFailurePolicy and PodDisruptionConditions \n  feature gates enabled) that their pods could get stuck in the pending phase when deleted. ([#115331](https://github.com/kubernetes/kubernetes/pull/115331), [@mimowo](https://github.com/mimowo)) [SIG Cloud Provider, Node and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3329-retriable-and-non-retriable-failures",
+        "type": "KEP"
+      }
+    ],
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/115331",
+    "pr_number": 115331,
+    "areas": ["test", "kubelet", "e2e-test-framework"],
+    "kinds": ["feature"],
+    "sigs": ["node", "testing", "cloud-provider"],
+    "feature": true,
+    "duplicate": true
+  },
+  "116550": {
+    "commit": "62889f416cb60f66b3f04810ef2475c425b8394a",
+    "text": "Fixes a regression in the pod binding subresource to honor the `metadata.uid` precondition.\nThis allows kube-scheduler to ensure it is assigns node names to the same instances of pods it made scheduling decisions for.",
+    "markdown": "Fixes a regression in the pod binding subresource to honor the `metadata.uid` precondition.\n  This allows kube-scheduler to ensure it is assigns node names to the same instances of pods it made scheduling decisions for. ([#116550](https://github.com/kubernetes/kubernetes/pull/116550), [@alculquicondor](https://github.com/alculquicondor)) [SIG API Machinery and Testing]",
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116550",
+    "pr_number": 116550,
+    "areas": ["test", "apiserver"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["api-machinery", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "116554": {
+    "commit": "51c0e2374f603ac68c1b70b0572121a0a8d9f1d2",
+    "text": "Fixed two regressions introduced by the PodDisruptionConditions feature (on by default in 1.26):\n- pod eviction API calls returned spurious precondition errors and required a second evict API call to succeed\n- dry-run eviction API calls persisted a DisruptionTarget condition into the pod being evicted",
+    "markdown": "Fixed two regressions introduced by the PodDisruptionConditions feature (on by default in 1.26):\n  - pod eviction API calls returned spurious precondition errors and required a second evict API call to succeed\n  - dry-run eviction API calls persisted a DisruptionTarget condition into the pod being evicted ([#116554](https://github.com/kubernetes/kubernetes/pull/116554), [@atiratree](https://github.com/atiratree)) [SIG API Machinery and Testing]",
+    "documentation": [
+      { "url": "https://github.com/kubernetes/enhancements/issues/3329", "type": "KEP" }
+    ],
+    "author": "atiratree",
+    "author_url": "https://github.com/atiratree",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116554",
+    "pr_number": 116554,
+    "areas": ["test"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["api-machinery", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "116684": {
+    "commit": "c14e0983fbdfa51ef61bbadf4c364f3a63aa8b75",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#116684](https://github.com/kubernetes/kubernetes/pull/116684), [@vinaykul](https://github.com/vinaykul)) [SIG Apps, Node and Release]",
+    "author": "vinaykul",
+    "author_url": "https://github.com/vinaykul",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116684",
+    "pr_number": 116684,
+    "areas": ["release-eng"],
+    "kinds": ["cleanup"],
+    "sigs": ["node", "apps", "release"],
+    "duplicate": true,
+    "do_not_publish": true
+  },
+  "116702": {
+    "commit": "c7cc7886e2f60a0710487bd2300c3b7399f19769",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#116702](https://github.com/kubernetes/kubernetes/pull/116702), [@vinaykul](https://github.com/vinaykul)) [SIG Node]",
+    "author": "vinaykul",
+    "author_url": "https://github.com/vinaykul",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116702",
+    "pr_number": 116702,
+    "areas": ["kubelet"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["node"],
+    "duplicate_kind": true,
+    "do_not_publish": true
+  },
+  "116770": {
+    "commit": "0740b11073d08262d4d6687ceedd8f0c71819ebd",
+    "text": "Fixes bug in beta aggregated discovery endpoint which caused CRD discovery information to be temporarily missing when an Aggregated APIService with the same GroupVersion is deleted (and vice versa).",
+    "markdown": "Fixes bug in beta aggregated discovery endpoint which caused CRD discovery information to be temporarily missing when an Aggregated APIService with the same GroupVersion is deleted (and vice versa). ([#116770](https://github.com/kubernetes/kubernetes/pull/116770), [@alexzielenski](https://github.com/alexzielenski)) [SIG API Machinery and Testing]",
+    "author": "alexzielenski",
+    "author_url": "https://github.com/alexzielenski",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116770",
+    "pr_number": 116770,
+    "areas": ["test", "apiserver"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["api-machinery", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "116857": {
+    "commit": "0e9dd5c51d84e35acdcdc19bd1f6bd6ddad06fb3",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#116857](https://github.com/kubernetes/kubernetes/pull/116857), [@vinaykul](https://github.com/vinaykul)) [SIG Apps]",
+    "author": "vinaykul",
+    "author_url": "https://github.com/vinaykul",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116857",
+    "pr_number": 116857,
+    "kinds": ["bug"],
+    "sigs": ["apps"],
+    "do_not_publish": true
+  },
+  "116866": {
+    "commit": "6843c520601ab00921d83f4f70f80755e44d036e",
+    "text": "remove `kubernetes.io/grpc` standard appProtocol",
+    "markdown": "Remove `kubernetes.io/grpc` standard appProtocol ([#116866](https://github.com/kubernetes/kubernetes/pull/116866), [@LiorLieberman](https://github.com/LiorLieberman)) [SIG API Machinery and Apps]",
+    "author": "LiorLieberman",
+    "author_url": "https://github.com/LiorLieberman",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116866",
+    "pr_number": 116866,
+    "areas": ["code-generation"],
+    "kinds": ["bug", "api-change"],
+    "sigs": ["api-machinery", "apps"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "116877": {
+    "commit": "5469c198e5d074c7e88e14c3dcbc3ebb2b37cfa8",
+    "text": "The encryption response from KMS v2 plugins is now validated earlier at DEK generation time instead of waiting until an encryption is performed.",
+    "markdown": "The encryption response from KMS v2 plugins is now validated earlier at DEK generation time instead of waiting until an encryption is performed. ([#116877](https://github.com/kubernetes/kubernetes/pull/116877), [@enj](https://github.com/enj)) [SIG API Machinery and Auth]",
+    "author": "enj",
+    "author_url": "https://github.com/enj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116877",
+    "pr_number": 116877,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery", "auth"],
+    "duplicate": true
+  }
+}
