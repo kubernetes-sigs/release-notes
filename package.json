@@ -52,7 +52,7 @@
     "bootstrap": "^5.2.1",
     "concurrently": "7.4.0",
     "es6-promise": "^4.2.8",
-    "es6-shim": "^0.35.6",
+    "es6-shim": "^0.35.8",
     "jquery": "^3.6.1",
     "ngx-markdown": "^14.0.1",
     "ngx-pagination": "^6.0.2",
