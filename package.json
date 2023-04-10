@@ -55,7 +55,7 @@
     "es6-shim": "^0.35.6",
     "jquery": "^3.6.1",
     "ngx-markdown": "^14.0.1",
-    "ngx-pagination": "^6.0.2",
+    "ngx-pagination": "^6.0.3",
     "npm-check-updates": "^16.2.1",
     "popper.js": "^1.16.1",
     "rxjs": "^7.5.6",
