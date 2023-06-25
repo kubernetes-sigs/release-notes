@@ -1,0 +1,377 @@
+{
+  "114849": {
+    "commit": "2e93c65eff5979e21178d9d7117916e49af29838",
+    "text": "Users will no longer see an error for failed events caused due to terminating namespace.",
+    "markdown": "Users will no longer see an error for failed events caused due to terminating namespace. ([#114849](https://github.com/kubernetes/kubernetes/pull/114849), [@padlar](https://github.com/padlar)) [SIG API Machinery]",
+    "author": "padlar",
+    "author_url": "https://github.com/padlar",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/114849",
+    "pr_number": 114849,
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "115813": {
+    "commit": "4e6a3fb9c1025fe24a5bd851f26c44454fc2d705",
+    "text": "kube-controller-manager and cloud-controller-manager have changed the name of controllers that can be turned off/on that are passed to the `--controllers` flag (eg `pod-garbage-collector-controller` ). The old names (eg `podgc`) are also accepted and aliased to the new names",
+    "markdown": "Kube-controller-manager and cloud-controller-manager have changed the name of controllers that can be turned off/on that are passed to the `--controllers` flag (eg `pod-garbage-collector-controller` ). The old names (eg `podgc`) are also accepted and aliased to the new names ([#115813](https://github.com/kubernetes/kubernetes/pull/115813), [@atiratree](https://github.com/atiratree)) [SIG API Machinery and Cloud Provider]",
+    "author": "atiratree",
+    "author_url": "https://github.com/atiratree",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/115813",
+    "pr_number": 115813,
+    "areas": ["cloudprovider"],
+    "kinds": ["cleanup"],
+    "sigs": ["api-machinery", "cloud-provider"],
+    "duplicate": true
+  },
+  "115835": {
+    "commit": "6a79a8a57c0924343fba2ffe9aa6cad19a3e257a",
+    "text": "Fixed the preStop hook will block the pod termination grace period",
+    "markdown": "Fixed the preStop hook will block the pod termination grace period ([#115835](https://github.com/kubernetes/kubernetes/pull/115835), [@HirazawaUi](https://github.com/HirazawaUi)) [SIG Node and Testing]",
+    "author": "HirazawaUi",
+    "author_url": "https://github.com/HirazawaUi",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/115835",
+    "pr_number": 115835,
+    "areas": ["test", "kubelet"],
+    "kinds": ["bug"],
+    "sigs": ["node", "testing"],
+    "duplicate": true
+  },
+  "116530": {
+    "commit": "03486cec21579ce77304bb7265ecb90516418301",
+    "text": "kubelet: un-deprecate --provider-id flag",
+    "markdown": "Kubelet: un-deprecate --provider-id flag ([#116530](https://github.com/kubernetes/kubernetes/pull/116530), [@pacoxu](https://github.com/pacoxu)) [SIG Node]",
+    "author": "pacoxu",
+    "author_url": "https://github.com/pacoxu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116530",
+    "pr_number": 116530,
+    "areas": ["kubelet"],
+    "kinds": ["cleanup", "feature"],
+    "sigs": ["node"],
+    "feature": true,
+    "duplicate_kind": true
+  },
+  "116635": {
+    "commit": "4483bf66fe58e9a65a025288179078374fc791b0",
+    "text": "Migrated the interpodaffinity scheduler plugin to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).",
+    "markdown": "Migrated the interpodaffinity scheduler plugin to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging). ([#116635](https://github.com/kubernetes/kubernetes/pull/116635), [@mengjiao-liu](https://github.com/mengjiao-liu)) [SIG Instrumentation and Scheduling]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/3077-contextual-logging",
+        "type": "KEP"
+      }
+    ],
+    "author": "mengjiao-liu",
+    "author_url": "https://github.com/mengjiao-liu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116635",
+    "pr_number": 116635,
+    "areas": ["logging"],
+    "kinds": ["cleanup"],
+    "sigs": ["scheduling", "instrumentation"],
+    "duplicate": true
+  },
+  "116910": {
+    "commit": "47e79b815608c8e2877389b872a31dfd01184148",
+    "text": "Migrated the Job controller (within `kube-controller-manager`) to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging).",
+    "markdown": "Migrated the Job controller (within `kube-controller-manager`) to use [contextual logging](https://k8s.io/docs/concepts/cluster-administration/system-logs/#contextual-logging). ([#116910](https://github.com/kubernetes/kubernetes/pull/116910), [@fatsheep9146](https://github.com/fatsheep9146)) [SIG API Machinery, Apps and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-instrumentation/3077-contextual-logging",
+        "type": "KEP"
+      }
+    ],
+    "author": "fatsheep9146",
+    "author_url": "https://github.com/fatsheep9146",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116910",
+    "pr_number": 116910,
+    "areas": ["test"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "apps", "testing"],
+    "feature": true,
+    "duplicate": true
+  },
+  "117550": {
+    "commit": "32048b146731e428800d661a67338d1a0c8f50aa",
+    "text": "Add '--concurrent-cron-job-syncs' flag for kube-controller-manager to set the number of workers for cron job controller",
+    "markdown": "Add '--concurrent-cron-job-syncs' flag for kube-controller-manager to set the number of workers for cron job controller ([#117550](https://github.com/kubernetes/kubernetes/pull/117550), [@borgerli](https://github.com/borgerli)) [SIG Apps]",
+    "author": "borgerli",
+    "author_url": "https://github.com/borgerli",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/117550",
+    "pr_number": 117550,
+    "kinds": ["feature"],
+    "sigs": ["apps"],
+    "feature": true
+  },
+  "117702": {
+    "commit": "18d05b646d09b2971dc5400bc288062b0414e8cf",
+    "text": "Rename PodHasNetwork to PodReadyToStartContainers",
+    "markdown": "Rename PodHasNetwork to PodReadyToStartContainers ([#117702](https://github.com/kubernetes/kubernetes/pull/117702), [@kannon92](https://github.com/kannon92)) [SIG Node and Testing]",
+    "documentation": [
+      {
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/3085-pod-conditions-for-starting-completition-of-sandbox-creation",
+        "type": "KEP"
+      }
+    ],
+    "author": "kannon92",
+    "author_url": "https://github.com/kannon92",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/117702",
+    "pr_number": 117702,
+    "areas": ["test", "kubelet"],
+    "kinds": ["feature"],
+    "sigs": ["node", "testing"],
+    "feature": true,
+    "duplicate": true
+  },
+  "117793": {
+    "commit": "86d786090ac9390d4b724a7294e8bb96825eeefe",
+    "text": "If using cgroups v2, then the cgroup aware OOM killer will be enabled for container cgroups via  `memory.oom.group` .  This causes processes within the cgroup to be treated as a unit and killed simultaneously in the event of an OOM kill on any process in the cgroup.",
+    "markdown": "If using cgroups v2, then the cgroup aware OOM killer will be enabled for container cgroups via  `memory.oom.group` .  This causes processes within the cgroup to be treated as a unit and killed simultaneously in the event of an OOM kill on any process in the cgroup. ([#117793](https://github.com/kubernetes/kubernetes/pull/117793), [@tzneal](https://github.com/tzneal)) [SIG Apps, Node and Testing]",
+    "author": "tzneal",
+    "author_url": "https://github.com/tzneal",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/117793",
+    "pr_number": 117793,
+    "areas": ["test", "kubelet", "code-generation"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["node", "apps", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "118055": {
+    "commit": "cc60a9348536a85978946de3001dc6a3737cf516",
+    "text": "Expose rest.DefaultServerUrlFor function",
+    "markdown": "Expose rest.DefaultServerUrlFor function ([#118055](https://github.com/kubernetes/kubernetes/pull/118055), [@timofurrer](https://github.com/timofurrer)) [SIG API Machinery]",
+    "author": "timofurrer",
+    "author_url": "https://github.com/timofurrer",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118055",
+    "pr_number": 118055,
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery"],
+    "feature": true,
+    "duplicate_kind": true
+  },
+  "118115": {
+    "commit": "de7360d9bc8ee0758e03d072c60e23f91edd2298",
+    "text": "kube-proxy: remove log warning about not using config file",
+    "markdown": "Kube-proxy: remove log warning about not using config file ([#118115](https://github.com/kubernetes/kubernetes/pull/118115), [@TommyStarK](https://github.com/TommyStarK)) [SIG Network]",
+    "author": "TommyStarK",
+    "author_url": "https://github.com/TommyStarK",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118115",
+    "pr_number": 118115,
+    "areas": ["kube-proxy"],
+    "kinds": ["cleanup"],
+    "sigs": ["network"]
+  },
+  "118128": {
+    "commit": "173a4738035b186f50c5882546155b13bb7f576d",
+    "text": "kube-controller-manager deprecate `--volume-host-cidr-denylist` and `--volume-host-allow-local-loopback` flags.",
+    "markdown": "Kube-controller-manager deprecate `--volume-host-cidr-denylist` and `--volume-host-allow-local-loopback` flags. ([#118128](https://github.com/kubernetes/kubernetes/pull/118128), [@carlory](https://github.com/carlory)) [SIG API Machinery, Apps, Network, Node, Storage and Testing]",
+    "author": "carlory",
+    "author_url": "https://github.com/carlory",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118128",
+    "pr_number": 118128,
+    "areas": ["test", "kubelet", "kube-proxy", "code-generation"],
+    "kinds": ["cleanup", "api-change", "deprecation"],
+    "sigs": ["network", "storage", "node", "api-machinery", "apps", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "118278": {
+    "commit": "1de217b095988a0e76b2ac4f3ebcfcbf4bb5f08e",
+    "text": "Update the comment about the feature-gate level for PodFailurePolicy from alpha to beta",
+    "markdown": "Update the comment about the feature-gate level for PodFailurePolicy from alpha to beta ([#118278](https://github.com/kubernetes/kubernetes/pull/118278), [@mimowo](https://github.com/mimowo)) [SIG Apps]",
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118278",
+    "pr_number": 118278,
+    "kinds": ["bug", "documentation", "api-change"],
+    "sigs": ["apps"],
+    "duplicate_kind": true
+  },
+  "118329": {
+    "commit": "9d231f8ce77b4a8413b41130ea130d392ca860c7",
+    "text": "Fixes the alpha `CloudDualStackNodeIPs` feature.",
+    "markdown": "Fixes the alpha `CloudDualStackNodeIPs` feature. ([#118329](https://github.com/kubernetes/kubernetes/pull/118329), [@danwinship](https://github.com/danwinship)) [SIG Network and Node]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/3705",
+        "type": "KEP"
+      }
+    ],
+    "author": "danwinship",
+    "author_url": "https://github.com/danwinship",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118329",
+    "pr_number": 118329,
+    "areas": ["kubelet"],
+    "kinds": ["bug", "feature"],
+    "sigs": ["network", "node"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "118342": {
+    "commit": "83d30f44631f8ef0e4b0d56c1789f540b5130571",
+    "text": "```\n\n#### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n\n\u003c!--\nThis section can be blank if this pull request does not require a release note.\n\nWhen adding links which point to resources within git repositories, like\nKEPs or supporting documentation, please reference a specific commit and avoid\nlinking directly to the master branch. This ensures that links reference a\nspecific point in time, rather than a document that may change over time.\n\nSee here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n\nPlease use the following format for linking documentation:\n- [KEP]: \u003clink\u003e\n- [Usage]: \u003clink\u003e\n- [Other doc]: \u003clink\u003e\n--\u003e",
+    "markdown": "```\n  \n  #### Additional documentation e.g., KEPs (Kubernetes Enhancement Proposals), usage docs, etc.:\n  \n  \u003c!--\n  This section can be blank if this pull request does not require a release note.\n  \n  When adding links which point to resources within git repositories, like\n  KEPs or supporting documentation, please reference a specific commit and avoid\n  linking directly to the master branch. This ensures that links reference a\n  specific point in time, rather than a document that may change over time.\n  \n  See here for guidance on getting permanent links to files: https://help.github.com/en/articles/getting-permanent-links-to-files\n  \n  Please use the following format for linking documentation:\n  - [KEP]: \u003clink\u003e\n  - [Usage]: \u003clink\u003e\n  - [Other doc]: \u003clink\u003e\n  --\u003e ([#118342](https://github.com/kubernetes/kubernetes/pull/118342), [@yt2985](https://github.com/yt2985)) [SIG Testing]",
+    "author": "yt2985",
+    "author_url": "https://github.com/yt2985",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118342",
+    "pr_number": 118342,
+    "areas": ["test"],
+    "kinds": ["cleanup"],
+    "sigs": ["testing"],
+    "do_not_publish": true
+  },
+  "118420": {
+    "commit": "b63700630231803967f85e83ff35d719db511baa",
+    "text": "ACTION_REQUIRED\nWhen an Indexed Job has a number of completions higher than 10^5 and parallelism higher than 10^4, and a big number of Indexes fail, Kubernetes might not be able to track the termination of the Job. Kubernetes now emits a warning, at Job creation, when the Job manifest exceeds both of these limits.",
+    "markdown": "ACTION_REQUIRED\n  When an Indexed Job has a number of completions higher than 10^5 and parallelism higher than 10^4, and a big number of Indexes fail, Kubernetes might not be able to track the termination of the Job. Kubernetes now emits a warning, at Job creation, when the Job manifest exceeds both of these limits. ([#118420](https://github.com/kubernetes/kubernetes/pull/118420), [@alculquicondor](https://github.com/alculquicondor)) [SIG Apps]",
+    "documentation": [
+      {
+        "description": "[Usage]",
+        "url": "https://kubernetes.io/docs/concepts/workloads/controllers/job/#completion-mode",
+        "type": "official"
+      }
+    ],
+    "author": "alculquicondor",
+    "author_url": "https://github.com/alculquicondor",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118420",
+    "pr_number": 118420,
+    "kinds": ["bug", "api-change"],
+    "sigs": ["apps"],
+    "duplicate_kind": true
+  },
+  "118460": {
+    "commit": "a60314c47ef28dd04b086a2ad4b4bfd40b6f86a4",
+    "text": "Fix component status calling etcd health endpoint over http which exposed kubernetes to the risk of complete watch starvation and is inconsistent with other etcd probing done by kube-apiserver.",
+    "markdown": "Fix component status calling etcd health endpoint over http which exposed kubernetes to the risk of complete watch starvation and is inconsistent with other etcd probing done by kube-apiserver. ([#118460](https://github.com/kubernetes/kubernetes/pull/118460), [@serathius](https://github.com/serathius)) [SIG API Machinery]",
+    "author": "serathius",
+    "author_url": "https://github.com/serathius",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118460",
+    "pr_number": 118460,
+    "areas": ["apiserver"],
+    "kinds": ["bug"],
+    "sigs": ["api-machinery"]
+  },
+  "118530": {
+    "commit": "bca13360215bbd2aad562207dcf0dd8a6a31779f",
+    "text": "Fix Cronjob status.lastSuccessfulTime not populated by a manually triggered job",
+    "markdown": "Fix Cronjob status.lastSuccessfulTime not populated by a manually triggered job ([#118530](https://github.com/kubernetes/kubernetes/pull/118530), [@carlory](https://github.com/carlory)) [SIG CLI]",
+    "author": "carlory",
+    "author_url": "https://github.com/carlory",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118530",
+    "pr_number": 118530,
+    "areas": ["kubectl"],
+    "kinds": ["bug"],
+    "sigs": ["cli"]
+  },
+  "118552": {
+    "commit": "471fd1ae8a1d167102f1d6d27fbde1020d320c59",
+    "text": "RBD volume plugin ( `kubernetes.io/rbd`) has been deprecated in this release and will be removed in a subsequent release. Alternative is to use RBD CSI driver (https://github.com/ceph/ceph-csi/) in your Kubernetes Cluster.",
+    "markdown": "RBD volume plugin ( `kubernetes.io/rbd`) has been deprecated in this release and will be removed in a subsequent release. Alternative is to use RBD CSI driver (https://github.com/ceph/ceph-csi/) in your Kubernetes Cluster. ([#118552](https://github.com/kubernetes/kubernetes/pull/118552), [@humblec](https://github.com/humblec)) [SIG Storage]",
+    "author": "humblec",
+    "author_url": "https://github.com/humblec",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118552",
+    "pr_number": 118552,
+    "kinds": ["deprecation"],
+    "sigs": ["storage"],
+    "action_required": true
+  },
+  "118567": {
+    "commit": "cdbdb179340896e7ec80fb97170ca94dc8611bb4",
+    "text": "CI job `ci-kubernetes-node-arm64-ubuntu-serial` will test node e2e on arm64, `use-dockerized-build` and `target-build-arch` are required to run this job.",
+    "markdown": "CI job `ci-kubernetes-node-arm64-ubuntu-serial` will test node e2e on arm64, `use-dockerized-build` and `target-build-arch` are required to run this job. ([#118567](https://github.com/kubernetes/kubernetes/pull/118567), [@chendave](https://github.com/chendave)) [SIG Node and Testing]",
+    "author": "chendave",
+    "author_url": "https://github.com/chendave",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118567",
+    "pr_number": 118567,
+    "kinds": ["bug"],
+    "sigs": ["node", "testing"],
+    "duplicate": true
+  },
+  "118596": {
+    "commit": "49d7b3f0a0e451f515e17b62a4a08017e46c15c2",
+    "text": "kubelet: The `--azure-container-registry-config` flag has been deprecated and will be removed in a future release, please use `--image-credential-provider-config` and `--image-credential-provider-bin-dir` to setup acr credential provider instead.",
+    "markdown": "Kubelet: The `--azure-container-registry-config` flag has been deprecated and will be removed in a future release, please use `--image-credential-provider-config` and `--image-credential-provider-bin-dir` to setup acr credential provider instead. ([#118596](https://github.com/kubernetes/kubernetes/pull/118596), [@SataQiu](https://github.com/SataQiu)) [SIG Node]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-node/2133-kubelet-credential-providers",
+        "type": "KEP"
+      }
+    ],
+    "author": "SataQiu",
+    "author_url": "https://github.com/SataQiu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118596",
+    "pr_number": 118596,
+    "areas": ["kubelet"],
+    "kinds": ["cleanup", "deprecation"],
+    "sigs": ["node"],
+    "duplicate_kind": true
+  },
+  "118615": {
+    "commit": "c51a422d7870e19b724999bbc72155058e982b55",
+    "text": "Make Job controller batching of syncJob invocations enabled unconditionally (it was conditional on JobReadyPods feature before).\n\nAlso, Job controller's constants for default backoff and maximal backoff are lowered down to 1s (from 10s) and 1min (from 6min), respectively. These constants are used to determine the backoff delay for the next Job controller sync in case of a request failure.",
+    "markdown": "Make Job controller batching of syncJob invocations enabled unconditionally (it was conditional on JobReadyPods feature before).\n  \n  Also, Job controller's constants for default backoff and maximal backoff are lowered down to 1s (from 10s) and 1min (from 6min), respectively. These constants are used to determine the backoff delay for the next Job controller sync in case of a request failure. ([#118615](https://github.com/kubernetes/kubernetes/pull/118615), [@mimowo](https://github.com/mimowo)) [SIG Apps and Testing]",
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118615",
+    "pr_number": 118615,
+    "areas": ["test"],
+    "kinds": ["cleanup"],
+    "sigs": ["apps", "testing"],
+    "duplicate": true
+  },
+  "118631": {
+    "commit": "604584d1d3cc230948498040281b2862f789c7c3",
+    "text": "client-go: make generated CA certificates valid 1 hour in the past (NewSelfSignedCACert). Applies to CA certificates and other certificates generated by kubeadm.",
+    "markdown": "Client-go: make generated CA certificates valid 1 hour in the past (NewSelfSignedCACert). Applies to CA certificates and other certificates generated by kubeadm. ([#118631](https://github.com/kubernetes/kubernetes/pull/118631), [@champtar](https://github.com/champtar)) [SIG Auth]",
+    "author": "champtar",
+    "author_url": "https://github.com/champtar",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118631",
+    "pr_number": 118631,
+    "kinds": ["feature"],
+    "sigs": ["auth"],
+    "feature": true
+  },
+  "118686": {
+    "commit": "889ecf865b7c70efcbfe5b783bdc99306464971a",
+    "text": "wait.PollUntilContextTimeout function, if immediate is true, the condition will be invoked before waiting and guarantees that the condition is invoked at least once, regardless of whether the context has been cancelled.",
+    "markdown": "Wait.PollUntilContextTimeout function, if immediate is true, the condition will be invoked before waiting and guarantees that the condition is invoked at least once, regardless of whether the context has been cancelled. ([#118686](https://github.com/kubernetes/kubernetes/pull/118686), [@aojea](https://github.com/aojea)) [SIG API Machinery]",
+    "author": "aojea",
+    "author_url": "https://github.com/aojea",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118686",
+    "pr_number": 118686,
+    "kinds": ["bug", "regression"],
+    "sigs": ["api-machinery"],
+    "duplicate_kind": true
+  },
+  "118759": {
+    "commit": "784a309b917edf5a2a41f13a3238ba10824726db",
+    "text": "Reduce delay when processing jobs after a transient API error",
+    "markdown": "Reduce delay when processing jobs after a transient API error ([#118759](https://github.com/kubernetes/kubernetes/pull/118759), [@mimowo](https://github.com/mimowo)) [SIG Apps]",
+    "author": "mimowo",
+    "author_url": "https://github.com/mimowo",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118759",
+    "pr_number": 118759,
+    "kinds": ["cleanup"],
+    "sigs": ["apps"]
+  },
+  "118763": {
+    "commit": "f2e3157df0a143ff04b9adf7525b32d82bb6f29c",
+    "text": "AdvancedAuditing feature gate that graduated to GA in 1.12 and was unconditionally enabled has been removed in v1.28.",
+    "markdown": "AdvancedAuditing feature gate that graduated to GA in 1.12 and was unconditionally enabled has been removed in v1.28. ([#118763](https://github.com/kubernetes/kubernetes/pull/118763), [@Shubham82](https://github.com/Shubham82)) [SIG API Machinery and Auth]",
+    "author": "Shubham82",
+    "author_url": "https://github.com/Shubham82",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118763",
+    "pr_number": 118763,
+    "areas": ["apiserver"],
+    "kinds": ["cleanup", "feature"],
+    "sigs": ["api-machinery", "auth"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  }
+}
