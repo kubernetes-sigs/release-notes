@@ -78,7 +78,7 @@
     "@types/jasminewd2": "^2.0.10",
     "@types/jest": "^26.0.24",
     "@types/node": "^18.7.18",
-    "@typescript-eslint/eslint-plugin": "5.38.0",
+    "@typescript-eslint/eslint-plugin": "5.60.1",
     "@typescript-eslint/parser": "5.38.0",
     "codelyzer": "^6.0.2",
     "cypress": "^4.12.1",
