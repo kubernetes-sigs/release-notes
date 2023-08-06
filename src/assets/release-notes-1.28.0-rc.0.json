@@ -1,0 +1,105 @@
+{
+  "116469": {
+    "commit": "f3a070f9c684d9335b6df91ef2f3ce207629882c",
+    "text": "PersistentVolumes have a new LastPhaseTransitionTime field which holds a timestamp of when the volume last transitioned its phase.",
+    "markdown": "PersistentVolumes have a new LastPhaseTransitionTime field which holds a timestamp of when the volume last transitioned its phase. ([#116469](https://github.com/kubernetes/kubernetes/pull/116469), [@RomanBednar](https://github.com/RomanBednar)) [SIG API Machinery, Apps, Auth, Node, Release, Storage and Testing]",
+    "author": "RomanBednar",
+    "author_url": "https://github.com/RomanBednar",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/116469",
+    "pr_number": 116469,
+    "areas": ["test", "apiserver", "release-eng", "code-generation"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["storage", "node", "api-machinery", "auth", "apps", "testing", "release"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "117015": {
+    "commit": "4e8908d56671c1bae588151d1d2fcbd4fa56b049",
+    "text": "Add implementation for PodRecreationPolicy to wait for creation of pods once the existing ones are fully terminated.",
+    "markdown": "Add implementation for PodRecreationPolicy to wait for creation of pods once the existing ones are fully terminated. ([#117015](https://github.com/kubernetes/kubernetes/pull/117015), [@kannon92](https://github.com/kannon92)) [SIG API Machinery, Apps and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-apps/3939-allow-replacement-when-fully-terminated",
+        "type": "KEP"
+      }
+    ],
+    "author": "kannon92",
+    "author_url": "https://github.com/kannon92",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/117015",
+    "pr_number": 117015,
+    "areas": ["test", "code-generation"],
+    "kinds": ["feature"],
+    "sigs": ["api-machinery", "apps", "testing"],
+    "feature": true,
+    "duplicate": true
+  },
+  "118644": {
+    "commit": "18f8cb83989ff64beb0c7f47cdd3ad9df7bdbbeb",
+    "text": "Promoted API groups `ValidatingAdmissionPolicy` and `ValidatingAdmissionPolicyBinding` to `v1beta1`.",
+    "markdown": "Promoted API groups `ValidatingAdmissionPolicy` and `ValidatingAdmissionPolicyBinding` to `v1beta1`. ([#118644](https://github.com/kubernetes/kubernetes/pull/118644), [@alexzielenski](https://github.com/alexzielenski)) [SIG API Machinery, Apps and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/issues/3488",
+        "type": "KEP"
+      }
+    ],
+    "author": "alexzielenski",
+    "author_url": "https://github.com/alexzielenski",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118644",
+    "pr_number": 118644,
+    "areas": ["test", "apiserver", "code-generation"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "apps", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "118828": {
+    "commit": "773a6b1e460360538ce4d85a7c0d009efed81836",
+    "text": "Changed how KMS v2 encryption at rest can generate data encryption keys.\nWhen you enable the `KMSv2KDF` feature gate (off by default), KMS v2 uses a key derivation function to generate single use data encryption keys from a secret seed combined with some random data.  This eliminates the need for a counter based nonce while avoiding nonce collision concerns associated with AES-GCM's 12 byte nonce.",
+    "markdown": "Changed how KMS v2 encryption at rest can generate data encryption keys.\n  When you enable the `KMSv2KDF` feature gate (off by default), KMS v2 uses a key derivation function to generate single use data encryption keys from a secret seed combined with some random data.  This eliminates the need for a counter based nonce while avoiding nonce collision concerns associated with AES-GCM's 12 byte nonce. ([#118828](https://github.com/kubernetes/kubernetes/pull/118828), [@enj](https://github.com/enj)) [SIG API Machinery, Auth and Testing]",
+    "author": "enj",
+    "author_url": "https://github.com/enj",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118828",
+    "pr_number": 118828,
+    "areas": ["test", "apiserver"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["api-machinery", "auth", "testing"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "119409": {
+    "commit": "3b9af471185d97bb6f4dd0259ae180ec624c46eb",
+    "text": "Promoted the feature gate `ValidtaingAdmissionPolicy` to beta and it is turned off by default.",
+    "markdown": "Promoted the feature gate `ValidtaingAdmissionPolicy` to beta and it is turned off by default. ([#119409](https://github.com/kubernetes/kubernetes/pull/119409), [@alexzielenski](https://github.com/alexzielenski)) [SIG API Machinery, Apps, Auth, Instrumentation, Node, Release, Storage and Testing]",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/cici37/enhancements/blob/d83909e5f8683f38ef38dc3276c2d9f667d65290/keps/sig-api-machinery/3488-cel-admission-control/README.md",
+        "type": "external"
+      }
+    ],
+    "author": "alexzielenski",
+    "author_url": "https://github.com/alexzielenski",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119409",
+    "pr_number": 119409,
+    "areas": ["test", "apiserver", "release-eng", "code-generation"],
+    "kinds": ["cleanup", "api-change"],
+    "sigs": [
+      "storage",
+      "node",
+      "api-machinery",
+      "auth",
+      "apps",
+      "instrumentation",
+      "testing",
+      "release"
+    ],
+    "duplicate": true,
+    "duplicate_kind": true
+  }
+}
