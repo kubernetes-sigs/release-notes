@@ -1,18 +1,19 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, forkJoin } from 'rxjs';
+import { Observable, forkJoin, switchMap } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { Note } from '@app/shared/model/notes.model';
 import { LoggerService } from '@shared/services/logger.service';
-import { assets } from '@env/assets';
+import { localAssets } from '@env/assets';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NotesService {
-  constructor(private http: HttpClient, private logger: LoggerService) {}
+  constructor(private http: HttpClient, private logger: LoggerService) {
+  }
 
   /**
    * Retrieve the notes
@@ -20,20 +21,43 @@ export class NotesService {
    * @returns The NoteList as observable
    */
   getNotes(): Observable<Note[]> {
-    this.logger.debug(`Gathering notes from ${assets.length} assets`);
+    this.logger.debug('Gathering assets list');
 
-    const observables = [];
-    for (const asset of assets) {
-      observables.push(
-        this.http.get(asset, { observe: 'response' }).pipe(
-          map(response => {
-            return [response.body, this.releaseVersionFromPath(asset)];
-          }),
-        ),
-      );
-    }
+    // Remote release notes index
+    const indexObservable = this.http.get('https://cdn.dl.k8s.io/release/release-notes-index.json').pipe(
+      switchMap(response => {
+        const observables = [];
 
-    return forkJoin(observables).pipe(map(this.toNoteList));
+        // Remote Assets
+        this.logger.debug(`Gathering remote notes from ${Object.keys(response).length} assets`);
+        for (const releaseVersion of Object.keys(response)) {
+          const assetLink = this.cdnLinkFromGsPath(response[releaseVersion]);
+          observables.unshift(
+            this.http.get(assetLink, {observe: 'response'}).pipe(
+              map(response1 => {
+                return [response1.body, releaseVersion];
+              }),
+            ),
+          );
+        }
+
+        // Local Assets
+        this.logger.debug(`Gathering local notes from ${localAssets.length} assets`);
+        for (const asset of localAssets) {
+          observables.push(
+            this.http.get(asset, {observe: 'response'}).pipe(
+              map(response2 => {
+                return [response2.body, this.releaseVersionFromPath(asset)];
+              }),
+            ),
+          );
+        }
+
+        return forkJoin(observables);
+      })
+    );
+
+    return indexObservable.pipe(map(this.toNoteList));
   }
 
   /**
@@ -71,5 +95,18 @@ export class NotesService {
       throw new Error(`Asset path "${path}" does not match regex ${regex}`);
     }
     return path.replace(/^.*release-notes-/, '').replace(/\.json$/, '');
+  }
+
+  /**
+   * Get cdn.dl.k8s.io path from gs:// url in release index.
+   *
+   * @returns Transformed URL
+   */
+  private cdnLinkFromGsPath(path: string): string {
+    const regex = /^gs:\/\/[\w-/.]*\.json$/;
+    if (!path.match(regex)) {
+      throw new Error(`Asset path from remote index "${path}" does not match regex ${regex}`);
+    }
+    return path.replace(/^gs:\/\/[\w-]*\//, 'https://cdn.dl.k8s.io/');
   }
 }
