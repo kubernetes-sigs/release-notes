@@ -6,14 +6,13 @@ import { map } from 'rxjs/operators';
 
 import { Note } from '@app/shared/model/notes.model';
 import { LoggerService } from '@shared/services/logger.service';
-import { localAssets } from '@env/assets';
+import { assets as localAssets } from '@env/assets';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NotesService {
-  constructor(private http: HttpClient, private logger: LoggerService) {
-  }
+  constructor(private http: HttpClient, private logger: LoggerService) {}
 
   /**
    * Retrieve the notes
@@ -24,38 +23,40 @@ export class NotesService {
     this.logger.debug('Gathering assets list');
 
     // Remote release notes index
-    const indexObservable = this.http.get('https://cdn.dl.k8s.io/release/release-notes-index.json').pipe(
-      switchMap(response => {
-        const observables = [];
+    const indexObservable = this.http
+      .get('https://cdn.dl.k8s.io/release/release-notes-index.json')
+      .pipe(
+        switchMap(response => {
+          const observables = [];
 
-        // Remote Assets
-        this.logger.debug(`Gathering remote notes from ${Object.keys(response).length} assets`);
-        for (const releaseVersion of Object.keys(response)) {
-          const assetLink = this.cdnLinkFromGsPath(response[releaseVersion]);
-          observables.unshift(
-            this.http.get(assetLink, {observe: 'response'}).pipe(
-              map(response1 => {
-                return [response1.body, releaseVersion];
-              }),
-            ),
-          );
-        }
+          // Remote Assets
+          this.logger.debug(`Gathering remote notes from ${Object.keys(response).length} assets`);
+          for (const releaseVersion of Object.keys(response)) {
+            const assetLink = this.cdnLinkFromGsPath(response[releaseVersion]);
+            observables.unshift(
+              this.http.get(assetLink, { observe: 'response' }).pipe(
+                map(response1 => {
+                  return [response1.body, releaseVersion];
+                }),
+              ),
+            );
+          }
 
-        // Local Assets
-        this.logger.debug(`Gathering local notes from ${localAssets.length} assets`);
-        for (const asset of localAssets) {
-          observables.push(
-            this.http.get(asset, {observe: 'response'}).pipe(
-              map(response2 => {
-                return [response2.body, this.releaseVersionFromPath(asset)];
-              }),
-            ),
-          );
-        }
+          // Local Assets
+          this.logger.debug(`Gathering local notes from ${localAssets.length} assets`);
+          for (const asset of localAssets) {
+            observables.push(
+              this.http.get(asset, { observe: 'response' }).pipe(
+                map(response2 => {
+                  return [response2.body, this.releaseVersionFromPath(asset)];
+                }),
+              ),
+            );
+          }
 
-        return forkJoin(observables);
-      })
-    );
+          return forkJoin(observables);
+        }),
+      );
 
     return indexObservable.pipe(map(this.toNoteList));
   }

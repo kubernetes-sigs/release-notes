@@ -1,4 +1,4 @@
-export const localAssets = [
+export const assets = [
   'assets/release-notes-1.19.4.json',
   'assets/release-notes-1.19.3.json',
   'assets/release-notes-1.19.2.json',
