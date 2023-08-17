@@ -1,0 +1,153 @@
+{
+  "118549": {
+    "commit": "d4fde1e92a83cb533ae63b3abe9d49f08efb7a2f",
+    "text": "Revert kubelet prober metrics `pod` tag to include actual pod name",
+    "markdown": "Revert kubelet prober metrics `pod` tag to include actual pod name ([#118549](https://github.com/kubernetes/kubernetes/pull/118549), [@a7i](https://github.com/a7i)) [SIG Node]",
+    "author": "a7i",
+    "author_url": "https://github.com/a7i",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118549",
+    "pr_number": 118549,
+    "areas": ["kubelet"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["node"],
+    "duplicate_kind": true
+  },
+  "118895": {
+    "commit": "0d90d1ffa5e87dfc4d3098da7f281351c7ff1972",
+    "text": "Added IP mode field to loadbalancer status ingress.",
+    "markdown": "Added IP mode field to loadbalancer status ingress. ([#118895](https://github.com/kubernetes/kubernetes/pull/118895), [@RyanAoh](https://github.com/RyanAoh))",
+    "documentation": [
+      {
+        "description": "[KEP]",
+        "url": "https://github.com/kubernetes/enhancements/tree/master/keps/sig-network/1860-kube-proxy-IP-node-binding",
+        "type": "KEP"
+      }
+    ],
+    "author": "RyanAoh",
+    "author_url": "https://github.com/RyanAoh",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/118895",
+    "pr_number": 118895,
+    "areas": ["test", "kube-proxy", "cloudprovider", "code-generation", "ipvs"],
+    "kinds": ["api-change", "feature"],
+    "sigs": ["network", "api-machinery", "apps", "testing", "cloud-provider"],
+    "feature": true,
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "119128": {
+    "commit": "2c6c4566eff972d6c1320b5f8ad795f88c822d09",
+    "text": "Fixed issue https://github.com/kubernetes-sigs/cloud-provider-azure/issues/4230 and removed the additional filtering on `NotReady` nodes by the Azure cloud provider code",
+    "markdown": "Fixed issue https://github.com/kubernetes-sigs/cloud-provider-azure/issues/4230 and removed the additional filtering on `NotReady` nodes by the Azure cloud provider code ([#119128](https://github.com/kubernetes/kubernetes/pull/119128), [@alexanderConstantinescu](https://github.com/alexanderConstantinescu)) [SIG Cloud Provider]",
+    "author": "alexanderConstantinescu",
+    "author_url": "https://github.com/alexanderConstantinescu",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119128",
+    "pr_number": 119128,
+    "areas": ["cloudprovider"],
+    "kinds": ["bug"],
+    "sigs": ["cloud-provider"]
+  },
+  "119653": {
+    "commit": "700e1ed1f43738780fbf890e918750779d413854",
+    "text": "Fixed CustomResourceDefinition `status.storedVersions` validation error messages.",
+    "markdown": "Fixed CustomResourceDefinition `status.storedVersions` validation error messages. ([#119653](https://github.com/kubernetes/kubernetes/pull/119653), [@sttts](https://github.com/sttts)) [SIG API Machinery]",
+    "author": "sttts",
+    "author_url": "https://github.com/sttts",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119653",
+    "pr_number": 119653,
+    "kinds": ["bug", "api-change"],
+    "sigs": ["api-machinery"],
+    "duplicate_kind": true
+  },
+  "119729": {
+    "commit": "2f30fae0e8bd9308e8ba1cd5f801c133a0dbef0e",
+    "text": "`kube-scheduler`: Fine-grained tracking of events (introduced in 1.28) suffered from a data race when binding fails.",
+    "markdown": "`kube-scheduler`: Fine-grained tracking of events (introduced in 1.28) suffered from a data race when binding fails. ([#119729](https://github.com/kubernetes/kubernetes/pull/119729), [@pohly](https://github.com/pohly)) [SIG Scheduling]",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119729",
+    "pr_number": 119729,
+    "kinds": ["bug"],
+    "sigs": ["scheduling"]
+  },
+  "119784": {
+    "commit": "201f8070369c15de231bbd82267a6c990f8f3d2b",
+    "text": "When the cluster size is small and the scheduler doesn't get unscheduled Pods frequently, the scheduler doesn't try to reschedule Pods in some cases.",
+    "markdown": "When the cluster size is small and the scheduler doesn't get unscheduled Pods frequently, the scheduler doesn't try to reschedule Pods in some cases. ([#119784](https://github.com/kubernetes/kubernetes/pull/119784), [@sanposhiho](https://github.com/sanposhiho)) [SIG Scheduling and Testing]",
+    "author": "sanposhiho",
+    "author_url": "https://github.com/sanposhiho",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119784",
+    "pr_number": 119784,
+    "areas": ["test"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["scheduling", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "119804": {
+    "commit": "ae86051ec5ae1cb447748469aa91eb6ffd703c26",
+    "text": "Kubernetes is now built with Go `1.20.7`",
+    "markdown": "Kubernetes is now built with Go `1.20.7` ([#119804](https://github.com/kubernetes/kubernetes/pull/119804), [@jeremyrickard](https://github.com/jeremyrickard)) [SIG Release and Testing]",
+    "author": "jeremyrickard",
+    "author_url": "https://github.com/jeremyrickard",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119804",
+    "pr_number": 119804,
+    "areas": ["test", "release-eng"],
+    "kinds": ["feature"],
+    "sigs": ["testing", "release"],
+    "feature": true,
+    "duplicate": true
+  },
+  "119818": {
+    "commit": "f0dcf0614036d8c3cd1c9f3b3cf8df4bb1d8e44e",
+    "text": "Bumped `distroless-iptables` to `0.2.7` based on Go 1.20.7",
+    "markdown": "Bumped `distroless-iptables` to `0.2.7` based on Go 1.20.7 ([#119818](https://github.com/kubernetes/kubernetes/pull/119818), [@jeremyrickard](https://github.com/jeremyrickard)) [SIG Testing]",
+    "author": "jeremyrickard",
+    "author_url": "https://github.com/jeremyrickard",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119818",
+    "pr_number": 119818,
+    "areas": ["test"],
+    "kinds": ["feature"],
+    "sigs": ["testing"],
+    "feature": true
+  },
+  "119835": {
+    "commit": "3d941afece97b284c764e5320cc8c80b0e88cba8",
+    "text": "Aggregated discovery now returns `responseKind: {}` for resources which are missing group/version/kind information, to ensure compatibility with `v0.26.0`-`v0.26.3` clients.",
+    "markdown": "Aggregated discovery now returns `responseKind: {}` for resources which are missing group/version/kind information, to ensure compatibility with `v0.26.0`-`v0.26.3` clients. ([#119835](https://github.com/kubernetes/kubernetes/pull/119835), [@liggitt](https://github.com/liggitt)) [SIG API Machinery and Testing]",
+    "author": "liggitt",
+    "author_url": "https://github.com/liggitt",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119835",
+    "pr_number": 119835,
+    "areas": ["test", "apiserver", "code-generation"],
+    "kinds": ["bug", "api-change", "regression"],
+    "sigs": ["api-machinery", "testing"],
+    "duplicate": true,
+    "duplicate_kind": true
+  },
+  "119867": {
+    "commit": "18c3c7efb3bcccd84cccc7dacc01f0a7427b8eb9",
+    "text": "kube-proxy in Kubernetes v1.28 up until `v1.28.0-beta.0` ignored the `-v` command line flag when combined with `--config`.",
+    "markdown": "kube-proxy in Kubernetes v1.28 up until `v1.28.0-beta.0` ignored the `-v` command line flag when combined with `--config`. ([#119867](https://github.com/kubernetes/kubernetes/pull/119867), [@pohly](https://github.com/pohly)) [SIG Network]",
+    "author": "pohly",
+    "author_url": "https://github.com/pohly",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119867",
+    "pr_number": 119867,
+    "areas": ["kube-proxy"],
+    "kinds": ["bug", "api-change", "regression"],
+    "sigs": ["network"],
+    "duplicate_kind": true
+  },
+  "119888": {
+    "commit": "c6efaf16c1ed07ce37485b7a272628f653cbf06f",
+    "text": "k8s.io/apiserver: Fixed a nil panic attempting to collect etcd metrics in aggregated API servers that don't initialize etcd storage",
+    "markdown": "K8s.io/apiserver: Fixed a nil panic attempting to collect etcd metrics in aggregated API servers that don't initialize etcd storage ([#119888](https://github.com/kubernetes/kubernetes/pull/119888), [@dgrisonnet](https://github.com/dgrisonnet)) [SIG API Machinery]",
+    "author": "dgrisonnet",
+    "author_url": "https://github.com/dgrisonnet",
+    "pr_url": "https://github.com/kubernetes/kubernetes/pull/119888",
+    "pr_number": 119888,
+    "areas": ["apiserver"],
+    "kinds": ["bug", "regression"],
+    "sigs": ["api-machinery"],
+    "duplicate_kind": true
+  }
+}
