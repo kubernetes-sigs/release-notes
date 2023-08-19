@@ -13,6 +13,7 @@ describe('Release Notes App', () => {
   const option1150 = `${optionID}-1-15-0`;
   const option1160 = `${optionID}-1-16-0`;
   const option1170 = `${optionID}-1-17-0-alpha-2`;
+  const option1274 = `${optionID}-1-27-4`;
   const optionKubectl = `${optionID}-kubectl`;
   const optionKubelet = `${optionID}-kubelet`;
   const optionKEP = `${optionID}-KEP`;
@@ -33,6 +34,10 @@ describe('Release Notes App', () => {
   const v1150entry4 = '#66635';
   const v1150entry5 = '#66928';
   const v1160entry1 = '#74416';
+  const v1274entry1 = '#118329';
+  const v1274entry2 = '#118841';
+  const v1274entry3 = '#118876';
+  const v1274entry4 = '#119366';
   const v1160entry1DocumentationButton = `${documentationButton}-${v1160entry1.replace('#', '')}`;
   const v1160entry1DocumentationContent = `${documentationContent}-${v1160entry1.replace('#', '')}`;
   const preReleaseSetting = '#preReleaseSetting';
@@ -49,6 +54,7 @@ describe('Release Notes App', () => {
     cy.get(cards).should('be.visible');
     cy.get(option1140).should('be.visible');
     cy.get(option1150).should('be.visible');
+    cy.get(option1274).should('be.visible');
     cy.get(optionsReleaseVersionsID).should('be.visible');
     cy.get(searchBar).should('be.visible');
     cy.location().should(loc => {
@@ -116,9 +122,11 @@ describe('Release Notes App', () => {
     // Then
     cy.get(optionKubelet).should('be.checked');
     cy.get(cards).should($c => {
-      expect($c).to.have.length(2);
+      expect($c).to.have.length(4);
       expect($c).to.contain(v1140entry4);
       expect($c).to.contain(v1150entry5);
+      expect($c).to.contain(v1274entry1);
+      expect($c).to.contain(v1274entry2);
     });
     cy.location().should(loc => {
       expect(loc.search).to.eq('?areas=kubelet');
@@ -138,10 +146,12 @@ describe('Release Notes App', () => {
     cy.get(optionKubectl).should('be.checked');
     cy.get(optionReleaseEng).should('be.checked');
     cy.get(cards).should($c => {
-      expect($c).to.have.length(3);
+      expect($c).to.have.length(5);
       expect($c).to.contain(v1140entry3);
       expect($c).to.contain(v1150entry3);
       expect($c).to.contain(v1150entry5);
+      expect($c).to.contain(v1274entry3);
+      expect($c).to.contain(v1274entry4);
     });
     cy.location().should(loc => {
       expect(loc.search).to.eq('?areas=kubectl&areas=release-eng');
@@ -216,8 +226,9 @@ describe('Release Notes App', () => {
     cy.get(optionKEP).should('be.checked');
     cy.get(v1160entry1DocumentationContent).should('be.visible');
     cy.get(cards).should($c => {
-      expect($c).to.have.length(1);
+      expect($c).to.have.length(2);
       expect($c).to.contain(v1160entry1);
+      expect($c).to.contain(v1274entry1);
     });
   });
 
@@ -251,8 +262,9 @@ describe('Release Notes App', () => {
     cy.get(optionKEP).should('be.checked');
     cy.get(v1160entry1DocumentationContent).should('be.visible');
     cy.get(cards).should($c => {
-      expect($c).to.have.length(1);
+      expect($c).to.have.length(2);
       expect($c).to.contain(v1160entry1);
+      expect($c).to.contain(v1274entry1);
     });
   });
 
@@ -263,10 +275,12 @@ describe('Release Notes App', () => {
 
     // Then
     cy.get(cards).should($c => {
-      expect($c).to.have.length(3);
+      expect($c).to.have.length(9);
       expect($c).to.contain(v1150entry1);
       expect($c).to.contain(v1150entry5);
       expect($c).to.contain(v1160entry1);
+      expect($c).to.contain(v1274entry2);
+      expect($c).to.contain(v1274entry4);
     });
     cy.get(optionTest).should('be.checked');
     cy.get(searchBar).should('have.attr', 'ng-reflect-model', 'shutdown');
@@ -293,11 +307,10 @@ describe('Release Notes App', () => {
 
     // Then
     cy.get(cards).should($c => {
-      expect($c).to.have.length(4);
-      expect($c).to.contain(v1140entry2);
-      expect($c).to.contain(v1140entry5);
-      expect($c).to.contain(v1150entry1);
-      expect($c).to.contain(v1150entry2);
+      expect($c).to.have.length(10);
+      expect($c).to.contain(v1274entry1);
+      expect($c).to.contain(v1274entry2);
+      expect($c).to.contain(v1274entry3);
     });
     cy.location().should(loc => {
       expect(loc.search).to.eq('?kinds=bug');
@@ -311,11 +324,13 @@ describe('Release Notes App', () => {
 
     // Then
     cy.get(cards).should($c => {
-      expect($c).to.have.length(4);
+      expect($c).to.have.length(10);
       expect($c).to.contain(v1140entry1);
       expect($c).to.contain(v1150entry1);
       expect($c).to.contain(v1150entry5);
       expect($c).to.contain(v1140entry3);
+      expect($c).to.contain(v1274entry2);
+      expect($c).to.contain(v1274entry4);
     });
     cy.location().should(loc => {
       expect(loc.search).to.eq('?sigs=testing');
