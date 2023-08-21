@@ -71,6 +71,10 @@
                 {
                   "replace": "src/environments/assets.ts",
                   "with": "src/environments/assets.test.ts"
+                },
+                {
+                  "replace": "src/environments/index-url.ts",
+                  "with": "src/environments/index-url.test.ts"
                 }
               ]
             }
