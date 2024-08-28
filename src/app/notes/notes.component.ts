@@ -120,8 +120,8 @@ export class NotesComponent implements OnInit {
    * @returns The resulting markdown as string
    */
   public saneMarkdown(markdown: string): string {
-    // remove trailing "(#…, @…) [SIG …]"
-    return markdown.replace(/ \(.*\) \[SIG .*\]$/, '');
+    // remove trailing "([#…](…), [@…](…)) [SIG …]"
+    return markdown.replace(/  \(\[\#\d+\]\(.*\)\) \[SIG .*\]$/, '');
   }
 
   /**
