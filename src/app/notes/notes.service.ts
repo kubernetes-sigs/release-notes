@@ -103,10 +103,11 @@ export class NotesService {
    * @returns Transformed URL
    */
   private cdnLinkFromGsPath(path: string): string {
+    // Normalize the link if required
     const regex = /^gs:\/\/[\w-/.]*\.json$/;
-    if (!path.match(regex)) {
-      throw new Error(`Asset path from remote index "${path}" does not match regex ${regex}`);
+    if (path.match(regex)) {
+      return path.replace(/^gs:\/\/[\w-]*\//, 'https://cdn.dl.k8s.io/');
     }
-    return path.replace(/^gs:\/\/[\w-]*\//, 'https://cdn.dl.k8s.io/');
+    return path;
   }
 }
