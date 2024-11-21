@@ -103,11 +103,12 @@ export class NotesService {
    * @returns Transformed URL
    */
   private cdnLinkFromGsPath(path: string): string {
+    const allowedCorsLink = 'cdn.dl.k8s.io';
     // Normalize the link if required
-    const regex = /^gs:\/\/[\w-/.]*\.json$/;
-    if (path.match(regex)) {
-      return path.replace(/^gs:\/\/[\w-]*\//, 'https://cdn.dl.k8s.io/');
+    if (path.match(/^gs:\/\/[\w-/.]*\.json$/)) {
+      return path.replace(/^gs:\/\/[\w-]*\//, `https://${allowedCorsLink}/`);
     }
-    return path;
+
+    return path.replace(/dl\.k8s\.io/, allowedCorsLink);
   }
 }
