@@ -11,16 +11,10 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
-# We label our stage as ‘builder’
-FROM node:latest as ui-builder
+ARG BASE="node:latest"
+FROM ${BASE} AS ui-builder
 COPY package-lock.json ./
 COPY package.json ./
 RUN npm ci && mkdir /ng-app && mv ./node_modules ./ng-app
 WORKDIR /ng-app
 COPY . .
-RUN $(npm bin)/ng build --configuration production --build-optimizer --output-path dist
-
-FROM nginx:alpine
-COPY nginx-gzip.conf /etc/nginx/conf.d/
-COPY --from=ui-builder /ng-app/dist/ /usr/share/nginx/html/

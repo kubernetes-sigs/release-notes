@@ -38,15 +38,13 @@ Any changes made to the source code (under `src/`) will automatically trigger a 
 
 ### Docker Build
 
-To build and run the containerized application:
+To build the containerized application:
 
 ```bash
-npm run docker:build:run
+npm run docker:build
 ```
 
-This runs a multi-stage Docker build that compiles the Angular application and serves it with nginx.
-
-Once complete, you can view it by going to `localhost` in your browser:
+This runs a Docker build that sets up the development environment for the Angular application.
 
 ## FAQ
 
