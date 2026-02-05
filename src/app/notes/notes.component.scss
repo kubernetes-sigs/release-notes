@@ -2,17 +2,16 @@
   margin-bottom: 1em;
 }
 
-.k8s-badge {
+.k8s-badge,
+.clickable {
   cursor: pointer;
 }
 
-$linkcolor: #007bff;
-
 .icon {
   margin-left: 0.5em;
-  color: $linkcolor;
+  color: var(--color-primary);
   &:hover {
-    color: darken($linkcolor, 20%);
+    color: #0056b3; /* Darker shade of --color-primary (#007bff) */
   }
 }
 

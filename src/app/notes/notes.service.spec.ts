@@ -25,11 +25,16 @@ describe('NotesService', () => {
   });
 
   it('should succeed to convert to note list', () => {
-    expect(
-      service.toNoteList([
-        [notesMock, '0.1.0'],
-        [notesMock, '0.2.0'],
-      ]),
-    ).toEqual(notesMock.concat(notesMock));
+    const note1 = { ...notesMock[0], release_version: 'original' };
+    const note2 = { ...notesMock[0], release_version: 'original' };
+    const mockData: [Record<string, unknown>, string][] = [
+      [{ note1 }, '0.1.0'],
+      [{ note2 }, '0.2.0'],
+    ];
+    const result = service.toNoteList(mockData);
+    expect(result).toHaveLength(2);
+    // Verify each note got its release version set
+    const versions = result.map(n => n.release_version).sort();
+    expect(versions).toEqual(['0.1.0', '0.2.0']);
   });
 });

@@ -89,9 +89,10 @@ export class NotesEffects {
           // Now lazily filter every string based field via the text based filter
           if (filter.text.length > 0) {
             for (const key of Object.keys(note)) {
+              const value = note[key as keyof Note];
               if (
-                typeof note[key] === 'string' &&
-                note[key].toUpperCase().trim().includes(filter.text.toUpperCase().trim())
+                typeof value === 'string' &&
+                value.toUpperCase().trim().includes(filter.text.toUpperCase().trim())
               ) {
                 filteredNotes.add(note);
                 break;

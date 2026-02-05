@@ -1,4 +1,4 @@
 [build]
   command = "npm run build-prod"
-  publish = "dist-prod"
-  environment = { NODE_VERSION = "14" }
+  publish = "dist-prod/browser"
+  environment = { NODE_VERSION = "24" }

@@ -6,35 +6,45 @@
 A lightweight release notes UI to help users keep track of the ever-changing
 codebase for Kubernetes.
 
+Built with Angular, TypeScript, and Bootstrap.
+
 ## Development
 
-Local requirements:
+### Prerequisites
 
-- node/npm
-- golang > 1.11 (to run the release-notes JSON tool)
-- `git clone https://github.com/kubernetes-sigs/release-notes.git`
-  (to generate any additional notes for development)
+**Required:**
 
-Run `npm install && npm start` from the root dir to start up the angular
-development server (on port `4200`).
+- Node.js and npm (see `package.json` engines field for version requirements)
 
+**Optional (only needed to generate new release notes):**
+
+- Go
+- [release-notes CLI tool](https://github.com/kubernetes-sigs/release-notes) to generate JSON files
+
+### Getting Started
+
+Run `npm install && npm start` from the root directory to start the Angular development server on port 4200:
+
+```bash
+npm install
+npm start
 ```
-$ npm install
-$ npm start
-** Angular Live Development Server is listening on localhost:4200, open your browser on http://localhost:4200/ **
-```
 
-Any changes made to the front-end code (under `src/`) will automatically be reflected.
+The application will be available at http://localhost:4200/
+
+Any changes made to the source code (under `src/`) will automatically trigger a rebuild.
 
 ## Build
 
-To build and run the container container:
+### Docker Build
 
-```
-$ npm run docker:build:run
+To build and run the containerized application:
+
+```bash
+npm run docker:build:run
 ```
 
-It will kick off a multi-stage `docker` build to handle building the angular code and dumping it in a nginx container.
+This runs a multi-stage Docker build that compiles the Angular application and serves it with nginx.
 
 Once complete, you can view it by going to `localhost` in your browser:
 
@@ -54,19 +64,16 @@ With some changes, this could become a generic tool. There are no immediate plan
 
 ## Roadmap
 
-Some of these may be blocked by external dependencies (such as GitHub labels not existing)
+Some of these may be blocked by external dependencies (such as GitHub labels not existing):
 
-In no particular order:
-
-- Improved filtering and have selectable or/and logic.
-- Generate **Security Content** from PRs with `area/security`.
-- Generate **Known Issues** from issues with release milestones attached.
-- Generate **New Features** from PRs with `area/feature` label, though no idea how to differentiate what's "new" yet.
-- Create structure for **Urgent Upgrade Notes** that can be manually added to a generated release JSON file.
-- Create labels and write handling for a potential `area/dependency` label to help generate **External Dependencies**.
-- Add support for viewing "alpha" and "beta" release notes, though disabled by default.
-- Highlight labels that are selected.
-- Rewrite relationship between "options" and "notes"
+- Advanced filtering with AND/OR logic
+- Generate **Security Content** from PRs with `area/security`
+- Generate **Known Issues** from issues with release milestones
+- Generate **New Features** from PRs with `area/feature` label
+- Create structure for **Urgent Upgrade Notes**
+- Generate **External Dependencies** from `area/dependency` label
+- Highlight selected filter labels
+- Improved relationship between "options" and "notes"
 
 ## Community, discussion, contribution, and support
 

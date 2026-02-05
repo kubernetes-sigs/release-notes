@@ -1,10 +1,9 @@
-import { TestBed, getTestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 import { LoggerService, Verbosity } from './logger.service';
 import { jest } from '@jest/globals';
 
 describe('LoggerService', () => {
   let service: LoggerService;
-  let injector: TestBed;
 
   // Given
   const message = 'message';
@@ -13,8 +12,7 @@ describe('LoggerService', () => {
     TestBed.configureTestingModule({
       providers: [LoggerService],
     }).compileComponents();
-    injector = getTestBed();
-    service = injector.inject(LoggerService);
+    service = TestBed.inject(LoggerService);
 
     jest.spyOn(global.console, 'log');
     jest.spyOn(global.console, 'warn');

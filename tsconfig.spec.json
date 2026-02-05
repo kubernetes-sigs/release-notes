@@ -4,8 +4,32 @@
     "esModuleInterop": true,
     "outDir": "./out-tsc/spec",
     "rootDir": "./",
-    "types": ["jasmine", "node"]
+    "types": ["jest", "node"],
+    "module": "ESNext",
+    "moduleResolution": "node16",
+    "paths": {
+      "@app/*": ["./src/app/*"],
+      "@env/*": ["./src/environments/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@angular/core/testing": ["./node_modules/@angular/core/types/testing.d.ts"],
+      "@angular/router/testing": ["./node_modules/@angular/router/types/testing.d.ts"],
+      "@angular/common/http": ["./node_modules/@angular/common/types/http.d.ts"],
+      "@angular/common/http/testing": ["./node_modules/@angular/common/types/http-testing.d.ts"],
+      "@angular/platform-browser-dynamic/testing": [
+        "./node_modules/@angular/platform-browser-dynamic/types/testing.d.ts"
+      ],
+      "@ngrx/effects/testing": ["./node_modules/@ngrx/effects/types/ngrx-effects-testing.d.ts"],
+      "@ng-bootstrap/ng-bootstrap/tooltip": [
+        "./node_modules/@ng-bootstrap/ng-bootstrap/types/ng-bootstrap-ng-bootstrap-tooltip.d.ts"
+      ],
+      "@ng-bootstrap/ng-bootstrap/modal": [
+        "./node_modules/@ng-bootstrap/ng-bootstrap/types/ng-bootstrap-ng-bootstrap-modal.d.ts"
+      ],
+      "@ng-bootstrap/ng-bootstrap/collapse": [
+        "./node_modules/@ng-bootstrap/ng-bootstrap/types/ng-bootstrap-ng-bootstrap-collapse.d.ts"
+      ]
+    }
   },
-  "files": ["src/polyfills.ts"],
+  "files": ["src/polyfills.ts", "src/setupJest.ts"],
   "include": ["src/**/*.spec.ts", "src/app/**/*.d.ts"]
 }

@@ -19,7 +19,10 @@ export class Failed implements Action {
 
 export class DoFilter implements Action {
   readonly type = ActionTypes.DoFilter;
-  constructor(public notes: Note[], public filter: Filter) {}
+  constructor(
+    public notes: Note[],
+    public filter: Filter,
+  ) {}
 }
 
 export class DoFilterSuccess implements Action {

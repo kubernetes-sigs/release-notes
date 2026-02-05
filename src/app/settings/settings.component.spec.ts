@@ -1,32 +1,30 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
-import { StoreModule } from '@ngrx/store';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideStore } from '@ngrx/store';
 import { SettingsComponent } from '@app/settings/settings.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgbModule, NgbModal, NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal';
 
 describe('SettingsComponent', () => {
   let component: SettingsComponent;
   let fixture: ComponentFixture<SettingsComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [SettingsComponent],
-      providers: [NgbModal, NgbActiveModal],
-      imports: [FontAwesomeModule, FormsModule, NgbModule, StoreModule.forRoot({})],
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [SettingsComponent],
+      providers: [NgbModal, provideStore({})],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SettingsComponent);
     fixture.detectChanges();
     component = fixture.componentInstance;
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should succeed to toggle the pre release setting', () => {
-    component.togglePreReleasesSetting();
+  it('should succeed to update the pre release setting', () => {
+    component.settings.displayPreReleases = true;
+    component.updatePreReleasesSetting();
     expect(component.settings.displayPreReleases).toBeTruthy();
   });
 });

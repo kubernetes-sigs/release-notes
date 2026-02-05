@@ -1,14 +1,12 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { Store, StoreModule, combineReducers } from '@ngrx/store';
-import { NgxPaginationModule } from 'ngx-pagination';
-import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Store, provideStore } from '@ngrx/store';
+import { provideMarkdown, MARKED_OPTIONS } from 'ngx-markdown';
 import { State } from '@app/app.reducer';
 import { jest } from '@jest/globals';
 
 import { NotesComponent } from './notes.component';
 import { notesReducer } from './notes.reducer';
 import { filterReducer } from '@app/filter/filter.reducer';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { OptionType } from '@app/shared/model/options.model';
 import { documentationMock } from '@app/shared/model/notes.model.mock';
 
@@ -17,29 +15,22 @@ describe('NotesComponent', () => {
   let component: NotesComponent;
   let store: Store<State>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [NotesComponent],
-      imports: [
-        FontAwesomeModule,
-        MarkdownModule.forRoot({
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [NotesComponent],
+      providers: [
+        provideStore({
+          filter: filterReducer as any,
+          notes: notesReducer as any,
+        }),
+        provideMarkdown({
           markedOptions: {
-            provide: MarkedOptions,
+            provide: MARKED_OPTIONS,
             useValue: {
               gfm: true,
-              tables: true,
               breaks: false,
-              pedantic: false,
-              sanitize: false,
-              smartLists: true,
-              smartypants: false,
             },
           },
-        }),
-        NgxPaginationModule,
-        StoreModule.forRoot({
-          filter: combineReducers(filterReducer),
-          notes: combineReducers(notesReducer),
         }),
       ],
     }).compileComponents();
@@ -49,7 +40,7 @@ describe('NotesComponent', () => {
     store = TestBed.inject(Store);
 
     jest.spyOn(store, 'dispatch');
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

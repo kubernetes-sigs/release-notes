@@ -1,20 +1,19 @@
 <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg shadow">
-  <a class="navbar-brand" href="/">
+  <a class="navbar-brand ps-3" href="/">
     <img src="assets/img/logo.svg" alt="kubernetes" class="d-inline-block align-top" />
     release notes
   </a>
   <button
     class="navbar-toggler"
     type="button"
-    data-bs-toggle="collapse"
-    data-target="#navbarNavAltMarkup"
+    (click)="isNavbarCollapsed = !isNavbarCollapsed"
+    [attr.aria-expanded]="!isNavbarCollapsed"
     aria-controls="navbarNavAltMarkup"
-    aria-expanded="false"
     aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div id="navbarNavAltMarkup" class="navbar-collapse collapse">
-    <ul class="navbar-nav mr-auto w-100">
+  <div id="navbarNavAltMarkup" class="navbar-collapse" [ngbCollapse]="isNavbarCollapsed">
+    <ul class="navbar-nav me-auto w-100">
       <li class="nav-item active w-100">
         <input
           [ngModel]="filter.text"
@@ -43,7 +42,7 @@
       </div>
     </nav>
 
-    <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">
+    <main role="main" class="col-md-10 ms-sm-auto col-lg-10 px-4">
       <div
         class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <app-notes id="notesComponent"></app-notes>

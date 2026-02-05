@@ -1,2 +1,4 @@
-import 'jest-preset-angular/setup-jest';
-global['CSS'] = null;
+import { setupZoneTestEnv } from 'jest-preset-angular/setup-env/zone';
+
+setupZoneTestEnv();
+(global as any)['CSS'] = null;

@@ -1,19 +1,23 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, forkJoin, switchMap } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, forkJoin, switchMap, of } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 
 import { Note } from '@app/shared/model/notes.model';
 import { LoggerService } from '@shared/services/logger.service';
 import { assets as localAssets } from '@env/assets';
 import { indexUrl } from '@env/index-url';
+import { environment } from '@env/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NotesService {
-  constructor(private http: HttpClient, private logger: LoggerService) {}
+  constructor(
+    private http: HttpClient,
+    private logger: LoggerService,
+  ) {}
 
   /**
    * Retrieve the notes
@@ -24,18 +28,25 @@ export class NotesService {
     this.logger.debug('Gathering assets list');
 
     // Remote release notes index
-    const indexObservable = this.http.get(indexUrl).pipe(
+    const indexObservable = this.http.get<Record<string, string>>(indexUrl).pipe(
       switchMap(response => {
-        const observables = [];
+        const observables: Observable<[Record<string, unknown>, string]>[] = [];
 
         // Remote Assets
         this.logger.debug(`Gathering remote notes from ${Object.keys(response).length} assets`);
         for (const releaseVersion of Object.keys(response)) {
           const assetLink = this.cdnLinkFromGsPath(response[releaseVersion]);
           observables.unshift(
-            this.http.get(assetLink, { observe: 'response' }).pipe(
+            this.http.get<Record<string, unknown>>(assetLink, { observe: 'response' }).pipe(
               map(response1 => {
-                return [response1.body, releaseVersion.substring(1)];
+                return [response1.body || {}, releaseVersion.substring(1)] as [
+                  Record<string, unknown>,
+                  string,
+                ];
+              }),
+              catchError(err => {
+                this.logger.error(`Failed to fetch remote asset ${assetLink}: ${err.message}`);
+                return of([{}, releaseVersion.substring(1)] as [Record<string, unknown>, string]);
               }),
             ),
           );
@@ -45,19 +56,34 @@ export class NotesService {
         this.logger.debug(`Gathering local notes from ${localAssets.length} assets`);
         for (const asset of localAssets) {
           observables.push(
-            this.http.get(asset, { observe: 'response' }).pipe(
+            this.http.get<Record<string, unknown>>(asset, { observe: 'response' }).pipe(
               map(response2 => {
-                return [response2.body, this.releaseVersionFromPath(asset)];
+                return [response2.body || {}, this.releaseVersionFromPath(asset)] as [
+                  Record<string, unknown>,
+                  string,
+                ];
+              }),
+              catchError(err => {
+                this.logger.error(`Failed to fetch local asset ${asset}: ${err.message}`);
+                return of([{}, this.releaseVersionFromPath(asset)] as [
+                  Record<string, unknown>,
+                  string,
+                ]);
               }),
             ),
           );
         }
 
-        return forkJoin(observables);
+        return forkJoin(observables).pipe(
+          catchError(err => {
+            this.logger.error(`Failed to gather release notes: ${err.message}`);
+            return of([] as [Record<string, unknown>, string][]);
+          }),
+        );
       }),
     );
 
-    return indexObservable.pipe(map(this.toNoteList));
+    return indexObservable.pipe(map(data => this.toNoteList(data)));
   }
 
   /**
@@ -65,12 +91,12 @@ export class NotesService {
    *
    * @returns The Note list
    */
-  toNoteList(res: any[]): Note[] {
-    const list = [];
+  toNoteList(res: [Record<string, unknown>, string][]): Note[] {
+    const list: Note[] = [];
 
     for (let i = 0, len = res.length; i < len; i++) {
       for (const x of Object.values(res[i][0])) {
-        const value: any = x;
+        const value = x as Note;
 
         // Set the release version from the asset path
         value.release_version = res[i][1];
@@ -103,12 +129,11 @@ export class NotesService {
    * @returns Transformed URL
    */
   private cdnLinkFromGsPath(path: string): string {
-    const allowedCorsLink = 'cdn.dl.k8s.io';
     // Normalize the link if required
     if (path.match(/^gs:\/\/[\w-/.]*\.json$/)) {
-      return path.replace(/^gs:\/\/[\w-]*\//, `https://${allowedCorsLink}/`);
+      return path.replace(/^gs:\/\/[\w-]*\//, `https://${environment.cdnDomain}/`);
     }
 
-    return path.replace(/dl\.k8s\.io/, allowedCorsLink);
+    return path.replace(/dl\.k8s\.io/, environment.cdnDomain);
   }
 }

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ARG BASE="node:latest"
-FROM ${BASE} as ui-builder
+FROM ${BASE} AS ui-builder
 COPY package-lock.json ./
 COPY package.json ./
 RUN npm ci && mkdir /ng-app && mv ./node_modules ./ng-app

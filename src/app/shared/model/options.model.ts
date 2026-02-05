@@ -51,7 +51,7 @@ export class Options {
    * @returns OptionSet The data
    */
   public get(optionType: OptionType): OptionSet {
-    return this.data.get(optionType);
+    return this.data.get(optionType) || new Set<string>();
   }
 
   /**
@@ -62,7 +62,7 @@ export class Options {
    * @param input The array of documentation string to be added
    */
   public add(optionType: OptionType, input: string[]) {
-    this.data.set(optionType, this.merge(this.data.get(optionType), input));
+    this.data.set(optionType, this.merge(this.data.get(optionType) || new Set<string>(), input));
     this.sort();
   }
 
@@ -108,6 +108,7 @@ export class Options {
    *                  ascending, ASCII character order.
    */
   private sort_set(optionType: OptionType, compareFn?: (a: string, b: string) => number) {
-    this.store.set(optionType, new Set([...this.store.get(optionType)].sort(compareFn)));
+    const existing = this.store.get(optionType) || new Set<string>();
+    this.store.set(optionType, new Set([...existing].sort(compareFn)));
   }
 }

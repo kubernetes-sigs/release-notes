@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Store, select } from '@ngrx/store';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { Note, Documentation } from '@app/shared/model/notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
 import { State } from '@app/app.reducer';
@@ -9,14 +12,27 @@ import { OptionType } from '@app/shared/model/options.model';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
 import { UpdateFilter } from '@app/filter/filter.actions';
 import { getFilterSelector } from '@app/filter/filter.reducer';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap/tooltip';
+import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap/collapse';
+import { MarkdownModule } from 'ngx-markdown';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
-  providers: [],
   styleUrls: ['./notes.component.scss'],
+  standalone: true,
+  imports: [
+    CommonModule,
+    NgxPaginationModule,
+    NgbTooltipModule,
+    NgbCollapseModule,
+    MarkdownModule,
+    FontAwesomeModule,
+  ],
 })
-export class NotesComponent implements OnInit {
+export class NotesComponent implements OnInit, OnDestroy {
   filter: Filter = new Filter();
   allNotes: Note[] = [];
   filteredNotes: Note[] = [];
@@ -24,15 +40,17 @@ export class NotesComponent implements OnInit {
   faBook = faBook;
   errorMessage = '';
   OptionType = OptionType;
+  collapseStates: { [key: number]: boolean } = {};
 
   readonly kep = 'KEP';
+  private destroy$ = new Subject<void>();
 
   constructor(private store: Store<State>) {}
 
   ngOnInit() {
     this.store.dispatch(new GetNotes());
 
-    this.store.pipe(select(getAllNotesSelector)).subscribe(notes => {
+    this.store.pipe(select(getAllNotesSelector), takeUntil(this.destroy$)).subscribe(notes => {
       if (notes) {
         // Initial retrieval of the notes
         this.allNotes = notes;
@@ -42,25 +60,32 @@ export class NotesComponent implements OnInit {
       }
     });
 
-    this.store.pipe(select(getErrorSelector, getAllNotesSelector)).subscribe(err => {
-      if (err) {
-        this.errorMessage = `Unable to display notes: ${err}`;
-      }
-    });
+    this.store
+      .pipe(select(getErrorSelector, getAllNotesSelector), takeUntil(this.destroy$))
+      .subscribe(err => {
+        if (err) {
+          this.errorMessage = `Unable to display notes: ${err}`;
+        }
+      });
 
-    this.store.pipe(select(getFilteredNotesSelector)).subscribe(notes => {
+    this.store.pipe(select(getFilteredNotesSelector), takeUntil(this.destroy$)).subscribe(notes => {
       if (notes) {
         // Filter update of the notes
         this.filteredNotes = notes;
       }
     });
 
-    this.store.pipe(select(getFilterSelector)).subscribe(filter => {
+    this.store.pipe(select(getFilterSelector), takeUntil(this.destroy$)).subscribe(filter => {
       if (filter) {
         this.filter = filter;
         this.store.dispatch(new DoFilter(this.allNotes, filter));
       }
     });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   /**
@@ -98,6 +123,10 @@ export class NotesComponent implements OnInit {
    * @returns The resulting description as string
    */
   public saneKEPDescription(doc: Documentation): string {
+    if (!doc.description) {
+      return 'Kubernetes Enhancement Proposal';
+    }
+
     const stripped = doc.description
       .replace(/[\[\]]/g, '') // remove brackets
       .replace(this.kep, '') // remove 'KEP'
@@ -129,10 +158,18 @@ export class NotesComponent implements OnInit {
    *
    * @returns The resulting class as string
    */
-  public collapseClass(): string {
+  public isCollapsed(prNumber: number): boolean {
+    // If documentation filter is active, show all
     if (!this.filter.optionIsEmpty(OptionType.documentation)) {
-      return 'show';
+      return false;
     }
-    return '';
+    // Otherwise check individual state (default collapsed)
+    return this.collapseStates[prNumber] !== false;
+  }
+
+  public toggleCollapse(prNumber: number): void {
+    // Initialize to true (collapsed) if undefined, then toggle
+    const currentState = this.collapseStates[prNumber] !== false;
+    this.collapseStates[prNumber] = !currentState;
   }
 }
