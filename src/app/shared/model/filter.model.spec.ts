@@ -17,7 +17,7 @@ describe('OptionsModel', () => {
     expect(filter.has(OptionType.areas, 'value')).toBeFalsy();
     expect(filter.hasAny(OptionType.areas, ['value'])).toBeFalsy();
     expect(filter.hasAny(OptionType.areas, [])).toBeFalsy();
-    expect(filter.hasAny(OptionType.areas, undefined)).toBeFalsy();
+    expect(filter.hasAny(OptionType.areas, undefined as any)).toBeFalsy();
   });
 
   it('should succeed to set a value', () => {
@@ -54,7 +54,7 @@ describe('OptionsModel', () => {
   });
 
   it('should indicate if a release version is a pre-release', () => {
-    expect(filter.isPreRelease(undefined)).toBeFalsy();
+    expect(filter.isPreRelease(undefined as any)).toBeFalsy();
     expect(filter.isPreRelease('1.15.1')).toBeFalsy();
     expect(filter.isPreRelease('1.16.0-alpha.1')).toBeTruthy();
     expect(filter.isPreRelease('1.16.0-beta.1')).toBeTruthy();

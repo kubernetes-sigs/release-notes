@@ -4,9 +4,7 @@
 <ng-template #content let-modal>
   <div class="modal-header">
     <h4 class="modal-title" id="modal-settings">Settings</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
-      <span aria-hidden="true">&times;</span>
-    </button>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
   </div>
   <div class="modal-body">
     <label
@@ -14,7 +12,7 @@
         type="checkbox"
         id="preReleaseSetting"
         [(ngModel)]="settings.displayPreReleases"
-        (click)="togglePreReleasesSetting()" />
+        (ngModelChange)="updatePreReleasesSetting()" />
       Show pre-releases</label
     >
   </div>

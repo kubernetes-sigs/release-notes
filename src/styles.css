@@ -1,9 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+
+:root {
+  --font-family-ubuntu: 'Ubuntu', sans-serif;
+  --color-text-dark: #333;
+  --color-text-medium: #999;
+  --color-primary: #007bff;
+  --color-white: #fff;
+  --navbar-height: 54px;
+}
+
 html {
   font-size: 0.875rem;
 }
 .k8s-badge {
-  padding: 3px;
+  padding: 5px 8px;
   margin: 3px;
 }
 .feather {
@@ -18,14 +29,14 @@ html {
   bottom: 0;
   left: 0;
   z-index: 100; /* Behind the navbar */
-  padding: 54px 0 0 20px !important; /* Height of navbar */
+  padding: var(--navbar-height) 0 0 20px;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-sticky {
   position: relative;
   top: 0;
-  height: calc(100vh - 54px);
+  height: calc(100vh - var(--navbar-height));
   padding-top: 0.5rem;
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
@@ -44,16 +55,16 @@ html {
 
 .sidebar .nav-link {
   font-weight: 500;
-  color: #333;
+  color: var(--color-text-dark);
 }
 
 .sidebar .nav-link .feather {
   margin-right: 4px;
-  color: #999;
+  color: var(--color-text-medium);
 }
 
 .sidebar .nav-link.active {
-  color: #007bff;
+  color: var(--color-primary);
 }
 
 .sidebar .nav-link:hover .feather,
@@ -68,7 +79,7 @@ html {
 
 /* Content */
 [role='main'] {
-  padding-top: 54px; /* Space for fixed navbar */
+  padding-top: var(--navbar-height); /* Space for fixed navbar */
 }
 
 #notesComponent {
@@ -77,19 +88,19 @@ html {
 
 /* Navbar */
 *:focus {
-  box-shadow: none !important;
-  border: none !important;
+  box-shadow: none;
+  border: none;
 }
 
 .form-control-dark {
-  color: #fff !important;
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: var(--color-white);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.1);
 }
 
 .form-control-dark:focus {
-  border-color: transparent !important;
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25) !important;
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.25);
 }
 
 input[type='checkbox'] {
@@ -97,5 +108,5 @@ input[type='checkbox'] {
 }
 
 ngb-modal-backdrop {
-  z-index: 1050 !important;
+  z-index: 1050;
 }

@@ -11,10 +11,11 @@
         placement="right"
         tooltipClass="documentationTooltip"
         *ngIf="note.documentation"
-        class="text-secondary"
+        class="text-secondary clickable"
         id="documentationButton-{{ note.pr_number }}"
-        data-bs-toggle="collapse"
-        href="#documentationContent-{{ note.pr_number }}">
+        (click)="toggleCollapse(note.pr_number)"
+        [attr.aria-expanded]="!isCollapsed(note.pr_number)"
+        [attr.aria-controls]="'documentationContent-' + note.pr_number">
         <fa-icon class="icon" [icon]="faBook" size="lg"></fa-icon>
       </a>
       <span
@@ -43,10 +44,10 @@
       >
     </div>
     <div class="card-body">
-      <div [innerHTML]="saneMarkdown(note.markdown) | markdown"></div>
+      <div [innerHTML]="saneMarkdown(note.markdown) | markdown | async"></div>
       <div
         *ngIf="note.documentation"
-        class="collapse {{ collapseClass() }}"
+        [ngbCollapse]="isCollapsed(note.pr_number)"
         id="documentationContent-{{ note.pr_number }}">
         <h6>Additional Documentation</h6>
         <ul>
@@ -64,6 +65,6 @@
     </div>
   </div>
 </ng-container>
-<div align="center">
+<div class="d-flex justify-content-center">
   <pagination-controls (pageChange)="p = $event"></pagination-controls>
 </div>

@@ -1,4 +1,7 @@
 {
   "extends": "../tsconfig.common.json",
-  "include": ["integration/*.spec.ts", "../node_modules/cypress"]
+  "include": ["**/*.ts"],
+  "compilerOptions": {
+    "types": ["cypress"]
+  }
 }

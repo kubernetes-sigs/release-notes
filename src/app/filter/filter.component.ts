@@ -1,6 +1,15 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+  OnDestroy,
+} from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { Store, select } from '@ngrx/store';
-import { skip } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { skip, takeUntil } from 'rxjs/operators';
 import { Options, OptionType } from '@app/shared/model/options.model';
 import { Filter } from '@app/shared/model/filter.model';
 import { Settings } from '@app/shared/model/settings.model';
@@ -15,42 +24,52 @@ import { getSettingsSelector } from '@app/settings/settings.reducer';
   selector: 'app-filter',
   templateUrl: './filter.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [CommonModule, FormsModule],
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent implements OnInit, OnDestroy {
   options: Options = new Options();
   filter: Filter = new Filter();
   settings: Settings = new Settings();
   notes: Note[] = [];
+  private destroy$ = new Subject<void>();
 
   /**
    * FilterComponent's constructor
    */
-  constructor(private cdr: ChangeDetectorRef, private store: Store<State>) {}
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private store: Store<State>,
+  ) {}
 
   /**
    * Runs after component initialization
    */
   ngOnInit() {
-    this.store.pipe(select(getAllNotesSelector)).subscribe(notes => {
+    this.store.pipe(select(getAllNotesSelector), takeUntil(this.destroy$)).subscribe(notes => {
       if (notes) {
         this.notes = notes;
         this.updateOptions();
       }
     });
 
-    this.store.pipe(select(getFilterSelector)).subscribe(filter => {
+    this.store.pipe(select(getFilterSelector), takeUntil(this.destroy$)).subscribe(filter => {
       if (filter) {
         this.filter = filter;
       }
     });
 
     this.store
-      .pipe(select(getSettingsSelector))
-      .pipe(skip(1))
+      .pipe(select(getSettingsSelector), skip(1), takeUntil(this.destroy$))
       .subscribe(settings => {
         this.settings = settings;
         this.updateOptions();
       });
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   /**
@@ -92,7 +111,7 @@ export class FilterComponent implements OnInit {
   /**
    * Update the filter object based on the given parameters
    */
-  updateFilter(optionType: OptionType, value: string, event: any): void {
+  updateFilter(optionType: OptionType, value: string, event: boolean): void {
     if (event) {
       this.filter.set(optionType, value);
     } else {

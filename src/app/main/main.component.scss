@@ -1,18 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
-
 .navbar-brand {
   img {
     width: 1.5em;
   }
-  font-family: 'Ubuntu', sans-serif;
+  font-family: var(--font-family-ubuntu);
   font-size: 1.5em;
   font-weight: bold;
 }
 
 #searchBar {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: var(--font-family-ubuntu);
   padding: 0;
   margin: 0;
   height: 40px;
   font-size: 16px;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 1;
+  }
 }

@@ -3,6 +3,7 @@ import { Actions, createEffect, ofType } from '@ngrx/effects';
 import { of } from 'rxjs';
 import { exhaustMap, map } from 'rxjs/operators';
 import { ActionTypes, UpdateSettingsSuccess, UpdateSettings } from './settings.actions';
+import { Settings } from '@app/shared/model/settings.model';
 import { LoggerService } from '@shared/services/logger.service';
 
 @Injectable()
@@ -13,12 +14,15 @@ export class SettingsEffects {
       map((action: UpdateSettings) => action.settings),
       exhaustMap(settings => {
         this.logger.debug('[Settings Effects:UpdateSettings] SUCCESS');
-        const copy = new (settings.constructor as { new () })();
+        const copy = new (settings.constructor as { new (): Settings })();
         Object.assign(copy, settings);
         return of(new UpdateSettingsSuccess(copy));
       }),
     ),
   );
 
-  constructor(private actions$: Actions, private logger: LoggerService) {}
+  constructor(
+    private actions$: Actions,
+    private logger: LoggerService,
+  ) {}
 }

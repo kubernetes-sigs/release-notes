@@ -1,6 +1,5 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
-import { StoreModule, combineReducers } from '@ngrx/store';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideStore } from '@ngrx/store';
 
 import { FilterComponent } from '@app/filter/filter.component';
 import { notesReducer } from '@app/notes/notes.reducer';
@@ -14,15 +13,14 @@ describe('FilterComponent', () => {
   let component: FilterComponent;
   let fixture: ComponentFixture<FilterComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [FilterComponent],
-      imports: [
-        FormsModule,
-        StoreModule.forRoot({
-          filter: combineReducers(filterReducer),
-          notes: combineReducers(notesReducer),
-          settings: combineReducers(settingsReducer),
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [FilterComponent],
+      providers: [
+        provideStore({
+          filter: filterReducer as any,
+          notes: notesReducer as any,
+          settings: settingsReducer as any,
         }),
       ],
     }).compileComponents();
@@ -30,7 +28,7 @@ describe('FilterComponent', () => {
     fixture = TestBed.createComponent(FilterComponent);
     fixture.detectChanges();
     component = fixture.componentInstance;
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -43,7 +41,7 @@ describe('FilterComponent', () => {
   it('should succeed to retrieve the options checkbox ID', () => {
     expect(component.optionCheckboxID('value')).toEqual('option-value');
     expect(component.optionCheckboxID('1.2.3')).toEqual('option-1-2-3');
-    expect(component.optionCheckboxID(undefined)).toEqual('');
+    expect(component.optionCheckboxID(undefined as any)).toEqual('');
   });
 
   it('should succeed to update options', () => {

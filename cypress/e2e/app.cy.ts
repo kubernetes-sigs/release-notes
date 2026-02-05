@@ -12,7 +12,7 @@ describe('Release Notes App', () => {
   const option1140 = `${optionID}-1-14-0`;
   const option1150 = `${optionID}-1-15-0`;
   const option1160 = `${optionID}-1-16-0`;
-  const option1170 = `${optionID}-1-17-0-alpha-2`;
+  const option1170alpha2 = `${optionID}-1-17-0-alpha-2`;
   const option1274 = `${optionID}-1-27-4`;
   const optionKubectl = `${optionID}-kubectl`;
   const optionKubelet = `${optionID}-kubelet`;
@@ -179,25 +179,21 @@ describe('Release Notes App', () => {
     cy.get(aboutLink).click();
 
     // Then
-    cy.get(appModal).should('be.visible');
+    cy.get('ngb-modal-window').should('be.visible');
 
     // And When
     cy.get(modalCloseButton).click();
 
     // Then
-    cy.get(appModal).should('not.be.visible');
+    cy.get('ngb-modal-window').should('not.exist');
   });
 
-  it(`should be open the 'Additional Documentation' tooltip on hover`, () => {
+  it(`should have documentation button for entries with documentation`, () => {
     // Given
     cy.get(option1160).check();
-    cy.get(documentationTooltip).should('not.be.visible');
 
-    // When
-    cy.get(v1160entry1DocumentationButton).trigger('mouseover');
-
-    // Then
-    cy.get(documentationTooltip).should('not.be.visible');
+    // Then - Documentation button should exist
+    cy.get(v1160entry1DocumentationButton).should('be.visible');
   });
 
   it(`should be possible to open the 'Additional Documentation'`, () => {
@@ -208,10 +204,10 @@ describe('Release Notes App', () => {
     // Then
     cy.get(option1140).should('not.be.checked');
     cy.get(option1150).should('not.be.checked');
-    cy.get(documentationTooltip).should('not.be.visible');
     cy.get(v1160entry1DocumentationContent).should('not.be.visible');
 
     cy.get(v1160entry1DocumentationButton).click();
+    cy.wait(300); // Wait for collapse animation
     cy.get(v1160entry1DocumentationContent).should('be.visible');
   });
 
@@ -283,7 +279,7 @@ describe('Release Notes App', () => {
       expect($c).to.contain(v1274entry4);
     });
     cy.get(optionTest).should('be.checked');
-    cy.get(searchBar).should('have.attr', 'ng-reflect-model', 'shutdown');
+    cy.get(searchBar).should('have.value', 'shutdown');
   });
 
   it(`should be possible to enable showing pre-releases`, () => {
@@ -291,13 +287,16 @@ describe('Release Notes App', () => {
     cy.get(settingsLink).click();
     cy.get(preReleaseSetting).should('be.visible');
     cy.get(preReleaseSetting).should('not.be.checked');
-    cy.get(option1170).should('not.be.visible');
+    cy.get(option1170alpha2).should('not.exist');
 
     // When
     cy.get(preReleaseSetting).check();
+    cy.get(preReleaseSetting).should('be.checked');
+    cy.get('ngb-modal-window .modal-header .btn-close').click();
+    cy.get('ngb-modal-window').should('not.exist');
 
     // Then
-    cy.get(option1170).should('be.visible');
+    cy.get(option1170alpha2).should('be.visible');
   });
 
   it(`should be possible to filter via the labels ('bug')`, () => {

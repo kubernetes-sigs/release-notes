@@ -10,7 +10,7 @@ export interface State {
 }
 
 export const reducers: ActionReducerMap<State> = {
-  filter: filterReducer,
-  notes: notesReducer,
-  settings: settingsReducer,
+  filter: filterReducer as any,
+  notes: notesReducer as any,
+  settings: settingsReducer as any,
 };

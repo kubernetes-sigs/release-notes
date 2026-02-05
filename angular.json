@@ -11,26 +11,27 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": "dist/relnotes",
             "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "browser": "src/main.ts",
+            "polyfills": ["src/polyfills.ts"],
             "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/favicon.png", "src/assets"],
-            "styles": ["src/styles.css", "node_modules/bootstrap/dist/css/bootstrap.css"],
-            "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/popper.js/dist/umd/popper.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            "assets": [
+              "src/favicon.png",
+              "src/assets",
+              {
+                "glob": "about-modal-content.html",
+                "input": "src/app/main",
+                "output": "app/main"
+              }
             ],
-            "vendorChunk": true,
+            "styles": ["node_modules/bootstrap/dist/css/bootstrap.css", "src/styles.css"],
+            "scripts": [],
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
-            "optimization": false,
-            "namedChunks": true
+            "optimization": false
           },
           "configurations": {
             "production": {
@@ -43,10 +44,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -60,7 +58,16 @@
               ]
             },
             "test": {
-              "assets": ["src/favicon.png", "src/assets", "src/testdata"],
+              "assets": [
+                "src/favicon.png",
+                "src/assets",
+                "src/testdata",
+                {
+                  "glob": "about-modal-content.html",
+                  "input": "src/app/main",
+                  "output": "app/main"
+                }
+              ],
               "budgets": [
                 {
                   "type": "anyComponentStyle",
@@ -84,21 +91,22 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "relnotes:build"
+            "buildTarget": "relnotes:build",
+            "host": "0.0.0.0"
           },
           "configurations": {
             "production": {
-              "browserTarget": "relnotes:build:production"
+              "buildTarget": "relnotes:build:production"
             },
             "test": {
-              "browserTarget": "relnotes:build:test"
+              "buildTarget": "relnotes:build:test"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "relnotes:build"
+            "buildTarget": "relnotes:build"
           }
         },
         "lint": {

@@ -44,7 +44,7 @@ export class Filter extends Options {
    * @returns Params the query parameter object
    */
   public toURI(): Params {
-    const params = {};
+    const params: Params = {};
 
     // Set the markdown if needed
     if (this.text.trim().length > 0) {
