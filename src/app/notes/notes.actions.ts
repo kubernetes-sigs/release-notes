@@ -7,6 +7,7 @@ export enum ActionTypes {
 
   GetNotes = '[Notes Component] Get Notes',
   GetNotesSuccess = '[Notes Component] Get Notes Success',
+  GetNotesComplete = '[Notes Component] Get Notes Complete',
 
   DoFilter = '[Notes Component] Do Filter',
   DoFilterSuccess = '[Notes Component] Do Filter Success',
@@ -40,4 +41,14 @@ export class GetNotesSuccess implements Action {
   constructor(public payload: Note[]) {}
 }
 
-export type NotesAction = Failed | DoFilter | DoFilterSuccess | GetNotes | GetNotesSuccess;
+export class GetNotesComplete implements Action {
+  readonly type = ActionTypes.GetNotesComplete;
+}
+
+export type NotesAction =
+  | Failed
+  | DoFilter
+  | DoFilterSuccess
+  | GetNotes
+  | GetNotesSuccess
+  | GetNotesComplete;

@@ -1,6 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store, provideStore } from '@ngrx/store';
-import { provideMarkdown, MARKED_OPTIONS } from 'ngx-markdown';
 import { State } from '@app/app.reducer';
 import { jest } from '@jest/globals';
 
@@ -22,15 +21,6 @@ describe('NotesComponent', () => {
         provideStore({
           filter: filterReducer as any,
           notes: notesReducer as any,
-        }),
-        provideMarkdown({
-          markedOptions: {
-            provide: MARKED_OPTIONS,
-            useValue: {
-              gfm: true,
-              breaks: false,
-            },
-          },
         }),
       ],
     }).compileComponents();

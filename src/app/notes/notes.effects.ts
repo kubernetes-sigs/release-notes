@@ -1,8 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Actions, createEffect, ofType } from '@ngrx/effects';
-import { of } from 'rxjs';
+import { concat, of } from 'rxjs';
 import { catchError, exhaustMap, map } from 'rxjs/operators';
-import { ActionTypes, DoFilterSuccess, DoFilter, Failed, GetNotesSuccess } from './notes.actions';
+import {
+  ActionTypes,
+  DoFilterSuccess,
+  DoFilter,
+  Failed,
+  GetNotesComplete,
+  GetNotesSuccess,
+} from './notes.actions';
 import { NotesService } from './notes.service';
 import { Note } from '@app/shared/model/notes.model';
 import { OptionType } from '@app/shared/model/options.model';
@@ -14,18 +21,21 @@ export class NotesEffects {
     this.actions$.pipe(
       ofType(ActionTypes.GetNotes),
       exhaustMap(() =>
-        this.notesService.getNotes().pipe(
-          map((notes: Note[]) => {
-            this.logger.debug('[Notes Effects:GetNotes] SUCCESS');
-            return new GetNotesSuccess(notes);
-          }),
-          catchError(error => {
-            this.logger.debug(`[Notes Effects:GetNotes] FAILED: ${error.message}`);
-            if (error && error.message) {
-              return of(new Failed(error.message));
-            }
-            return of(new Failed(error));
-          }),
+        concat(
+          this.notesService.getNotes().pipe(
+            map((notes: Note[]) => {
+              this.logger.debug('[Notes Effects:GetNotes] SUCCESS');
+              return new GetNotesSuccess(notes);
+            }),
+            catchError(error => {
+              this.logger.debug(`[Notes Effects:GetNotes] FAILED: ${error.message}`);
+              if (error && error.message) {
+                return of(new Failed(error.message));
+              }
+              return of(new Failed(error));
+            }),
+          ),
+          of(new GetNotesComplete()),
         ),
       ),
     ),

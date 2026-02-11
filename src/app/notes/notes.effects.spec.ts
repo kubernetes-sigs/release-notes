@@ -6,7 +6,14 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 import { NotesService } from './notes.service';
 import { NotesEffects } from './notes.effects';
-import { DoFilter, DoFilterSuccess, Failed, GetNotes, GetNotesSuccess } from './notes.actions';
+import {
+  DoFilter,
+  DoFilterSuccess,
+  Failed,
+  GetNotes,
+  GetNotesComplete,
+  GetNotesSuccess,
+} from './notes.actions';
 import { notesMock } from '@app/shared/model/notes.model.mock';
 import { OptionType } from '@app/shared/model/options.model';
 import { LoggerService } from '@shared/services/logger.service';
@@ -32,11 +39,12 @@ describe('NotesEffects', () => {
   describe('GetNotes', () => {
     it('should succeed with empty filter', () => {
       const action = new GetNotes();
-      const completion = new GetNotesSuccess(notesMock);
+      const success = new GetNotesSuccess(notesMock);
+      const complete = new GetNotesComplete();
 
       actions = hot('-a---', { a: action });
       const response = cold('-a|', { a: notesMock });
-      const expected = cold('--b', { b: completion });
+      const expected = cold('--bc', { b: success, c: complete });
       notesService.getNotes = () => response;
 
       expect(effects.getNotes$).toBeObservable(expected);
@@ -45,11 +53,12 @@ describe('NotesEffects', () => {
     it('should fail if NotesService fails', () => {
       const error = 'error';
       const action = new GetNotes();
-      const completion = new Failed(error);
+      const failure = new Failed(error);
+      const complete = new GetNotesComplete();
 
       actions = hot('-a---', { a: action });
       const response = cold('-#|', { a: error });
-      const expected = cold('--b', { b: completion });
+      const expected = cold('--(bc)', { b: failure, c: complete });
       notesService.getNotes = () => response;
 
       expect(effects.getNotes$).toBeObservable(expected);

@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
+/* Google Fonts loaded via <link> in index.html for non-blocking rendering */
 
 :root {
   --font-family-ubuntu: 'Ubuntu', sans-serif;

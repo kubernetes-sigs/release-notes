@@ -120,6 +120,14 @@ export class FilterComponent implements OnInit, OnDestroy {
     this.store.dispatch(new UpdateFilter(this.filter));
   }
 
+  trackByKey(_index: number, item: { key: string }): string {
+    return item.key;
+  }
+
+  trackByIdentity(_index: number, value: string): string {
+    return value;
+  }
+
   /**
    * Create the options header ID from the given input string
    *

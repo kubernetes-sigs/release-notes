@@ -1,4 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+  OnDestroy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { faCogs } from '@fortawesome/free-solid-svg-icons';
@@ -15,6 +21,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @Component({
   selector: 'app-settings',
   templateUrl: './settings.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [CommonModule, FormsModule, FontAwesomeModule],
 })
@@ -29,12 +36,14 @@ export class SettingsComponent implements OnInit, OnDestroy {
   constructor(
     private modalService: NgbModal,
     private store: Store<State>,
+    private cdr: ChangeDetectorRef,
   ) {}
 
   ngOnInit() {
     this.store.pipe(select(getSettingsSelector), takeUntil(this.destroy$)).subscribe(settings => {
       if (settings) {
         this.settings = settings;
+        this.cdr.markForCheck();
       }
     });
   }
