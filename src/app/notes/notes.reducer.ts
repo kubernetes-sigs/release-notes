@@ -1,5 +1,5 @@
-import { createSelector } from '@ngrx/store';
-import { ActionTypes, NotesAction } from './notes.actions';
+import { Action, createSelector } from '@ngrx/store';
+import { ActionTypes, DoFilterSuccess, Failed, GetNotesSuccess } from './notes.actions';
 import { Note } from '@app/shared/model/notes.model';
 import { State as RootState } from '@app/app.reducer';
 
@@ -17,7 +17,7 @@ export const initialState: State = {
   notes: [],
 };
 
-export function notesReducer(state = initialState, action: NotesAction): State {
+export function notesReducer(state = initialState, action: Action): State {
   switch (action.type) {
     case ActionTypes.GetNotes: {
       return {
@@ -29,7 +29,7 @@ export function notesReducer(state = initialState, action: NotesAction): State {
     case ActionTypes.GetNotesSuccess: {
       return {
         ...state,
-        notes: action.payload,
+        notes: (action as GetNotesSuccess).payload,
       };
     }
 
@@ -43,14 +43,14 @@ export function notesReducer(state = initialState, action: NotesAction): State {
     case ActionTypes.DoFilterSuccess: {
       return {
         ...state,
-        filteredNotes: action.notes,
+        filteredNotes: (action as DoFilterSuccess).notes,
       };
     }
 
     case ActionTypes.Failed: {
       return {
         ...state,
-        error: action.error,
+        error: (action as Failed).error,
         loading: false,
       };
     }

@@ -1,5 +1,5 @@
-import { createSelector } from '@ngrx/store';
-import { ActionTypes, SettingsAction } from './settings.actions';
+import { Action, createSelector } from '@ngrx/store';
+import { ActionTypes, Failed, UpdateSettingsSuccess } from './settings.actions';
 import { Settings } from '@app/shared/model/settings.model';
 import { State as RootState } from '@app/app.reducer';
 
@@ -13,19 +13,19 @@ export const initialState: State = {
   settings: new Settings(),
 };
 
-export function settingsReducer(state = initialState, action: SettingsAction): State {
+export function settingsReducer(state = initialState, action: Action): State {
   switch (action.type) {
     case ActionTypes.UpdateSettingsSuccess: {
       return {
         ...state,
-        settings: action.settings,
+        settings: (action as UpdateSettingsSuccess).settings,
       };
     }
 
     case ActionTypes.Failed: {
       return {
         ...state,
-        error: action.error,
+        error: (action as Failed).error,
       };
     }
 

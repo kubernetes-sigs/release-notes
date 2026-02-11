@@ -27,9 +27,9 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(),
     provideStore(
       {
-        filter: filterReducer as any,
-        notes: notesReducer as any,
-        settings: settingsReducer as any,
+        filter: filterReducer,
+        notes: notesReducer,
+        settings: settingsReducer,
       },
       {
         runtimeChecks: {
