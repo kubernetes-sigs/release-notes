@@ -1,4 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+  OnDestroy,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store, select } from '@ngrx/store';
 import { Subject } from 'rxjs';
@@ -6,7 +12,12 @@ import { takeUntil } from 'rxjs/operators';
 import { Note, Documentation } from '@app/shared/model/notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
 import { State } from '@app/app.reducer';
-import { getErrorSelector, getAllNotesSelector, getFilteredNotesSelector } from './notes.reducer';
+import {
+  getErrorSelector,
+  getAllNotesSelector,
+  getFilteredNotesSelector,
+  getLoadingSelector,
+} from './notes.reducer';
 import { Filter } from '@app/shared/model/filter.model';
 import { OptionType } from '@app/shared/model/options.model';
 import { faBook } from '@fortawesome/free-solid-svg-icons';
@@ -15,20 +26,19 @@ import { getFilterSelector } from '@app/filter/filter.reducer';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap/tooltip';
 import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap/collapse';
-import { MarkdownModule } from 'ngx-markdown';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
   selector: 'app-notes',
   templateUrl: './notes.component.html',
   styleUrls: ['./notes.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [
     CommonModule,
     NgxPaginationModule,
     NgbTooltipModule,
     NgbCollapseModule,
-    MarkdownModule,
     FontAwesomeModule,
   ],
 })
@@ -36,6 +46,7 @@ export class NotesComponent implements OnInit, OnDestroy {
   filter: Filter = new Filter();
   allNotes: Note[] = [];
   filteredNotes: Note[] = [];
+  loading = false;
   p = 1;
   faBook = faBook;
   errorMessage = '';
@@ -45,7 +56,10 @@ export class NotesComponent implements OnInit, OnDestroy {
   readonly kep = 'KEP';
   private destroy$ = new Subject<void>();
 
-  constructor(private store: Store<State>) {}
+  constructor(
+    private store: Store<State>,
+    private cdr: ChangeDetectorRef,
+  ) {}
 
   ngOnInit() {
     this.store.dispatch(new GetNotes());
@@ -57,6 +71,7 @@ export class NotesComponent implements OnInit, OnDestroy {
         this.filteredNotes = notes;
 
         this.store.dispatch(new DoFilter(this.allNotes, this.filter));
+        this.cdr.markForCheck();
       }
     });
 
@@ -65,6 +80,7 @@ export class NotesComponent implements OnInit, OnDestroy {
       .subscribe(err => {
         if (err) {
           this.errorMessage = `Unable to display notes: ${err}`;
+          this.cdr.markForCheck();
         }
       });
 
@@ -72,6 +88,7 @@ export class NotesComponent implements OnInit, OnDestroy {
       if (notes) {
         // Filter update of the notes
         this.filteredNotes = notes;
+        this.cdr.markForCheck();
       }
     });
 
@@ -79,13 +96,31 @@ export class NotesComponent implements OnInit, OnDestroy {
       if (filter) {
         this.filter = filter;
         this.store.dispatch(new DoFilter(this.allNotes, filter));
+        this.cdr.markForCheck();
       }
+    });
+
+    this.store.pipe(select(getLoadingSelector), takeUntil(this.destroy$)).subscribe(loading => {
+      this.loading = loading;
+      this.cdr.markForCheck();
     });
   }
 
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
+  }
+
+  trackByCommit(_index: number, note: Note): string {
+    return note.commit;
+  }
+
+  trackByValue(_index: number, value: string): string {
+    return value;
+  }
+
+  trackByDocUrl(_index: number, doc: Documentation): string {
+    return doc.url;
   }
 
   /**
@@ -139,18 +174,6 @@ export class NotesComponent implements OnInit, OnDestroy {
 
     // all other sort of descriptions
     return stripped;
-  }
-
-  /**
-   * Sanitize the markdown
-   *
-   * @param markdown The markdown string to be processed
-   *
-   * @returns The resulting markdown as string
-   */
-  public saneMarkdown(markdown: string): string {
-    // remove trailing "([#…](…), [@…](…)) [SIG …]"
-    return markdown.replace(/  \(\[\#\d+\]\(.*\)\) \[SIG .*\]$/, '');
   }
 
   /**

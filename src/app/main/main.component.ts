@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -22,6 +22,7 @@ import { SettingsComponent } from '@app/settings/settings.component';
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   standalone: true,
   imports: [
     CommonModule,
@@ -44,6 +45,7 @@ export class MainComponent implements OnDestroy {
     private route: ActivatedRoute,
     private modalService: NgbModal,
     private http: HttpClient,
+    private cdr: ChangeDetectorRef,
   ) {
     // Load about modal content
     this.http
@@ -79,6 +81,7 @@ export class MainComponent implements OnDestroy {
       .subscribe(filter => {
         this.filter = filter;
         this.updateURI();
+        this.cdr.markForCheck();
       });
   }
 

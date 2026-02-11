@@ -3,7 +3,6 @@ import { provideRouter } from '@angular/router';
 import { provideHttpClient } from '@angular/common/http';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
-import { provideMarkdown, MARKED_OPTIONS } from 'ngx-markdown';
 import { AppComponent } from './app.component';
 import { filterReducer } from './filter/filter.reducer';
 import { notesReducer } from './notes/notes.reducer';
@@ -29,15 +28,6 @@ describe('AppComponent', () => {
           settings: settingsReducer as any,
         }),
         provideEffects([FilterEffects, NotesEffects, SettingsEffects]),
-        provideMarkdown({
-          markedOptions: {
-            provide: MARKED_OPTIONS,
-            useValue: {
-              gfm: true,
-              breaks: false,
-            },
-          },
-        }),
         LoggerService,
       ],
     }).compileComponents();

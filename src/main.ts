@@ -5,7 +5,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideStoreDevtools } from '@ngrx/store-devtools';
-import { provideMarkdown, MARKED_OPTIONS } from 'ngx-markdown';
+import { provideServiceWorker } from '@angular/service-worker';
 
 import { AppComponent } from './app/app.component';
 import { environment } from '@env/environment';
@@ -40,14 +40,9 @@ bootstrapApplication(AppComponent, {
     ),
     provideEffects([FilterEffects, NotesEffects, SettingsEffects]),
     provideStoreDevtools({ maxAge: 25, logOnly: environment.production }),
-    provideMarkdown({
-      markedOptions: {
-        provide: MARKED_OPTIONS,
-        useValue: {
-          gfm: true,
-          breaks: false,
-        },
-      },
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: environment.production,
+      registrationStrategy: 'registerWhenStable:30000',
     }),
     LoggerService,
   ],

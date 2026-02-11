@@ -21,6 +21,7 @@
             "assets": [
               "src/favicon.png",
               "src/assets",
+              "src/manifest.webmanifest",
               {
                 "glob": "about-modal-content.html",
                 "input": "src/app/main",
@@ -45,6 +46,7 @@
               "outputHashing": "all",
               "sourceMap": false,
               "extractLicenses": true,
+              "serviceWorker": "ngsw-config.json",
               "budgets": [
                 {
                   "type": "initial",

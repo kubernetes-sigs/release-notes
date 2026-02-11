@@ -1,7 +1,24 @@
+<div *ngIf="loading && filteredNotes.length === 0" class="d-flex justify-content-center my-5">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+<div
+  *ngIf="loading && filteredNotes.length > 0"
+  class="d-flex align-items-center justify-content-center my-2">
+  <div class="spinner-border spinner-border-sm text-secondary me-2" role="status">
+    <span class="visually-hidden">Loading more...</span>
+  </div>
+  <small class="text-secondary">Loading more release notes...</small>
+</div>
 <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
   {{ errorMessage }}
 </div>
-<ng-container *ngFor="let note of filteredNotes | paginate: { itemsPerPage: 10, currentPage: p }">
+<ng-container
+  *ngFor="
+    let note of filteredNotes | paginate: { itemsPerPage: 10, currentPage: p };
+    trackBy: trackByCommit
+  ">
   <div class="card">
     <div class="card-header">
       <a target="_blank" href="{{ note.pr_url }}">#{{ note.pr_number }}</a> by
@@ -25,33 +42,33 @@
       >
 
       <span
-        *ngFor="let sig of note.sigs"
+        *ngFor="let sig of note.sigs; trackBy: trackByValue"
         (click)="toggleFilter(OptionType.sigs, sig)"
         class="k8s-badge float-sm-end badge rounded-pill text-bg-success badge-sig"
         >{{ sig }}</span
       >
       <span
-        *ngFor="let kind of note.kinds"
+        *ngFor="let kind of note.kinds; trackBy: trackByValue"
         (click)="toggleFilter(OptionType.kinds, kind)"
         class="k8s-badge float-sm-end badge rounded-pill text-bg-primary badge-kind"
         >{{ kind }}</span
       >
       <span
-        *ngFor="let area of note.areas"
+        *ngFor="let area of note.areas; trackBy: trackByValue"
         (click)="toggleFilter(OptionType.areas, area)"
         class="k8s-badge float-sm-end badge rounded-pill text-bg-secondary badge-area"
         >{{ area }}</span
       >
     </div>
     <div class="card-body">
-      <div [innerHTML]="saneMarkdown(note.markdown) | markdown | async"></div>
+      <div [innerHTML]="note.renderedHtml"></div>
       <div
         *ngIf="note.documentation"
         [ngbCollapse]="isCollapsed(note.pr_number)"
         id="documentationContent-{{ note.pr_number }}">
         <h6>Additional Documentation</h6>
         <ul>
-          <li *ngFor="let doc of note.documentation">
+          <li *ngFor="let doc of note.documentation; trackBy: trackByDocUrl">
             <a href="{{ doc.url }}" target="_blank">
               <span *ngIf="doc.description; else elseBlock">
                 {{ saneKEPDescription(doc) }}
