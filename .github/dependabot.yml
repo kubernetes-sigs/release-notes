@@ -9,3 +9,8 @@ updates:
       - 'release-note-none'
       - 'ok-to-test'
     open-pull-requests-limit: 10
+    groups:
+      angular:
+        patterns:
+          - '@angular/*'
+          - '@angular-devkit/*'
