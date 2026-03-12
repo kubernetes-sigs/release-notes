@@ -192,7 +192,7 @@ export class NotesService {
   }
 
   /**
-   * Get cdn.dl.k8s.io path from gs:// url in release index.
+   * Get dl.k8s.io path from gs:// url in release index.
    *
    * @returns Transformed URL
    */
@@ -202,6 +202,6 @@ export class NotesService {
       return path.replace(/^gs:\/\/[\w-]*\//, `https://${environment.cdnDomain}/`);
     }
 
-    return path.replace(/dl\.k8s\.io/, environment.cdnDomain);
+    return path;
   }
 }

@@ -21,7 +21,7 @@
   "dataGroups": [
     {
       "name": "api-cdn",
-      "urls": ["https://cdn.dl.k8s.io/**"],
+      "urls": ["https://dl.k8s.io/**"],
       "cacheConfig": {
         "maxSize": 200,
         "maxAge": "1d",
