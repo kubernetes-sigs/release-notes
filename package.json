@@ -49,7 +49,7 @@
     "@fortawesome/fontawesome-svg-core": "^7.2.0",
     "@fortawesome/free-solid-svg-icons": "^7.2.0",
     "@ng-bootstrap/ng-bootstrap": "^20.0.0",
-    "@ngrx/effects": "^21.0.1",
+    "@ngrx/effects": "^21.1.0",
     "@ngrx/store": "^21.0.1",
     "@ngrx/store-devtools": "^21.0.1",
     "@popperjs/core": "^2.11.8",
