@@ -3,9 +3,9 @@ export interface Note {
   text: string;
   markdown: string;
   author: string;
-  authorUrl: string;
-  prUrl: string;
-  prNumber: number;
+  author_url: string;
+  pr_url: string;
+  pr_number: number;
   areas: string[];
   kinds: string[];
   sigs: string[];

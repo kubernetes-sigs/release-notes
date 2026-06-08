@@ -8,9 +8,9 @@ describe('Notes Model', () => {
         text: 'Test note',
         markdown: '# Test',
         author: 'test-author',
-        authorUrl: 'https://github.com/test-author',
-        prUrl: 'https://github.com/kubernetes/kubernetes/pull/123',
-        prNumber: 123,
+        author_url: 'https://github.com/test-author',
+        pr_url: 'https://github.com/kubernetes/kubernetes/pull/123',
+        pr_number: 123,
         areas: ['area1'],
         kinds: ['kind1'],
         sigs: ['sig-test'],
@@ -23,7 +23,7 @@ describe('Notes Model', () => {
 
       expect(note).toBeTruthy();
       expect(note.commit).toBe('abc123');
-      expect(note.prNumber).toBe(123);
+      expect(note.pr_number).toBe(123);
       expect(note.feature).toBe(true);
     });
 
@@ -33,9 +33,9 @@ describe('Notes Model', () => {
         text: 'Another test',
         markdown: '## Test',
         author: 'another-author',
-        authorUrl: 'https://github.com/another-author',
-        prUrl: 'https://github.com/kubernetes/kubernetes/pull/456',
-        prNumber: 456,
+        author_url: 'https://github.com/another-author',
+        pr_url: 'https://github.com/kubernetes/kubernetes/pull/456',
+        pr_number: 456,
         areas: ['area1', 'area2', 'area3'],
         kinds: ['bug', 'feature'],
         sigs: ['sig-node', 'sig-testing'],
@@ -117,9 +117,9 @@ describe('Notes Model', () => {
         text: 'Note with docs',
         markdown: '### Test',
         author: 'doc-author',
-        authorUrl: 'https://github.com/doc-author',
-        prUrl: 'https://github.com/kubernetes/kubernetes/pull/789',
-        prNumber: 789,
+        author_url: 'https://github.com/doc-author',
+        pr_url: 'https://github.com/kubernetes/kubernetes/pull/789',
+        pr_number: 789,
         areas: ['docs'],
         kinds: ['documentation'],
         sigs: ['sig-docs'],
