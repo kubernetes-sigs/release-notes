@@ -8,6 +8,7 @@ import { notesReducer } from './notes.reducer';
 import { filterReducer } from '@app/filter/filter.reducer';
 import { OptionType } from '@app/shared/model/options.model';
 import { documentationMock } from '@app/shared/model/notes.model.mock';
+import { DocType } from '@app/shared/model/notes.model';
 
 describe('NotesComponent', () => {
   let fixture: ComponentFixture<NotesComponent>;
@@ -49,9 +50,9 @@ describe('NotesComponent', () => {
     // Given
 
     // When
-    const kep = component.badgeClass('KEP');
-    const official = component.badgeClass('official');
-    const external = component.badgeClass('external');
+    const kep = component.badgeClass(DocType.kep);
+    const official = component.badgeClass(DocType.official);
+    const external = component.badgeClass(DocType.external);
 
     // Then
     expect(kep).toEqual('badge-primary');

@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 import { Store, select } from '@ngrx/store';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { Note, Documentation } from '@app/shared/model/notes.model';
+import { Note, Documentation, DocType } from '@app/shared/model/notes.model';
 import { DoFilter, GetNotes } from './notes.actions';
 import { State } from '@app/app.reducer';
 import {
@@ -141,10 +141,10 @@ export class NotesComponent implements OnInit, OnDestroy {
    *
    * @returns The resulting class as string
    */
-  public badgeClass(t: string): string {
-    if (t === this.kep) {
+  public badgeClass(t: DocType): string {
+    if (t === DocType.kep) {
       return 'badge-primary';
-    } else if (t === 'official') {
+    } else if (t === DocType.official) {
       return 'badge-success';
     }
     return 'badge-secondary';
@@ -181,18 +181,17 @@ export class NotesComponent implements OnInit, OnDestroy {
    *
    * @returns The resulting class as string
    */
-  public isCollapsed(prNumber: number): boolean {
+  public isCollapsed(pr_number: number): boolean {
     // If documentation filter is active, show all
     if (!this.filter.optionIsEmpty(OptionType.documentation)) {
       return false;
     }
     // Otherwise check individual state (default collapsed)
-    return this.collapseStates[prNumber] !== false;
+    return this.collapseStates[pr_number] !== false;
   }
 
-  public toggleCollapse(prNumber: number): void {
-    // Initialize to true (collapsed) if undefined, then toggle
-    const currentState = this.collapseStates[prNumber] !== false;
-    this.collapseStates[prNumber] = !currentState;
+  public toggleCollapse(pr_number: number): void {
+    const currentState = this.collapseStates[pr_number] !== false;
+    this.collapseStates[pr_number] = !currentState;
   }
 }
