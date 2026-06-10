@@ -88,7 +88,7 @@
     "jest-preset-angular": "^16.1.5",
     "npm-check-updates": "^22.2.3",
     "prettier": "^3.8.4",
-    "start-server-and-test": "^3.0.9",
+    "start-server-and-test": "^3.0.10",
     "tar": "^7.5.16",
     "ts-jest": "^29.4.11",
     "ts-node": "^10.9.2",
