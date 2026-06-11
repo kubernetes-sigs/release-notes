@@ -76,7 +76,7 @@
     "@angular/router": "^22.0.0",
     "@compodoc/compodoc": "^1.2.1",
     "@types/jest": "^30.0.0",
-    "@types/node": "^25.9.2",
+    "@types/node": "^25.9.3",
     "@typescript-eslint/eslint-plugin": "8.61.0",
     "@typescript-eslint/parser": "8.61.0",
     "babel-jest": "^30.4.1",
