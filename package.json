@@ -80,7 +80,7 @@
     "@typescript-eslint/eslint-plugin": "8.62.0",
     "@typescript-eslint/parser": "8.62.0",
     "babel-jest": "^30.4.1",
-    "cypress": "^15.17.0",
+    "cypress": "^15.18.0",
     "eslint": "^10.5.0",
     "jasmine-marbles": "^0.9.2",
     "jest": "^30.4.2",
