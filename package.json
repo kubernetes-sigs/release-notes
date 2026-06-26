@@ -47,7 +47,7 @@
     "@angular/service-worker": "^22.0.3",
     "@fortawesome/angular-fontawesome": "^5.0.0",
     "@fortawesome/fontawesome-svg-core": "^7.3.0",
-    "@fortawesome/free-solid-svg-icons": "^7.2.0",
+    "@fortawesome/free-solid-svg-icons": "^7.3.0",
     "@ng-bootstrap/ng-bootstrap": "^21.0.0",
     "@ngrx/effects": "^21.1.1",
     "@ngrx/store": "^21.1.1",
