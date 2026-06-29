@@ -74,7 +74,7 @@
     "@angular/language-service": "^22.0.4",
     "@angular/platform-browser-dynamic": "^22.0.4",
     "@angular/router": "^22.0.4",
-    "@compodoc/compodoc": "^1.2.1",
+    "@compodoc/compodoc": "^2.0.0",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.0.1",
     "@typescript-eslint/eslint-plugin": "8.62.0",
