@@ -46,9 +46,4 @@ export class GetNotesComplete implements Action {
 }
 
 export type NotesAction =
-  | Failed
-  | DoFilter
-  | DoFilterSuccess
-  | GetNotes
-  | GetNotesSuccess
-  | GetNotesComplete;
+  Failed | DoFilter | DoFilterSuccess | GetNotes | GetNotesSuccess | GetNotesComplete;
