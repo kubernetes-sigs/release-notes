@@ -45,7 +45,7 @@
     "@angular/localize": "^22.0.5",
     "@angular/platform-browser": "^22.0.5",
     "@angular/service-worker": "^22.0.5",
-    "@fortawesome/angular-fontawesome": "^5.0.0",
+    "@fortawesome/angular-fontawesome": "^5.1.0",
     "@fortawesome/fontawesome-svg-core": "^7.3.0",
     "@fortawesome/free-solid-svg-icons": "^7.3.0",
     "@ng-bootstrap/ng-bootstrap": "^21.0.0",
