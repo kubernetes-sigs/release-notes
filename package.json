@@ -89,7 +89,7 @@
     "npm-check-updates": "^22.2.9",
     "prettier": "^3.9.5",
     "start-server-and-test": "^3.0.11",
-    "tar": "^7.5.20",
+    "tar": "^7.5.21",
     "ts-jest": "^29.4.12",
     "ts-node": "^10.9.2",
     "typescript": "~6.0.3"
