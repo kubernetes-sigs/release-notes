@@ -90,7 +90,7 @@
     "prettier": "^3.9.8",
     "start-server-and-test": "^3.0.12",
     "tar": "^7.5.22",
-    "ts-jest": "^29.4.12",
+    "ts-jest": "^29.4.14",
     "ts-node": "^10.9.2",
     "typescript": "~6.0.3"
   },
