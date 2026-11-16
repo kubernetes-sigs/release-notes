@@ -87,7 +87,7 @@
     "jest-environment-jsdom": "^30.5.2",
     "jest-preset-angular": "^17.0.3",
     "npm-check-updates": "^23.1.1",
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.1",
     "start-server-and-test": "^3.0.13",
     "tar": "^7.5.23",
     "ts-jest": "^29.4.15",
