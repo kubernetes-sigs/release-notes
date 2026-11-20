@@ -54,7 +54,7 @@
     "@ngrx/store-devtools": "^22.0.1",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.9",
-    "marked": "^18.2.0",
+    "marked": "^18.2.1",
     "ngx-pagination": "^6.0.3",
     "rxjs": "^7.8.2",
     "tslib": "^2.9.1",
